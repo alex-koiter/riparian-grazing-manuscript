@@ -1,0 +1,1142 @@
+sample_type,site,timing,plot,location,ak_content,year,treatment
+Biomass,1,Before,a,Lower,60.183447217342014,2021,High Graze
+Biomass,1,Before,a,Middle,37.41726534958453,2021,High Graze
+Biomass,1,Before,a,Upper,30.04191525382404,2021,High Graze
+Biomass,1,Before,b,Lower,47.42933452676366,2021,Control
+Biomass,1,Before,b,Middle,28.37470546889006,2021,Control
+Biomass,1,Before,b,Upper,24.97599815519385,2021,Control
+Biomass,1,Before,c,Lower,48.132074475420595,2021,Regular Graze
+Biomass,1,Before,c,Middle,35.45498759016991,2021,Regular Graze
+Biomass,1,Before,c,Upper,33.97708654954719,2021,Regular Graze
+Biomass,1,Before,d,Lower,45.53354713950533,2021,Mow
+Biomass,1,Before,d,Middle,36.629907004341185,2021,Mow
+Biomass,1,Before,d,Upper,42.97801855652951,2021,Mow
+Biomass,2,Before,a,Lower,31.625377893507448,2021,Regular Graze
+Biomass,2,Before,a,Middle,40.40908461244259,2021,Regular Graze
+Biomass,2,Before,a,Upper,28.78389277301807,2021,Regular Graze
+Biomass,2,Before,b,Lower,53.50248134696676,2021,High Graze
+Biomass,2,Before,b,Middle,76.11472216393334,2021,High Graze
+Biomass,2,Before,b,Upper,45.05701184856246,2021,High Graze
+Biomass,2,Before,c,Lower,70.51844899513371,2021,Mow
+Biomass,2,Before,c,Middle,56.21685057154376,2021,Mow
+Biomass,2,Before,c,Upper,37.33874012007861,2021,Mow
+Biomass,2,Before,d,Lower,48.94754914168705,2021,Control
+Biomass,2,Before,d,Middle,38.94991725193937,2021,Control
+Biomass,2,Before,d,Upper,40.329691534953064,2021,Control
+Litter,3,Before,a,Lower,37.604578930104886,2021,Regular Graze
+Litter,3,Before,a,Middle,44.76593968259892,2021,Regular Graze
+Litter,3,Before,a,Upper,32.20510348762243,2021,Regular Graze
+Litter,3,Before,b,Lower,41.88981188101804,2021,Control
+Litter,3,Before,b,Middle,57.192015295865076,2021,Control
+Litter,3,Before,b,Upper,45.761288751589014,2021,Control
+Litter,3,Before,c,Middle,32.41660149345164,2021,High Graze
+Litter,3,Before,c,Upper,42.069713102280524,2021,High Graze
+Litter,3,Before,d,Lower,58.68890413154435,2021,Mow
+Litter,3,Before,d,Middle,38.80590068344338,2021,Mow
+Litter,3,Before,d,Upper,42.82172684165468,2021,Mow
+Biomass,3,Before,a,Lower,70.27470794386495,2021,Regular Graze
+Biomass,3,Before,a,Middle,54.757644573750106,2021,Regular Graze
+Biomass,3,Before,a,Upper,45.446407136675205,2021,Regular Graze
+Biomass,3,Before,b,Lower,63.74218798243837,2021,Control
+Biomass,3,Before,b,Middle,67.11516438544422,2021,Control
+Biomass,3,Before,b,Upper,81.83759422735505,2021,Control
+Biomass,3,Before,c,Lower,66.61968316628193,2021,High Graze
+Biomass,3,Before,c,Middle,67.1488685683059,2021,High Graze
+Biomass,3,Before,c,Upper,81.92310583369247,2021,High Graze
+Biomass,3,Before,d,Lower,105.9425653109804,2021,Mow
+Biomass,3,Before,d,Middle,82.69960453778094,2021,Mow
+Biomass,3,Before,d,Upper,88.8284348826973,2021,Mow
+Biomass,4,Before,a,Lower,70.84022736599063,2021,Regular Graze
+Biomass,4,Before,a,Middle,58.42766014421078,2021,Regular Graze
+Biomass,4,Before,a,Upper,92.1058698223212,2021,Regular Graze
+Biomass,4,Before,b,Lower,50.018261547897744,2021,High Graze
+Biomass,4,Before,b,Middle,94.54116781586123,2021,High Graze
+Biomass,4,Before,b,Upper,78.93545183989723,2021,High Graze
+Biomass,4,Before,c,Lower,69.63575168531553,2021,Control
+Biomass,4,Before,c,Middle,75.86254763950694,2021,Control
+Biomass,4,Before,c,Upper,66.51682415086883,2021,Control
+Biomass,4,Before,d,Lower,86.60319440199352,2021,Mow
+Biomass,4,Before,d,Middle,54.46837361321422,2021,Mow
+Biomass,4,Before,d,Upper,38.894537806860505,2021,Mow
+Litter,4,Before,a,Lower,62.416391703350556,2021,Regular Graze
+Litter,4,Before,a,Middle,102.66978347440835,2021,Regular Graze
+Litter,4,Before,a,Upper,39.4159067233464,2021,Regular Graze
+Litter,4,Before,b,Lower,43.03874048389328,2021,High Graze
+Litter,4,Before,b,Middle,38.75687991639627,2021,High Graze
+Litter,4,Before,b,Upper,33.30385722763002,2021,High Graze
+Litter,4,Before,c,Lower,23.96312762630799,2021,Control
+Litter,4,Before,c,Middle,27.17706512226867,2021,Control
+Litter,4,Before,c,Upper,29.573704266941004,2021,Control
+Litter,4,Before,d,Lower,25.655251531600403,2021,Mow
+Litter,4,Before,d,Middle,22.236252894607812,2021,Mow
+Litter,4,Before,d,Upper,13.383534724298828,2021,Mow
+Biomass,1,After,a,Lower,46.93729387701865,2021,High Graze
+Biomass,1,After,a,Middle,46.018999108046515,2021,High Graze
+Biomass,1,After,a,Upper,50.62129851235197,2021,High Graze
+Biomass,1,After,b,Lower,76.18745737948237,2021,Control
+Biomass,1,After,b,Middle,58.807169999815265,2021,Control
+Biomass,1,After,b,Upper,58.453431793571596,2021,Control
+Biomass,1,After,c,Lower,46.74372997473899,2021,Regular Graze
+Biomass,1,After,c,Middle,49.97198884650846,2021,Regular Graze
+Biomass,1,After,c,Upper,52.6188464908887,2021,Regular Graze
+Biomass,1,After,d,Lower,59.148959050555035,2021,Mow
+Biomass,1,After,d,Middle,48.6883771917458,2021,Mow
+Biomass,1,After,d,Upper,70.8383328349933,2021,Mow
+Litter,1,After,a,Lower,56.58593899525125,2021,High Graze
+Litter,1,After,a,Middle,46.319784978501964,2021,High Graze
+Litter,1,After,a,Upper,57.92633138289114,2021,High Graze
+Litter,1,After,b,Lower,49.073400834644566,2021,Control
+Litter,1,After,b,Middle,49.39394720230748,2021,Control
+Litter,1,After,b,Upper,46.91536509048981,2021,Control
+Litter,1,After,c,Lower,41.6145191702787,2021,Regular Graze
+Litter,1,After,c,Middle,30.314166136403088,2021,Regular Graze
+Litter,1,After,c,Upper,39.53039527027822,2021,Regular Graze
+Litter,1,After,d,Lower,44.17581900659499,2021,Mow
+Litter,1,After,d,Middle,26.646426480454725,2021,Mow
+Litter,1,After,d,Upper,36.11631247286898,2021,Mow
+Litter,2,After,a,Lower,51.09546290196297,2021,Regular Graze
+Litter,3,After,a,Lower,62.0902166601088,2021,Regular Graze
+Litter,3,After,a,Middle,93.57342926489758,2021,Regular Graze
+Litter,3,After,a,Upper,48.798539376560136,2021,Regular Graze
+Litter,3,After,b,Lower,49.99644825399343,2021,Control
+Litter,3,After,b,Middle,66.38327763246116,2021,Control
+Litter,3,After,b,Upper,70.4635451963585,2021,Control
+Litter,3,After,c,Lower,74.89103638646839,2021,High Graze
+Litter,3,After,c,Middle,76.2390699675504,2021,High Graze
+Litter,3,After,c,Upper,67.62827519394452,2021,High Graze
+Litter,3,After,d,Lower,56.51845211101263,2021,Mow
+Biomass,3,After,a,Lower,140.21631621866345,2021,Regular Graze
+Biomass,3,After,a,Middle,93.61333083144577,2021,Regular Graze
+Biomass,3,After,a,Upper,74.075165212028,2021,Regular Graze
+Biomass,3,After,b,Lower,106.66156785575214,2021,Control
+Biomass,3,After,b,Middle,124.67727544890528,2021,Control
+Biomass,3,After,b,Upper,103.05588288037808,2021,Control
+Biomass,3,After,c,Lower,177.5277114402037,2021,High Graze
+Biomass,3,After,c,Middle,145.16694332864196,2021,High Graze
+Biomass,3,After,c,Upper,152.02395986222473,2021,High Graze
+Biomass,3,After,d,Lower,57.54310275527681,2021,Mow
+Biomass,3,After,d,Middle,71.87767579274106,2021,Mow
+Litter,2,After,a,Middle,29.753066847097905,2021,Regular Graze
+Litter,2,After,a,Upper,48.33842380983564,2021,Regular Graze
+Litter,2,After,b,Lower,56.0488849109153,2021,High Graze
+Litter,2,After,b,Middle,68.16582001041593,2021,High Graze
+Litter,2,After,b,Upper,66.916492937919,2021,High Graze
+Litter,2,After,c,Lower,52.557897565844826,2021,Mow
+Litter,2,After,c,Middle,58.34735323433769,2021,Mow
+Litter,2,After,c,Upper,59.15011479468374,2021,Mow
+Litter,2,After,d,Lower,60.39833771323662,2021,Control
+Litter,2,After,d,Middle,43.23367221277411,2021,Control
+Litter,2,After,d,Upper,47.09871238641198,2021,Control
+Litter,3,After,d,Middle,58.00325008602756,2021,Mow
+Litter,3,After,d,Upper,56.3817427514339,2021,Mow
+Litter,4,After,a,Lower,65.72957915114193,2021,Regular Graze
+Litter,4,After,a,Middle,78.69427822390428,2021,Regular Graze
+Litter,4,After,a,Upper,58.83472435912205,2021,Regular Graze
+Litter,4,After,b,Lower,57.00070399920411,2021,High Graze
+Litter,4,After,b,Middle,61.76844395882207,2021,High Graze
+Litter,4,After,b,Upper,30.156302990233797,2021,High Graze
+Litter,4,After,c,Lower,68.78933033989011,2021,Control
+Litter,4,After,c,Middle,50.178281773077906,2021,Control
+Litter,4,After,c,Upper,3.749488868006963,2021,Control
+Litter,4,After,d,Lower,71.3714173817931,2021,Mow
+Litter,4,After,d,Middle,35.8152679283794,2021,Mow
+Litter,4,After,d,Upper,23.89033469674883,2021,Mow
+Biomass,2,After,a,Lower,57.38762365432249,2021,Regular Graze
+Biomass,2,After,a,Middle,61.694813805927296,2021,Regular Graze
+Biomass,2,After,a,Upper,85.42247756032506,2021,Regular Graze
+Biomass,2,After,b,Lower,66.90633673204296,2021,High Graze
+Biomass,2,After,b,Middle,130.2611123094745,2021,High Graze
+Biomass,2,After,b,Upper,139.98251835710045,2021,High Graze
+Biomass,2,After,c,Lower,54.90681660381621,2021,Mow
+Biomass,2,After,c,Middle,21.47092610075045,2021,Mow
+Biomass,2,After,c,Upper,76.53496546440212,2021,Mow
+Biomass,2,After,d,Lower,78.11936834136758,2021,Control
+Biomass,2,After,d,Middle,23.92917758823994,2021,Control
+Biomass,2,After,d,Upper,50.342922882670365,2021,Control
+Biomass,3,After,d,Upper,89.48695457145381,2021,Mow
+Biomass,4,After,a,Lower,107.14410569206566,2021,Regular Graze
+Biomass,4,After,a,Middle,109.30613939389069,2021,Regular Graze
+Biomass,4,After,a,Upper,90.64452499389746,2021,Regular Graze
+Biomass,4,After,b,Lower,98.15762871478158,2021,High Graze
+Biomass,4,After,b,Middle,83.42212778058489,2021,High Graze
+Biomass,4,After,b,Upper,87.17198143160876,2021,High Graze
+Biomass,4,After,c,Lower,99.91832699735092,2021,Control
+Biomass,4,After,c,Middle,73.51131726419,2021,Control
+Biomass,4,After,c,Upper,59.34023446253781,2021,Control
+Biomass,4,After,d,Lower,120.24518169854913,2021,Mow
+Biomass,4,After,d,Middle,59.333863921205676,2021,Mow
+Biomass,4,After,d,Upper,53.27218179740298,2021,Mow
+Litter,1,Before,a,Lower,29.323179965697026,2021,High Graze
+Litter,1,Before,b,Upper,37.071560440208124,2021,Control
+Litter,1,Before,c,Lower,34.632404812748035,2021,Regular Graze
+Litter,1,Before,d,Middle,32.89805595585527,2021,Mow
+Litter,2,Before,a,Lower,62.761674542816145,2021,Regular Graze
+Litter,2,Before,a,Middle,32.39837728571917,2021,Regular Graze
+Litter,2,Before,a,Upper,18.33360472333203,2021,Regular Graze
+Litter,2,Before,b,Lower,75.61890832720974,2021,High Graze
+Litter,2,Before,b,Upper,26.584649929705048,2021,High Graze
+Litter,2,Before,c,Lower,62.51415691792473,2021,Mow
+Litter,2,Before,d,Lower,27.93604530211003,2021,Control
+Litter,2,Before,d,Middle,25.92839815130175,2021,Control
+Litter,2,Before,d,Upper,41.90218802345934,2021,Control
+Litter,3,Before,c,Lower,41.336077721218636,2021,High Graze
+Organic,1,After,a,Lower,2.416384148045069,2021,High Graze
+Organic,1,After,a,Middle,5.446900444569602,2021,High Graze
+Organic,1,After,a,Upper,3.870357359121797,2021,High Graze
+Organic,1,After,b,Lower,2.866245455060143,2021,Control
+Organic,1,After,b,Middle,2.632253173936907,2021,Control
+Organic,1,After,b,Upper,2.508738495324113,2021,Control
+Organic,1,After,c,Lower,2.6689944944106028,2021,Regular Graze
+Organic,1,After,c,Middle,3.8436257345398013,2021,Regular Graze
+Organic,1,After,c,Upper,3.4221625988729154,2021,Regular Graze
+Organic,1,After,d,Lower,1.165821144931987,2021,Mow
+Organic,1,After,d,Middle,2.2988179849611567,2021,Mow
+Organic,1,After,d,Upper,2.764509340943006,2021,Mow
+Organic,2,After,a,Lower,1.8791825740767572,2021,Regular Graze
+Organic,2,After,a,Middle,2.053371276924239,2021,Regular Graze
+Organic,2,After,a,Upper,2.909067847317018,2021,Regular Graze
+Organic,2,After,b,Lower,4.07804662341728,2021,High Graze
+Organic,2,After,b,Middle,0.9497144178060432,2021,High Graze
+Organic,2,After,b,Upper,5.248641616127413,2021,High Graze
+Organic,2,After,c,Lower,1.070979238229206,2021,Mow
+Organic,2,After,c,Middle,4.939508685306198,2021,Mow
+Organic,2,After,c,Upper,4.202224317910824,2021,Mow
+Organic,2,After,d,Lower,1.4263943998352868,2021,Control
+Organic,2,After,d,Middle,4.290670546824267,2021,Control
+Organic,2,After,d,Upper,2.3207428107595462,2021,Control
+Organic,3,After,a,Lower,7.399604555514567,2021,Regular Graze
+Organic,3,After,a,Middle,5.811040427941594,2021,Regular Graze
+Organic,3,After,a,Upper,4.705764777105881,2021,Regular Graze
+Organic,3,After,b,Lower,2.9270602174391134,2021,Control
+Organic,3,After,b,Middle,9.494143865471626,2021,Control
+Organic,3,After,b,Upper,8.673604331452834,2021,Control
+Organic,3,After,c,Lower,5.501726551739075,2021,High Graze
+Organic,3,After,c,Middle,10.230017127522089,2021,High Graze
+Organic,3,After,c,Upper,9.67902512794208,2021,High Graze
+Organic,3,After,d,Lower,6.105801078696973,2021,Mow
+Organic,3,After,d,Middle,4.948726073803289,2021,Mow
+Organic,3,After,d,Upper,6.476371143279928,2021,Mow
+Soil,1,After,a,Lower,3.312480694745618,2021,High Graze
+Soil,1,After,a,Middle,2.3659124973225385,2021,High Graze
+Soil,1,After,a,Upper,4.579752048089427,2021,High Graze
+Soil,1,After,b,Lower,1.3941477021763629,2021,Control
+Soil,1,After,b,Middle,2.7783453924319548,2021,Control
+Soil,1,After,b,Upper,3.4590486695093414,2021,Control
+Soil,1,After,c,Lower,1.7792164629217513,2021,Regular Graze
+Soil,1,After,c,Middle,2.2610284929482702,2021,Regular Graze
+Soil,1,After,c,Upper,4.205888440136977,2021,Regular Graze
+Soil,1,After,d,Lower,3.1042586774001495,2021,Mow
+Soil,1,After,d,Middle,3.711322968733754,2021,Mow
+Soil,1,After,d,Upper,8.249593460305972,2021,Mow
+Soil,3,After,a,Middle,2.1408862647084517,2021,Regular Graze
+Soil,3,After,a,Upper,2.137768469177322,2021,Regular Graze
+Soil,3,After,b,Lower,1.5259127564092108,2021,Control
+Soil,3,After,b,Middle,2.630808564261115,2021,Control
+Soil,3,After,b,Upper,2.583506963272337,2021,Control
+Soil,3,After,c,Lower,2.144013167724092,2021,High Graze
+Soil,3,After,c,Middle,1.80285596879638,2021,High Graze
+Soil,3,After,c,Upper,2.614310488363675,2021,High Graze
+Soil,3,After,d,Lower,1.9032592811768332,2021,Mow
+Soil,3,After,d,Middle,1.9315675501085665,2021,Mow
+Soil,3,After,d,Upper,1.7383994102784355,2021,Mow
+Soil,4,After,a,Lower,1.5702529066455506,2021,Regular Graze
+Soil,4,After,a,Middle,1.3086365982264265,2021,Regular Graze
+Soil,4,After,a,Upper,1.540159607697552,2021,Regular Graze
+Soil,4,After,b,Lower,1.8703656978247611,2021,High Graze
+Soil,4,After,b,Middle,2.013531003171825,2021,High Graze
+Soil,4,After,b,Upper,1.6065151496598722,2021,High Graze
+Soil,4,After,c,Lower,1.5259127564092108,2021,Control
+Soil,4,After,c,Middle,1.4077757344557018,2021,Control
+Soil,4,After,c,Upper,1.2429690031841987,2021,Control
+Soil,4,After,d,Lower,1.2830451899014224,2021,Mow
+Soil,4,After,d,Middle,0.8964646907806496,2021,Mow
+Soil,4,After,d,Upper,0.6358084624589714,2021,Mow
+Organic,1,Before,a,Lower,0.5577266554515443,2021,High Graze
+Organic,1,Before,a,Middle,1.2147533083496354,2021,High Graze
+Organic,1,Before,a,Upper,1.6541557926494872,2021,High Graze
+Organic,1,Before,b,Lower,0.1528118050919928,2021,Control
+Organic,1,Before,b,Middle,3.5523161149474483,2021,Control
+Organic,1,Before,b,Upper,1.4790436182940587,2021,Control
+Organic,1,Before,c,Lower,1.2171224030514385,2021,Regular Graze
+Organic,1,Before,c,Middle,2.1166503374793897,2021,Regular Graze
+Organic,1,Before,c,Upper,3.1066110928265642,2021,Regular Graze
+Organic,1,Before,d,Lower,0.29454960620268217,2021,Mow
+Organic,1,Before,d,Middle,2.1217630194539776,2021,Mow
+Organic,1,Before,d,Upper,5.715978547357834,2021,Mow
+Organic,2,Before,a,Lower,5.416600343186627,2021,Regular Graze
+Organic,2,Before,a,Middle,4.760472229491358,2021,Regular Graze
+Organic,2,Before,a,Upper,2.5893063508686445,2021,Regular Graze
+Organic,2,Before,b,Lower,6.118308183049417,2021,High Graze
+Organic,2,Before,b,Middle,4.329884272150114,2021,High Graze
+Organic,2,Before,b,Upper,4.758097336884976,2021,High Graze
+Organic,2,Before,c,Lower,8.418963199046726,2021,Mow
+Organic,2,Before,c,Middle,6.798244282263006,2021,Mow
+Organic,2,Before,c,Upper,7.324369119220895,2021,Mow
+Organic,2,Before,d,Lower,2.1872756226442895,2021,Control
+Organic,2,Before,d,Middle,1.6476318910640093,2021,Control
+Organic,2,Before,d,Upper,3.4036473437321004,2021,Control
+Organic,3,Before,a,Lower,9.906202994530236,2021,Regular Graze
+Organic,4,After,a,Lower,1.9145800342858326,2021,Regular Graze
+Organic,4,After,a,Middle,0.9770471385289445,2021,Regular Graze
+Organic,4,After,a,Upper,0.7058509226352521,2021,Regular Graze
+Organic,4,After,b,Lower,1.518977795987998,2021,High Graze
+Organic,4,After,b,Middle,1.5165513138857807,2021,High Graze
+Organic,4,After,b,Upper,0.16481801049006417,2021,High Graze
+Organic,4,After,c,Lower,1.6408501679319332,2021,Control
+Organic,4,After,c,Middle,1.915723124012258,2021,Control
+Organic,4,After,c,Upper,1.3815651407046026,2021,Control
+Organic,4,After,d,Lower,2.452496392895177,2021,Mow
+Organic,4,After,d,Middle,1.6514970619589437,2021,Mow
+Organic,4,After,d,Upper,1.1108057284750457,2021,Mow
+Soil,2,After,a,Lower,1.1930187589506545,2021,Regular Graze
+Soil,2,After,a,Middle,1.3669770232717997,2021,Regular Graze
+Soil,2,After,a,Upper,0.6468061432937927,2021,Regular Graze
+Soil,2,After,b,Lower,3.4438219294477204,2021,High Graze
+Soil,2,After,b,Middle,0.7388039959498568,2021,High Graze
+Soil,2,After,b,Upper,2.4496696372602047,2021,High Graze
+Soil,2,After,c,Lower,0.7412030697239859,2021,Mow
+Soil,2,After,c,Middle,1.6321579309207448,2021,Mow
+Soil,2,After,c,Upper,1.548868368021419,2021,Mow
+Soil,2,After,d,Lower,0.5599433804476787,2021,Control
+Soil,2,After,d,Middle,1.9095569541443502,2021,Control
+Soil,2,After,d,Upper,2.0876806122087643,2021,Control
+Soil,3,After,a,Lower,1.0969464298356435,2021,Regular Graze
+Organic,3,Before,a,Middle,6.163654393710397,2021,Regular Graze
+Organic,3,Before,a,Upper,4.632152367723471,2021,Regular Graze
+Organic,3,Before,b,Lower,4.875973991951528,2021,Control
+Organic,3,Before,b,Middle,7.0031456334648885,2021,Control
+Organic,3,Before,b,Upper,9.972185736318107,2021,Control
+Organic,3,Before,c,Lower,1.9843676980032785,2021,High Graze
+Organic,3,Before,c,Middle,6.647692659842872,2021,High Graze
+Organic,3,Before,c,Upper,5.906482144903516,2021,High Graze
+Organic,3,Before,d,Lower,5.7882558850076204,2021,Mow
+Organic,3,Before,d,Middle,9.581606579182106,2021,Mow
+Organic,3,Before,d,Upper,8.913655461540204,2021,Mow
+Organic,4,Before,a,Lower,1.2884646772826835,2021,Regular Graze
+Organic,4,Before,a,Middle,2.8454029087461326,2021,Regular Graze
+Organic,4,Before,a,Upper,0.9101132560228452,2021,Regular Graze
+Organic,4,Before,b,Lower,0.9504829913811774,2021,High Graze
+Organic,4,Before,b,Middle,0.43752526292903365,2021,High Graze
+Organic,4,Before,b,Upper,1.171309487149873,2021,High Graze
+Organic,4,Before,c,Lower,1.0298091308569215,2021,Control
+Organic,4,Before,c,Middle,0.9249544314208197,2021,Control
+Organic,4,Before,c,Upper,0.2441939359254396,2021,Control
+Organic,4,Before,d,Lower,2.1582681064369647,2021,Mow
+Organic,4,Before,d,Middle,0.7300598327715156,2021,Mow
+Organic,4,Before,d,Upper,1.240383095088384,2021,Mow
+Soil,1,Before,a,Lower,0.6110019685968784,2021,High Graze
+Soil,1,Before,a,Middle,0.5924778473160298,2021,High Graze
+Soil,1,Before,a,Upper,1.5308273113244444,2021,High Graze
+Soil,1,Before,b,Lower,0.8270578660136652,2021,Control
+Soil,1,Before,b,Middle,2.3070777900592687,2021,Control
+Soil,1,Before,b,Upper,0.9049882634971419,2021,Control
+Soil,1,Before,c,Lower,0.6961412691531128,2021,Regular Graze
+Soil,1,Before,c,Middle,0.865838960422006,2021,Regular Graze
+Soil,1,Before,c,Upper,2.4500263984845527,2021,Regular Graze
+Soil,1,Before,d,Lower,0.5804662737966573,2021,Mow
+Soil,1,Before,d,Middle,0.9704062045269192,2021,Mow
+Soil,1,Before,d,Upper,2.198496775708856,2021,Mow
+Soil,2,Before,a,Lower,1.5241586541115113,2021,Regular Graze
+Soil,2,Before,a,Middle,0.7699071530787329,2021,Regular Graze
+Soil,2,Before,a,Upper,1.954600417054694,2021,Regular Graze
+Soil,2,Before,b,Lower,0.8692714240906759,2021,High Graze
+Soil,2,Before,b,Middle,0.7725425320868264,2021,High Graze
+Soil,2,Before,b,Upper,1.3540770154736617,2021,High Graze
+Soil,2,Before,c,Lower,0.5195814705139064,2021,Mow
+Soil,2,Before,c,Middle,1.2784279514615917,2021,Mow
+Soil,2,Before,c,Upper,1.8204920904742976,2021,Mow
+Soil,2,Before,d,Lower,1.0090548201582694,2021,Control
+Soil,2,Before,d,Middle,0.6664339603699073,2021,Control
+Soil,2,Before,d,Upper,0.8561199286554337,2021,Control
+Soil,3,Before,a,Lower,0.2554104994894789,2021,Regular Graze
+Soil,3,Before,a,Middle,0.6132774360337913,2021,Regular Graze
+Soil,3,Before,a,Upper,0.9834817145921145,2021,Regular Graze
+Soil,3,Before,b,Lower,0.5279893027983236,2021,Control
+Soil,3,Before,b,Middle,1.6564125075803817,2021,Control
+Soil,3,Before,b,Upper,1.0732977444744811,2021,Control
+Soil,3,Before,c,Lower,0.35760974070825174,2021,High Graze
+Soil,3,Before,c,Middle,0.956004865147826,2021,High Graze
+Soil,3,Before,c,Upper,0.9491468675499221,2021,High Graze
+Soil,3,Before,d,Lower,0.8525895445859809,2021,Mow
+Soil,3,Before,d,Middle,1.467711168491366,2021,Mow
+Soil,3,Before,d,Upper,0.8904077106839299,2021,Mow
+Soil,4,Before,a,Lower,0.7231204062010518,2021,Regular Graze
+Soil,4,Before,a,Middle,1.3046838511483578,2021,Regular Graze
+Soil,4,Before,a,Upper,0.5469874186411419,2021,Regular Graze
+Soil,4,Before,b,Lower,0.7879092355628938,2021,High Graze
+Soil,4,Before,b,Middle,0.4503650956421287,2021,High Graze
+Soil,4,Before,b,Upper,0.26611360849636645,2021,High Graze
+Soil,4,Before,c,Lower,0.5352184961862713,2021,Control
+Soil,4,Before,c,Middle,0.705534793209781,2021,Control
+Soil,4,Before,c,Upper,0.5437266888727892,2021,Control
+Soil,4,Before,d,Lower,0.6201514033967431,2021,Mow
+Soil,4,Before,d,Middle,0.36288162877766084,2021,Mow
+Soil,4,Before,d,Upper,1.4231734531647766,2021,Mow
+Biomass,1,Before,a,Lower,129.10758630346476,2020,High Graze
+Biomass,1,Before,a,Middle,72.95990403788194,2020,High Graze
+Biomass,1,Before,a,Upper,51.60302463603215,2020,High Graze
+Biomass,1,Before,b,Lower,81.34790736673123,2020,Control
+Biomass,1,Before,b,Middle,96.94541895819438,2020,Control
+Biomass,1,Before,b,Upper,69.2914857645304,2020,Control
+Biomass,1,Before,c,Lower,148.52436589116212,2020,Regular Graze
+Biomass,1,Before,c,Middle,86.82468102763092,2020,Regular Graze
+Biomass,1,Before,c,Upper,68.8548237653628,2020,Regular Graze
+Biomass,1,Before,d,Lower,83.77971559080905,2020,Mow
+Biomass,1,Before,d,Middle,104.2334771201902,2020,Mow
+Biomass,1,Before,d,Upper,116.47908094600191,2020,Mow
+Biomass,2,Before,a,Lower,66.48741654710273,2020,Regular Graze
+Biomass,2,Before,a,Middle,156.31382779392686,2020,Regular Graze
+Biomass,2,Before,a,Upper,193.32754952823632,2020,Regular Graze
+Biomass,2,Before,b,Lower,130.65064808014284,2020,High Graze
+Biomass,2,Before,b,Middle,33.50447631209237,2020,High Graze
+Biomass,2,Before,b,Upper,160.03541056071975,2020,High Graze
+Biomass,2,Before,c,Lower,145.30841541262023,2020,Mow
+Biomass,2,Before,c,Middle,201.75466374412355,2020,Mow
+Biomass,2,Before,c,Upper,117.8650956362802,2020,Mow
+Biomass,2,Before,d,Lower,115.53763850592884,2020,Control
+Biomass,2,Before,d,Middle,111.92786699422797,2020,Control
+Biomass,2,Before,d,Upper,106.07967471964017,2020,Control
+Biomass,3,Before,a,Lower,86.54416439087005,2020,Regular Graze
+Biomass,3,Before,a,Middle,45.52458811738445,2020,Regular Graze
+Biomass,3,Before,a,Upper,113.86248355127891,2020,Regular Graze
+Biomass,3,Before,b,Lower,200.05537336800614,2020,Control
+Biomass,3,Before,b,Middle,134.31681266906992,2020,Control
+Biomass,3,Before,b,Upper,118.8380300358002,2020,Control
+Biomass,3,Before,c,Lower,187.16765137072346,2020,High Graze
+Biomass,3,Before,c,Middle,203.408581799452,2020,High Graze
+Biomass,3,Before,c,Upper,177.39050452070188,2020,High Graze
+Biomass,3,Before,d,Lower,179.07798545995144,2020,Mow
+Biomass,3,Before,d,Middle,107.18512283440673,2020,Mow
+Biomass,3,Before,d,Upper,115.44336604631572,2020,Mow
+Biomass,4,Before,a,Lower,137.0844865831656,2020,Regular Graze
+Biomass,4,Before,a,Middle,142.07928905935427,2020,Regular Graze
+Biomass,4,Before,a,Upper,169.307874285039,2020,Regular Graze
+Biomass,4,Before,b,Lower,199.26371154707425,2020,High Graze
+Biomass,4,Before,b,Middle,196.74184836485628,2020,High Graze
+Biomass,4,Before,b,Upper,139.7343796243663,2020,High Graze
+Biomass,4,Before,c,Lower,266.2929327218492,2020,Control
+Biomass,4,Before,c,Middle,226.1373448438484,2020,Control
+Biomass,4,Before,c,Upper,97.21537874994615,2020,Control
+Biomass,4,Before,d,Lower,173.79552108528333,2020,Mow
+Biomass,4,Before,d,Middle,122.07519895893549,2020,Mow
+Biomass,4,Before,d,Upper,102.13086835828737,2020,Mow
+Biomass,1,After,a,Lower,57.12635879882569,2020,High Graze
+Biomass,1,After,a,Middle,6.7539294997385735,2020,High Graze
+Biomass,1,After,a,Upper,39.396131580006745,2020,High Graze
+Biomass,1,After,b,Lower,63.08497102258666,2020,Control
+Biomass,1,After,b,Middle,2.466124736771012,2020,Control
+Biomass,1,After,b,Upper,23.85910081025129,2020,Control
+Biomass,1,After,c,Lower,61.33357395092456,2020,Regular Graze
+Biomass,1,After,c,Middle,44.956299441469646,2020,Regular Graze
+Biomass,1,After,c,Upper,37.69481270515762,2020,Regular Graze
+Biomass,1,After,d,Lower,56.49599276776953,2020,Mow
+Biomass,1,After,d,Middle,3.457826440801593,2020,Mow
+Biomass,1,After,d,Upper,8.385562254851186,2020,Mow
+Biomass,2,After,a,Lower,44.2224526596748,2020,Regular Graze
+Biomass,2,After,a,Middle,73.18822560702426,2020,Regular Graze
+Biomass,2,After,a,Upper,81.36343466629216,2020,Regular Graze
+Biomass,2,After,b,Lower,77.08188046660119,2020,High Graze
+Biomass,2,After,b,Middle,95.48104827452039,2020,High Graze
+Biomass,2,After,b,Upper,89.75014092277709,2020,High Graze
+Biomass,2,After,c,Lower,70.17162969373996,2020,Mow
+Biomass,2,After,c,Middle,59.730816710171425,2020,Mow
+Biomass,2,After,c,Upper,46.075962467107246,2020,Mow
+Biomass,2,After,d,Lower,44.53795606917043,2020,Control
+Biomass,2,After,d,Middle,5.752241324460256,2020,Control
+Biomass,2,After,d,Upper,37.354373832546415,2020,Control
+Biomass,3,After,a,Lower,5.487856398243679,2020,Regular Graze
+Biomass,3,After,a,Middle,9.799945552619086,2020,Regular Graze
+Biomass,3,After,a,Upper,27.322008911398463,2020,Regular Graze
+Biomass,3,After,b,Lower,57.40254591968941,2020,Control
+Biomass,3,After,b,Middle,82.06941831440326,2020,Control
+Biomass,3,After,b,Upper,9.880642667490063,2020,Control
+Biomass,3,After,c,Lower,85.7403912807899,2020,High Graze
+Biomass,3,After,c,Middle,116.47926534550106,2020,High Graze
+Biomass,3,After,c,Upper,12.805354863216351,2020,High Graze
+Biomass,3,After,d,Lower,20.66644612734209,2020,Mow
+Biomass,3,After,d,Middle,11.188618355476276,2020,Mow
+Biomass,3,After,d,Upper,98.90937940149603,2020,Mow
+Biomass,4,After,a,Lower,117.20268533004581,2020,Regular Graze
+Biomass,4,After,a,Middle,101.70586935618162,2020,Regular Graze
+Biomass,4,After,a,Upper,70.39338744154398,2020,Regular Graze
+Biomass,4,After,b,Lower,100.33844407162542,2020,High Graze
+Biomass,4,After,b,Middle,93.41330826990696,2020,High Graze
+Biomass,4,After,b,Upper,41.22246532457263,2020,High Graze
+Biomass,4,After,c,Lower,33.501897048208946,2020,Control
+Biomass,4,After,c,Middle,103.59432579879828,2020,Control
+Biomass,4,After,c,Upper,57.20504029955751,2020,Control
+Biomass,4,After,d,Lower,94.06828221175496,2020,Mow
+Biomass,4,After,d,Middle,104.60358548987254,2020,Mow
+Biomass,4,After,d,Upper,8.641859120450496,2020,Mow
+Litter,1,After,a,Lower,76.51200972575873,2020,High Graze
+Litter,1,After,a,Middle,22.644808203476643,2020,High Graze
+Litter,1,After,a,Upper,37.51378183609986,2020,High Graze
+Litter,1,After,b,Lower,67.03926207276615,2020,Control
+Litter,1,After,b,Middle,41.17427545673746,2020,Control
+Litter,1,After,b,Upper,20.68214951925697,2020,Control
+Litter,1,After,c,Lower,65.38541849916024,2020,Regular Graze
+Litter,1,After,c,Middle,38.950500901555294,2020,Regular Graze
+Litter,1,After,c,Upper,46.58225944611357,2020,Regular Graze
+Litter,1,After,d,Lower,64.83437285168517,2020,Mow
+Litter,1,After,d,Middle,43.32948414043945,2020,Mow
+Litter,1,After,d,Upper,64.69916065599088,2020,Mow
+Litter,2,After,a,Lower,42.07248352944874,2020,Regular Graze
+Litter,2,After,a,Middle,45.85274869845953,2020,Regular Graze
+Litter,2,After,a,Upper,38.28224405642756,2020,Regular Graze
+Litter,2,After,b,Lower,69.42421414796662,2020,High Graze
+Litter,2,After,b,Middle,61.04496658455472,2020,High Graze
+Litter,2,After,b,Upper,77.0713300797631,2020,High Graze
+Litter,2,After,c,Lower,87.16314715782873,2020,Mow
+Litter,2,After,c,Middle,87.14570765052677,2020,Mow
+Litter,2,After,c,Upper,70.82201711738878,2020,Mow
+Litter,2,After,d,Lower,59.6699320958721,2020,Control
+Litter,2,After,d,Middle,48.81685569144688,2020,Control
+Litter,2,After,d,Upper,51.15332936749876,2020,Control
+Litter,3,After,a,Lower,50.74975280444158,2020,Regular Graze
+Litter,3,After,a,Middle,71.62444141718626,2020,Regular Graze
+Litter,3,After,a,Upper,26.275114628590693,2020,Regular Graze
+Litter,3,After,b,Lower,67.97765560640104,2020,Control
+Litter,3,After,b,Middle,84.05252524697336,2020,Control
+Litter,3,After,b,Upper,62.27509725202812,2020,Control
+Litter,3,After,c,Lower,48.45675932176622,2020,High Graze
+Litter,3,After,c,Middle,93.77966186326098,2020,High Graze
+Litter,3,After,c,Upper,80.48540837809301,2020,High Graze
+Litter,3,After,d,Lower,50.368139375164034,2020,Mow
+Litter,3,After,d,Middle,59.286026282755266,2020,Mow
+Litter,3,After,d,Upper,64.4599920793121,2020,Mow
+Litter,4,After,a,Lower,83.64383662762972,2020,Regular Graze
+Litter,4,After,a,Middle,92.06915324619507,2020,Regular Graze
+Litter,4,After,a,Upper,15.824531946755027,2020,Regular Graze
+Litter,4,After,b,Lower,85.99315123297752,2020,High Graze
+Litter,4,After,b,Middle,84.30248486366344,2020,High Graze
+Litter,4,After,b,Upper,87.314008326282,2020,High Graze
+Litter,4,After,c,Lower,81.28939823242754,2020,Control
+Litter,4,After,c,Middle,75.51790018872826,2020,Control
+Litter,4,After,c,Upper,5.0561977504248405,2020,Control
+Litter,4,After,d,Lower,56.691232243157174,2020,Mow
+Litter,4,After,d,Middle,79.31340513662893,2020,Mow
+Litter,4,After,d,Upper,19.401580654658652,2020,Mow
+Soil,1,Before,a,Lower,0.5541382120263375,2020,High Graze
+Soil,1,Before,a,Middle,0.6169588585277757,2020,High Graze
+Soil,1,Before,a,Upper,4.858593185952636,2020,High Graze
+Soil,1,Before,b,Lower,0.8477972698063967,2020,Control
+Soil,1,Before,b,Middle,1.201884946598611,2020,Control
+Soil,1,Before,b,Upper,1.567467622340434,2020,Control
+Soil,1,Before,c,Lower,0.9460452782217484,2020,Regular Graze
+Soil,1,Before,c,Middle,1.0239679873554857,2020,Regular Graze
+Soil,1,Before,c,Upper,1.1268901046340676,2020,Regular Graze
+Soil,1,Before,d,Lower,1.5233830616782429,2020,Mow
+Soil,1,Before,d,Middle,0.8546538604756209,2020,Mow
+Soil,1,Before,d,Upper,0.5975246528093708,2020,Mow
+Soil,2,Before,a,Lower,0.5772162514932074,2020,Regular Graze
+Soil,2,Before,a,Middle,0.8434189740468332,2020,Regular Graze
+Soil,2,Before,a,Upper,0.9402712121870611,2020,Regular Graze
+Soil,2,Before,b,Lower,0.5655744603045545,2020,High Graze
+Soil,2,Before,b,Middle,0.829524248735392,2020,High Graze
+Soil,2,Before,b,Upper,0.9695403549788763,2020,High Graze
+Soil,2,Before,c,Lower,0.6340549474612144,2020,Mow
+Soil,2,Before,c,Middle,0.9876398712913013,2020,Mow
+Soil,2,Before,c,Upper,1.0724994388527607,2020,Mow
+Soil,2,Before,d,Lower,0.7179070215421007,2020,Control
+Soil,2,Before,d,Middle,0.9980063203220305,2020,Control
+Soil,2,Before,d,Upper,0.8336345311924617,2020,Control
+Soil,3,Before,a,Lower,0.7074192186826261,2020,Regular Graze
+Soil,3,Before,a,Middle,0.8884680587140231,2020,Regular Graze
+Soil,3,Before,a,Upper,2.253259365024656,2020,Regular Graze
+Soil,3,Before,b,Lower,1.082646074981926,2020,Control
+Soil,3,Before,b,Middle,2.1098138027595743,2020,Control
+Soil,3,Before,b,Upper,1.8549468283467634,2020,Control
+Soil,3,Before,c,Lower,1.4989283760800085,2020,High Graze
+Soil,3,Before,c,Middle,1.5322057435026342,2020,High Graze
+Soil,3,Before,c,Upper,1.9442102654586444,2020,High Graze
+Soil,3,Before,d,Lower,0.6968193266200324,2020,Mow
+Soil,3,Before,d,Middle,0.7938411213910371,2020,Mow
+Soil,3,Before,d,Upper,1.7771491089497444,2020,Mow
+Soil,4,Before,a,Lower,2.512237729506156,2020,Regular Graze
+Soil,4,Before,a,Middle,1.4771020562602395,2020,Regular Graze
+Soil,4,Before,a,Upper,0.8754787596100169,2020,Regular Graze
+Soil,4,Before,b,Lower,0.4919123326438301,2020,High Graze
+Soil,4,Before,b,Middle,0.6724339906453143,2020,High Graze
+Soil,4,Before,b,Upper,0.4727798473535593,2020,High Graze
+Soil,4,Before,c,Lower,2.3673422944484295,2020,Control
+Soil,4,Before,c,Middle,1.0159403824162099,2020,Control
+Soil,4,Before,c,Upper,0.9478720731510077,2020,Control
+Soil,4,Before,d,Lower,1.1142715688957114,2020,Mow
+Soil,4,Before,d,Middle,1.1202710731824725,2020,Mow
+Soil,4,Before,d,Upper,1.1858718728614996,2020,Mow
+Organic,1,Before,a,Lower,2.5742935070362485,2020,High Graze
+Organic,1,Before,a,Middle,1.9914679088569827,2020,High Graze
+Organic,1,Before,a,Upper,5.083078248726268,2020,High Graze
+Organic,1,Before,b,Lower,1.8580736578567245,2020,Control
+Organic,1,Before,b,Middle,3.3330206976276013,2020,Control
+Organic,1,Before,b,Upper,3.8784229721207772,2020,Control
+Organic,1,Before,c,Lower,3.224931449447036,2020,Regular Graze
+Organic,1,Before,c,Middle,3.659940446095435,2020,Regular Graze
+Organic,1,Before,c,Upper,5.336104815074889,2020,Regular Graze
+Organic,1,Before,d,Lower,2.1777156169642367,2020,Mow
+Organic,1,Before,d,Middle,2.854974885167336,2020,Mow
+Organic,1,Before,d,Upper,4.311424296672118,2020,Mow
+Organic,2,Before,a,Lower,2.863001958403589,2020,Regular Graze
+Organic,2,Before,a,Middle,3.5097338641946028,2020,Regular Graze
+Organic,2,Before,a,Upper,4.70310918152521,2020,Regular Graze
+Organic,2,Before,b,Lower,1.8873792856195049,2020,High Graze
+Organic,2,Before,b,Middle,3.0417040338341694,2020,High Graze
+Organic,2,Before,b,Upper,3.413275411803526,2020,High Graze
+Organic,2,Before,c,Lower,1.7957520689492152,2020,Mow
+Organic,2,Before,c,Middle,4.331701232758515,2020,Mow
+Organic,2,Before,c,Upper,3.97537360030994,2020,Mow
+Organic,2,Before,d,Lower,1.808846356954039,2020,Control
+Organic,2,Before,d,Middle,4.11205207486069,2020,Control
+Organic,2,Before,d,Upper,1.845985526205545,2020,Control
+Organic,3,Before,a,Lower,4.5826230532144185,2020,Regular Graze
+Organic,3,Before,a,Middle,4.825391812613217,2020,Regular Graze
+Organic,3,Before,a,Upper,4.379369995984516,2020,Regular Graze
+Organic,3,Before,b,Lower,3.6860145685956556,2020,Control
+Organic,3,Before,b,Middle,8.769908194965119,2020,Control
+Organic,3,Before,b,Upper,7.887556801158394,2020,Control
+Organic,3,Before,c,Lower,6.884638703586862,2020,High Graze
+Organic,3,Before,c,Middle,4.337715570219832,2020,High Graze
+Organic,3,Before,c,Upper,5.043862325709308,2020,High Graze
+Organic,3,Before,d,Lower,5.218311699380457,2020,Mow
+Organic,3,Before,d,Middle,4.033127211936719,2020,Mow
+Organic,3,Before,d,Upper,6.094466603954015,2020,Mow
+Organic,4,Before,a,Lower,3.316430251148619,2020,Regular Graze
+Organic,4,Before,a,Middle,3.2660335169399874,2020,Regular Graze
+Organic,4,Before,a,Upper,2.792077928884914,2020,Regular Graze
+Organic,4,Before,b,Lower,2.7040161018143323,2020,High Graze
+Organic,4,Before,b,Middle,2.7880720781978483,2020,High Graze
+Organic,4,Before,b,Upper,3.9437568129615617,2020,High Graze
+Organic,4,Before,c,Lower,2.9380449412204315,2020,Control
+Organic,4,Before,c,Middle,2.873175503695786,2020,Control
+Organic,4,Before,c,Upper,3.374715515382635,2020,Control
+Organic,4,Before,d,Lower,2.9207708995549604,2020,Mow
+Organic,4,Before,d,Middle,3.364799602996594,2020,Mow
+Organic,4,Before,d,Upper,4.269937754966925,2020,Mow
+Organic,1,After,a,Lower,1.3676132540706565,2020,High Graze
+Organic,1,After,a,Middle,1.3064239156735837,2020,High Graze
+Organic,1,After,a,Upper,3.4109154055821214,2020,High Graze
+Organic,1,After,b,Lower,1.2121508984417666,2020,Control
+Organic,1,After,b,Middle,1.6280989806088104,2020,Control
+Organic,1,After,b,Upper,2.384096922279037,2020,Control
+Organic,1,After,c,Lower,1.1255869357875954,2020,Regular Graze
+Organic,1,After,c,Middle,3.0537688885326073,2020,Regular Graze
+Organic,1,After,c,Upper,2.07019773842288,2020,Regular Graze
+Organic,1,After,d,Lower,0.901671739049256,2020,Mow
+Organic,1,After,d,Middle,1.3850010020441712,2020,Mow
+Organic,1,After,d,Upper,3.4955022820417296,2020,Mow
+Organic,2,After,a,Lower,1.839982342060681,2020,Regular Graze
+Organic,2,After,a,Middle,2.767210546143659,2020,Regular Graze
+Organic,2,After,a,Upper,8.328371577193298,2020,Regular Graze
+Organic,2,After,b,Lower,3.6710595821343275,2020,High Graze
+Organic,2,After,b,Middle,3.9556476472811455,2020,High Graze
+Organic,2,After,b,Upper,8.59950795670019,2020,High Graze
+Organic,2,After,c,Lower,1.9355780067300241,2020,Mow
+Organic,2,After,c,Middle,5.495117441418018,2020,Mow
+Organic,2,After,c,Upper,7.206181367166052,2020,Mow
+Organic,2,After,d,Lower,3.806795769775507,2020,Control
+Organic,2,After,d,Middle,3.7434810916542465,2020,Control
+Organic,2,After,d,Upper,3.4099310945367822,2020,Control
+Organic,3,After,a,Lower,7.875226163715116,2020,Regular Graze
+Organic,3,After,a,Middle,6.987534877562957,2020,Regular Graze
+Organic,3,After,a,Upper,4.860436989652809,2020,Regular Graze
+Organic,3,After,b,Lower,10.942658449910594,2020,Control
+Organic,3,After,b,Middle,5.738073265767586,2020,Control
+Organic,3,After,b,Upper,15.16175468384075,2020,Control
+Organic,3,After,c,Lower,2.111978693864475,2020,High Graze
+Organic,3,After,c,Middle,4.463429449648712,2020,High Graze
+Organic,3,After,c,Upper,7.843431500444901,2020,High Graze
+Organic,3,After,d,Lower,6.3289975657068975,2020,Mow
+Organic,3,After,d,Middle,8.675722207424267,2020,Mow
+Organic,3,After,d,Upper,7.201039569552297,2020,Mow
+Organic,4,After,a,Lower,4.115771315162091,2020,Regular Graze
+Organic,4,After,a,Middle,1.9550810443285929,2020,Regular Graze
+Organic,4,After,a,Upper,2.4902066964535496,2020,Regular Graze
+Organic,4,After,b,Lower,1.0572420961554667,2020,High Graze
+Organic,4,After,b,Middle,1.5922747052864255,2020,High Graze
+Organic,4,After,b,Upper,1.960486798368211,2020,High Graze
+Organic,4,After,c,Lower,2.2988694345903204,2020,Control
+Organic,4,After,c,Middle,2.906178213746193,2020,Control
+Organic,4,After,c,Upper,2.2161338931224397,2020,Control
+Organic,4,After,d,Lower,2.815574641659633,2020,Mow
+Organic,4,After,d,Middle,4.665501306723689,2020,Mow
+Organic,4,After,d,Upper,2.2685926969757726,2020,Mow
+Litter,1,Before,a,Lower,60.80732005405208,2020,High Graze
+Litter,1,Before,a,Middle,20.000050347462516,2020,High Graze
+Litter,1,Before,a,Upper,6.453302948577399,2020,High Graze
+Litter,1,Before,b,Lower,56.819455674304976,2020,Control
+Litter,1,Before,b,Middle,7.674090692712041,2020,Control
+Litter,1,Before,b,Upper,14.922405022742721,2020,Control
+Litter,1,Before,c,Lower,49.50061339277925,2020,Regular Graze
+Litter,1,Before,c,Middle,17.822034208787777,2020,Regular Graze
+Litter,1,Before,c,Upper,18.24871274417312,2020,Regular Graze
+Litter,1,Before,d,Lower,54.582639063990335,2020,Mow
+Litter,1,Before,d,Middle,14.847418062829442,2020,Mow
+Litter,1,Before,d,Upper,31.873341903835993,2020,Mow
+Litter,2,Before,a,Lower,61.805747150028196,2020,Regular Graze
+Litter,2,Before,a,Middle,69.03600779869639,2020,Regular Graze
+Litter,2,Before,a,Upper,6.535389972385134,2020,Regular Graze
+Litter,2,Before,b,Lower,43.92548212407881,2020,High Graze
+Litter,2,Before,b,Middle,40.69700100148863,2020,High Graze
+Litter,2,Before,b,Upper,3.175336931411608,2020,High Graze
+Litter,2,Before,c,Lower,80.40178997576955,2020,Mow
+Litter,2,Before,c,Middle,68.19532680708426,2020,Mow
+Litter,2,Before,c,Upper,38.98855628783184,2020,Mow
+Litter,2,Before,d,Lower,29.214461378723517,2020,Control
+Litter,2,Before,d,Middle,6.237103056736436,2020,Control
+Litter,2,Before,d,Upper,24.75081049414274,2020,Control
+Litter,3,Before,a,Lower,48.900126054928506,2020,Regular Graze
+Litter,3,Before,a,Middle,68.99117092294605,2020,Regular Graze
+Litter,3,Before,a,Upper,7.411942197638275,2020,Regular Graze
+Litter,3,Before,b,Lower,43.60659081549545,2020,Control
+Litter,3,Before,b,Middle,48.33455187478906,2020,Control
+Litter,3,Before,b,Upper,29.742473602108397,2020,Control
+Litter,3,Before,c,Lower,43.31721706548157,2020,High Graze
+Litter,3,Before,c,Middle,65.54315559936379,2020,High Graze
+Litter,3,Before,c,Upper,60.06053504168896,2020,High Graze
+Litter,3,Before,d,Lower,67.08707586692239,2020,Mow
+Litter,3,Before,d,Middle,45.61135090766764,2020,Mow
+Litter,3,Before,d,Upper,23.657961798852345,2020,Mow
+Litter,4,Before,a,Lower,97.13045865153188,2020,Regular Graze
+Litter,4,Before,a,Middle,74.97232391241563,2020,Regular Graze
+Litter,4,Before,a,Upper,37.66469919888882,2020,Regular Graze
+Litter,4,Before,b,Lower,146.68635691431047,2020,High Graze
+Litter,4,Before,b,Middle,72.15515587878224,2020,High Graze
+Litter,4,Before,b,Upper,64.23014985706328,2020,High Graze
+Litter,4,Before,c,Lower,72.73386154687572,2020,Control
+Litter,4,Before,c,Middle,62.464788604312496,2020,Control
+Litter,4,Before,c,Upper,24.917819159152792,2020,Control
+Litter,4,Before,d,Lower,65.45604360763818,2020,Mow
+Litter,4,Before,d,Middle,4.308810965844088,2020,Mow
+Litter,4,Before,d,Upper,4.387078086638579,2020,Mow
+Soil,1,Before,a,Lower,0.7283766802562289,2019,High Graze
+Soil,1,Before,a,Middle,1.035129939829292,2019,High Graze
+Soil,1,Before,a,Upper,1.9107335414157054,2019,High Graze
+Soil,1,Before,b,Lower,1.480430419480951,2019,Control
+Soil,1,Before,b,Middle,1.7055719829499116,2019,Control
+Soil,1,Before,b,Upper,1.299641590728753,2019,Control
+Soil,1,Before,c,Lower,-0.03218359580611292,2019,Regular Graze
+Soil,1,Before,c,Middle,1.4855728237934416,2019,Regular Graze
+Soil,1,Before,c,Upper,0.7072235929779593,2019,Regular Graze
+Soil,1,Before,d,Lower,2.057650421312474,2019,Mow
+Soil,1,Before,d,Middle,1.4758631240186697,2019,Mow
+Soil,1,Before,d,Upper,1.5867436933762609,2019,Mow
+Soil,2,Before,a,Lower,0.7910678074623623,2019,Regular Graze
+Soil,2,Before,a,Middle,1.1449896274479434,2019,Regular Graze
+Soil,2,Before,a,Upper,2.026650628865554,2019,Regular Graze
+Soil,2,Before,b,Lower,0.23947674313477063,2019,High Graze
+Soil,2,Before,b,Middle,1.254176186998769,2019,High Graze
+Soil,2,Before,b,Upper,2.1158551240586,2019,High Graze
+Soil,2,Before,c,Lower,0.7309840694218828,2019,Mow
+Soil,2,Before,c,Middle,1.6425821085796022,2019,Mow
+Soil,2,Before,c,Upper,1.7633832265071814,2019,Mow
+Soil,2,Before,d,Lower,0.29249899980060584,2019,Control
+Soil,2,Before,d,Middle,0.29554889006665,2019,Control
+Soil,2,Before,d,Upper,0.7273902441051578,2019,Control
+Soil,3,Before,a,Lower,1.3078076942716743,2019,Regular Graze
+Soil,3,Before,a,Middle,2.544348493644574,2019,Regular Graze
+Soil,3,Before,a,Upper,3.232572419249088,2019,Regular Graze
+Soil,3,Before,b,Lower,0.5640826275388299,2019,Control
+Soil,3,Before,b,Middle,1.6159524081299537,2019,Control
+Soil,3,Before,b,Upper,1.7360174344372346,2019,Control
+Soil,3,Before,c,Lower,0.8583485146816409,2019,High Graze
+Soil,3,Before,c,Middle,1.9482982707481677,2019,High Graze
+Soil,3,Before,c,Upper,1.360924279455359,2019,High Graze
+Soil,3,Before,d,Lower,0.9419852463077056,2019,Mow
+Soil,3,Before,d,Middle,1.0598558381637306,2019,Mow
+Soil,3,Before,d,Upper,1.0970075520623621,2019,Mow
+Soil,4,Before,a,Lower,1.2952386630917445,2019,Regular Graze
+Soil,4,Before,a,Middle,1.6807816925000583,2019,Regular Graze
+Soil,4,Before,a,Upper,0.27354570983190857,2019,Regular Graze
+Soil,4,Before,b,Lower,0.6737303080646133,2019,High Graze
+Soil,4,Before,b,Middle,1.1638394096495794,2019,High Graze
+Soil,4,Before,b,Upper,0.6245373119260428,2019,High Graze
+Soil,4,Before,c,Lower,0.7733428055883607,2019,Control
+Soil,4,Before,c,Middle,0.7392125955366564,2019,Control
+Soil,4,Before,c,Upper,1.531508835764097,2019,Control
+Soil,4,Before,d,Lower,0.6251037534339877,2019,Mow
+Soil,4,Before,d,Middle,0.5450655968858115,2019,Mow
+Soil,4,Before,d,Upper,1.3890723734571175,2019,Mow
+Soil,1,After,a,Lower,0.7378405071922728,2019,High Graze
+Soil,1,After,a,Middle,0.2922118137428734,2019,High Graze
+Soil,1,After,a,Upper,1.4716368685983812,2019,High Graze
+Soil,1,After,b,Lower,1.0345516583728611,2019,Control
+Soil,1,After,b,Middle,0.9883390108148681,2019,Control
+Soil,1,After,b,Upper,1.7639591234699017,2019,Control
+Soil,1,After,c,Lower,1.4889302839952245,2019,Regular Graze
+Soil,1,After,c,Middle,1.030294244140874,2019,Regular Graze
+Soil,1,After,c,Upper,1.0994363015932787,2019,Regular Graze
+Soil,1,After,d,Lower,0.725386082572695,2019,Mow
+Soil,1,After,d,Middle,0.8782677799212611,2019,Mow
+Soil,1,After,d,Upper,1.5679733318537183,2019,Mow
+Soil,2,After,a,Lower,1.2624785282875508,2019,Regular Graze
+Soil,2,After,a,Middle,1.2188781206477863,2019,Regular Graze
+Soil,2,After,a,Upper,1.4716368685983812,2019,Regular Graze
+Soil,2,After,b,Lower,1.079144402268243,2019,High Graze
+Soil,2,After,b,Middle,1.360924279455359,2019,High Graze
+Soil,2,After,b,Upper,1.5327453853696866,2019,High Graze
+Soil,2,After,c,Lower,1.4961143898393399,2019,Mow
+Soil,2,After,c,Middle,1.2463149090667616,2019,Mow
+Soil,2,After,c,Upper,0.8724062456542687,2019,Mow
+Soil,2,After,d,Lower,0.22357053879371575,2019,Control
+Soil,2,After,d,Middle,1.5186494694345352,2019,Control
+Soil,2,After,d,Upper,0.8340268903819544,2019,Control
+Soil,3,After,a,Lower,1.059702757392005,2019,Regular Graze
+Soil,3,After,a,Middle,1.1099770994759073,2019,Regular Graze
+Soil,3,After,a,Upper,0.5654719936165119,2019,Regular Graze
+Soil,3,After,b,Lower,0.228524718578395,2019,Control
+Soil,3,After,b,Middle,0.7539337567564475,2019,Control
+Soil,3,After,b,Upper,0.5955715492337798,2019,Control
+Soil,3,After,c,Lower,0.37359475403805376,2019,High Graze
+Soil,3,After,c,Middle,0.45724670649363813,2019,High Graze
+Soil,3,After,c,Upper,0.7440553547025492,2019,High Graze
+Soil,3,After,d,Lower,0.1277286119795839,2019,Mow
+Soil,3,After,d,Middle,0.49873731276541433,2019,Mow
+Soil,3,After,d,Upper,0.8402079197079075,2019,Mow
+Soil,4,After,a,Lower,0.17077425450265565,2019,Regular Graze
+Soil,4,After,a,Middle,0.020721899779428826,2019,Regular Graze
+Soil,4,After,a,Upper,0.2370175687553916,2019,Regular Graze
+Soil,4,After,b,Lower,0.2393584830147041,2019,High Graze
+Soil,4,After,b,Middle,0.07586586651952618,2019,High Graze
+Soil,4,After,b,Upper,0.23506349568611823,2019,High Graze
+Soil,4,After,c,Lower,0.1286636677041782,2019,Control
+Soil,4,After,c,Middle,0.01986130758140308,2019,Control
+Soil,4,After,c,Upper,0.435749447138037,2019,Control
+Soil,4,After,d,Lower,0.22777299253043973,2019,Mow
+Soil,4,After,d,Middle,0.1261396436008905,2019,Mow
+Soil,4,After,d,Upper,0.07311237757230364,2019,Mow
+Organic,1,Before,a,Lower,2.421835284153837,2019,High Graze
+Organic,1,Before,a,Middle,2.487005138765354,2019,High Graze
+Organic,1,Before,a,Upper,4.079348556628597,2019,High Graze
+Organic,1,Before,b,Lower,3.7175381028060777,2019,Control
+Organic,1,Before,b,Middle,3.608786058314508,2019,Control
+Organic,1,Before,b,Upper,2.2968750953244705,2019,Control
+Organic,1,Before,c,Lower,3.4020649669402925,2019,Regular Graze
+Organic,1,Before,c,Middle,1.538795529348873,2019,Regular Graze
+Organic,1,Before,c,Upper,2.0918565945740704,2019,Regular Graze
+Organic,1,Before,d,Lower,4.487933336312899,2019,Mow
+Organic,1,Before,d,Middle,2.931622513803662,2019,Mow
+Organic,1,Before,d,Upper,3.039041828224629,2019,Mow
+Organic,2,Before,a,Lower,4.334765352284568,2019,Regular Graze
+Organic,2,Before,a,Middle,2.8233044074875,2019,Regular Graze
+Organic,2,Before,a,Upper,4.2066209609708505,2019,Regular Graze
+Organic,2,Before,b,Lower,2.6636844704059066,2019,High Graze
+Organic,2,Before,b,Middle,8.460287548418572,2019,High Graze
+Organic,2,Before,b,Upper,3.736460491972003,2019,High Graze
+Organic,2,Before,c,Lower,2.827374524365185,2019,Mow
+Organic,2,Before,c,Middle,6.714296416995804,2019,Mow
+Organic,2,Before,c,Upper,3.352676675347558,2019,Mow
+Organic,2,Before,d,Lower,2.1610003497967947,2019,Control
+Organic,2,Before,d,Middle,3.0050778039053068,2019,Control
+Organic,2,Before,d,Upper,4.115917586153558,2019,Control
+Organic,3,Before,a,Lower,5.581064041206031,2019,Regular Graze
+Organic,3,Before,a,Middle,17.579613497676412,2019,Regular Graze
+Organic,3,Before,a,Upper,11.448711831014794,2019,Regular Graze
+Organic,3,Before,b,Lower,3.3361935058522416,2019,Control
+Organic,3,Before,b,Middle,7.566457466681929,2019,Control
+Organic,3,Before,b,Upper,6.215612136379033,2019,Control
+Organic,3,Before,c,Lower,4.076848600997852,2019,High Graze
+Organic,3,Before,c,Middle,9.41995850106579,2019,High Graze
+Organic,3,Before,c,Upper,9.014454719803663,2019,High Graze
+Organic,3,Before,d,Lower,3.203879882390679,2019,Mow
+Organic,3,Before,d,Middle,3.934141560070863,2019,Mow
+Organic,3,Before,d,Upper,9.693027517364548,2019,Mow
+Organic,4,Before,a,Lower,3.9192606463684676,2019,Regular Graze
+Organic,4,Before,a,Middle,5.846408397969211,2019,Regular Graze
+Organic,4,Before,a,Upper,2.03373079451891,2019,Regular Graze
+Organic,4,Before,b,Lower,2.325400618117869,2019,High Graze
+Organic,4,Before,b,Middle,2.4480172872257695,2019,High Graze
+Organic,4,Before,b,Upper,2.467417127045291,2019,High Graze
+Organic,4,Before,c,Lower,3.6176224590449557,2019,Control
+Organic,4,Before,c,Middle,2.817895778354382,2019,Control
+Organic,4,Before,c,Upper,3.4004324981461758,2019,Control
+Organic,4,Before,d,Lower,3.0271415175903678,2019,Mow
+Organic,4,Before,d,Middle,4.241935803606162,2019,Mow
+Organic,4,Before,d,Upper,4.21074509916788,2019,Mow
+Organic,1,After,a,Lower,2.630676750367337,2019,High Graze
+Organic,1,After,a,Middle,2.405463630856804,2019,High Graze
+Organic,1,After,a,Upper,5.622609210712356,2019,High Graze
+Organic,1,After,b,Lower,1.9746679447264928,2019,Control
+Organic,1,After,b,Middle,6.7561851584153665,2019,Control
+Organic,1,After,b,Upper,3.175873582600534,2019,Control
+Organic,1,After,c,Lower,3.070729950564609,2019,Regular Graze
+Organic,1,After,c,Middle,4.479184928249911,2019,Regular Graze
+Organic,1,After,c,Upper,3.196221712996693,2019,Regular Graze
+Organic,1,After,d,Lower,3.3145469252276105,2019,Mow
+Organic,1,After,d,Middle,2.1243199364879257,2019,Mow
+Organic,1,After,d,Upper,3.6140827110419758,2019,Mow
+Organic,2,After,a,Lower,1.8443046552326803,2019,Regular Graze
+Organic,2,After,a,Middle,1.7503382300008163,2019,Regular Graze
+Organic,2,After,a,Upper,2.501135849781066,2019,Regular Graze
+Organic,2,After,b,Lower,2.1853554828530677,2019,High Graze
+Organic,2,After,b,Middle,1.9436226649856756,2019,High Graze
+Organic,2,After,b,Upper,2.295748623968254,2019,High Graze
+Organic,2,After,c,Lower,2.3699881919621517,2019,Mow
+Organic,2,After,c,Middle,5.379349258399137,2019,Mow
+Organic,2,After,c,Upper,2.6675024605689353,2019,Mow
+Organic,2,After,d,Lower,3.339538796482861,2019,Control
+Organic,2,After,d,Middle,4.3305424927109835,2019,Control
+Organic,2,After,d,Upper,1.8698566247262556,2019,Control
+Organic,3,After,a,Lower,2.9284124951244026,2019,Regular Graze
+Organic,3,After,a,Middle,5.044903622966125,2019,Regular Graze
+Organic,3,After,a,Upper,4.1417189302834565,2019,Regular Graze
+Organic,3,After,b,Lower,6.542890835480983,2019,Control
+Organic,3,After,b,Middle,9.846285874209538,2019,Control
+Organic,3,After,b,Upper,5.029819444096441,2019,Control
+Organic,3,After,c,Lower,6.384423531308289,2019,High Graze
+Organic,3,After,c,Middle,3.842973654887762,2019,High Graze
+Organic,3,After,c,Upper,4.585098010959202,2019,High Graze
+Organic,3,After,d,Lower,1.8863775962520652,2019,Mow
+Organic,3,After,d,Middle,1.438464516436127,2019,Mow
+Organic,3,After,d,Upper,2.480563252255361,2019,Mow
+Organic,4,After,a,Lower,3.086360974367263,2019,Regular Graze
+Organic,4,After,a,Middle,2.039118295499042,2019,Regular Graze
+Organic,4,After,a,Upper,2.781112154406367,2019,Regular Graze
+Organic,4,After,b,Lower,2.931768590963152,2019,High Graze
+Organic,4,After,b,Middle,1.7351573896730483,2019,High Graze
+Organic,4,After,b,Upper,1.889112296826516,2019,High Graze
+Organic,4,After,c,Lower,3.08067253820031,2019,Control
+Organic,4,After,c,Middle,2.480933854334882,2019,Control
+Organic,4,After,c,Upper,2.637770355906128,2019,Control
+Organic,4,After,d,Lower,3.236579256211155,2019,Mow
+Organic,4,After,d,Middle,3.2373871084616064,2019,Mow
+Organic,4,After,d,Upper,3.081593562428184,2019,Mow
+Biomass,1,Before,a,Lower,74.05303126354639,2019,High Graze
+Biomass,1,Before,a,Middle,45.40809564115079,2019,High Graze
+Biomass,1,Before,a,Upper,57.22225586860805,2019,High Graze
+Biomass,1,Before,b,Lower,55.39873935477782,2019,Control
+Biomass,1,Before,b,Middle,57.331120440417315,2019,Control
+Biomass,1,Before,b,Upper,87.4560106818894,2019,Control
+Biomass,1,Before,c,Lower,68.1466322305189,2019,Regular Graze
+Biomass,1,Before,c,Middle,34.565915618744825,2019,Regular Graze
+Biomass,1,Before,c,Upper,76.3878806627741,2019,Regular Graze
+Biomass,1,Before,d,Lower,64.07015422760753,2019,Mow
+Biomass,1,Before,d,Middle,57.0967809728531,2019,Mow
+Biomass,1,Before,d,Upper,66.1600030317675,2019,Mow
+Biomass,2,Before,a,Lower,106.88429130296483,2019,Regular Graze
+Biomass,2,Before,a,Middle,91.32877240660726,2019,Regular Graze
+Biomass,2,Before,a,Upper,85.75903419177835,2019,Regular Graze
+Biomass,2,Before,b,Lower,79.60117488226656,2019,High Graze
+Biomass,2,Before,b,Middle,105.32038909771393,2019,High Graze
+Biomass,2,Before,b,Upper,75.57376279444043,2019,High Graze
+Biomass,2,Before,c,Lower,84.64015647265987,2019,Mow
+Biomass,2,Before,c,Middle,110.60064660930333,2019,Mow
+Biomass,2,Before,c,Upper,90.79927683316743,2019,Mow
+Biomass,2,Before,d,Lower,63.14195797959132,2019,Control
+Biomass,2,Before,d,Middle,71.59244420195643,2019,Control
+Biomass,2,Before,d,Upper,53.47774338434073,2019,Control
+Biomass,3,Before,a,Lower,81.26554341895509,2019,Regular Graze
+Biomass,3,Before,a,Middle,101.20920680690003,2019,Regular Graze
+Biomass,3,Before,a,Upper,92.71539520765457,2019,Regular Graze
+Biomass,3,Before,b,Lower,146.9015714218618,2019,Control
+Biomass,3,Before,b,Middle,104.80283652580151,2019,Control
+Biomass,3,Before,b,Upper,114.98010062590961,2019,Control
+Biomass,3,Before,c,Lower,104.06176671341237,2019,High Graze
+Biomass,3,Before,c,Middle,NA,2019,High Graze
+Biomass,3,Before,c,Upper,146.09976233063685,2019,High Graze
+Biomass,3,Before,d,Lower,81.4212329327997,2019,Mow
+Biomass,3,Before,d,Middle,86.93794106720598,2019,Mow
+Biomass,3,Before,d,Upper,101.68866337377966,2019,Mow
+Biomass,4,Before,a,Lower,136.03853197085704,2019,Regular Graze
+Biomass,4,Before,a,Middle,104.5029817854268,2019,Regular Graze
+Biomass,4,Before,a,Upper,86.0906393023844,2019,Regular Graze
+Biomass,4,Before,b,Lower,126.7531188373886,2019,High Graze
+Biomass,4,Before,b,Middle,100.38779376864053,2019,High Graze
+Biomass,4,Before,b,Upper,82.90677709876655,2019,High Graze
+Biomass,4,Before,c,Lower,107.09061387598486,2019,Control
+Biomass,4,Before,c,Middle,84.70649769242361,2019,Control
+Biomass,4,Before,c,Upper,53.796254166870625,2019,Control
+Biomass,4,Before,d,Lower,108.72043195177304,2019,Mow
+Biomass,4,Before,d,Middle,59.16201948063104,2019,Mow
+Biomass,4,Before,d,Upper,NA,2019,Mow
+Biomass,1,After,a,Lower,50.47875589011993,2019,High Graze
+Biomass,1,After,a,Middle,66.19437922893083,2019,High Graze
+Biomass,1,After,a,Upper,55.14509042728344,2019,High Graze
+Biomass,1,After,b,Lower,61.98873754697709,2019,Control
+Biomass,1,After,b,Middle,53.35107096865482,2019,Control
+Biomass,1,After,b,Upper,58.78006227515158,2019,Control
+Biomass,1,After,c,Lower,71.3594863778788,2019,Regular Graze
+Biomass,1,After,c,Middle,61.83893055438211,2019,Regular Graze
+Biomass,1,After,c,Upper,53.318521622057965,2019,Regular Graze
+Biomass,1,After,d,Lower,64.79749184777891,2019,Mow
+Biomass,1,After,d,Middle,60.025206913369296,2019,Mow
+Biomass,1,After,d,Upper,49.78782469169983,2019,Mow
+Biomass,2,After,a,Lower,83.11812316534112,2019,Regular Graze
+Biomass,2,After,a,Middle,108.27712954031419,2019,Regular Graze
+Biomass,2,After,a,Upper,72.11677605257582,2019,Regular Graze
+Biomass,2,After,b,Lower,85.82689998781186,2019,High Graze
+Biomass,2,After,b,Middle,95.98009250572159,2019,High Graze
+Biomass,2,After,b,Upper,108.50440747477938,2019,High Graze
+Biomass,2,After,c,Lower,62.617151364486226,2019,Mow
+Biomass,2,After,c,Middle,82.99860476268945,2019,Mow
+Biomass,2,After,c,Upper,97.41687210836122,2019,Mow
+Biomass,2,After,d,Lower,69.51792423467158,2019,Control
+Biomass,2,After,d,Middle,67.00229293770664,2019,Control
+Biomass,2,After,d,Upper,67.45509497734221,2019,Control
+Biomass,3,After,a,Lower,96.79261733340806,2019,Regular Graze
+Biomass,3,After,a,Middle,72.6205055337323,2019,Regular Graze
+Biomass,3,After,a,Upper,68.17201298644815,2019,Regular Graze
+Biomass,3,After,b,Lower,120.18252126578619,2019,Control
+Biomass,3,After,b,Middle,97.7955196121068,2019,Control
+Biomass,3,After,b,Upper,170.4161017777264,2019,Control
+Biomass,3,After,c,Lower,126.96474713186329,2019,High Graze
+Biomass,3,After,c,Middle,156.2155728474837,2019,High Graze
+Biomass,3,After,c,Upper,151.4573024977998,2019,High Graze
+Biomass,3,After,d,Lower,75.87108151374063,2019,Mow
+Biomass,3,After,d,Middle,70.38279572651066,2019,Mow
+Biomass,3,After,d,Upper,109.05846070517188,2019,Mow
+Biomass,4,After,a,Lower,120.40847527368386,2019,Regular Graze
+Biomass,4,After,a,Middle,111.65377235667368,2019,Regular Graze
+Biomass,4,After,a,Upper,97.2304681025073,2019,Regular Graze
+Biomass,4,After,b,Lower,168.4365243426566,2019,High Graze
+Biomass,4,After,b,Middle,89.92079795385368,2019,High Graze
+Biomass,4,After,b,Upper,73.80655822486155,2019,High Graze
+Biomass,4,After,c,Lower,115.07976964606678,2019,Control
+Biomass,4,After,c,Middle,81.97648887738752,2019,Control
+Biomass,4,After,c,Upper,57.083973913740536,2019,Control
+Biomass,4,After,d,Lower,117.17777629840482,2019,Mow
+Biomass,4,After,d,Middle,35.950073690120874,2019,Mow
+Biomass,4,After,d,Upper,28.0590597338943,2019,Mow
+Litter,1,Before,a,Lower,59.2847764925553,2019,High Graze
+Litter,1,Before,a,Middle,13.2735445588706,2019,High Graze
+Litter,1,Before,a,Upper,37.72056214620919,2019,High Graze
+Litter,1,Before,b,Lower,14.381769994661399,2019,Control
+Litter,1,Before,b,Middle,31.247917218930525,2019,Control
+Litter,1,Before,b,Upper,29.44188969110504,2019,Control
+Litter,1,Before,c,Lower,9.995954792589878,2019,Regular Graze
+Litter,1,Before,c,Middle,28.14443105018506,2019,Regular Graze
+Litter,1,Before,c,Upper,15.082779286822856,2019,Regular Graze
+Litter,1,Before,d,Lower,7.422502010090957,2019,Mow
+Litter,1,Before,d,Middle,28.982335755708235,2019,Mow
+Litter,1,Before,d,Upper,40.99581140673664,2019,Mow
+Litter,2,Before,a,Lower,73.37354751940207,2019,Regular Graze
+Litter,2,Before,a,Middle,9.984977903030277,2019,Regular Graze
+Litter,2,Before,a,Upper,24.277156844741942,2019,Regular Graze
+Litter,2,Before,b,Lower,10.353324750105891,2019,High Graze
+Litter,2,Before,b,Middle,39.90041490021521,2019,High Graze
+Litter,2,Before,b,Upper,41.50574943798312,2019,High Graze
+Litter,2,Before,c,Lower,60.61345592297945,2019,Mow
+Litter,2,Before,c,Middle,58.71476648016118,2019,Mow
+Litter,2,Before,c,Upper,34.115163411761024,2019,Mow
+Litter,2,Before,d,Lower,45.729736117906604,2019,Control
+Litter,2,Before,d,Middle,53.981481938181375,2019,Control
+Litter,2,Before,d,Upper,39.6694741620699,2019,Control
+Litter,3,Before,a,Lower,41.79290071685208,2019,Regular Graze
+Litter,3,Before,a,Middle,70.86522694239282,2019,Regular Graze
+Litter,3,Before,a,Upper,26.404301458936658,2019,Regular Graze
+Litter,3,Before,b,Lower,52.28031379578007,2019,Control
+Litter,3,Before,b,Middle,65.97966405188069,2019,Control
+Litter,3,Before,b,Upper,60.314811169920326,2019,Control
+Litter,3,Before,c,Lower,59.34387216290274,2019,High Graze
+Litter,3,Before,c,Middle,52.776478075623594,2019,High Graze
+Litter,3,Before,c,Upper,17.27779972177941,2019,High Graze
+Litter,3,Before,d,Lower,12.890764587076907,2019,Mow
+Litter,3,Before,d,Middle,51.746029100185744,2019,Mow
+Litter,3,Before,d,Upper,52.96803044504921,2019,Mow
+Litter,4,Before,a,Lower,16.164933989130958,2019,Regular Graze
+Litter,4,Before,a,Middle,9.558581342956158,2019,Regular Graze
+Litter,4,Before,a,Upper,5.568497169843855,2019,Regular Graze
+Litter,4,Before,b,Lower,64.08086182970939,2019,High Graze
+Litter,4,Before,b,Middle,25.670936418429655,2019,High Graze
+Litter,4,Before,b,Upper,45.61173560787627,2019,High Graze
+Litter,4,Before,c,Lower,9.57377781567946,2019,Control
+Litter,4,Before,c,Middle,9.584253450412621,2019,Control
+Litter,4,Before,c,Upper,18.721490431853766,2019,Control
+Litter,4,Before,d,Lower,51.46343237687026,2019,Mow
+Litter,4,Before,d,Middle,47.20883365076509,2019,Mow
+Litter,4,Before,d,Upper,11.076076896211383,2019,Mow
+Litter,1,After,a,Lower,4.835820654752766,2019,High Graze
+Litter,1,After,a,Middle,25.235205540835594,2019,High Graze
+Litter,1,After,a,Upper,0.0010795174585993223,2019,High Graze
+Litter,1,After,b,Lower,47.04959750551449,2019,Control
+Litter,1,After,b,Middle,42.89875942204724,2019,Control
+Litter,1,After,b,Upper,27.854821883505007,2019,Control
+Litter,1,After,c,Lower,43.48734900407714,2019,Regular Graze
+Litter,1,After,c,Middle,22.45417882666982,2019,Regular Graze
+Litter,1,After,c,Upper,13.590790419645709,2019,Regular Graze
+Litter,1,After,d,Lower,27.024760799890444,2019,Mow
+Litter,1,After,d,Middle,17.55244069443243,2019,Mow
+Litter,1,After,d,Upper,10.304963960674865,2019,Mow
+Litter,2,After,a,Lower,1.5582115379347907,2019,Regular Graze
+Litter,2,After,a,Middle,4.8469009371854535,2019,Regular Graze
+Litter,2,After,a,Upper,62.71045342398544,2019,Regular Graze
+Litter,2,After,b,Lower,60.96201624946463,2019,High Graze
+Litter,2,After,b,Middle,46.11875256840449,2019,High Graze
+Litter,2,After,b,Upper,34.68856862221254,2019,High Graze
+Litter,2,After,c,Lower,63.521233752927635,2019,Mow
+Litter,2,After,c,Middle,69.7443788923138,2019,Mow
+Litter,2,After,c,Upper,46.54854878983186,2019,Mow
+Litter,2,After,d,Lower,42.35846018628591,2019,Control
+Litter,2,After,d,Middle,17.546293883782795,2019,Control
+Litter,2,After,d,Upper,19.6506594568584,2019,Control
+Litter,3,After,a,Lower,25.194876218805685,2019,Regular Graze
+Litter,3,After,a,Middle,67.02346518368401,2019,Regular Graze
+Litter,3,After,a,Upper,20.099920108408462,2019,Regular Graze
+Litter,3,After,b,Lower,73.07269423774513,2019,Control
+Litter,3,After,b,Middle,41.480675804958274,2019,Control
+Litter,3,After,b,Upper,39.443347607636966,2019,Control
+Litter,3,After,c,Lower,49.38463870834484,2019,High Graze
+Litter,3,After,c,Middle,72.04127814832844,2019,High Graze
+Litter,3,After,c,Upper,13.600962461310761,2019,High Graze
+Litter,3,After,d,Lower,16.80852476425051,2019,Mow
+Litter,3,After,d,Middle,54.66287974558919,2019,Mow
+Litter,3,After,d,Upper,15.06922590664038,2019,Mow
+Litter,4,After,a,Lower,75.85344187369708,2019,Regular Graze
+Litter,4,After,a,Middle,59.92336547138839,2019,Regular Graze
+Litter,4,After,a,Upper,66.2134449767775,2019,Regular Graze
+Litter,4,After,b,Lower,60.53787880146088,2019,High Graze
+Litter,4,After,b,Middle,63.1030186124624,2019,High Graze
+Litter,4,After,b,Upper,42.85482146356736,2019,High Graze
+Litter,4,After,c,Lower,27.53099450075811,2019,Control
+Litter,4,After,c,Middle,8.917945674986502,2019,Control
+Litter,4,After,c,Upper,22.58224067500354,2019,Control
+Litter,4,After,d,Lower,65.06930284732795,2019,Mow
+Litter,4,After,d,Middle,62.41779218767053,2019,Mow
+Litter,4,After,d,Upper,19.045257144665584,2019,Mow
+Soil,1,After,a,Lower,0.9943664990547209,2020,High Graze
+Soil,1,After,a,Middle,1.0548377618860143,2020,High Graze
+Soil,1,After,a,Upper,1.6174459320704948,2020,High Graze
+Soil,1,After,b,Lower,1.0516870886436103,2020,Control
+Soil,1,After,b,Middle,1.0790637009149755,2020,Control
+Soil,1,After,b,Upper,1.0085409768788205,2020,Control
+Soil,1,After,c,Lower,1.0981289237872038,2020,Regular Graze
+Soil,1,After,c,Middle,1.502932883179635,2020,Regular Graze
+Soil,1,After,c,Upper,1.537850975334825,2020,Regular Graze
+Soil,1,After,d,Lower,1.1274621740742223,2020,Mow
+Soil,1,After,d,Middle,1.2397494573240353,2020,Mow
+Soil,1,After,d,Upper,1.6076665585787135,2020,Mow
+Soil,2,After,a,Lower,1.1281856602862925,2020,Regular Graze
+Soil,2,After,a,Middle,1.4285122556820635,2020,Regular Graze
+Soil,2,After,a,Upper,1.0723933118936273,2020,Regular Graze
+Soil,2,After,b,Lower,1.1184453507453158,2020,High Graze
+Soil,2,After,b,Middle,1.2518623000922233,2020,High Graze
+Soil,2,After,b,Upper,1.6135875209729982,2020,High Graze
+Soil,2,After,c,Lower,1.1585664861774574,2020,Mow
+Soil,2,After,c,Middle,1.175901645571634,2020,Mow
+Soil,2,After,c,Upper,1.0770024522026258,2020,Mow
+Soil,2,After,d,Lower,0.7786450631985431,2020,Control
+Soil,2,After,d,Middle,1.1164569974813359,2020,Control
+Soil,2,After,d,Upper,1.4494526072270746,2020,Control
+Soil,3,After,a,Lower,1.684970555327966,2020,Regular Graze
+Soil,3,After,a,Middle,1.057806348457926,2020,Regular Graze
+Soil,3,After,a,Upper,1.3863436502444466,2020,Regular Graze
+Soil,3,After,b,Lower,1.2523504665167333,2020,Control
+Soil,3,After,b,Middle,1.9454945871719023,2020,Control
+Soil,3,After,b,Upper,1.7393752760526224,2020,Control
+Soil,3,After,c,Lower,1.3824090181431914,2020,High Graze
+Soil,3,After,c,Middle,1.306373427817455,2020,High Graze
+Soil,3,After,c,Upper,1.473634499813631,2020,High Graze
+Soil,3,After,d,Lower,0.8958662510082457,2020,Mow
+Soil,3,After,d,Middle,0.7153591525867836,2020,Mow
+Soil,3,After,d,Upper,1.2905577688850405,2020,Mow
+Soil,4,After,a,Lower,1.2874404795882168,2020,Regular Graze
+Soil,4,After,a,Middle,0.8943637013479405,2020,Regular Graze
+Soil,4,After,a,Upper,1.0646901436466225,2020,Regular Graze
+Soil,4,After,b,Lower,0.9455942434639875,2020,High Graze
+Soil,4,After,b,Middle,1.198890089585747,2020,High Graze
+Soil,4,After,b,Upper,1.9874278621145551,2020,High Graze
+Soil,4,After,c,Lower,1.7165118760680955,2020,Control
+Soil,4,After,c,Middle,1.1953947832021152,2020,Control
+Soil,4,After,c,Upper,1.3679888567505867,2020,Control
+Soil,4,After,d,Lower,1.9336036575241033,2020,Mow
+Soil,4,After,d,Middle,1.4547619574366977,2020,Mow
+Soil,4,After,d,Upper,1.3134557874556967,2020,Mow

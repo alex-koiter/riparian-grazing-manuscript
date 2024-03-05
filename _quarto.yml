@@ -8,10 +8,16 @@ format:
   html:
     toc: true
     comments:
-      hypothesis: true
+      hypothesis: false
   docx: default
   jats: default
   agu-pdf: default
+  
+crossref:
+  custom:
+    - kind: float
+      reference-prefix: "Figure S"
+      key: supp
 
 
 

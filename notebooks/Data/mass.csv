@@ -1,0 +1,577 @@
+sample_type,site,timing,plot,location,dryweight,year,treatment
+Biomass,1,Before,a,Upper,82.83,2019,High Graze
+Biomass,1,Before,a,Middle,65.94,2019,High Graze
+Biomass,1,Before,a,Lower,98.18,2019,High Graze
+Biomass,1,Before,b,Upper,47.089999999999996,2019,Control
+Biomass,1,Before,b,Middle,66.59,2019,Control
+Biomass,1,Before,b,Lower,105.68,2019,Control
+Biomass,1,Before,c,Upper,60.86000000000001,2019,Regular Graze
+Biomass,1,Before,c,Middle,70.17,2019,Regular Graze
+Biomass,1,Before,c,Lower,102.89,2019,Regular Graze
+Biomass,1,Before,d,Upper,45.48,2019,Mow
+Biomass,1,Before,d,Middle,72.6,2019,Mow
+Biomass,1,Before,d,Lower,111.82000000000001,2019,Mow
+Biomass,2,Before,a,Upper,48.959999999999994,2019,Regular Graze
+Biomass,2,Before,a,Middle,81.17,2019,Regular Graze
+Biomass,2,Before,a,Lower,124.6,2019,Regular Graze
+Biomass,2,Before,b,Upper,57.07,2019,High Graze
+Biomass,2,Before,b,Middle,41.760000000000005,2019,High Graze
+Biomass,2,Before,b,Lower,85.39,2019,High Graze
+Biomass,2,Before,c,Upper,49.49,2019,Mow
+Biomass,2,Before,c,Middle,90.77000000000001,2019,Mow
+Biomass,2,Before,c,Lower,98.56,2019,Mow
+Biomass,2,Before,d,Upper,110.35,2019,Control
+Biomass,2,Before,d,Middle,62.5,2019,Control
+Biomass,2,Before,d,Lower,102.87,2019,Control
+Biomass,3,Before,a,Upper,51.559999999999995,2019,Regular Graze
+Biomass,3,Before,a,Middle,63.510000000000005,2019,Regular Graze
+Biomass,3,Before,a,Lower,79.82,2019,Regular Graze
+Biomass,3,Before,b,Upper,58.05,2019,Control
+Biomass,3,Before,b,Middle,45.730000000000004,2019,Control
+Biomass,3,Before,b,Lower,65.6,2019,Control
+Biomass,3,Before,c,Upper,43.34,2019,High Graze
+Biomass,3,Before,c,Middle,49.76,2019,High Graze
+Biomass,3,Before,c,Lower,81.64999999999999,2019,High Graze
+Biomass,3,Before,d,Upper,33.54,2019,Mow
+Biomass,3,Before,d,Middle,83.19999999999999,2019,Mow
+Biomass,3,Before,d,Lower,78.02,2019,Mow
+Biomass,4,Before,a,Upper,92.16,2019,Regular Graze
+Biomass,4,Before,a,Middle,79,2019,Regular Graze
+Biomass,4,Before,a,Lower,80.75,2019,Regular Graze
+Biomass,4,Before,b,Upper,83.41,2019,High Graze
+Biomass,4,Before,b,Middle,80.83,2019,High Graze
+Biomass,4,Before,b,Lower,122.89,2019,High Graze
+Biomass,4,Before,c,Upper,86.93,2019,Control
+Biomass,4,Before,c,Middle,59.11,2019,Control
+Biomass,4,Before,c,Lower,136.79,2019,Control
+Biomass,4,Before,d,Upper,68.31,2019,Mow
+Biomass,4,Before,d,Middle,94.78,2019,Mow
+Biomass,4,Before,d,Lower,83.21,2019,Mow
+Biomass,1,After,a,Upper,8.64,2019,High Graze
+Biomass,1,After,a,Middle,25.480000000000004,2019,High Graze
+Biomass,1,After,a,Lower,87.41999999999999,2019,High Graze
+Biomass,1,After,b,Upper,37.04,2019,Control
+Biomass,1,After,b,Middle,83.24,2019,Control
+Biomass,1,After,b,Lower,81.57,2019,Control
+Biomass,1,After,c,Upper,51.53,2019,Regular Graze
+Biomass,1,After,c,Middle,74.36000000000001,2019,Regular Graze
+Biomass,1,After,c,Lower,60.55,2019,Regular Graze
+Biomass,1,After,d,Upper,32.129999999999995,2019,Mow
+Biomass,1,After,d,Middle,47.97,2019,Mow
+Biomass,1,After,d,Lower,35.69,2019,Mow
+Biomass,2,After,a,Upper,37.019999999999996,2019,Regular Graze
+Biomass,2,After,a,Middle,46.64,2019,Regular Graze
+Biomass,2,After,a,Lower,69.22,2019,Regular Graze
+Biomass,2,After,b,Upper,33.91,2019,High Graze
+Biomass,2,After,b,Middle,12.040000000000001,2019,High Graze
+Biomass,2,After,b,Lower,68.25,2019,High Graze
+Biomass,2,After,c,Upper,34.8,2019,Mow
+Biomass,2,After,c,Middle,49.03,2019,Mow
+Biomass,2,After,c,Lower,33.93000000000001,2019,Mow
+Biomass,2,After,d,Upper,31.310000000000002,2019,Control
+Biomass,2,After,d,Middle,36.69,2019,Control
+Biomass,2,After,d,Lower,91.9,2019,Control
+Biomass,3,After,a,Upper,83.21,2019,Regular Graze
+Biomass,3,After,a,Middle,61.06,2019,Regular Graze
+Biomass,3,After,a,Lower,29.509999999999998,2019,Regular Graze
+Biomass,3,After,b,Upper,55.88,2019,Control
+Biomass,3,After,b,Middle,71.82000000000001,2019,Control
+Biomass,3,After,b,Lower,33.269999999999996,2019,Control
+Biomass,3,After,c,Upper,17.000000000000004,2019,High Graze
+Biomass,3,After,c,Middle,45.64,2019,High Graze
+Biomass,3,After,c,Lower,46.760000000000005,2019,High Graze
+Biomass,3,After,d,Upper,38.83,2019,Mow
+Biomass,3,After,d,Middle,28.250000000000004,2019,Mow
+Biomass,3,After,d,Lower,101.39999999999999,2019,Mow
+Biomass,4,After,a,Upper,70.31,2019,Regular Graze
+Biomass,4,After,a,Middle,35.93000000000001,2019,Regular Graze
+Biomass,4,After,a,Lower,85.99000000000001,2019,Regular Graze
+Biomass,4,After,b,Upper,37.7,2019,High Graze
+Biomass,4,After,b,Middle,17.299999999999997,2019,High Graze
+Biomass,4,After,b,Lower,30.440000000000005,2019,High Graze
+Biomass,4,After,c,Upper,42.76,2019,Control
+Biomass,4,After,c,Middle,50.53,2019,Control
+Biomass,4,After,c,Lower,84.88,2019,Control
+Biomass,4,After,d,Upper,41.540000000000006,2019,Mow
+Biomass,4,After,d,Middle,46.870000000000005,2019,Mow
+Biomass,4,After,d,Lower,35.599999999999994,2019,Mow
+Litter,1,Before,a,Upper,65.1,2019,High Graze
+Litter,1,Before,a,Middle,216.88,2019,High Graze
+Litter,1,Before,a,Lower,188.83,2019,High Graze
+Litter,1,Before,b,Upper,78.14,2019,Control
+Litter,1,Before,b,Middle,225.32999999999998,2019,Control
+Litter,1,Before,b,Lower,182.12,2019,Control
+Litter,1,Before,c,Upper,87.64,2019,Regular Graze
+Litter,1,Before,c,Middle,188.71,2019,Regular Graze
+Litter,1,Before,c,Lower,197.85000000000002,2019,Regular Graze
+Litter,1,Before,d,Upper,70.69,2019,Mow
+Litter,1,Before,d,Middle,108.07,2019,Mow
+Litter,1,Before,d,Lower,219.31,2019,Mow
+Litter,2,Before,a,Upper,200.93,2019,Regular Graze
+Litter,2,Before,a,Middle,165.33,2019,Regular Graze
+Litter,2,Before,a,Lower,143.78,2019,Regular Graze
+Litter,2,Before,b,Upper,223.93,2019,High Graze
+Litter,2,Before,b,Middle,138.36,2019,High Graze
+Litter,2,Before,b,Lower,293,2019,High Graze
+Litter,2,Before,c,Upper,86.29,2019,Mow
+Litter,2,Before,c,Middle,175.60999999999999,2019,Mow
+Litter,2,Before,c,Lower,276.89,2019,Mow
+Litter,2,Before,d,Upper,74.78,2019,Control
+Litter,2,Before,d,Middle,123.98999999999998,2019,Control
+Litter,2,Before,d,Lower,221.85000000000002,2019,Control
+Litter,3,Before,a,Upper,80.06,2019,Regular Graze
+Litter,3,Before,a,Middle,46.16,2019,Regular Graze
+Litter,3,Before,a,Lower,290.41,2019,Regular Graze
+Litter,3,Before,b,Upper,115.93999999999998,2019,Control
+Litter,3,Before,b,Middle,203.76000000000002,2019,Control
+Litter,3,Before,b,Lower,333.74,2019,Control
+Litter,3,Before,c,Upper,69.71000000000001,2019,High Graze
+Litter,3,Before,c,Middle,115.68,2019,High Graze
+Litter,3,Before,c,Lower,324.47,2019,High Graze
+Litter,3,Before,d,Upper,77.71000000000001,2019,Mow
+Litter,3,Before,d,Middle,219.04999999999998,2019,Mow
+Litter,3,Before,d,Lower,201.81,2019,Mow
+Litter,4,Before,a,Upper,46.690000000000005,2019,Regular Graze
+Litter,4,Before,a,Middle,231.11,2019,Regular Graze
+Litter,4,Before,a,Lower,269.61,2019,Regular Graze
+Litter,4,Before,b,Upper,33.76,2019,High Graze
+Litter,4,Before,b,Middle,70.53,2019,High Graze
+Litter,4,Before,b,Lower,128.41,2019,High Graze
+Litter,4,Before,c,Upper,81.98,2019,Control
+Litter,4,Before,c,Middle,77.25999999999999,2019,Control
+Litter,4,Before,c,Lower,167.68,2019,Control
+Litter,4,Before,d,Upper,84.3,2019,Mow
+Litter,4,Before,d,Middle,101.31,2019,Mow
+Litter,4,Before,d,Lower,163.98,2019,Mow
+Litter,1,After,a,Upper,43.61,2019,High Graze
+Litter,1,After,a,Middle,128.04000000000002,2019,High Graze
+Litter,1,After,a,Lower,219.82,2019,High Graze
+Litter,1,After,b,Upper,100.99,2019,Control
+Litter,1,After,b,Middle,110.65,2019,Control
+Litter,1,After,b,Lower,120.23,2019,Control
+Litter,1,After,c,Upper,48.56,2019,Regular Graze
+Litter,1,After,c,Middle,121.54,2019,Regular Graze
+Litter,1,After,c,Lower,206.70999999999998,2019,Regular Graze
+Litter,1,After,d,Upper,29.32,2019,Mow
+Litter,1,After,d,Middle,83.41,2019,Mow
+Litter,1,After,d,Lower,210.69,2019,Mow
+Litter,2,After,a,Upper,84.99000000000001,2019,Regular Graze
+Litter,2,After,a,Middle,108.02,2019,Regular Graze
+Litter,2,After,a,Lower,194.12,2019,Regular Graze
+Litter,2,After,b,Upper,173.46,2019,High Graze
+Litter,2,After,b,Middle,144.45,2019,High Graze
+Litter,2,After,b,Lower,163.19,2019,High Graze
+Litter,2,After,c,Upper,61.53,2019,Mow
+Litter,2,After,c,Middle,141.77,2019,Mow
+Litter,2,After,c,Lower,285.33000000000004,2019,Mow
+Litter,2,After,d,Upper,96.28,2019,Control
+Litter,2,After,d,Middle,54.28,2019,Control
+Litter,2,After,d,Lower,151.94,2019,Control
+Litter,3,After,a,Upper,76.72999999999999,2019,Regular Graze
+Litter,3,After,a,Middle,42.06999999999999,2019,Regular Graze
+Litter,3,After,a,Lower,311.32,2019,Regular Graze
+Litter,3,After,b,Upper,123.09,2019,Control
+Litter,3,After,b,Middle,259.40999999999997,2019,Control
+Litter,3,After,b,Lower,288.03999999999996,2019,Control
+Litter,3,After,c,Upper,59.099999999999994,2019,High Graze
+Litter,3,After,c,Middle,80.63,2019,High Graze
+Litter,3,After,c,Lower,301.44,2019,High Graze
+Litter,3,After,d,Upper,142.67000000000002,2019,Mow
+Litter,3,After,d,Middle,260.42,2019,Mow
+Litter,3,After,d,Lower,265.59999999999997,2019,Mow
+Litter,4,After,a,Upper,87.48,2019,Regular Graze
+Litter,4,After,a,Middle,234.32,2019,Regular Graze
+Litter,4,After,a,Lower,202.93,2019,Regular Graze
+Litter,4,After,b,Upper,72.24,2019,High Graze
+Litter,4,After,b,Middle,74.99000000000001,2019,High Graze
+Litter,4,After,b,Lower,115.28000000000002,2019,High Graze
+Litter,4,After,c,Upper,62.739999999999995,2019,Control
+Litter,4,After,c,Middle,56.99000000000001,2019,Control
+Litter,4,After,c,Lower,136.1,2019,Control
+Litter,4,After,d,Upper,97.58,2019,Mow
+Litter,4,After,d,Middle,84.66,2019,Mow
+Litter,4,After,d,Lower,166.39,2019,Mow
+Biomass,1,Before,a,Upper,75.28999999999999,2020,High Graze
+Biomass,1,Before,a,Middle,24.299999999999997,2020,High Graze
+Biomass,1,Before,a,Lower,86.28999999999999,2020,High Graze
+Biomass,1,Before,b,Upper,67.1,2020,Control
+Biomass,1,Before,b,Middle,40.89,2020,Control
+Biomass,1,Before,b,Lower,91.61,2020,Control
+Biomass,1,Before,c,Upper,51.66000000000001,2020,Regular Graze
+Biomass,1,Before,c,Middle,84.25,2020,Regular Graze
+Biomass,1,Before,c,Lower,133.62,2020,Regular Graze
+Biomass,1,Before,d,Upper,43.432,2020,Mow
+Biomass,1,Before,d,Middle,42.129999999999995,2020,Mow
+Biomass,1,Before,d,Lower,136.54,2020,Mow
+Biomass,2,Before,a,Upper,63.09,2020,Regular Graze
+Biomass,2,Before,a,Middle,48.650000000000006,2020,Regular Graze
+Biomass,2,Before,a,Lower,191.08,2020,Regular Graze
+Biomass,2,Before,b,Upper,71.71,2020,High Graze
+Biomass,2,Before,b,Middle,89.08999999999999,2020,High Graze
+Biomass,2,Before,b,Lower,104.75999999999999,2020,High Graze
+Biomass,2,Before,c,Upper,82.78999999999999,2020,Mow
+Biomass,2,Before,c,Middle,94.91999999999999,2020,Mow
+Biomass,2,Before,c,Lower,108.88,2020,Mow
+Biomass,2,Before,d,Upper,77.38,2020,Control
+Biomass,2,Before,d,Middle,107.00999999999999,2020,Control
+Biomass,2,Before,d,Lower,129.70999999999998,2020,Control
+Biomass,3,Before,a,Upper,80.59,2020,Regular Graze
+Biomass,3,Before,a,Middle,102.11999999999999,2020,Regular Graze
+Biomass,3,Before,a,Lower,94.48,2020,Regular Graze
+Biomass,3,Before,b,Upper,141.34,2020,Control
+Biomass,3,Before,b,Middle,101.94,2020,Control
+Biomass,3,Before,b,Lower,110.19,2020,Control
+Biomass,3,Before,c,Upper,104.5,2020,High Graze
+Biomass,3,Before,c,Middle,92.28999999999999,2020,High Graze
+Biomass,3,Before,c,Lower,105.99000000000001,2020,High Graze
+Biomass,3,Before,d,Upper,89.69,2020,Mow
+Biomass,3,Before,d,Middle,95.86999999999999,2020,Mow
+Biomass,3,Before,d,Lower,171.19,2020,Mow
+Biomass,4,Before,a,Upper,43.3,2020,Regular Graze
+Biomass,4,Before,a,Middle,94.89999999999999,2020,Regular Graze
+Biomass,4,Before,a,Lower,206.89999999999998,2020,Regular Graze
+Biomass,4,Before,b,Upper,66.73,2020,High Graze
+Biomass,4,Before,b,Middle,78.75,2020,High Graze
+Biomass,4,Before,b,Lower,130.70000000000002,2020,High Graze
+Biomass,4,Before,c,Upper,77.72,2020,Control
+Biomass,4,Before,c,Middle,86.47,2020,Control
+Biomass,4,Before,c,Lower,117.77,2020,Control
+Biomass,4,Before,d,Upper,53.760000000000005,2020,Mow
+Biomass,4,Before,d,Middle,93.8,2020,Mow
+Biomass,4,Before,d,Lower,112.08999999999999,2020,Mow
+Biomass,1,After,a,Upper,32.92999999999999,2020,High Graze
+Biomass,1,After,a,Middle,63.879999999999995,2020,High Graze
+Biomass,1,After,a,Lower,113.44,2020,High Graze
+Biomass,1,After,b,Upper,18.519999999999996,2020,Control
+Biomass,1,After,b,Middle,118.61000000000001,2020,Control
+Biomass,1,After,b,Lower,155.22,2020,Control
+Biomass,1,After,c,Upper,40.83,2020,Regular Graze
+Biomass,1,After,c,Middle,94.88999999999999,2020,Regular Graze
+Biomass,1,After,c,Lower,137.04,2020,Regular Graze
+Biomass,1,After,d,Upper,47.23,2020,Mow
+Biomass,1,After,d,Middle,57.28000000000001,2020,Mow
+Biomass,1,After,d,Lower,74.31,2020,Mow
+Biomass,2,After,a,Upper,67.87,2020,Regular Graze
+Biomass,2,After,a,Middle,75.36,2020,Regular Graze
+Biomass,2,After,a,Lower,121.8,2020,Regular Graze
+Biomass,2,After,b,Upper,27.95,2020,High Graze
+Biomass,2,After,b,Middle,20.759999999999998,2020,High Graze
+Biomass,2,After,b,Lower,111,2020,High Graze
+Biomass,2,After,c,Upper,90.22,2020,Mow
+Biomass,2,After,c,Middle,75.28,2020,Mow
+Biomass,2,After,c,Lower,87.89999999999999,2020,Mow
+Biomass,2,After,d,Upper,70.37,2020,Control
+Biomass,2,After,d,Middle,96.49,2020,Control
+Biomass,2,After,d,Lower,121.95000000000002,2020,Control
+Biomass,3,After,a,Upper,83.21,2020,Regular Graze
+Biomass,3,After,a,Middle,61.06,2020,Regular Graze
+Biomass,3,After,a,Lower,29.509999999999998,2020,Regular Graze
+Biomass,3,After,b,Upper,55.88,2020,Control
+Biomass,3,After,b,Middle,71.82000000000001,2020,Control
+Biomass,3,After,b,Lower,33.269999999999996,2020,Control
+Biomass,3,After,c,Upper,17.000000000000004,2020,High Graze
+Biomass,3,After,c,Middle,45.64,2020,High Graze
+Biomass,3,After,c,Lower,46.760000000000005,2020,High Graze
+Biomass,3,After,d,Upper,37.53,2020,Mow
+Biomass,3,After,d,Middle,28.250000000000004,2020,Mow
+Biomass,3,After,d,Lower,101.39999999999999,2020,Mow
+Biomass,4,After,a,Upper,69.45,2020,Regular Graze
+Biomass,4,After,a,Middle,82.45,2020,Regular Graze
+Biomass,4,After,a,Lower,157.92000000000002,2020,Regular Graze
+Biomass,4,After,b,Upper,51.85,2020,High Graze
+Biomass,4,After,b,Middle,49.8,2020,High Graze
+Biomass,4,After,b,Lower,101.69,2020,High Graze
+Biomass,4,After,c,Upper,76.94000000000001,2020,Control
+Biomass,4,After,c,Middle,85.33000000000001,2020,Control
+Biomass,4,After,c,Lower,90.94,2020,Control
+Biomass,4,After,d,Upper,41.730000000000004,2020,Mow
+Biomass,4,After,d,Middle,38.19,2020,Mow
+Biomass,4,After,d,Lower,66.23,2020,Mow
+Litter,1,Before,a,Upper,47.32,2020,High Graze
+Litter,1,Before,a,Middle,86.12,2020,High Graze
+Litter,1,Before,a,Lower,55.72,2020,High Graze
+Litter,1,Before,b,Upper,49.279999999999994,2020,Control
+Litter,1,Before,b,Middle,136.35999999999999,2020,Control
+Litter,1,Before,b,Lower,67.67,2020,Control
+Litter,1,Before,c,Upper,30.339999999999996,2020,Regular Graze
+Litter,1,Before,c,Middle,122.52,2020,Regular Graze
+Litter,1,Before,c,Lower,67.37,2020,Regular Graze
+Litter,1,Before,d,Upper,30.54,2020,Mow
+Litter,1,Before,d,Middle,74.53999999999999,2020,Mow
+Litter,1,Before,d,Lower,35.6,2020,Mow
+Litter,2,Before,a,Upper,60.129999999999995,2020,Regular Graze
+Litter,2,Before,a,Middle,12.470000000000002,2020,Regular Graze
+Litter,2,Before,a,Lower,63.69,2020,Regular Graze
+Litter,2,Before,b,Upper,100.65,2020,High Graze
+Litter,2,Before,b,Middle,44.3,2020,High Graze
+Litter,2,Before,b,Lower,63.45,2020,High Graze
+Litter,2,Before,c,Upper,43.63,2020,Mow
+Litter,2,Before,c,Middle,39.24000000000001,2020,Mow
+Litter,2,Before,c,Lower,41.32,2020,Mow
+Litter,2,Before,d,Upper,44.68,2020,Control
+Litter,2,Before,d,Middle,50.949999999999996,2020,Control
+Litter,2,Before,d,Lower,74.22999999999999,2020,Control
+Litter,3,Before,a,Upper,61.07,2020,Regular Graze
+Litter,3,Before,a,Middle,101.41,2020,Regular Graze
+Litter,3,Before,a,Lower,94.41,2020,Regular Graze
+Litter,3,Before,b,Upper,115.94,2020,Control
+Litter,3,Before,b,Middle,98.66000000000001,2020,Control
+Litter,3,Before,b,Lower,197.62,2020,Control
+Litter,3,Before,c,Upper,86.75,2020,High Graze
+Litter,3,Before,c,Middle,46.78999999999999,2020,High Graze
+Litter,3,Before,c,Lower,169.60000000000002,2020,High Graze
+Litter,3,Before,d,Upper,71.17,2020,Mow
+Litter,3,Before,d,Middle,42.43,2020,Mow
+Litter,3,Before,d,Lower,96.45,2020,Mow
+Litter,4,Before,a,Upper,79.46,2020,Regular Graze
+Litter,4,Before,a,Middle,82.98,2020,Regular Graze
+Litter,4,Before,a,Lower,61.27,2020,Regular Graze
+Litter,4,Before,b,Upper,31.53,2020,High Graze
+Litter,4,Before,b,Middle,18.009999999999998,2020,High Graze
+Litter,4,Before,b,Lower,15.95,2020,High Graze
+Litter,4,Before,c,Upper,33.260000000000005,2020,Control
+Litter,4,Before,c,Middle,68.12,2020,Control
+Litter,4,Before,c,Lower,91.72,2020,Control
+Litter,4,Before,d,Upper,113.91000000000001,2020,Mow
+Litter,4,Before,d,Middle,76.39999999999999,2020,Mow
+Litter,4,Before,d,Lower,115.92999999999999,2020,Mow
+Litter,1,After,a,Upper,49.879999999999995,2020,High Graze
+Litter,1,After,a,Middle,91.44,2020,High Graze
+Litter,1,After,a,Lower,61.71000000000001,2020,High Graze
+Litter,1,After,b,Upper,52.800000000000004,2020,Control
+Litter,1,After,b,Middle,116.70000000000002,2020,Control
+Litter,1,After,b,Lower,81.22,2020,Control
+Litter,1,After,c,Upper,33.56,2020,Regular Graze
+Litter,1,After,c,Middle,77.44,2020,Regular Graze
+Litter,1,After,c,Lower,29.69,2020,Regular Graze
+Litter,1,After,d,Upper,18.990000000000002,2020,Mow
+Litter,1,After,d,Middle,95.7,2020,Mow
+Litter,1,After,d,Lower,36.41,2020,Mow
+Litter,2,After,a,Upper,91.5,2020,Regular Graze
+Litter,2,After,a,Middle,58.94,2020,Regular Graze
+Litter,2,After,a,Lower,109.74,2020,Regular Graze
+Litter,2,After,b,Upper,-10.68,2020,High Graze
+Litter,2,After,b,Middle,80.16,2020,High Graze
+Litter,2,After,b,Lower,109.39,2020,High Graze
+Litter,2,After,c,Upper,132.55,2020,Mow
+Litter,2,After,c,Middle,103.38,2020,Mow
+Litter,2,After,c,Lower,75.25999999999999,2020,Mow
+Litter,2,After,d,Upper,22.58,2020,Control
+Litter,2,After,d,Middle,58.550000000000004,2020,Control
+Litter,2,After,d,Lower,124.81,2020,Control
+Litter,3,After,a,Upper,62.559999999999995,2020,Regular Graze
+Litter,3,After,a,Middle,86.49000000000001,2020,Regular Graze
+Litter,3,After,a,Lower,182.13,2020,Regular Graze
+Litter,3,After,b,Upper,77.41,2020,Control
+Litter,3,After,b,Middle,83.33000000000001,2020,Control
+Litter,3,After,b,Lower,152.91,2020,Control
+Litter,3,After,c,Upper,58.11000000000001,2020,High Graze
+Litter,3,After,c,Middle,33.15,2020,High Graze
+Litter,3,After,c,Lower,274.67,2020,High Graze
+Litter,3,After,d,Upper,86.63999999999999,2020,Mow
+Litter,3,After,d,Middle,114.12,2020,Mow
+Litter,3,After,d,Lower,145.08,2020,Mow
+Litter,4,After,a,Upper,38.120000000000005,2020,Regular Graze
+Litter,4,After,a,Middle,38.3,2020,Regular Graze
+Litter,4,After,a,Lower,72.38,2020,Regular Graze
+Litter,4,After,b,Upper,18.419999999999998,2020,High Graze
+Litter,4,After,b,Middle,13.520000000000001,2020,High Graze
+Litter,4,After,b,Lower,13.920000000000002,2020,High Graze
+Litter,4,After,c,Upper,41.57000000000001,2020,Control
+Litter,4,After,c,Middle,58.550000000000004,2020,Control
+Litter,4,After,c,Lower,32.88,2020,Control
+Litter,4,After,d,Upper,68.6,2020,Mow
+Litter,4,After,d,Middle,111.27,2020,Mow
+Litter,4,After,d,Lower,47.94,2020,Mow
+Biomass,1,After,a,Lower,74.41,2021,High Graze
+Biomass,1,After,a,Middle,44.4,2021,High Graze
+Biomass,1,After,a,Upper,20.05,2021,High Graze
+Biomass,1,After,b,Lower,159.9,2021,Control
+Biomass,1,After,d,Lower,53.89,2021,Mow
+Biomass,1,After,b,Middle,29.88,2021,Control
+Biomass,1,After,b,Upper,61.56,2021,Control
+Biomass,1,After,c,Lower,106.03,2021,Regular Graze
+Biomass,1,After,c,Middle,46.49,2021,Regular Graze
+Biomass,1,After,c,Upper,25.46,2021,Regular Graze
+Biomass,1,After,d,Middle,21.97,2021,Mow
+Biomass,1,After,d,Upper,45.67,2021,Mow
+Biomass,2,After,a,Lower,103.36,2021,Regular Graze
+Biomass,2,After,a,Middle,114.15,2021,Regular Graze
+Biomass,2,After,a,Upper,79.19,2021,Regular Graze
+Biomass,2,After,b,Lower,125.28,2021,High Graze
+Biomass,2,After,b,Middle,12.85,2021,High Graze
+Biomass,2,After,b,Upper,25.72,2021,High Graze
+Biomass,2,After,c,Lower,34.95,2021,Mow
+Biomass,2,After,c,Middle,33.05,2021,Mow
+Biomass,2,After,c,Upper,21.89,2021,Mow
+Biomass,2,After,d,Lower,112.95,2021,Control
+Biomass,2,After,d,Middle,77.83,2021,Control
+Biomass,2,After,d,Upper,93.92,2021,Control
+Biomass,3,After,b,Lower,160.1,2021,Control
+Biomass,3,After,a,Lower,70.43,2021,Regular Graze
+Biomass,3,After,a,Middle,82.41,2021,Regular Graze
+Biomass,3,After,a,Upper,73.68,2021,Regular Graze
+Biomass,3,After,b,Middle,80.95,2021,Control
+Biomass,3,After,b,Upper,60.95,2021,Control
+Biomass,3,After,c,Lower,52.96,2021,High Graze
+Biomass,3,After,c,Middle,53.73,2021,High Graze
+Biomass,3,After,c,Upper,46.71,2021,High Graze
+Biomass,3,After,d,Lower,47.22,2021,Mow
+Biomass,3,After,d,Middle,73.4,2021,Mow
+Biomass,3,After,d,Upper,43.37,2021,Mow
+Biomass,4,After,b,Lower,76.9,2021,High Graze
+Biomass,4,After,a,Lower,136.74,2021,Regular Graze
+Biomass,4,After,a,Middle,106.44,2021,Regular Graze
+Biomass,4,After,a,Upper,44.36,2021,Regular Graze
+Biomass,4,After,b,Middle,15.3,2021,High Graze
+Biomass,4,After,b,Upper,34.92,2021,High Graze
+Biomass,4,After,c,Lower,78.96,2021,Control
+Biomass,4,After,c,Middle,84.79,2021,Control
+Biomass,4,After,c,Upper,57.49,2021,Control
+Biomass,4,After,d,Lower,49.27,2021,Mow
+Biomass,4,After,d,Middle,52.47,2021,Mow
+Biomass,4,After,d,Upper,27.39,2021,Mow
+Litter,1,After,a,Lower,101.22,2021,High Graze
+Litter,1,After,a,Middle,89.13,2021,High Graze
+Litter,1,After,a,Upper,17.78,2021,High Graze
+Litter,1,After,b,Lower,82.38,2021,Control
+Litter,1,After,b,Middle,87.57,2021,Control
+Litter,1,After,b,Upper,33.23,2021,Control
+Litter,1,After,c,Lower,81.77,2021,Regular Graze
+Litter,1,After,c,Middle,52.1,2021,Regular Graze
+Litter,1,After,c,Upper,31.09,2021,Regular Graze
+Litter,1,After,d,Lower,87.96,2021,Mow
+Litter,1,After,d,Middle,110.07,2021,Mow
+Litter,1,After,d,Upper,73.91,2021,Mow
+Litter,2,After,a,Lower,101.87,2021,Regular Graze
+Litter,2,After,a,Middle,76.58,2021,Regular Graze
+Litter,2,After,a,Upper,113.63,2021,Regular Graze
+Litter,2,After,b,Lower,129.78,2021,High Graze
+Litter,2,After,b,Middle,70.88,2021,High Graze
+Litter,2,After,b,Upper,55.3,2021,High Graze
+Litter,2,After,c,Lower,122.06,2021,Mow
+Litter,2,After,c,Middle,57.11,2021,Mow
+Litter,2,After,c,Upper,66.04,2021,Mow
+Litter,2,After,d,Lower,28.57,2021,Control
+Litter,2,After,d,Middle,43.37,2021,Control
+Litter,2,After,d,Upper,19.74,2021,Control
+Litter,3,After,a,Lower,218.98,2021,Regular Graze
+Litter,3,After,a,Middle,95.62,2021,Regular Graze
+Litter,3,After,a,Upper,144.35,2021,Regular Graze
+Litter,3,After,b,Lower,204.22,2021,Control
+Litter,3,After,b,Middle,79.25,2021,Control
+Litter,3,After,b,Upper,96.07,2021,Control
+Litter,3,After,c,Lower,43.54,2021,High Graze
+Litter,3,After,c,Middle,89.06,2021,High Graze
+Litter,3,After,c,Upper,105.72,2021,High Graze
+Litter,3,After,d,Lower,149.33,2021,Mow
+Litter,3,After,d,Middle,77.23,2021,Mow
+Litter,3,After,d,Upper,99.58,2021,Mow
+Litter,4,After,a,Lower,213.69,2021,Regular Graze
+Litter,4,After,a,Middle,108.55,2021,Regular Graze
+Litter,4,After,a,Upper,41.88,2021,Regular Graze
+Litter,4,After,b,Lower,54.79,2021,High Graze
+Litter,4,After,b,Middle,79.72,2021,High Graze
+Litter,4,After,b,Upper,97.27,2021,High Graze
+Litter,4,After,c,Lower,119.29,2021,Control
+Litter,4,After,c,Middle,44.08,2021,Control
+Litter,4,After,c,Upper,42.88,2021,Control
+Litter,4,After,d,Lower,143.5,2021,Mow
+Litter,4,After,d,Middle,88.77,2021,Mow
+Litter,4,After,d,Upper,63.19,2021,Mow
+Biomass,1,Before,a,Lower,126.24,2021,High Graze
+Biomass,1,Before,a,Middle,64.07,2021,High Graze
+Biomass,1,Before,a,Upper,32.95,2021,High Graze
+Biomass,1,Before,b,Lower,213.97,2021,Control
+Biomass,1,Before,b,Middle,63.63,2021,Control
+Biomass,1,Before,b,Upper,40.33,2021,Control
+Biomass,1,Before,c,Lower,138.39,2021,Regular Graze
+Biomass,1,Before,c,Middle,58.06,2021,Regular Graze
+Biomass,1,Before,c,Upper,39.48,2021,Regular Graze
+Biomass,1,Before,d,Lower,60.02,2021,Mow
+Biomass,1,Before,d,Middle,33.48,2021,Mow
+Biomass,1,Before,d,Upper,58.98,2021,Mow
+Biomass,2,Before,a,Lower,162.89,2021,Regular Graze
+Biomass,2,Before,a,Middle,76.71,2021,Regular Graze
+Biomass,2,Before,a,Upper,62.72,2021,Regular Graze
+Biomass,2,Before,b,Lower,129.87,2021,High Graze
+Biomass,2,Before,b,Middle,51.43,2021,High Graze
+Biomass,2,Before,b,Upper,54.24,2021,High Graze
+Biomass,2,Before,c,Lower,123.05,2021,Mow
+Biomass,2,Before,c,Middle,45.38,2021,Mow
+Biomass,2,Before,c,Upper,48.36,2021,Mow
+Biomass,2,Before,d,Lower,147.89,2021,Control
+Biomass,2,Before,d,Middle,96.27,2021,Control
+Biomass,2,Before,d,Upper,82.41,2021,Control
+Biomass,3,Before,a,Lower,150.98,2021,Regular Graze
+Biomass,3,Before,a,Middle,43.07,2021,Regular Graze
+Biomass,3,Before,a,Upper,94.15,2021,Regular Graze
+Biomass,3,Before,b,Lower,117.47,2021,Control
+Biomass,3,Before,b,Middle,66.68,2021,Control
+Biomass,3,Before,b,Upper,55.34,2021,Control
+Biomass,3,Before,c,Lower,89.96,2021,High Graze
+Biomass,3,Before,c,Middle,108.91,2021,High Graze
+Biomass,3,Before,c,Upper,66.13,2021,High Graze
+Biomass,3,Before,d,Lower,78.62,2021,Mow
+Biomass,3,Before,d,Middle,95.52,2021,Mow
+Biomass,3,Before,d,Upper,61.22,2021,Mow
+Biomass,4,Before,a,Lower,157.45,2021,Regular Graze
+Biomass,4,Before,a,Middle,78.7,2021,Regular Graze
+Biomass,4,Before,a,Upper,41.08,2021,Regular Graze
+Biomass,4,Before,b,Lower,69.67,2021,High Graze
+Biomass,4,Before,b,Middle,37.17,2021,High Graze
+Biomass,4,Before,b,Upper,38.28,2021,High Graze
+Biomass,4,Before,c,Lower,95.26,2021,Control
+Biomass,4,Before,c,Middle,44.12,2021,Control
+Biomass,4,Before,c,Upper,62.59,2021,Control
+Biomass,4,Before,d,Lower,74.45,2021,Mow
+Biomass,4,Before,d,Middle,113.88,2021,Mow
+Biomass,4,Before,d,Upper,36.74,2021,Mow
+Litter,1,Before,a,Lower,109.14,2021,High Graze
+Litter,1,Before,a,Middle,26.14,2021,High Graze
+Litter,1,Before,a,Upper,47.12,2021,High Graze
+Litter,1,Before,b,Lower,106.85,2021,Control
+Litter,1,Before,b,Middle,76.49,2021,Control
+Litter,1,Before,b,Upper,46.45,2021,Control
+Litter,1,Before,c,Lower,89.3,2021,Regular Graze
+Litter,1,Before,c,Middle,35.68,2021,Regular Graze
+Litter,1,Before,c,Upper,31.39,2021,Regular Graze
+Litter,1,Before,d,Lower,110.38,2021,Mow
+Litter,1,Before,d,Middle,70.62,2021,Mow
+Litter,1,Before,d,Upper,55.34,2021,Mow
+Litter,2,Before,a,Lower,144.49,2021,Regular Graze
+Litter,2,Before,a,Middle,58.62,2021,Regular Graze
+Litter,2,Before,a,Upper,33.86,2021,Regular Graze
+Litter,2,Before,b,Lower,120.4,2021,High Graze
+Litter,2,Before,b,Middle,77.41,2021,High Graze
+Litter,2,Before,b,Upper,61.91,2021,High Graze
+Litter,2,Before,c,Lower,111.1,2021,Mow
+Litter,2,Before,c,Middle,34.66,2021,Mow
+Litter,2,Before,c,Upper,48.2,2021,Mow
+Litter,2,Before,d,Lower,179.05,2021,Control
+Litter,2,Before,d,Middle,74.84,2021,Control
+Litter,2,Before,d,Upper,77.92,2021,Control
+Litter,3,Before,a,Lower,146.57,2021,Regular Graze
+Litter,3,Before,a,Middle,47.04,2021,Regular Graze
+Litter,3,Before,a,Upper,41.63,2021,Regular Graze
+Litter,3,Before,b,Lower,95.81,2021,Control
+Litter,3,Before,b,Middle,43.21,2021,Control
+Litter,3,Before,b,Upper,104.92,2021,Control
+Litter,3,Before,c,Lower,105.52,2021,High Graze
+Litter,3,Before,c,Middle,64.9,2021,High Graze
+Litter,3,Before,c,Upper,88.46,2021,High Graze
+Litter,3,Before,d,Lower,42.07,2021,Mow
+Litter,3,Before,d,Middle,62.08,2021,Mow
+Litter,3,Before,d,Upper,65.1,2021,Mow
+Litter,4,Before,a,Lower,107.15,2021,Regular Graze
+Litter,4,Before,a,Middle,85.02,2021,Regular Graze
+Litter,4,Before,a,Upper,65.93,2021,Regular Graze
+Litter,4,Before,b,Lower,65.58,2021,High Graze
+Litter,4,Before,b,Middle,40.98,2021,High Graze
+Litter,4,Before,b,Upper,40.58,2021,High Graze
+Litter,4,Before,c,Lower,50.82,2021,Control
+Litter,4,Before,c,Middle,17.52,2021,Control
+Litter,4,Before,c,Upper,30.66,2021,Control
+Litter,4,Before,d,Lower,93.99,2021,Mow
+Litter,4,Before,d,Middle,75.04,2021,Mow
+Litter,4,Before,d,Upper,38.79,2021,Mow

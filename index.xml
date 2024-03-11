@@ -44,6 +44,18 @@ sources</article-title>
 <xref ref-type="aff" rid="aff-1">a</xref>
 <xref ref-type="corresp" rid="cor-1">&#x002A;</xref>
 </contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Malone</surname>
+<given-names>Tamaragh Y</given-names>
+</name>
+<string-name>Tamaragh Y Malone</string-name>
+
+<email>malonety35@brandonu.ca</email>
+<role>Research Assistant</role>
+<role>Lab analysis</role>
+<xref ref-type="aff" rid="aff-2">b</xref>
+</contrib>
 </contrib-group>
 <aff id="aff-1">
 <institution-wrap>
@@ -58,14 +70,26 @@ Environment</institution>
 
 
 </aff>
+<aff id="aff-2">
+<institution-wrap>
+<institution>Brandon University, Department of Biology</institution>
+</institution-wrap>
+
+
+
+
+
+
+
+</aff>
 <author-notes>
 <corresp id="cor-1">koitera@brandonu.ca</corresp>
 </author-notes>
 
-<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-03-05">
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-03-11">
 <year>2024</year>
 <month>3</month>
-<day>5</day>
+<day>11</day>
 </pub-date>
 
 
@@ -80,25 +104,26 @@ Environment</institution>
 <abstract>
 <p>Riparian areas play an important role in maintaining water quality in
 agricultural watersheds by buffering sediment, nutrients, and other
-pollutants. Additionally, riparian areas are also an important sources
-of forage, particularly during drought. Recent studies have shown that
+pollutants. Additionally, these areas are also an important sources of
+forage, particularly during drought. Recent studies have shown that
 riparian areas are less effective buffers and, in some cases, are a net
 source of phosphorus (P) in cold climates. The repeated freeze-thaw
-cycles increase the availability of P in both the vegetation and soil.
-Cattle grazing or harvesting of riparian areas prior to the onset of
-winter conditions may be a viable management practice to reduce the loss
-of P during the spring snowmelt. This study measured the
-water-extractable phosphorus (WEP) in four sources: biomass, litter,
-organic layer, and Ah horizon. Overall, the Ah (0-10cm) soil was the
-largest source (~44%); however, the biomass (i.e., standing vegetation)
-was a considerable proportion (~25%) of the total. In addition to a
-control, the riparian areas were subjected to grazing, high density
-grazing, and mowing treatments. Findings revealed significant reductions
-in biomass WEP with high density grazing and mowing treatments,
-particularly in lower riparian zones. There was no detectable changes in
-the other sources of WEP. This suggests that autumn short-term grazing
-may be a mechanism to use this important forage resource and reduce the
-potential P loss during the snowmelt period.</p>
+cycles increase the availability of P in both the vegetation and soil
+sources. Cattle grazing or harvesting of riparian areas prior to the
+onset of winter conditions may be a viable management practice to reduce
+the loss of P during the spring snowmelt. This study measured the
+water-extractable phosphorus (WEP) in four distinctive sources: biomass,
+litter, organic layer, and Ah horizon. Overall, the Ah (0-10cm) soil was
+the largest (~44%) source of WEP; however, the biomass (i.e., standing
+vegetation) was a considerable proportion (~25%) of the total. In
+addition to control plots, the riparian areas were subjected to grazing,
+high density grazing, and mowing treatments. Findings revealed
+significant reductions in biomass WEP with high density grazing and
+mowing treatments, particularly in lower riparian zones. There were no
+detectable changes in the other sources of WEP. This suggests that
+autumn short-term grazing may be a mechanism to use this important
+forage resource and reduce the potential P loss during the snowmelt
+period.</p>
 </abstract>
 <kwd-group kwd-group-type="author">
 <kwd>Phosphorus</kwd>
@@ -149,18 +174,18 @@ potential P loss during the snowmelt period.</p>
   and Verdonschot, 2024</xref>). Beyond ecosystem services, riparian
   zones can offer recreational opportunities (e.g., hiking, fishing,
   canoeing, foraging) and are key components of the agricultural
-  landscape. Riparian areas benefit agricultural production through
-  providing habitat for beneficial organisms (e.g., pollination, pest
-  control), a source of forage during drought (livestock health and
-  productivity), and other opportunities (e.g., agroforestry, carbon
-  sequestration)
+  landscape. Beyond improving water quality, riparian areas benefit
+  agricultural production through providing habitat for beneficial
+  organisms (e.g., pollination, pest control), a source of forage during
+  drought (livestock health and productivity), and other opportunities
+  (e.g., agroforestry, carbon sequestration)
   (<xref alt="Cole et al., 2015" rid="ref-cole2015" ref-type="bibr">Cole
   et al., 2015</xref>,
   <xref alt="2020" rid="ref-cole2020" ref-type="bibr">2020</xref>).</p>
-  <p>Increasing frequency and extent of algal blooms is typically linked
-  to increased nutrient loading into lake and rivers. Of particular
-  concern is phosphorus (P) loading as this generally the limiting
-  nutrient in fresh water systems
+  <p>Increasing frequency and extent of algal blooms are typically
+  linked to increased nutrient loading into lake and rivers. Of
+  particular concern is phosphorus (P) loading as this is generally the
+  limiting nutrient in fresh water systems
   (<xref alt="Schindler et al., 2012" rid="ref-schindler2012" ref-type="bibr">Schindler
   et al., 2012</xref>). There have been many lab and field studies
   demonstrating the role and functionality of riparian areas to reduce P
@@ -178,8 +203,8 @@ potential P loss during the snowmelt period.</p>
   with climatic/weather conditions creates variability in hydrologic
   conditions and pathways reducing the buffering capacity of riparian
   areas and ultimately resulting in reduced, inconsistent and/or
-  unsustainable reductions in P loading relative to many experimental
-  studies
+  unsustainable reductions in P loading relative to many controlled
+  experimental studies
   (<xref alt="Roberts et al., 2012" rid="ref-roberts2012" ref-type="bibr">Roberts
   et al., 2012</xref>;
   <xref alt="Habibiandehkordi et al., 2017" rid="ref-habibiandehkordi2017" ref-type="bibr">Habibiandehkordi
@@ -196,8 +221,8 @@ potential P loss during the snowmelt period.</p>
   surrounding environment
   (<xref alt="Roberts et al., 2012" rid="ref-roberts2012" ref-type="bibr">Roberts
   et al., 2012</xref>). The sources of this riparian-derived P are soil
-  and vegetation. As soil soil P content increases over time, so does
-  the risk of phosphorus loss through leaching and runoff
+  and vegetation. As soil P content increases over time, so does the
+  risk of P loss through leaching and runoff
   (<xref alt="Habibiandehkordi et al., 2019" rid="ref-habibiandehkordi2019" ref-type="bibr">Habibiandehkordi
   et al., 2019</xref>). This process can be intensified during periods
   of inundation, in addition to a longer period of soil-water contact,
@@ -209,7 +234,7 @@ potential P loss during the snowmelt period.</p>
   vegetation near the soil surface will also contribute to the P
   available to be lost during runoff
   (<xref alt="Liu et al., 2019b" rid="ref-liu2019a" ref-type="bibr">Liu
-  et al., 2019b</xref>). Both the soil and vegetation P pools can also
+  et al., 2019b</xref>). Both the soil and vegetation P sources can also
   be affected by freeze-thaw cycles (FTC). Repeated FTCs result in the
   cell disruption of microbial and plant biomass, releasing
   inter-cellular P to the surrounding environment
@@ -336,8 +361,8 @@ potential P loss during the snowmelt period.</p>
     livestock and are not actively managed. The farm has an irregular
     undulating to hummocky relief with soils developed on fine loamy,
     moderately calcareous glacial till. The riparian soils are poorly
-    drained and primarly consist of Humic and Luvic Gleysols and
-    generally the soil profile can be described by a 5-10 cm organic
+    drained and primarily consist of Humic and Luvic Gleysols and
+    generally the soil profile can be described by a 1-10 cm organic
     layer overlying a 10-18 cm Ah horizon
     (<xref alt="Podolsky and Schindler, 1993" rid="ref-podolsky1993" ref-type="bibr">Podolsky
     and Schindler, 1993</xref>). The vegetation in the riparian areas
@@ -356,25 +381,24 @@ potential P loss during the snowmelt period.</p>
     subdivided into four ~450 <inline-formula><alternatives>
     <tex-math><![CDATA[m^2]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msup><mml:mi>m</mml:mi><mml:mn>2</mml:mn></mml:msup></mml:math></alternatives></inline-formula>
-    plots. Within each riparian area each plot was randomly assigned one
-    treatment. The treatments consisted of a 1) control, 2) graze, 3)
-    high graze, and 4) mow and harvest. The grazing treatments consisted
-    of a five hour grazing period with the graze treatment having
-    ~3.1-3.5 animal units (AU) and the high graze with ~11.75-12 AU. For
-    the mowing treatment, the vegetation was cut to a height of ~10cm
-    and the vegetation manually raked out of the plot. The cattle were
-    rotated daily over four consecutive days among the four riparian
-    areas and the grazed plots were fenced on all four sides, including
-    the waters edge, and provided with supplemental water. Treatments
-    were applied early to mid September, before the first frost, in
-    three consecutive years (2019-2021)
-    (<xref alt="Figure S 1" rid="supp-weather-plot">Figure S 1</xref>).
-    Within each plot three distinctive sampling zones, or landscape
-    positions, were established, adjacent to the waters edged (Lower),
-    adjacent to the field/pasture (Upper), and the mid-point (Mid). To
-    assess the impact of grazing and mowing, samples were collected in
-    each plot and zone 1-3 days prior and immediately adjacent 1-3 days
-    following the treatments (including the control).</p>
+    plots. Within each riparian area each plot was randomly assigned a
+    treatment. The treatments consisted of a: 1) control, 2) graze, 3)
+    high density graze, and 4) mow and harvest. The grazing treatments
+    consisted of a five hour grazing period with the graze treatment
+    having ~3.1-3.5 animal units (AU) and the high desnity graze with
+    ~11.75-12 AU. For the mowing treatment, the vegetation was cut to a
+    height of ~10cm and the vegetation manually raked out of the plot.
+    The cattle were rotated daily over four consecutive days among the
+    four riparian areas and the grazed plots were fenced on all four
+    sides, including the waters edge, and provided with supplemental
+    water. Treatments were applied early to mid September, before the
+    first frost, in three consecutive years (2019-2021) herexx. Within
+    each plot three distinctive sampling zones, or landscape positions,
+    were established, adjacent to the waters edged (Lower), adjacent to
+    the field/pasture (Upper), and the mid-point (Mid). To assess the
+    impact of grazing and mowing, samples were collected in each plot
+    and zone 1-3 days prior and immediately adjacent 1-3 days following
+    the treatments (including the control).</p>
   </sec>
   <sec id="sampling-and-analysis">
     <title>2.3 Sampling and analysis</title>
@@ -384,9 +408,9 @@ potential P loss during the snowmelt period.</p>
     <tex-math><![CDATA[m^2]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msup><mml:mi>m</mml:mi><mml:mn>2</mml:mn></mml:msup></mml:math></alternatives></inline-formula>
     quadrate, biomass was collected by cutting the standing live
-    vegetation just above the soil surface and litter by raking the
-    surface and picking up previous years growth. Both the biomass and
-    litter were dried at 40 <inline-formula><alternatives>
+    vegetation and litter by raking the surface and picking up previous
+    years growth. Both the biomass and litter were dried at 40
+    <inline-formula><alternatives>
     <tex-math><![CDATA[^\circ C]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msup><mml:mi></mml:mi><mml:mo>∘</mml:mo></mml:msup><mml:mi>C</mml:mi></mml:mrow></mml:math></alternatives></inline-formula>,
     weighed, and homogenized using a blade grinder (&lt;1cm). A
@@ -398,6 +422,7 @@ potential P loss during the snowmelt period.</p>
     Additional bulk density samples of both the organic layer and Ah and
     the depth of the organic layer were collected in 2023. Daily air
     temperature and rainfall data were collected from an onsite station
+    herexx
     (<xref alt="Manitoba Agriculture, 2023" rid="ref-manitobaagriculture2023" ref-type="bibr">Manitoba
     Agriculture, 2023</xref>).</p>
     <p>Water Extractable Phosphorus (WEP), an environmental soil and
@@ -405,8 +430,8 @@ potential P loss during the snowmelt period.</p>
     Dried and homogenized samples were extracted by shaking (200 RPM)
     with deionized water for one hour at a mass to volume ratio of 1:30
     for the biomass and litter samples (1 g) and 1:15 for the organic
-    and Ah samples (2 g). Extractions were gravity filtered by a Whatman
-    42 filter followed by syringe filtration with a 0.45
+    and Ah samples (2 g). Extractions were gravity filtered through a
+    Whatman 42 filter followed by syringe filtration with a 0.45
     <inline-formula><alternatives>
     <tex-math><![CDATA[\mu m]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>μ</mml:mi><mml:mi>m</mml:mi></mml:mrow></mml:math></alternatives></inline-formula>
@@ -416,9 +441,9 @@ potential P loss during the snowmelt period.</p>
     and Riley, 1962</xref>;
     <xref alt="Sharpley et al., 2006" rid="ref-sharpley" ref-type="bibr">Sharpley
     et al., 2006</xref>).</p>
-    <p>The concentration of WEP in the biomass and litter sources of P
-    combined with the mass of material in collected from the quadrate
-    was used to calculate the total WEP (<inline-formula><alternatives>
+    <p>The concentration of WEP in the biomass and litter combined with
+    the mass of material in collected from the quadrate was used to
+    calculate the total WEP (<inline-formula><alternatives>
     <tex-math><![CDATA[mg~kg^{-1}]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>m</mml:mi><mml:mi>g</mml:mi><mml:mspace width="0.222em"></mml:mspace><mml:mi>k</mml:mi><mml:msup><mml:mi>g</mml:mi><mml:mrow><mml:mo>−</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:math></alternatives></inline-formula>).
     Only the change in concentration (<inline-formula><alternatives>
@@ -434,17 +459,17 @@ potential P loss during the snowmelt period.</p>
   <sec id="statistical-analysis">
     <title>2.4 Statistical analysis</title>
     <p>All statistical analysis was undertaken using the R Statistical
-    Software (v4.3.2), through the RStudio Integrated Development
+    Software (v4.3.3), through the RStudio Integrated Development
     Environment v2023.12.1.402. Generalized Linear Mixed Models (R
     package <monospace>glmmTMB</monospace> v1.1.8) were used to
     investigate the relation between the change in WEP (before - after
     treatment) and treatment and riparian zone for each of the four
-    sources of P. Year and riparian area were included as crossed random
-    factors to control for the variability between years and riparian
-    areas. Additionally, when investigating the change in biomass WEP
-    the WEP prior to the treatment was included as a co-variate the
-    because the magnitude of the difference (i.e., before - after) is
-    directly related to the amount initially available.</p>
+    sources of WEP. Year and riparian area were included as crossed
+    random factors to control for the variability between years and
+    riparian areas. Additionally, when investigating the change in
+    biomass WEP the WEP prior to the treatment was included as a
+    co-variate the because the magnitude of the difference (i.e., before
+    - after) is directly related to the amount initially available.</p>
     <p>If there were no significant (p &lt;0.5) interaction between main
     effects the interaction term was removed. When a main effect or
     interaction were significant a post-hoc pairwise comparisons with a
@@ -543,8 +568,8 @@ potential P loss during the snowmelt period.</p>
   <fig id="fig-vegetation-wep">
     <caption><p>Figure 3: Change in riparian biomass WEP following
     grazing or mowing in each riparian zone. Within each plot
-    significant differences (p&lt;0.05) between treatments or landscape
-    positions are denoted with different letters.</p></caption>
+    significant differences (p&lt;0.05) between treatments or riparian
+    zones are denoted with different letters.</p></caption>
     <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/notebooks-01_Biomass_analysis-fig-vegetation-wep-output-2.png" />
   </fig>
   <p>There were no significant impacts of either treatment or riparian
@@ -565,23 +590,23 @@ potential P loss during the snowmelt period.</p>
   <fig id="fig-litter-wep">
     <caption><p>Figure 4: Change in riparian litter WEP following
     grazing or mowing in each of the riparian zones. No significant
-    effect of treatment or landsacpe position on the litter WEP content
-    was detected</p></caption>
+    effect of treatment or riparian zone on the litter WEP content was
+    detected</p></caption>
     <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/notebooks-02_Litter_analysis-fig-litter-wep-output-2.png" />
   </fig>
   <fig id="fig-organic-wep">
     <caption><p>Figure 5: Change in riparian organic layer WEP
-    concentrationfollowing grazing or mowing in each of the landscape
-    positions. A significant effect of treatment was detected; however,
-    the post-hoc analysis was not able to detect any significant (p &lt;
+    concentration following grazing or mowing in each of the riparian
+    zones. A significant effect of treatment was detected; however, the
+    post-hoc analysis was not able to detect any significant (p &lt;
     0.05) pairwise contrasts.</p></caption>
     <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/notebooks-03_Soils_analysis-fig-organic-wep-output-1.png" />
   </fig>
   <fig id="fig-soil-wep">
     <caption><p>Figure 6: Change in riparian Ah layer (0-10cm) WEP
-    concentrationfollowing grazing or mowing in each of the landscape
-    positions. No significant effect of treatment or landscape position
-    was detected.</p></caption>
+    concentration following grazing or mowing in each of the riparian
+    zones. No significant effect of treatment or zone was
+    detected.</p></caption>
     <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/notebooks-03_Soils_analysis-fig-soil-wep-output-1.png" />
   </fig>
 </sec>
@@ -617,15 +642,12 @@ potential P loss during the snowmelt period.</p>
   edge and the Ah soil WEP is larger in the upper zone adjacent to the
   fields (<xref alt="Figure 2" rid="fig-vertical-wep">Figure 2</xref>
   b). The high soil water content in the lower zone creates conditions
-  that favour high biomass production
-  (<xref alt="Figure S 2" rid="supp-bd-plot">Figure S 2</xref> a)
-  coupled with high biomass WEP concentrations
+  that favour high biomass production herexxbd coupled with high biomass
+  WEP concentrations
   (<xref alt="Figure 2" rid="fig-vertical-wep">Figure 2</xref> a)
   results in a considerable source of P. The higher amount of WEP in the
   Ah soil in the upper zone of the riparian area is due to the higher
-  bulk density
-  (<xref alt="Figure S 2" rid="supp-bd-plot">Figure S 2</xref> b) and
-  higher WEP concentration
+  bulk density herexxbd and higher WEP concentration
   (<xref alt="Figure 2" rid="fig-vertical-wep">Figure 2</xref> a). The
   higher bulk density is most likely due to the lower soil organic
   matter content and the higher WEP concentration may be related to the
@@ -680,18 +702,18 @@ potential P loss during the snowmelt period.</p>
   to capture the spatial variability. Therefore, larger, composite,
   and/or several sampling locations within each zone is recommended.
   Appropriate sampling design becomes more important as the scale of
-  observation of similar research increases to the farm scale so does
+  observation of similar research increases to the farm scale so will
   the amount and source of variability. As the scope of research is
   expanded to the farm level, the importance of using an appropriate
   sampling design becomes increasingly critical
   (<xref alt="Hale et al., 2014" rid="ref-hale2014" ref-type="bibr">Hale
   et al., 2014</xref>).</p>
   <p>Autumn was selected for the mowing and grazing treatments for three
-  reasons. First was to reduce the amount of biomass P that can
-  contribute to the P loss during the spring snowmelt. Secondly, the
+  reasons. First was to reduce the amount of biomass P available that
+  can contribute to the P loss during the spring snowmelt. Secondly, the
   drier soil conditions reduced the amount of pugging and soil
-  compactions which limits the disruption of soil structure and damage
-  to plants
+  compaction which limits the disruption of soil structure and damage to
+  plants
   (<xref alt="Batey, 2009" rid="ref-batey2009" ref-type="bibr">Batey,
   2009</xref>). Lastly, the prairie potholes and associated riparian
   areas are important breeding habitat for migratory birds and late
@@ -710,8 +732,8 @@ potential P loss during the snowmelt period.</p>
   access to prevent bank erosion and protect water quality (e.g., direct
   deposition)
   (<xref alt="Dauwalter et al., 2018" rid="ref-dauwalter2018" ref-type="bibr">Dauwalter
-  et al., 2018</xref>). Scaling this up to the farm level is expensive
-  (fencing infrastructure)
+  et al., 2018</xref>). Scaling this up to the farm level will be
+  expensive (fencing infrastructure)
   (<xref alt="Aarons et al.," rid="ref-aarons2013" ref-type="bibr">Aarons
   et al.,</xref>) and time consuming (short-term grazing), especially in
   prairie pothole region were there are numerous and small riparian
@@ -744,7 +766,7 @@ potential P loss during the snowmelt period.</p>
   cold climates has the potential to reduce the amount of P directly
   lost during the spring snowmelt and maintain or enhance the nutrient
   buffering capacity. The results from this experiment demonstrated that
-  short term high density cattle grazing and mowing both resulted in a
+  short-term high density cattle grazing and mowing both resulted in a
   reduction in the amount of biomass WEP, particularly in the lower
   riparian zones. The grazing and mowing treatments had no detectable
   effect on the other three near-surface sources of WEP. However,
@@ -762,29 +784,22 @@ potential P loss during the snowmelt period.</p>
   other ecological goods and services and recognize these areas as an
   integral part of the farm.</p>
 </sec>
-<sec id="references">
-  <title>References</title>
-</sec>
-<sec id="supplemental-materials">
-  <title>Supplemental materials</title>
-  <fig id="supp-weather-plot">
-    <caption><p>Figure S 1: Average daily air temperature and cumulative
-    rainfall over the growing season over the three year study. Red bars
-    indicate sampling dates</p></caption>
-    <graphic mimetype="image" mime-subtype="png" xlink:href="supp-weather-plot-1.png" />
-  </fig>
-  <fig id="supp-bd-plot">
-    <caption><p>Figure S 2: a) Mass of biomass and litter before grazing
-    and mowing (2019-2021) and b) the bulk density of the organic layer
-    and 10 cm Ah horizon (2023)</p></caption>
-    <graphic mimetype="image" mime-subtype="png" xlink:href="supp-weights-bd-1.png" />
-  </fig>
+<sec id="acknowledgements">
+  <title>Acknowledgements</title>
+  <p>This research was funded through a Brandon University Research
+  Committee grant awarded to AK and a Lake Winnipeg Basin Program grant
+  awarded to the Manitoba Association of Watersheds. Thank you to A.
+  Avila, M. Luna, C Sobchuk, and A. Tan for all the help with lab and
+  field work. Special thanks to the Manitoba Beef and Forage Initiatives
+  research farm staff for the use of their facilities and managing the
+  cattle grazing and mowing treatments. Lastly, thank you to R. Canart
+  and M. Elsinger for helping to develop the experimental design.</p>
 </sec>
 </body>
 
 <back>
 <ref-list>
-  <title></title>
+  <title>References</title>
   <ref id="ref-fitch2003">
     <element-citation publication-type="book">
       <person-group person-group-type="author">

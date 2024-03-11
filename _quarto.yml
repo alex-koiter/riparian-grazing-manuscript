@@ -9,7 +9,8 @@ format:
     toc: true
     comments:
       hypothesis: false
-  docx: default
+  docx:
+    reference-doc: custom-reference-doc.docx
   jats: default
   agu-pdf: default
   

@@ -99,7 +99,7 @@ df <- data.frame(x1 = c(-Inf, -Inf), x2 = c(Inf, Inf), y2 = c(Inf, 0), y1 = c(0,
 Plots
 ```{r}
 #| label: fig-litter-WEP
-#| fig-cap: "Change in riparian litter WEP following grazing or mowing in each of the riparian zones. No significant effect of treatment or landsacpe position on the litter WEP content was detected"
+#| fig-cap: "Change in riparian litter WEP following grazing or mowing in each of the riparian zones. No significant effect of treatment or riparian zone on the litter WEP content was detected"
 #| fig-alt: "Boxplots showing the change in riparian litter WEP following grazing or mowing."
 #|  
 p1 <- ggplot(data = filter(plot_data, measure == "p_total")) +

@@ -388,7 +388,8 @@ P, phosphorus; WEP, water extractable phosphorus</p>
     <fig id="fig-map">
       <caption><p>Figure 1: Showing a) the study site in southwestern
       Manitoba and b) the four riparian areas included in this study and
-      the regional land use.</p></caption>
+      the regional land use (data from
+      https://mli.gov.mb.ca/).</p></caption>
       <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/notebooks-05_Map-fig-map-output-1.png" />
     </fig>
   </sec>
@@ -2256,14 +2257,15 @@ The stations data frame hasn't been updated in over 4 weeks. Consider running `s
     and Schindler, 1993</xref>). The vegetation in the riparian areas
     are dominated by grasses, sedges, and forbs.</p>
     <sec id="cell-fig-map-nb-article" specific-use="notebook-code">
-    <code language="python">p4 &lt;- p1 + p3 + plot_layout(guides = &quot;collect&quot;) &amp; theme(legend.position = &quot;right&quot;)
-p4
+    <code language="python">p1 + p3 + plot_layout(guides = &quot;collect&quot;) &amp; theme(legend.position = &quot;right&quot;)
+
 #ggsave(filename = &quot;Figures/Maps.png&quot;, plot = p4, height = 75, width = 180, units = &quot;mm&quot;, dpi = 600)</code>
     <sec id="cell-fig-map-output-0-nb-article" specific-use="notebook-output">
     <fig id="fig-map-nb-article">
       <caption><p>Figure 1: Showing a) the study site in southwestern
       Manitoba and b) the four riparian areas included in this study and
-      the regional land use.</p></caption>
+      the regional land use (data from
+      https://mli.gov.mb.ca/).</p></caption>
       <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/notebooks-05_Map-fig-map-output-1.png" />
     </fig>
     </sec>
@@ -2444,8 +2446,10 @@ p4
 
 p3</code>
   <sec id="cell-fig-vertical-WEP-output-0-nb-article" specific-use="notebook-output">
-  <preformat>Warning: Removed 2 rows containing non-finite values (`stat_boxplot()`).
-Removed 2 rows containing non-finite values (`stat_boxplot()`).</preformat>
+  <preformat>Warning: Removed 2 rows containing non-finite outside the scale range
+(`stat_boxplot()`).
+Removed 2 rows containing non-finite outside the scale range
+(`stat_boxplot()`).</preformat>
   </sec>
   <sec id="cell-fig-vertical-WEP-output-1-nb-article" specific-use="notebook-output">
   <fig id="fig-vertical-wep-nb-article">
@@ -3869,7 +3873,7 @@ p2
 <sub-article article-type="notebook" id="nb-4-nb-1">
 <front-stub>
 <title-group>
-<article-title>Vertical profile of WEP</article-title>
+<article-title>Weather</article-title>
 </title-group>
 <contrib-group>
 <contrib contrib-type="author">
@@ -3889,15 +3893,14 @@ p2
   <sec id="nb-code-cell-1-nb-1" specific-use="notebook-code">
   <code language="r script">library(tidyverse)
   </code>
-  <code language="r script">library(viridis)
-  </code>
-  <code language="r script">library(patchwork)
+  <code language="r script">library(readxl)
+library(janitor)
   </code>
   <sec id="nb-code-cell-1-output-0-nb-1" specific-use="notebook-output">
   <preformat>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
 ✔ dplyr     1.1.4     ✔ readr     2.1.4
 ✔ forcats   1.0.0     ✔ stringr   1.5.1
-✔ ggplot2   3.4.4     ✔ tibble    3.2.1
+✔ ggplot2   3.5.0     ✔ tibble    3.2.1
 ✔ lubridate 1.9.2     ✔ tidyr     1.3.1
 ✔ purrr     1.0.2     
 ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
@@ -3906,259 +3909,88 @@ p2
 ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</preformat>
   </sec>
   <sec id="nb-code-cell-1-output-1-nb-1" specific-use="notebook-output">
-  <preformat>Loading required package: viridisLite</preformat>
+  <preformat>
+Attaching package: 'janitor'
+
+The following objects are masked from 'package:stats':
+
+    chisq.test, fisher.test</preformat>
   </sec>
   </sec>
 </sec>
 <sec id="read-in-data-nb-1">
   <title>Read in data</title>
   <sec id="nb-code-cell-2-nb-1" specific-use="notebook-code">
-  <code language="r script">conc &lt;- read_csv(here::here(&quot;notebooks/Data/P_concentration.csv&quot;)) %&gt;%
-  rename(&quot;conc&quot; = &quot;ak_content&quot;) %&gt;%
-  filter(timing == &quot;Before&quot;) %&gt;%
-  mutate(sample_type = fct_recode(sample_type, &quot;Ah&quot; = &quot;Soil&quot;)) %&gt;%
-  mutate(sample_type = fct_relevel(sample_type, c(&quot;Ah&quot;, &quot;Organic&quot;, &quot;Litter&quot;,&quot;Biomass&quot;))) %&gt;%
-  mutate(location = fct_relevel(location, c(&quot;Upper&quot;, &quot;Middle&quot;, &quot;Lower&quot;)))
+  <code language="r script">data &lt;- read_excel(&quot;Forrest-Daily-TempRainSoil-20192021-AKoiter.xlsx&quot;) %&gt;%
+  clean_names() %&gt;%
+  mutate(date = ymd(date),
+         year = year(date),
+         month = month(date)) %&gt;%
+  filter(month &gt;4, month &lt; 11) 
   </code>
-  <code language="r script">mass_data &lt;- read_csv(here::here(&quot;notebooks/Data/mass.csv&quot;)) %&gt;%
-  filter(timing == &quot;Before&quot;) %&gt;%
-  mutate(sample_type = fct_relevel(sample_type, c(&quot;Biomass&quot;, &quot;Litter&quot;)))
-  </code>
-  <code language="r script">bd_data &lt;- read_csv(here::here(&quot;notebooks/Data/bulk density.csv&quot;)) %&gt;% # Bulk density measurements
-  mutate(mass = bd * length_cm/100 * 1) %&gt;%
-  mutate(sample_type = fct_recode(sample_type, &quot;Organic&quot; = &quot;LFH&quot;))
-  </code>
-  <sec id="nb-code-cell-2-output-0-nb-1" specific-use="notebook-output">
-  <preformat>Rows: 1141 Columns: 8
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: &quot;,&quot;
-chr (5): sample_type, timing, plot, location, treatment
-dbl (3): site, ak_content, year
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</preformat>
   </sec>
-  <sec id="nb-code-cell-2-output-1-nb-1" specific-use="notebook-output">
-  <preformat>Rows: 576 Columns: 8
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: &quot;,&quot;
-chr (5): sample_type, timing, plot, location, treatment
-dbl (3): site, dryweight, year
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</preformat>
-  </sec>
-  <sec id="nb-code-cell-2-output-2-nb-1" specific-use="notebook-output">
-  <preformat>Rows: 96 Columns: 7
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: &quot;,&quot;
-chr (4): plot, location, sample_type, treatment
-dbl (3): site, length_cm, bd
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</preformat>
-  </sec>
+  <sec id="precip-data-nb-1">
+    <title>precip data</title>
+    <sec id="nb-code-cell-3-nb-1" specific-use="notebook-code">
+    <code language="r script">precip &lt;- data %&gt;%
+  group_by(year) %&gt;%
+  mutate(cumu_precip = cumsum(pluvio_rain)) %&gt;%
+  select(date, cumu_precip, pluvio_rain, year)
+    </code>
+    </sec>
+    <sec id="nb-code-cell-4-nb-1" specific-use="notebook-code">
+    <code language="r script">ggplot(data = data, aes(x = date, y = avg_air_t)) +
+  geom_point() +
+  theme_bw() +
+  facet_wrap(~year, scales = &quot;free_x&quot;)
+    </code>
+    <graphic mimetype="image" mime-subtype="png" xlink:href="06_Weather_files/figure-jats/unnamed-chunk-4-1.png" />
+    <code language="r script">ggplot(data = precip, aes(x = date, y = cumu_precip)) +
+  geom_point() +
+  theme_bw() +
+  facet_wrap(~year, scales = &quot;free_x&quot;)
+    </code>
+    <graphic mimetype="image" mime-subtype="png" xlink:href="06_Weather_files/figure-jats/unnamed-chunk-4-2.png" />
+    </sec>
   </sec>
 </sec>
-<sec id="merge-data-nb-1">
-  <title>Merge data</title>
-  <sec id="nb-code-cell-3-nb-1" specific-use="notebook-code">
-  <code language="r script">total_data &lt;- conc %&gt;%
-  left_join(mass_data) %&gt;%
-  left_join(bd_data) %&gt;%
-  mutate(p_total = case_when(sample_type == &quot;Biomass&quot; ~ conc * dryweight/1000 /0.25,
-                             sample_type == &quot;Litter&quot; ~ conc * dryweight/1000 /0.25,
-                             sample_type == &quot;Organic&quot; ~ conc *mass,
-                             sample_type == &quot;Ah&quot;  ~ conc *mass)) %&gt;%
-  mutate(sample_type = fct_relevel(sample_type, c(&quot;Ah&quot;, &quot;Organic&quot;, &quot;Litter&quot;,&quot;Biomass&quot;))) %&gt;%
-  mutate(location = fct_relevel(location, c(&quot;Upper&quot;, &quot;Middle&quot;, &quot;Lower&quot;)))
-  </code>
-  <sec id="nb-code-cell-3-output-0-nb-1" specific-use="notebook-output">
-  <preformat>Joining with `by = join_by(sample_type, site, timing, plot, location, year,
-treatment)`
-Joining with `by = join_by(sample_type, site, plot, location, treatment)`</preformat>
-  </sec>
-  </sec>
-</sec>
-<sec id="summary-nb-1">
-  <title>Summary</title>
-  <sec id="nb-code-cell-4-nb-1" specific-use="notebook-code">
-  <code language="r script">conc %&gt;%
-  group_by(sample_type) %&gt;%
-  summarise(mean = mean(conc, na.rm = T),
-            median = median(conc, na.rm = T),
-            sd = sd(conc, na.rm = T),
-            IQR = quantile(conc, 0.75, na.rm = T) -quantile(conc, 0.25, na.rm = T))
-  </code>
-  <code language="r script">conc %&gt;%
-  group_by(sample_type, location) %&gt;%
-  summarise(mean = mean(conc, na.rm = T),
-            median = median(conc, na.rm = T),
-            sd = sd(conc, na.rm = T),
-            IQR = quantile(conc, 0.75, na.rm = T) -quantile(conc, 0.25, na.rm = T))
-  </code>
-  <code language="r script">total_data %&gt;%
-  group_by(sample_type) %&gt;%
-  summarise(mean = mean(p_total, na.rm = T),
-            median = median(p_total, na.rm = T),
-            sd = sd(p_total, na.rm = T),
-            IQR = quantile(p_total, 0.75, na.rm = T) -quantile(p_total, 0.25, na.rm = T))
-  </code>
-  <code language="r script">total_data %&gt;%
-  group_by(sample_type, location) %&gt;%
-  summarise(mean = mean(p_total, na.rm = T),
-            median = median(p_total, na.rm = T),
-            sd = sd(p_total, na.rm = T),
-            IQR = quantile(p_total, 0.75, na.rm = T) -quantile(p_total, 0.25, na.rm = T))
-  </code>
-  <sec id="nb-code-cell-4-output-0-nb-1" specific-use="notebook-output">
-  <preformat># A tibble: 4 × 5
-  sample_type  mean median     sd    IQR
-  &lt;fct&gt;       &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
-1 Ah           1.12  0.953  0.651  0.785
-2 Organic      3.99  3.40   2.54   2.38 
-3 Litter      39.7  39.0   23.2   32.9  
-4 Biomass     91.7  82.8   46.4   54.3  </preformat>
-  </sec>
-  <sec id="nb-code-cell-4-output-1-nb-1" specific-use="notebook-output">
-  <preformat>`summarise()` has grouped output by 'sample_type'. You can override using the
-`.groups` argument.</preformat>
-  </sec>
-  <sec id="nb-code-cell-4-output-2-nb-1" specific-use="notebook-output">
-  <preformat># A tibble: 12 × 6
-# Groups:   sample_type [4]
-   sample_type location    mean median     sd    IQR
-   &lt;fct&gt;       &lt;fct&gt;      &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
- 1 Ah          Upper      1.38   1.24   0.803  0.901
- 2 Ah          Middle     1.13   1.02   0.499  0.704
- 3 Ah          Lower      0.864  0.726  0.507  0.387
- 4 Organic     Upper      4.35   4.03   2.49   2.40 
- 5 Organic     Middle     4.32   3.53   2.98   2.27 
- 6 Organic     Lower      3.29   2.93   1.97   2.03 
- 7 Litter      Upper     29.5   29.7   15.7   22.0  
- 8 Litter      Middle    40.5   38.8   23.2   34.0  
- 9 Litter      Lower     48.7   49.2   25.8   31.6  
-10 Biomass     Upper     86.1   82.9   40.6   56.3  
-11 Biomass     Middle    88.5   82.7   47.8   49.6  
-12 Biomass     Lower    100.    82.6   49.8   63.6  </preformat>
-  </sec>
-  <sec id="nb-code-cell-4-output-3-nb-1" specific-use="notebook-output">
-  <preformat># A tibble: 4 × 5
-  sample_type  mean median    sd   IQR
-  &lt;fct&gt;       &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
-1 Ah           49.5   42.5  29.5  32.0
-2 Organic      19.9   17.7  13.7  15.6
-3 Litter       15.7   11.1  14.3  14.3
-4 Biomass      31.9   26.3  23.5  23.3</preformat>
-  </sec>
-  <sec id="nb-code-cell-4-output-4-nb-1" specific-use="notebook-output">
-  <preformat>`summarise()` has grouped output by 'sample_type'. You can override using the
-`.groups` argument.</preformat>
-  </sec>
-  <sec id="nb-code-cell-4-output-5-nb-1" specific-use="notebook-output">
-  <preformat># A tibble: 12 × 6
-# Groups:   sample_type [4]
-   sample_type location  mean median    sd   IQR
-   &lt;fct&gt;       &lt;fct&gt;    &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
- 1 Ah          Upper    64.5   57.7  35.8  41.5 
- 2 Ah          Middle   49.0   44.6  21.5  26.0 
- 3 Ah          Lower    35.1   28.9  21.4  18.3 
- 4 Organic     Upper    23.1   22.1  13.1  17.1 
- 5 Organic     Middle   19.2   17.8  12.6  10.4 
- 6 Organic     Lower    17.4   12.8  14.8  11.8 
- 7 Litter      Upper     8.75   6.66  7.50  8.25
- 8 Litter      Middle   14.4    9.29 12.2  13.4 
- 9 Litter      Lower    23.7   17.4  17.1  21.1 
-10 Biomass     Upper    22.7   18.6  14.9  14.6 
-11 Biomass     Middle   26.6   18.6  18.9  18.3 
-12 Biomass     Lower    46.0   34.3  27.7  28.1 </preformat>
-  </sec>
-  </sec>
-</sec>
-<sec id="plots-nb-1">
-  <title>Plots</title>
-  <p>Bulk Density</p>
+<sec id="sampling-dates-nb-1">
+  <title>Sampling dates</title>
   <sec id="nb-code-cell-5-nb-1" specific-use="notebook-code">
-  <code language="r script">p5 &lt;- ggplot(data = bd_data, aes(y = sample_type, x = bd, fill = location)) + 
-  geom_boxplot() +
-  theme_bw(base_size = 12) +
-  labs(x = expression(paste(&quot;Bulk Density (&quot;, kg~m^{-3}, &quot;)&quot;)), tag = &quot;b)&quot;) +
-  scale_fill_viridis_d(begin = 0.3, end = 1) +
-  theme(legend.position = &quot;bottom&quot;, 
-        legend.title = element_blank(),
-        axis.title.y = element_blank())
+  <code language="r script">sampling &lt;- tribble(
+  ~year,    ~start,                 ~end,                    ~ymin, ~ymax,
+  2019,   as_date(&quot;2019-09-03&quot;),  as_date(&quot;2019-09-15&quot;),   -Inf,    Inf,
+  2020,   as_date(&quot;2020-09-09&quot;),  as_date(&quot;2020-09-21&quot;),   -Inf,    Inf,
+  2021,   as_date(&quot;2021-09-04&quot;),  as_date(&quot;2021-09-16&quot;),   -Inf,    Inf)
   </code>
   </sec>
-  <p>biomass and litter weights</p>
   <sec id="nb-code-cell-6-nb-1" specific-use="notebook-code">
-  <code language="r script">p4 &lt;- ggplot(data = mass_data, aes(y = sample_type, x = dryweight/1000 /0.25, fill = location)) + 
-  geom_boxplot() +
-  theme_bw(base_size = 12) +
-  labs(x = expression(paste(&quot;Mass (&quot;, kg~m^{-2}, &quot;)&quot;)), y = &quot;P Source&quot;, tag = &quot;a)&quot;) +
-  scale_fill_viridis_d(begin = 0.3, end = 1) +
-  theme(legend.position = &quot;bottom&quot;, 
-        legend.title = element_blank())
-  </code>
-  </sec>
-  <sec id="nb-code-cell-7-nb-1" specific-use="notebook-code">
-  <code language="r script">#|
-p4 + p5 + plot_layout(guides = 'collect') &amp; theme(legend.position = 'bottom', legend.title = element_blank())
+  <code language="r script">
+ggplot() + 
+  theme_bw() +
+  geom_rect(data = sampling, aes(xmin = start, xmax = end, ymin = ymin, ymax = ymax), alpha = 0.3, fill = &quot;red&quot;) +
+  geom_point(data = data, aes(x = date, y = avg_air_t), colour = &quot;skyblue4&quot;, size = 2,  shape = 21, fill = &quot;white&quot;) + 
+  stat_smooth(data = data, aes(x = date, y = avg_air_t), method = &quot;loess&quot;, se = FALSE, colour = &quot;skyblue4&quot;, linewidth = 1) +
+  geom_line(data = precip, aes(x = date, y = cumu_precip/12 -10), colour = &quot;black&quot;) +
+  scale_y_continuous(name = expression(&quot;Daily Temperature &quot; ( degree*C)), 
+                     sec.axis = sec_axis(~ (. + 10) * 12 , name = &quot;Cumulative Precipitation (mm)&quot;),
+                     limits = c(-10, 30),
+                     expand = c(0, 0)) +
+  scale_x_date(date_labels = &quot;%b&quot;, 
+               date_breaks = &quot;1 month&quot;, 
+               expand = c(0.05,0.05)) +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1),
+        axis.title.x = element_blank()) +
+  facet_wrap(~year, scale = &quot;free_x&quot;)
   </code>
   <fig>
-    <caption><p>a) Mass of biomass and litter before grazing and mowing
-    and b) the bulk density of the organic layer and 10 cm Ah
-    horizon</p></caption>
-    <graphic mimetype="image" mime-subtype="png" xlink:href="04_Vertical_profile_files/figure-jats/suppfig-weights-bd-1.png" />
+    <caption><p>Average daily air temperature and cumulative rainfall
+    over the growing season over the three year study. Red bars indicate
+    sampling dates</p></caption>
+    <graphic mimetype="image" mime-subtype="png" xlink:href="06_Weather_files/figure-jats/supp-weather-plot-1.png" />
   </fig>
-  </sec>
-  <sec id="nb-code-cell-8-nb-1" specific-use="notebook-code">
-  <code language="r script">p1 &lt;- ggplot(data = conc, aes(y = sample_type, x = conc, fill = location)) + 
-  geom_boxplot() + 
-  #scale_x_log10() +
-  theme_bw(base_size = 12) +
-  theme(legend.position = c(0.2, 0.8),
-        legend.title = element_blank()) +
-  labs(x = expression(paste(&quot;WEP Concentration (&quot;, mg~kg^{-1}, &quot;)&quot;)), y = &quot;P Source&quot;, tag = &quot;a)&quot;) +
-  scale_fill_viridis_d(name = &quot;Location&quot;, begin = 0.3, end = 1)
-p1
-  </code>
-  <graphic mimetype="image" mime-subtype="png" xlink:href="04_Vertical_profile_files/figure-jats/unnamed-chunk-8-1.png" />
-  <code language="r script">p2 &lt;- ggplot(data = total_data, aes(y = sample_type, x = p_total, fill = location)) + 
-  geom_boxplot() + 
-  #scale_x_log10() +
-  theme_bw(base_size = 12) +
-  theme(axis.title.y = element_blank(),
-        legend.position = &quot;none&quot;) +
-  labs(x = expression(paste(&quot;WEP Total (&quot;, mg~m^{-2}, &quot;)&quot;)), tag = &quot;b)&quot;) +
-  scale_fill_viridis_d(name = &quot;Location&quot;, begin = 0.3, end = 1)
-p2
-  </code>
-  <graphic mimetype="image" mime-subtype="png" xlink:href="04_Vertical_profile_files/figure-jats/unnamed-chunk-8-2.png" />
-  <sec id="nb-code-cell-8-output-0-nb-1" specific-use="notebook-output">
-  <preformat>Warning: Removed 2 rows containing non-finite values (`stat_boxplot()`).</preformat>
-  </sec>
-  <sec id="nb-code-cell-8-output-1-nb-1" specific-use="notebook-output">
-  <preformat>Warning: Removed 2 rows containing non-finite values (`stat_boxplot()`).</preformat>
-  </sec>
-  </sec>
-  <sec id="cell-fig-vertical-WEP-nb-1" specific-use="notebook-code">
-  <code language="r script">#|
-p3 &lt;- p1+p2 + plot_layout(guides = 'collect') &amp; theme(legend.position = 'bottom', legend.title = element_blank())  
-
-p3
-  </code>
-  <code language="r script">#|
-#ggsave(plot = p3, filename = &quot;Figures/Profile P.png&quot;, width = 174, height = 100, units = &quot;mm&quot;, dpi = 600) 
-  </code>
-  <fig id="fig-vertical-WEP-nb-1">
-    <caption><p>Vertical and longitudinal profiles of a) WEP
-    concentration and b) WEP content in the riparian areas prior to
-    grazing and mowing treatments.</p></caption>
-    <graphic mimetype="image" mime-subtype="png" xlink:href="04_Vertical_profile_files/figure-jats/fig-vertical-WEP-1.png" />
-  </fig>
-  <sec id="cell-fig-vertical-WEP-output-0-nb-1" specific-use="notebook-output">
-  <preformat>Warning: Removed 2 rows containing non-finite values (`stat_boxplot()`).
-Removed 2 rows containing non-finite values (`stat_boxplot()`).</preformat>
+  <sec id="nb-code-cell-6-output-0-nb-1" specific-use="notebook-output">
+  <preformat>`geom_smooth()` using formula = 'y ~ x'</preformat>
   </sec>
   </sec>
 </sec>
@@ -4174,7 +4006,7 @@ Removed 2 rows containing non-finite values (`stat_boxplot()`).</preformat>
 <sub-article article-type="notebook" id="nb-8-nb-2">
 <front-stub>
 <title-group>
-<article-title>Riparian litter WEP in response to
+<article-title>Riparian vegetation WEP in response to
 grazing</article-title>
 </title-group>
 <contrib-group>
@@ -4233,9 +4065,9 @@ Please re-install glmmTMB from source or restore original 'TMB' package (see '?r
 <sec id="read-in-data-nb-2">
   <title>Read in data</title>
   <sec id="nb-code-cell-2-nb-2" specific-use="notebook-code">
-  <code language="r script">conc &lt;- read_csv(here::here(&quot;notebooks/Data/P_concentration.csv&quot;))
+  <code language="r script">conc &lt;- read_csv(&quot;P_concentration.csv&quot;)
   </code>
-  <code language="r script">mass_data &lt;- read_csv(here::here(&quot;notebooks/Data/mass.csv&quot;))
+  <code language="r script">mass_data &lt;- read_csv(&quot;mass.csv&quot;)
   </code>
   <sec id="nb-code-cell-2-output-0-nb-2" specific-use="notebook-output">
   <preformat>Rows: 1141 Columns: 8
@@ -4273,418 +4105,9 @@ treatment)`</preformat>
   </sec>
   </sec>
 </sec>
-<sec id="litter-data-nb-2">
-  <title>Litter data</title>
-  <sec id="nb-code-cell-4-nb-2" specific-use="notebook-code">
-  <code language="r script">litter_diff &lt;- veg_data %&gt;%
-  filter(sample_type == &quot;Litter&quot;) %&gt;%
-  mutate(dryweight = dryweight/1000 /0.25) %&gt;%
-  pivot_longer(cols = c(dryweight, p_total, conc), names_to = &quot;measure&quot;, values_to = &quot;value&quot;) %&gt;%
-  pivot_wider(names_from = timing, values_from = value) %&gt;%
-  mutate(diff = Before - After) 
-  </code>
-  </sec>
-</sec>
-<sec id="litter-analysis-nb-2">
-  <title>Litter Analysis</title>
-  <sec id="p-total-nb-2">
-    <title>P-total</title>
-    <sec id="nb-code-cell-5-nb-2" specific-use="notebook-code">
-    <code language="r script">m4 &lt;- glmmTMB(diff ~ treatment * location + (1|site) + (1|year),
-             data = filter(litter_diff, measure == &quot;p_total&quot;))
-simulateResiduals(m4, n = 1000, plot = TRUE) 
-    </code>
-    <graphic mimetype="image" mime-subtype="png" xlink:href="02_Litter_analysis_files/figure-jats/unnamed-chunk-5-1.png" />
-    <code language="r script">car::Anova(m4, type = &quot;III&quot;) # No interaction
-    </code>
-    <sec id="nb-code-cell-5-output-0-nb-2" specific-use="notebook-output">
-    <preformat>Object of Class DHARMa with simulated residuals based on 1000 simulations with refit = FALSE . See ?DHARMa::simulateResiduals for help. 
- 
-Scaled residual values: 0.78 0.652 0.998 0.43 0.789 0.365 0.765 0.871 0.046 0.873 0.903 0.276 0.639 0.764 1 0.845 0.556 0.028 0.655 0.815 ...</preformat>
-    </sec>
-    <sec id="nb-code-cell-5-output-1-nb-2" specific-use="notebook-output">
-    <preformat>Analysis of Deviance Table (Type III Wald chisquare tests)
-
-Response: diff
-                    Chisq Df Pr(&gt;Chisq)  
-(Intercept)        2.8105  1    0.09365 .
-treatment          2.3622  3    0.50070  
-location           2.4062  2    0.30026  
-treatment:location 3.3590  6    0.76263  
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</preformat>
-    </sec>
-    </sec>
-    <p>Removing interaction</p>
-    <sec id="nb-code-cell-6-nb-2" specific-use="notebook-code">
-    <code language="r script">temp4 &lt;- filter(litter_diff, measure == &quot;p_total&quot;) ## otherwise issue with emmeans()
-m4 &lt;- glmmTMB(diff ~ treatment + location + (1|site) + (1|year),
-             data = temp4)
-simulateResiduals(m4, n = 1000, plot = TRUE)
-    </code>
-    <graphic mimetype="image" mime-subtype="png" xlink:href="02_Litter_analysis_files/figure-jats/unnamed-chunk-6-1.png" />
-    <code language="r script">performance::check_collinearity(m4)
-    </code>
-    <code language="r script">car::Anova(m4, type = &quot;III&quot;) # No sig impact of treatment or position
-    </code>
-    <sec id="nb-code-cell-6-output-0-nb-2" specific-use="notebook-output">
-    <preformat>Object of Class DHARMa with simulated residuals based on 1000 simulations with refit = FALSE . See ?DHARMa::simulateResiduals for help. 
- 
-Scaled residual values: 0.773 0.556 0.999 0.475 0.824 0.268 0.697 0.896 0.053 0.886 0.883 0.291 0.576 0.791 1 0.842 0.469 0.046 0.675 0.788 ...</preformat>
-    </sec>
-    <sec id="nb-code-cell-6-output-1-nb-2" specific-use="notebook-output">
-    <preformat># Check for Multicollinearity
-
-Low Correlation
-
-      Term  VIF  VIF 95% CI Increased SE Tolerance Tolerance 95% CI
- treatment 1.00 [1.00, Inf]         1.00      1.00     [0.00, 1.00]
-  location 1.00 [1.00, Inf]         1.00      1.00     [0.00, 1.00]</preformat>
-    </sec>
-    <sec id="nb-code-cell-6-output-2-nb-2" specific-use="notebook-output">
-    <preformat>Analysis of Deviance Table (Type III Wald chisquare tests)
-
-Response: diff
-             Chisq Df Pr(&gt;Chisq)
-(Intercept) 0.9539  1     0.3287
-treatment   4.3029  3     0.2306
-location    1.1534  2     0.5617</preformat>
-    </sec>
-    </sec>
-  </sec>
-  <sec id="summary-nb-2">
-    <title>Summary</title>
-    <sec id="nb-code-cell-7-nb-2" specific-use="notebook-code">
-    <code language="r script">litter_diff %&gt;%
-  filter(measure == &quot;p_total&quot;) %&gt;%
-  group_by(treatment) %&gt;%
-  summarise(median = median(diff, na.rm =T),
-            mean = mean(diff, na.rm =T))
-    </code>
-    <code language="r script">litter_diff %&gt;%
-  filter(measure == &quot;p_total&quot;) %&gt;%
-  group_by(location) %&gt;%
-  summarise(median = median(diff, na.rm =T),
-            mean = mean(diff, na.rm =T))
-    </code>
-    <sec id="nb-code-cell-7-output-0-nb-2" specific-use="notebook-output">
-    <preformat># A tibble: 4 × 3
-  treatment     median  mean
-  &lt;chr&gt;          &lt;dbl&gt; &lt;dbl&gt;
-1 Control        -1.05 -2.22
-2 High Graze     -1.39 -2.36
-3 Mow            -5.70 -7.94
-4 Regular Graze  -1.66 -6.05</preformat>
-    </sec>
-    <sec id="nb-code-cell-7-output-1-nb-2" specific-use="notebook-output">
-    <preformat># A tibble: 3 × 3
-  location median  mean
-  &lt;chr&gt;     &lt;dbl&gt; &lt;dbl&gt;
-1 Lower     -5.88 -5.53
-2 Middle    -2.44 -5.56
-3 Upper     -1.22 -2.72</preformat>
-    </sec>
-    </sec>
-  </sec>
-  <sec id="plots-nb-2">
-    <title>Plots</title>
-    <p>Reorder factors</p>
-    <sec id="nb-code-cell-8-nb-2" specific-use="notebook-code">
-    <code language="r script">plot_data &lt;- litter_diff %&gt;% 
-  mutate(treatment = fct_recode(treatment, &quot;Graze&quot; = &quot;Regular Graze&quot;)) %&gt;%
-  mutate(treatment = fct_relevel(treatment, c(&quot;Control&quot;, &quot;Graze&quot;, &quot;High Graze&quot;, &quot;Mow&quot;))) %&gt;%
-  mutate(location = fct_relevel(location, c(&quot;Upper&quot;, &quot;Middle&quot;, &quot;Lower&quot;)))
-    </code>
-    </sec>
-    <p>Extra</p>
-    <sec id="nb-code-cell-9-nb-2" specific-use="notebook-code">
-    <code language="r script">df &lt;- data.frame(x1 = c(-Inf, -Inf), x2 = c(Inf, Inf), y2 = c(Inf, 0), y1 = c(0, -Inf), difference = c(&quot;Net removal&quot;, &quot;Net addition&quot;)) %&gt;%
-  mutate(difference = fct_relevel(difference, c(&quot;Net removal&quot;, &quot;Net addition&quot;))) 
-    </code>
-    </sec>
-    <p>Plots</p>
-    <sec id="cell-fig-litter-WEP-nb-2" specific-use="notebook-code">
-    <code language="r script">#|
-p1 &lt;- ggplot(data = filter(plot_data, measure == &quot;p_total&quot;)) +
-  theme_bw(base_size = 12) +
-  geom_rect(data = df, aes(xmin = x1, xmax = x2, ymin = y1, ymax = y2, fill = difference), alpha = 0.15) +
-  #scale_fill_manual(values = c(&quot;white&quot;, &quot;black&quot;)) +
-  #ggnewscale::new_scale_fill() +
-  geom_boxplot(aes(x = treatment, y = diff, fill = location)) +
-  labs(y = expression(paste(&quot;Net WEP Difference (&quot;, mg~m^{-2}, &quot;)&quot;)), x = &quot;Treatment&quot;) +
-  #scale_fill_viridis_d(name = &quot;Location&quot;, begin = 0.3, end = 1) +
-  scale_fill_manual(values = c(&quot;white&quot;, &quot;black&quot;, &quot;#35608DFF&quot;, &quot;#2FB47CFF&quot;, &quot;#FDE725FF&quot;)) +
-  guides(fill = guide_legend(override.aes = list(colour = &quot;black&quot;, size = 1))) +
-  theme(axis.title.x = element_blank(),
-        axis.text.x = element_text(angle = 0, vjust = 1, hjust = 0.5),
-        legend.position = &quot;bottom&quot;,
-        legend.title = element_blank())
-p1
-    </code>
-    <code language="r script">#|
-#ggsave(plot = p1, filename = &quot;Figures/Litter_WEP.png&quot;, width = 150, height = 100, units = &quot;mm&quot;, dpi = 600)
-    </code>
-    <fig id="fig-litter-WEP-nb-2">
-      <caption><p>Change in riparian litter WEP following grazing or
-      mowing in each of the riparian zones. No significant effect of
-      treatment or riparian zone on the litter WEP content was
-      detected</p></caption>
-      <graphic mimetype="image" mime-subtype="png" xlink:href="02_Litter_analysis_files/figure-jats/fig-litter-WEP-1.png" />
-    </fig>
-    <sec id="cell-fig-litter-WEP-output-0-nb-2" specific-use="notebook-output">
-    <preformat>Warning: Removed 11 rows containing non-finite outside the scale range
-(`stat_boxplot()`).</preformat>
-    </sec>
-    </sec>
-  </sec>
-</sec>
-</body>
-
-
-
-<back>
-</back>
-
-
-</sub-article>
-<sub-article article-type="notebook" id="nb-12-nb-3">
-<front-stub>
-<title-group>
-<article-title>Weather</article-title>
-</title-group>
-<contrib-group>
-<contrib contrib-type="author">
-<name>
-<surname>Koiter</surname>
-<given-names>Alex</given-names>
-</name>
-<string-name>Alex Koiter</string-name>
-
-</contrib>
-</contrib-group>
-</front-stub>
-
-<body>
-<sec id="load-libraries-nb-3">
-  <title>Load Libraries</title>
-  <sec id="nb-code-cell-1-nb-3" specific-use="notebook-code">
-  <code language="r script">library(tidyverse)
-  </code>
-  <code language="r script">library(readxl)
-library(janitor)
-  </code>
-  <sec id="nb-code-cell-1-output-0-nb-3" specific-use="notebook-output">
-  <preformat>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.4     ✔ readr     2.1.4
-✔ forcats   1.0.0     ✔ stringr   1.5.1
-✔ ggplot2   3.4.4     ✔ tibble    3.2.1
-✔ lubridate 1.9.2     ✔ tidyr     1.3.1
-✔ purrr     1.0.2     
-── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()
-ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</preformat>
-  </sec>
-  <sec id="nb-code-cell-1-output-1-nb-3" specific-use="notebook-output">
-  <preformat>
-Attaching package: 'janitor'
-
-The following objects are masked from 'package:stats':
-
-    chisq.test, fisher.test</preformat>
-  </sec>
-  </sec>
-</sec>
-<sec id="read-in-data-nb-3">
-  <title>Read in data</title>
-  <sec id="nb-code-cell-2-nb-3" specific-use="notebook-code">
-  <code language="r script">data &lt;- read_excel(here::here(&quot;notebooks/Data/Forrest-Daily-TempRainSoil-20192021-AKoiter.xlsx&quot;)) %&gt;%
-  clean_names() %&gt;%
-  mutate(date = ymd(date),
-         year = year(date),
-         month = month(date)) %&gt;%
-  filter(month &gt;4, month &lt; 11) 
-  </code>
-  </sec>
-  <sec id="precip-data-nb-3">
-    <title>precip data</title>
-    <sec id="nb-code-cell-3-nb-3" specific-use="notebook-code">
-    <code language="r script">precip &lt;- data %&gt;%
-  group_by(year) %&gt;%
-  mutate(cumu_precip = cumsum(pluvio_rain)) %&gt;%
-  select(date, cumu_precip, pluvio_rain, year)
-    </code>
-    </sec>
-    <sec id="nb-code-cell-4-nb-3" specific-use="notebook-code">
-    <code language="r script">ggplot(data = data, aes(x = date, y = avg_air_t)) +
-  geom_point() +
-  theme_bw() +
-  facet_wrap(~year, scales = &quot;free_x&quot;)
-    </code>
-    <graphic mimetype="image" mime-subtype="png" xlink:href="06_Weather_files/figure-jats/unnamed-chunk-4-1.png" />
-    <code language="r script">ggplot(data = precip, aes(x = date, y = cumu_precip)) +
-  geom_point() +
-  theme_bw() +
-  facet_wrap(~year, scales = &quot;free_x&quot;)
-    </code>
-    <graphic mimetype="image" mime-subtype="png" xlink:href="06_Weather_files/figure-jats/unnamed-chunk-4-2.png" />
-    </sec>
-  </sec>
-</sec>
-<sec id="sampling-dates-nb-3">
-  <title>Sampling dates</title>
-  <sec id="nb-code-cell-5-nb-3" specific-use="notebook-code">
-  <code language="r script">sampling &lt;- tribble(
-  ~year,    ~start,                 ~end,                    ~ymin, ~ymax,
-  2019,   as_date(&quot;2019-09-03&quot;),  as_date(&quot;2019-09-15&quot;),   -Inf,    Inf,
-  2020,   as_date(&quot;2020-09-09&quot;),  as_date(&quot;2020-09-21&quot;),   -Inf,    Inf,
-  2021,   as_date(&quot;2021-09-04&quot;),  as_date(&quot;2021-09-16&quot;),   -Inf,    Inf)
-  </code>
-  </sec>
-  <sec id="nb-code-cell-6-nb-3" specific-use="notebook-code">
-  <code language="r script">
-ggplot() + 
-  theme_bw() +
-  geom_rect(data = sampling, aes(xmin = start, xmax = end, ymin = ymin, ymax = ymax), alpha = 0.3, fill = &quot;red&quot;) +
-  geom_point(data = data, aes(x = date, y = avg_air_t), colour = &quot;skyblue4&quot;, size = 2,  shape = 21, fill = &quot;white&quot;) + 
-  stat_smooth(data = data, aes(x = date, y = avg_air_t), method = &quot;loess&quot;, se = FALSE, colour = &quot;skyblue4&quot;, linewidth = 1) +
-  geom_line(data = precip, aes(x = date, y = cumu_precip/12 -10), colour = &quot;black&quot;) +
-  scale_y_continuous(name = expression(&quot;Daily Temperature &quot; ( degree*C)), 
-                     sec.axis = sec_axis(~ (. + 10) * 12 , name = &quot;Cumulative Precipitation (mm)&quot;),
-                     limits = c(-10, 30),
-                     expand = c(0, 0)) +
-  scale_x_date(date_labels = &quot;%b&quot;, 
-               date_breaks = &quot;1 month&quot;, 
-               expand = c(0.05,0.05)) +
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1),
-        axis.title.x = element_blank()) +
-  facet_wrap(~year, scale = &quot;free_x&quot;)
-  </code>
-  <fig>
-    <caption><p>Average daily air temperature and cumulative rainfall
-    over the growing season over the three year study. Red bars indicate
-    sampling dates</p></caption>
-    <graphic mimetype="image" mime-subtype="png" xlink:href="06_Weather_files/figure-jats/supp-weather-plot-1.png" />
-  </fig>
-  <sec id="nb-code-cell-6-output-0-nb-3" specific-use="notebook-output">
-  <preformat>`geom_smooth()` using formula = 'y ~ x'</preformat>
-  </sec>
-  </sec>
-</sec>
-</body>
-
-
-
-<back>
-</back>
-
-
-</sub-article>
-<sub-article article-type="notebook" id="nb-16-nb-4">
-<front-stub>
-<title-group>
-<article-title>Riparian vegetation WEP in response to
-grazing</article-title>
-</title-group>
-<contrib-group>
-<contrib contrib-type="author">
-<name>
-<surname>Koiter</surname>
-<given-names>Alex</given-names>
-</name>
-<string-name>Alex Koiter</string-name>
-
-</contrib>
-</contrib-group>
-</front-stub>
-
-<body>
-<sec id="load-libraries-nb-4">
-  <title>Load Libraries</title>
-  <sec id="nb-code-cell-1-nb-4" specific-use="notebook-code">
-  <code language="r script">library(tidyverse)
-  </code>
-  <code language="r script">library(glmmTMB)
-  </code>
-  <code language="r script">library(DHARMa)
-  </code>
-  <code language="r script">library(emmeans)
-library(viridis)
-  </code>
-  <code language="r script">library(patchwork)
-  </code>
-  <sec id="nb-code-cell-1-output-0-nb-4" specific-use="notebook-output">
-  <preformat>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.4     ✔ readr     2.1.4
-✔ forcats   1.0.0     ✔ stringr   1.5.1
-✔ ggplot2   3.5.0     ✔ tibble    3.2.1
-✔ lubridate 1.9.2     ✔ tidyr     1.3.1
-✔ purrr     1.0.2     
-── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()
-ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</preformat>
-  </sec>
-  <sec id="nb-code-cell-1-output-1-nb-4" specific-use="notebook-output">
-  <preformat>Warning in checkDepPackageVersion(dep_pkg = &quot;TMB&quot;): Package version inconsistency detected.
-glmmTMB was built with TMB version 1.9.6
-Current TMB version is 1.9.9
-Please re-install glmmTMB from source or restore original 'TMB' package (see '?reinstalling' for more information)</preformat>
-  </sec>
-  <sec id="nb-code-cell-1-output-2-nb-4" specific-use="notebook-output">
-  <preformat>This is DHARMa 0.4.6. For overview type '?DHARMa'. For recent changes, type news(package = 'DHARMa')</preformat>
-  </sec>
-  <sec id="nb-code-cell-1-output-3-nb-4" specific-use="notebook-output">
-  <preformat>Loading required package: viridisLite</preformat>
-  </sec>
-  </sec>
-</sec>
-<sec id="read-in-data-nb-4">
-  <title>Read in data</title>
-  <sec id="nb-code-cell-2-nb-4" specific-use="notebook-code">
-  <code language="r script">conc &lt;- read_csv(here::here(&quot;notebooks/Data/P_concentration.csv&quot;))
-  </code>
-  <code language="r script">mass_data &lt;- read_csv(here::here(&quot;notebooks/Data/mass.csv&quot;))
-  </code>
-  <sec id="nb-code-cell-2-output-0-nb-4" specific-use="notebook-output">
-  <preformat>Rows: 1141 Columns: 8
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: &quot;,&quot;
-chr (5): sample_type, timing, plot, location, treatment
-dbl (3): site, ak_content, year
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</preformat>
-  </sec>
-  <sec id="nb-code-cell-2-output-1-nb-4" specific-use="notebook-output">
-  <preformat>Rows: 576 Columns: 8
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: &quot;,&quot;
-chr (5): sample_type, timing, plot, location, treatment
-dbl (3): site, dryweight, year
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</preformat>
-  </sec>
-  </sec>
-</sec>
-<sec id="merge-data-nb-4">
-  <title>Merge data</title>
-  <sec id="nb-code-cell-3-nb-4" specific-use="notebook-code">
-  <code language="r script">veg_data &lt;- mass_data %&gt;%
-  right_join(conc) %&gt;%
-  rename(conc = ak_content) %&gt;% # mg/kg
-  mutate(p_total = conc * dryweight/1000 /0.25) # mg/m2
-  </code>
-  <sec id="nb-code-cell-3-output-0-nb-4" specific-use="notebook-output">
-  <preformat>Joining with `by = join_by(sample_type, site, timing, plot, location, year,
-treatment)`</preformat>
-  </sec>
-  </sec>
-</sec>
-<sec id="biomass-data-nb-4">
+<sec id="biomass-data-nb-2">
   <title>Biomass data</title>
-  <sec id="nb-code-cell-4-nb-4" specific-use="notebook-code">
+  <sec id="nb-code-cell-4-nb-2" specific-use="notebook-code">
   <code language="r script">biomass_diff &lt;- veg_data %&gt;%
   filter(sample_type == &quot;Biomass&quot;) %&gt;%
   mutate(dryweight = dryweight/1000 /0.25) %&gt;% # kg/m2
@@ -4694,11 +4117,11 @@ treatment)`</preformat>
   </code>
   </sec>
 </sec>
-<sec id="biomass-analysis-nb-4">
+<sec id="biomass-analysis-nb-2">
   <title>Biomass Analysis</title>
-  <sec id="p-total-nb-4">
+  <sec id="p-total-nb-2">
     <title>P-total</title>
-    <sec id="nb-code-cell-5-nb-4" specific-use="notebook-code">
+    <sec id="nb-code-cell-5-nb-2" specific-use="notebook-code">
     <code language="r script">m &lt;- glmmTMB((diff) ~ treatment * location + Before + (1|site) + (1|year),
              data = filter(biomass_diff, measure == &quot;p_total&quot;))
 simulateResiduals(m, n = 1000, plot = TRUE) 
@@ -4706,12 +4129,12 @@ simulateResiduals(m, n = 1000, plot = TRUE)
     <graphic mimetype="image" mime-subtype="png" xlink:href="01_Biomass_analysis_files/figure-jats/unnamed-chunk-5-1.png" />
     <code language="r script">car::Anova(m, type = &quot;III&quot;) # No interaction
     </code>
-    <sec id="nb-code-cell-5-output-0-nb-4" specific-use="notebook-output">
+    <sec id="nb-code-cell-5-output-0-nb-2" specific-use="notebook-output">
     <preformat>Object of Class DHARMa with simulated residuals based on 1000 simulations with refit = FALSE . See ?DHARMa::simulateResiduals for help. 
  
 Scaled residual values: 0.751 0.611 0.716 0.648 0.463 0.707 0.684 0.558 0.811 0.623 0.328 0.664 0.676 0.595 0.785 0.304 0.68 0.547 0.369 0.329 ...</preformat>
     </sec>
-    <sec id="nb-code-cell-5-output-1-nb-4" specific-use="notebook-output">
+    <sec id="nb-code-cell-5-output-1-nb-2" specific-use="notebook-output">
     <preformat>Analysis of Deviance Table (Type III Wald chisquare tests)
 
 Response: (diff)
@@ -4726,7 +4149,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</preformat>
     </sec>
     </sec>
     <p>Removing interaction</p>
-    <sec id="nb-code-cell-6-nb-4" specific-use="notebook-code">
+    <sec id="nb-code-cell-6-nb-2" specific-use="notebook-code">
     <code language="r script">temp &lt;- filter(biomass_diff, measure == &quot;p_total&quot;) ## otherwise issue with emmeans()
 m &lt;- glmmTMB((diff) ~ treatment + location + Before + (1|site) + (1|year),
              data = temp)
@@ -4737,12 +4160,12 @@ simulateResiduals(m, n = 1000, plot = TRUE)
     </code>
     <code language="r script">car::Anova(m, type = &quot;III&quot;)
     </code>
-    <sec id="nb-code-cell-6-output-0-nb-4" specific-use="notebook-output">
+    <sec id="nb-code-cell-6-output-0-nb-2" specific-use="notebook-output">
     <preformat>Object of Class DHARMa with simulated residuals based on 1000 simulations with refit = FALSE . See ?DHARMa::simulateResiduals for help. 
  
 Scaled residual values: 0.781 0.692 0.617 0.69 0.469 0.664 0.714 0.47 0.829 0.472 0.332 0.78 0.71 0.511 0.803 0.336 0.739 0.442 0.245 0.323 ...</preformat>
     </sec>
-    <sec id="nb-code-cell-6-output-1-nb-4" specific-use="notebook-output">
+    <sec id="nb-code-cell-6-output-1-nb-2" specific-use="notebook-output">
     <preformat># Check for Multicollinearity
 
 Low Correlation
@@ -4752,7 +4175,7 @@ Low Correlation
   location 1.59 [1.33,     2.03]         1.26      0.63     [0.49, 0.75]
     Before 1.59 [1.34,     2.04]         1.26      0.63     [0.49, 0.75]</preformat>
     </sec>
-    <sec id="nb-code-cell-6-output-2-nb-4" specific-use="notebook-output">
+    <sec id="nb-code-cell-6-output-2-nb-2" specific-use="notebook-output">
     <preformat>Analysis of Deviance Table (Type III Wald chisquare tests)
 
 Response: (diff)
@@ -4766,7 +4189,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</preformat>
     </sec>
     </sec>
     <p>Post-hoc</p>
-    <sec id="nb-code-cell-7-nb-4" specific-use="notebook-code">
+    <sec id="nb-code-cell-7-nb-2" specific-use="notebook-code">
     <code language="r script">m_emms1 &lt;- emmeans(m, ~treatment)
 m_emms2 &lt;- emmeans(m, ~location)
 
@@ -4774,7 +4197,7 @@ pairs(m_emms1, adjust = &quot;fdr&quot;)
     </code>
     <code language="r script">pairs(m_emms2, adjust = &quot;fdr&quot;)
     </code>
-    <sec id="nb-code-cell-7-output-0-nb-4" specific-use="notebook-output">
+    <sec id="nb-code-cell-7-output-0-nb-2" specific-use="notebook-output">
     <preformat> contrast                   estimate   SE  df t.ratio p.value
  Control - High Graze          -4.83 2.42 132  -1.998  0.0716
  Control - Mow                 -8.52 2.42 132  -3.522  0.0018
@@ -4787,7 +4210,7 @@ Results are averaged over the levels of: location
 Note: contrasts are still on the ( scale 
 P value adjustment: fdr method for 6 tests </preformat>
     </sec>
-    <sec id="nb-code-cell-7-output-1-nb-4" specific-use="notebook-output">
+    <sec id="nb-code-cell-7-output-1-nb-2" specific-use="notebook-output">
     <preformat> contrast       estimate   SE  df t.ratio p.value
  Lower - Middle    -7.94 2.43 132  -3.264  0.0021
  Lower - Upper     -9.82 2.57 132  -3.826  0.0006
@@ -4799,9 +4222,9 @@ P value adjustment: fdr method for 3 tests </preformat>
     </sec>
     </sec>
   </sec>
-  <sec id="summary-nb-4">
+  <sec id="summary-nb-2">
     <title>Summary</title>
-    <sec id="nb-code-cell-8-nb-4" specific-use="notebook-code">
+    <sec id="nb-code-cell-8-nb-2" specific-use="notebook-code">
     <code language="r script">biomass_diff %&gt;%
   filter(measure == &quot;p_total&quot;) %&gt;%
   group_by(treatment) %&gt;%
@@ -4814,7 +4237,7 @@ P value adjustment: fdr method for 3 tests </preformat>
   summarise(median = median(diff, na.rm =T),
             mean = mean(diff, na.rm =T))
     </code>
-    <sec id="nb-code-cell-8-output-0-nb-4" specific-use="notebook-output">
+    <sec id="nb-code-cell-8-output-0-nb-2" specific-use="notebook-output">
     <preformat># A tibble: 4 × 3
   treatment     median  mean
   &lt;chr&gt;          &lt;dbl&gt; &lt;dbl&gt;
@@ -4823,7 +4246,7 @@ P value adjustment: fdr method for 3 tests </preformat>
 3 Mow            18.7  19.5 
 4 Regular Graze   7.79  7.64</preformat>
     </sec>
-    <sec id="nb-code-cell-8-output-1-nb-4" specific-use="notebook-output">
+    <sec id="nb-code-cell-8-output-1-nb-2" specific-use="notebook-output">
     <preformat># A tibble: 3 × 3
   location median  mean
   &lt;chr&gt;     &lt;dbl&gt; &lt;dbl&gt;
@@ -4833,10 +4256,10 @@ P value adjustment: fdr method for 3 tests </preformat>
     </sec>
     </sec>
   </sec>
-  <sec id="plotting-nb-4">
+  <sec id="plotting-nb-2">
     <title>Plotting</title>
     <p>Ordering of factors</p>
-    <sec id="nb-code-cell-9-nb-4" specific-use="notebook-code">
+    <sec id="nb-code-cell-9-nb-2" specific-use="notebook-code">
     <code language="r script">plot_data &lt;- biomass_diff %&gt;% 
   mutate(treatment = fct_recode(treatment, &quot;Graze&quot; = &quot;Regular Graze&quot;)) %&gt;%
   mutate(treatment = fct_relevel(treatment, c(&quot;Control&quot;, &quot;Graze&quot;, &quot;High Graze&quot;, &quot;Mow&quot;))) %&gt;%
@@ -4844,13 +4267,13 @@ P value adjustment: fdr method for 3 tests </preformat>
     </code>
     </sec>
     <p>Extra</p>
-    <sec id="nb-code-cell-10-nb-4" specific-use="notebook-code">
+    <sec id="nb-code-cell-10-nb-2" specific-use="notebook-code">
     <code language="r script">df &lt;- data.frame(x1 = c(-Inf, -Inf), x2 = c(Inf, Inf), y2 = c(Inf, 0), y1 = c(0, -Inf), difference = c(&quot;Net removal&quot;, &quot;Net addition&quot;)) %&gt;%
   mutate(difference = fct_relevel(difference, c(&quot;Net removal&quot;, &quot;Net addition&quot;))) 
     </code>
     </sec>
     <p>Plots</p>
-    <sec id="nb-code-cell-11-nb-4" specific-use="notebook-code">
+    <sec id="nb-code-cell-11-nb-2" specific-use="notebook-code">
     <code language="r script">p1 &lt;- ggplot(data = filter(plot_data, measure == &quot;p_total&quot;)) +
   geom_rect(data = df, aes(xmin = x1, xmax = x2, ymin = y1, ymax = y2, fill = difference), alpha = 0.15) +
   #geom_hline(yintercept = 0) +
@@ -4884,16 +4307,16 @@ p1
 p2
     </code>
     <graphic mimetype="image" mime-subtype="png" xlink:href="01_Biomass_analysis_files/figure-jats/unnamed-chunk-11-2.png" />
-    <sec id="nb-code-cell-11-output-0-nb-4" specific-use="notebook-output">
+    <sec id="nb-code-cell-11-output-0-nb-2" specific-use="notebook-output">
     <preformat>Warning: Removed 2 rows containing non-finite outside the scale range
 (`stat_boxplot()`).</preformat>
     </sec>
-    <sec id="nb-code-cell-11-output-1-nb-4" specific-use="notebook-output">
+    <sec id="nb-code-cell-11-output-1-nb-2" specific-use="notebook-output">
     <preformat>Warning: Removed 2 rows containing non-finite outside the scale range
 (`stat_boxplot()`).</preformat>
     </sec>
     </sec>
-    <sec id="cell-fig-vegetation-WEP-nb-4" specific-use="notebook-code">
+    <sec id="cell-fig-vegetation-WEP-nb-2" specific-use="notebook-code">
     <code language="r script">#|
 p3 &lt;- p1 + p2 + plot_layout(guides = 'collect') &amp; theme(legend.position = 'bottom', legend.title = element_blank())
 p3
@@ -4901,14 +4324,14 @@ p3
     <code language="r script">#|
 # ggsave(plot = p3, filename = &quot;Figures/Biomass_WEP.png&quot;, width = 174, height = 85, units = &quot;mm&quot;, dpi = 600)
     </code>
-    <fig id="fig-vegetation-WEP-nb-4">
+    <fig id="fig-vegetation-WEP-nb-2">
       <caption><p>Change in riparian biomass WEP following grazing or
       mowing in each riparian zone. Within each plot significant
       differences (p&lt;0.05) between treatments or riparian zones are
       denoted with different letters.</p></caption>
       <graphic mimetype="image" mime-subtype="png" xlink:href="01_Biomass_analysis_files/figure-jats/fig-vegetation-WEP-1.png" />
     </fig>
-    <sec id="cell-fig-vegetation-WEP-output-0-nb-4" specific-use="notebook-output">
+    <sec id="cell-fig-vegetation-WEP-output-0-nb-2" specific-use="notebook-output">
     <preformat>Warning: Removed 2 rows containing non-finite outside the scale range
 (`stat_boxplot()`).
 Removed 2 rows containing non-finite outside the scale range
@@ -4917,9 +4340,9 @@ Removed 2 rows containing non-finite outside the scale range
     </sec>
   </sec>
 </sec>
-<sec id="dry-weight-nb-4">
+<sec id="dry-weight-nb-2">
   <title>Dry Weight</title>
-  <sec id="nb-code-cell-12-nb-4" specific-use="notebook-code">
+  <sec id="nb-code-cell-12-nb-2" specific-use="notebook-code">
   <code language="r script">m2 &lt;- glmmTMB((diff) ~ treatment * location + Before + (1|site) + (1|year),
               data = filter(biomass_diff, measure == &quot;dryweight&quot;))
 simulateResiduals(m2, n = 1000, plot = TRUE)
@@ -4930,12 +4353,12 @@ simulateResiduals(m2, n = 1000, plot = TRUE)
   <code language="r script">performance::check_collinearity(glmmTMB((diff) ~ treatment + location + Before + (1|site) + (1|year),
                                         data = filter(biomass_diff, measure == &quot;dryweight&quot;)))
   </code>
-  <sec id="nb-code-cell-12-output-0-nb-4" specific-use="notebook-output">
+  <sec id="nb-code-cell-12-output-0-nb-2" specific-use="notebook-output">
   <preformat>Object of Class DHARMa with simulated residuals based on 1000 simulations with refit = FALSE . See ?DHARMa::simulateResiduals for help. 
  
 Scaled residual values: 0.86 0.638 0.321 0.663 0.337 0.721 0.66 0.47 0.82 0.604 0.421 0.873 0.792 0.909 0.794 0.374 0.729 0.575 0.564 0.531 ...</preformat>
   </sec>
-  <sec id="nb-code-cell-12-output-1-nb-4" specific-use="notebook-output">
+  <sec id="nb-code-cell-12-output-1-nb-2" specific-use="notebook-output">
   <preformat>Analysis of Deviance Table (Type III Wald chisquare tests)
 
 Response: (diff)
@@ -4948,7 +4371,7 @@ treatment:location 13.564  6   0.034909 *
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</preformat>
   </sec>
-  <sec id="nb-code-cell-12-output-2-nb-4" specific-use="notebook-output">
+  <sec id="nb-code-cell-12-output-2-nb-2" specific-use="notebook-output">
   <preformat># Check for Multicollinearity
 
 Low Correlation
@@ -4960,13 +4383,13 @@ Low Correlation
   </sec>
   </sec>
   <p>Post-hoc</p>
-  <sec id="nb-code-cell-13-nb-4" specific-use="notebook-code">
+  <sec id="nb-code-cell-13-nb-2" specific-use="notebook-code">
   <code language="r script">m_emms2 &lt;- emmeans(m2, ~treatment * location)
 emmeans(m2, pairwise ~ location|treatment, adjust = &quot;fdr&quot;)$contrasts
   </code>
   <code language="r script">emmeans(m2, pairwise ~ treatment|location, adjust = &quot;fdr&quot;)$contrasts
   </code>
-  <sec id="nb-code-cell-13-output-0-nb-4" specific-use="notebook-output">
+  <sec id="nb-code-cell-13-output-0-nb-2" specific-use="notebook-output">
   <preformat>treatment = Control:
  contrast       estimate     SE  df t.ratio p.value
  Lower - Middle -0.03993 0.0395 128  -1.011  0.3138
@@ -4994,7 +4417,7 @@ treatment = Regular Graze:
 Note: contrasts are still on the ( scale 
 P value adjustment: fdr method for 3 tests </preformat>
   </sec>
-  <sec id="nb-code-cell-13-output-1-nb-4" specific-use="notebook-output">
+  <sec id="nb-code-cell-13-output-1-nb-2" specific-use="notebook-output">
   <preformat>location = Lower:
  contrast                   estimate     SE  df t.ratio p.value
  Control - High Graze        -0.0674 0.0368 128  -1.829  0.1046
@@ -5026,9 +4449,9 @@ Note: contrasts are still on the ( scale
 P value adjustment: fdr method for 6 tests </preformat>
   </sec>
   </sec>
-  <sec id="plots-nb-4">
+  <sec id="plots-nb-2">
     <title>Plots</title>
-    <sec id="nb-code-cell-14-nb-4" specific-use="notebook-code">
+    <sec id="nb-code-cell-14-nb-2" specific-use="notebook-code">
     <code language="r script">ggplot(data = filter(plot_data, measure == &quot;dryweight&quot;), aes(x = treatment, y = diff, fill = location)) +
   geom_boxplot() +
   labs(y = &quot;kg/m^2&quot;) +
@@ -5062,10 +4485,583 @@ P value adjustment: fdr method for 6 tests </preformat>
 
 
 </sub-article>
-<sub-article article-type="notebook" id="nb-20-nb-5">
+<sub-article article-type="notebook" id="nb-12-nb-3">
 <front-stub>
 <title-group>
 <article-title>Riparian organic and mineral soil WEP in response to
+grazing</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<name>
+<surname>Koiter</surname>
+<given-names>Alex</given-names>
+</name>
+<string-name>Alex Koiter</string-name>
+
+</contrib>
+</contrib-group>
+</front-stub>
+
+<body>
+<sec id="load-libraries-nb-3">
+  <title>Load Libraries</title>
+  <sec id="nb-code-cell-1-nb-3" specific-use="notebook-code">
+  <code language="r script">library(tidyverse)
+  </code>
+  <code language="r script">library(glmmTMB)
+  </code>
+  <code language="r script">library(DHARMa)
+  </code>
+  <code language="r script">library(emmeans)
+  </code>
+  <sec id="nb-code-cell-1-output-0-nb-3" specific-use="notebook-output">
+  <preformat>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.4
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ ggplot2   3.5.0     ✔ tibble    3.2.1
+✔ lubridate 1.9.2     ✔ tidyr     1.3.1
+✔ purrr     1.0.2     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</preformat>
+  </sec>
+  <sec id="nb-code-cell-1-output-1-nb-3" specific-use="notebook-output">
+  <preformat>Warning in checkDepPackageVersion(dep_pkg = &quot;TMB&quot;): Package version inconsistency detected.
+glmmTMB was built with TMB version 1.9.6
+Current TMB version is 1.9.9
+Please re-install glmmTMB from source or restore original 'TMB' package (see '?reinstalling' for more information)</preformat>
+  </sec>
+  <sec id="nb-code-cell-1-output-2-nb-3" specific-use="notebook-output">
+  <preformat>This is DHARMa 0.4.6. For overview type '?DHARMa'. For recent changes, type news(package = 'DHARMa')</preformat>
+  </sec>
+  </sec>
+</sec>
+<sec id="read-in-clean-data-nb-3">
+  <title>Read in clean data</title>
+  <sec id="nb-code-cell-2-nb-3" specific-use="notebook-code">
+  <code language="r script">conc &lt;- read_csv(&quot;P_concentration.csv&quot;) %&gt;%
+  rename(&quot;conc&quot; = &quot;ak_content&quot;)
+  </code>
+  <sec id="nb-code-cell-2-output-0-nb-3" specific-use="notebook-output">
+  <preformat>Rows: 1141 Columns: 8
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: &quot;,&quot;
+chr (5): sample_type, timing, plot, location, treatment
+dbl (3): site, ak_content, year
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</preformat>
+  </sec>
+  </sec>
+</sec>
+<sec id="organics-data-nb-3">
+  <title>Organics data</title>
+  <sec id="nb-code-cell-3-nb-3" specific-use="notebook-code">
+  <code language="r script">organic_diff &lt;- conc %&gt;%
+  filter(sample_type == &quot;Organic&quot;) %&gt;%
+  pivot_wider(names_from = timing, values_from = conc) %&gt;%
+  mutate(diff = Before - After) %&gt;%
+  mutate(treatment = fct_recode(treatment, &quot;Graze&quot; = &quot;Regular Graze&quot;)) %&gt;%
+  mutate(treatment = fct_relevel(treatment, c(&quot;Control&quot;, &quot;Graze&quot;, &quot;High Graze&quot;, &quot;Mow&quot;))) %&gt;%
+  mutate(location = fct_relevel(location, c(&quot;Upper&quot;, &quot;Middle&quot;, &quot;Lower&quot;)))
+  </code>
+  </sec>
+</sec>
+<sec id="soil-data-nb-3">
+  <title>Soil data</title>
+  <sec id="nb-code-cell-4-nb-3" specific-use="notebook-code">
+  <code language="r script">soil_diff &lt;- conc %&gt;%
+  filter(sample_type == &quot;Soil&quot;) %&gt;%
+  pivot_wider(names_from = timing, values_from = conc) %&gt;%
+  mutate(diff = Before - After) %&gt;%
+  mutate(treatment = fct_recode(treatment, &quot;Graze&quot; = &quot;Regular Graze&quot;)) %&gt;%
+  mutate(treatment = fct_relevel(treatment, c(&quot;Control&quot;, &quot;Graze&quot;, &quot;High Graze&quot;, &quot;Mow&quot;))) %&gt;%
+  mutate(location = fct_relevel(location, c(&quot;Upper&quot;, &quot;Middle&quot;, &quot;Lower&quot;)))
+  </code>
+  </sec>
+</sec>
+<sec id="organics-analysis-nb-3">
+  <title>Organics analysis</title>
+  <sec id="nb-code-cell-5-nb-3" specific-use="notebook-code">
+  <code language="r script">m7 &lt;- glmmTMB(diff ~ treatment * location + (1|site) + (1|year),
+              data = organic_diff)
+  </code>
+  </sec>
+  <sec id="cell-fig-resid1-nb-3" specific-use="notebook-code">
+  <code language="r script">simulateResiduals(m7, n = 1000, plot = TRUE)
+  </code>
+  <fig id="fig-resid1-nb-3">
+    <caption><p></p></caption>
+    <graphic id="fig-resid1-nb-3" mimetype="image" mime-subtype="png" xlink:href="03_Soils_analysis_files/figure-jats/fig-resid1-1.png" />
+  </fig>
+  <sec id="cell-fig-resid1-output-0-nb-3" specific-use="notebook-output">
+  <preformat>Object of Class DHARMa with simulated residuals based on 1000 simulations with refit = FALSE . See ?DHARMa::simulateResiduals for help. 
+ 
+Scaled residual values: 0.238 0.027 0.226 0.24 0.719 0.392 0.179 0.09 0.368 0.246 0.39 0.748 0.864 0.689 0.362 0.796 0.846 0.507 0.995 0.711 ...</preformat>
+  </sec>
+  </sec>
+  <sec id="nb-code-cell-6-nb-3" specific-use="notebook-code">
+  <code language="r script">car::Anova(m7, type = &quot;III&quot;)  # No interaction
+  </code>
+  <sec id="nb-code-cell-6-output-0-nb-3" specific-use="notebook-output">
+  <preformat>Analysis of Deviance Table (Type III Wald chisquare tests)
+
+Response: diff
+                    Chisq Df Pr(&gt;Chisq)
+(Intercept)        0.0818  1     0.7748
+treatment          3.4925  3     0.3217
+location           0.4320  2     0.8057
+treatment:location 2.8110  6     0.8322</preformat>
+  </sec>
+  </sec>
+  <sec id="nb-code-cell-7-nb-3" specific-use="notebook-code">
+  <code language="r script">m7 &lt;- glmmTMB(diff ~ treatment + location + (1|site) + (1|year),
+              data = organic_diff)
+simulateResiduals(m7, n = 1000, plot = TRUE) # No interaction
+  </code>
+  <graphic mimetype="image" mime-subtype="png" xlink:href="03_Soils_analysis_files/figure-jats/unnamed-chunk-8-1.png" />
+  <code language="r script">performance::check_collinearity(m7)
+  </code>
+  <code language="r script">car::Anova(m7, type = &quot;III&quot;)
+  </code>
+  <sec id="nb-code-cell-7-output-0-nb-3" specific-use="notebook-output">
+  <preformat>Object of Class DHARMa with simulated residuals based on 1000 simulations with refit = FALSE . See ?DHARMa::simulateResiduals for help. 
+ 
+Scaled residual values: 0.246 0.033 0.186 0.226 0.693 0.435 0.183 0.12 0.31 0.257 0.319 0.8 0.865 0.745 0.32 0.802 0.881 0.428 0.995 0.63 ...</preformat>
+  </sec>
+  <sec id="nb-code-cell-7-output-1-nb-3" specific-use="notebook-output">
+  <preformat># Check for Multicollinearity
+
+Low Correlation
+
+      Term  VIF      VIF  CI Increased SE Tolerance
+ treatment 1.00 [1.00, 1.00]         1.00      1.00
+  location 1.00 [1.00, 1.00]         1.00      1.00</preformat>
+  </sec>
+  <sec id="nb-code-cell-7-output-2-nb-3" specific-use="notebook-output">
+  <preformat>Analysis of Deviance Table (Type III Wald chisquare tests)
+
+Response: diff
+             Chisq Df Pr(&gt;Chisq)  
+(Intercept) 0.9723  1    0.32411  
+treatment   8.2398  3    0.04131 *
+location    0.5743  2    0.75039  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</preformat>
+  </sec>
+  </sec>
+  <p>Post-hoc</p>
+  <sec id="nb-code-cell-8-nb-3" specific-use="notebook-code">
+  <code language="r script">m_emms7 &lt;- emmeans(m7, ~treatment)
+pairs(m_emms7, adjust = &quot;fdr&quot;)
+  </code>
+  <sec id="nb-code-cell-8-output-0-nb-3" specific-use="notebook-output">
+  <preformat> contrast             estimate    SE  df t.ratio p.value
+ Control - Graze        -1.486 0.594 135  -2.501  0.0656
+ Control - High Graze   -0.625 0.594 135  -1.052  0.3534
+ Control - Mow          -1.378 0.594 135  -2.319  0.0656
+ Graze - High Graze      0.861 0.594 135   1.449  0.2994
+ Graze - Mow             0.108 0.594 135   0.182  0.8560
+ High Graze - Mow       -0.753 0.594 135  -1.267  0.3110
+
+Results are averaged over the levels of: location 
+P value adjustment: fdr method for 6 tests </preformat>
+  </sec>
+  </sec>
+  <sec id="plots-nb-3">
+    <title>Plots</title>
+    <p>Extra</p>
+    <sec id="nb-code-cell-9-nb-3" specific-use="notebook-code">
+    <code language="r script">df &lt;- data.frame(x1 = c(-Inf, -Inf), x2 = c(Inf, Inf), y2 = c(Inf, 0), y1 = c(0, -Inf), difference = c(&quot;Net removal&quot;, &quot;Net addition&quot;)) %&gt;%
+  mutate(difference = fct_relevel(difference, c(&quot;Net removal&quot;, &quot;Net addition&quot;))) 
+    </code>
+    </sec>
+    <p>Plots</p>
+    <sec id="cell-fig-organic-WEP-nb-3" specific-use="notebook-code">
+    <code language="r script">#|
+p1 &lt;- ggplot(data = organic_diff) +
+  theme_bw(base_size = 12) + 
+  geom_rect(data = df, aes(xmin = x1, xmax = x2, ymin = y1, ymax = y2, fill = difference), alpha = 0.15) +
+  #scale_fill_manual(values = c(&quot;white&quot;, &quot;black&quot;)) +
+  #ggnewscale::new_scale_fill() +
+  geom_boxplot(aes(x = treatment, y = diff, fill = location)) +
+  #scale_fill_viridis_d(name = &quot;Location&quot;, begin = 0.3, end = 1) +
+  scale_fill_manual(values = c(&quot;white&quot;, &quot;black&quot;, &quot;#35608DFF&quot;, &quot;#2FB47CFF&quot;, &quot;#FDE725FF&quot;)) +
+  guides(fill = guide_legend(override.aes = list(colour = &quot;black&quot;, size = 1))) +
+  labs(y = expression(paste(&quot;Net WEP Difference (&quot;, mg~kg^{-1}, &quot;)&quot;)), x = &quot;Treatment&quot;) +
+  theme(axis.title.x = element_blank(),
+        axis.text.x = element_text(angle = 0, vjust = 1, hjust = 0.5),
+        legend.position = 'bottom', legend.title = element_blank())
+p1
+#ggsave(plot = p1, filename = &quot;Figures/Organics_WEP.png&quot;, width = 150, height = 100, units = &quot;mm&quot;, dpi = 600)
+    </code>
+    <fig id="fig-organic-WEP-nb-3">
+      <caption><p>Change in riparian organic layer WEP concentration
+      following grazing or mowing in each of the riparian zones. A
+      significant effect of treatment was detected; however, the
+      post-hoc analysis was not able to detect any significant (p &lt;
+      0.05) pairwise contrasts.</p></caption>
+      <graphic mimetype="image" mime-subtype="png" xlink:href="03_Soils_analysis_files/figure-jats/fig-organic-WEP-1.png" />
+    </fig>
+    </sec>
+  </sec>
+</sec>
+<sec id="mineral-soil-analysis-nb-3">
+  <title>Mineral soil analysis</title>
+  <sec id="nb-code-cell-10-nb-3" specific-use="notebook-code">
+  <code language="r script">m8 &lt;- glmmTMB(diff ~ treatment * location + (1|site) + (1|year),
+              data = soil_diff)
+simulateResiduals(m8, n = 1000, plot = TRUE) 
+  </code>
+  <graphic mimetype="image" mime-subtype="png" xlink:href="03_Soils_analysis_files/figure-jats/unnamed-chunk-12-1.png" />
+  <code language="r script">car::Anova(m8, type = &quot;III&quot;) # No interaction
+  </code>
+  <sec id="nb-code-cell-10-output-0-nb-3" specific-use="notebook-output">
+  <preformat>Object of Class DHARMa with simulated residuals based on 1000 simulations with refit = FALSE . See ?DHARMa::simulateResiduals for help. 
+ 
+Scaled residual values: 0.041 0.077 0.008 0.313 0.396 0.023 0.231 0.106 0.047 0.023 0.015 0 0.083 0.149 0.197 0.225 0.155 0.19 0.274 0.108 ...</preformat>
+  </sec>
+  <sec id="nb-code-cell-10-output-1-nb-3" specific-use="notebook-output">
+  <preformat>Analysis of Deviance Table (Type III Wald chisquare tests)
+
+Response: diff
+                    Chisq Df Pr(&gt;Chisq)
+(Intercept)        0.7086  1     0.3999
+treatment          1.8322  3     0.6080
+location           1.0737  2     0.5846
+treatment:location 4.3582  6     0.6283</preformat>
+  </sec>
+  </sec>
+  <p>No interaction</p>
+  <sec id="nb-code-cell-11-nb-3" specific-use="notebook-code">
+  <code language="r script">m8 &lt;- glmmTMB(diff ~ treatment + location + (1|site) + (1|year),
+              data = soil_diff)
+simulateResiduals(m8, n = 1000, plot = TRUE) 
+  </code>
+  <graphic mimetype="image" mime-subtype="png" xlink:href="03_Soils_analysis_files/figure-jats/unnamed-chunk-13-1.png" />
+  <code language="r script">performance::check_collinearity(m8)
+  </code>
+  <code language="r script">car::Anova(m8, type = &quot;III&quot;)
+  </code>
+  <sec id="nb-code-cell-11-output-0-nb-3" specific-use="notebook-output">
+  <preformat>Object of Class DHARMa with simulated residuals based on 1000 simulations with refit = FALSE . See ?DHARMa::simulateResiduals for help. 
+ 
+Scaled residual values: 0.021 0.097 0.01 0.402 0.365 0.018 0.208 0.101 0.057 0.027 0.015 0 0.081 0.179 0.276 0.202 0.115 0.134 0.315 0.129 ...</preformat>
+  </sec>
+  <sec id="nb-code-cell-11-output-1-nb-3" specific-use="notebook-output">
+  <preformat># Check for Multicollinearity
+
+Low Correlation
+
+      Term  VIF      VIF  CI Increased SE Tolerance
+ treatment 1.00 [1.00, 1.00]         1.00      1.00
+  location 1.00 [1.00, 1.00]         1.00      1.00</preformat>
+  </sec>
+  <sec id="nb-code-cell-11-output-2-nb-3" specific-use="notebook-output">
+  <preformat>Analysis of Deviance Table (Type III Wald chisquare tests)
+
+Response: diff
+             Chisq Df Pr(&gt;Chisq)
+(Intercept) 0.2055  1     0.6503
+treatment   2.5923  3     0.4588
+location    1.1674  2     0.5578</preformat>
+  </sec>
+  </sec>
+  <sec id="plots-1-nb-3">
+    <title>plots</title>
+    <sec id="cell-fig-soil-WEP-nb-3" specific-use="notebook-code">
+    <code language="r script">#|
+p2 &lt;- ggplot(data = soil_diff) +
+  theme_bw(base_size = 12) + 
+  geom_rect(data = df, aes(xmin = x1, xmax = x2, ymin = y1, ymax = y2, fill = difference), alpha = 0.15) +
+  #scale_fill_manual(values = c(&quot;white&quot;, &quot;black&quot;)) +
+  #ggnewscale::new_scale_fill() +
+  geom_boxplot(aes(x = treatment, y = diff, fill = location)) +
+  #scale_fill_viridis_d(name = &quot;Location&quot;, begin = 0.3, end = 1) +
+  scale_fill_manual(values = c(&quot;white&quot;, &quot;black&quot;, &quot;#35608DFF&quot;, &quot;#2FB47CFF&quot;, &quot;#FDE725FF&quot;)) +
+  guides(fill = guide_legend(override.aes = list(colour = &quot;black&quot;, size = 1))) +
+  labs(y = expression(paste(&quot;Net WEP Difference (&quot;, mg~kg^{-1}, &quot;)&quot;)), x = &quot;Treatment&quot;) +
+  theme(axis.title.x = element_blank(),
+        axis.text.x = element_text(angle = 0, vjust = 1, hjust = 0.5),
+        legend.position = 'bottom', legend.title = element_blank())
+p2
+#ggsave(plot = p2, filename = &quot;Figures/Soil_WEP.png&quot;, width = 150, height = 100, units = &quot;mm&quot;, dpi = 600)
+    </code>
+    <fig id="fig-soil-WEP-nb-3">
+      <caption><p>Change in riparian Ah layer (0-10cm) WEP concentration
+      following grazing or mowing in each of the riparian zones. No
+      significant effect of treatment or zone was
+      detected.</p></caption>
+      <graphic mimetype="image" mime-subtype="png" xlink:href="03_Soils_analysis_files/figure-jats/fig-soil-WEP-1.png" />
+    </fig>
+    </sec>
+  </sec>
+</sec>
+</body>
+
+
+
+<back>
+</back>
+
+
+</sub-article>
+<sub-article article-type="notebook" id="nb-16-nb-4">
+<front-stub>
+<title-group>
+<article-title>Map of study area</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<name>
+<surname>Koiter</surname>
+<given-names>Alex</given-names>
+</name>
+<string-name>Alex Koiter</string-name>
+
+</contrib>
+</contrib-group>
+</front-stub>
+
+<body>
+<sec id="load-libraries-nb-4">
+  <title>Load Libraries</title>
+  <sec id="nb-code-cell-1-nb-4" specific-use="notebook-code">
+  <code language="r script">library(tidyverse)
+  </code>
+  <code language="r script">library(ggspatial)
+library(sf)
+  </code>
+  <code language="r script">library(rnaturalearth)
+  </code>
+  <code language="r script">library(patchwork)
+  </code>
+  <sec id="nb-code-cell-1-output-0-nb-4" specific-use="notebook-output">
+  <preformat>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.4
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ ggplot2   3.5.0     ✔ tibble    3.2.1
+✔ lubridate 1.9.2     ✔ tidyr     1.3.1
+✔ purrr     1.0.2     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</preformat>
+  </sec>
+  <sec id="nb-code-cell-1-output-1-nb-4" specific-use="notebook-output">
+  <preformat>Linking to GEOS 3.10.2, GDAL 3.4.3, PROJ 8.2.1; sf_use_s2() is TRUE</preformat>
+  </sec>
+  <sec id="nb-code-cell-1-output-2-nb-4" specific-use="notebook-output">
+  <preformat>The legacy packages maptools, rgdal, and rgeos, underpinning the sp package,
+which was just loaded, will retire in October 2023.
+Please refer to R-spatial evolution reports for details, especially
+https://r-spatial.org/r/2023/05/15/evolution4.html.
+It may be desirable to make the sf package available;
+package maintainers should consider adding sf to Suggests:.
+The sp package is now running under evolution status 2
+     (status 2 uses the sf package in place of rgdal)
+Support for Spatial objects (`sp`) will be deprecated in {rnaturalearth} and will be removed in a future release of the package. Please use `sf` objects with {rnaturalearth}. For example: `ne_download(returnclass = 'sf')`</preformat>
+  </sec>
+  </sec>
+</sec>
+<sec id="important-coordinants-nb-4">
+  <title>Important coordinants</title>
+  <p>Regional site location</p>
+  <sec id="nb-code-cell-2-nb-4" specific-use="notebook-code">
+  <code language="r script">site &lt;- st_sfc(st_point(c(-99.924176, 50.056015)), crs = 4326)
+box = c(xmin = -99.99, xmax = -99.924176 + 0.12, ymax = 50.056015 +.065, ymin = 50.056015 - 0.065)
+  </code>
+  </sec>
+  <p>Study plot locations</p>
+  <sec id="nb-code-cell-3-nb-4" specific-use="notebook-code">
+  <code language="r script"># sites &lt;- st_as_sf(data.frame(site = c(1,2,3,4), lat = c(50.052525, 50.052209, 50.059208, 50.060235), long = c(-99.924242, -99.918429, -99.912849, -99.931591)), coords = c(&quot;long&quot;, &quot;lat&quot;), crs = 4362)
+                                                                                              
+sites &lt;- data.frame(site = c(1,2,3,4), lat = c(50.052525, 50.052209, 50.059208, 50.060235), long = c(-99.924242, -99.918429, -99.912849, -99.931591))
+  </code>
+  </sec>
+</sec>
+<sec id="land-use-data-of-region-nb-4">
+  <title>Land use data of region</title>
+  <sec id="get-data-nb-4">
+    <title>Get data</title>
+    <sec id="nb-code-cell-4-nb-4" specific-use="notebook-code">
+    <code language="r script">minnedosa_data &lt;- &quot;lcv_minnedosa_2004_2006_shp&quot;
+if (file.exists(minnedosa_data)) {
+  print(&quot;The data already exists!&quot;)
+} else {
+  download.file(&quot;https://mli.gov.mb.ca/landuse/shp_zip_files/lcv_minnedosa_2004_2006_shp.zip&quot;, 
+                destfile = &quot;lcv_minnedosa_2004_2006_shp.zip&quot;)
+  unzip(&quot;lcv_minnedosa_2004_2006_shp.zip&quot;, exdir = &quot;lcv_minnedosa_2004_2006_shp&quot;)
+}
+    </code>
+    <code language="r script">brandon_data &lt;- &quot;lcv_brandon_2006_shp&quot;
+if (file.exists(brandon_data)) {
+  print(&quot;The data already exists!&quot;)
+} else {
+  download.file(&quot;https://mli.gov.mb.ca/landuse/shp_zip_files/lcv_brandon_2006_shp.zip&quot;, 
+                destfile = &quot;lcv_brandon_2006_shp.zip&quot;)
+  unzip(&quot;lcv_brandon_2006_shp.zip&quot;, exdir = &quot;lcv_brandon_2006_shp&quot;)
+}
+    </code>
+    <sec id="nb-code-cell-4-output-0-nb-4" specific-use="notebook-output">
+    <preformat>[1] &quot;The data already exists!&quot;</preformat>
+    </sec>
+    <sec id="nb-code-cell-4-output-1-nb-4" specific-use="notebook-output">
+    <preformat>[1] &quot;The data already exists!&quot;</preformat>
+    </sec>
+    </sec>
+    <sec id="nb-code-cell-5-nb-4" specific-use="notebook-code">
+    <code language="r script">sf_use_s2(FALSE)
+    </code>
+    <code language="r script">land &lt;- st_read(&quot;lcv_brandon_2006_shp/lcv_brandon_2006.shp&quot;) %&gt;%
+  bind_rows(st_read(&quot;lcv_minnedosa_2004_2006_shp/lcv_minnedosa_2004_2006.shp&quot;)) %&gt;%
+  st_transform(crs = 4326) %&gt;%
+  st_crop(st_bbox(box, crs = 4326)) %&gt;%
+  mutate(Land_use = recode(CLASSNAME, &quot;Agricultural Field&quot; = &quot;Agriculture&quot;, &quot;Agri - Forage Field&quot; = &quot;Forage&quot;, &quot;Water Body&quot; = &quot;Water&quot;, &quot;Wetland - Treed Bog&quot; = &quot;Wetland&quot;, &quot;Wetland - Marsh&quot; = &quot;Wetland&quot;, &quot;Decidious Forest&quot; = &quot;Forest&quot;, &quot;Open Decidious Forest&quot; = &quot;Forest&quot;, &quot;Mixedwood Forest&quot; = &quot;Forest&quot;, &quot;Forest Cut Blocks&quot; = &quot;Forest&quot;, &quot;Coniferous Forest&quot; = &quot;Forest&quot;,&quot;Roads Trails Rail Lines&quot; = &quot;Other&quot;, &quot;Sand and Gravel&quot; = &quot;Other&quot;, &quot;Cultural Features&quot; = &quot;Other&quot;, &quot;Range and Grassland&quot; = &quot;Forage&quot;, &quot;Water Bodies&quot; = &quot;Water&quot;)) %&gt;%
+  # group_by(Land_use) %&gt;%
+  # summarise(do_union = TRUE) %&gt;%
+  mutate(Land_use = factor(Land_use, levels=c(&quot;Agriculture&quot;, &quot;Forage&quot;, &quot;Forest&quot;,  &quot;Water&quot;, &quot;Wetland&quot;, &quot;Other&quot;)))
+    </code>
+    <sec id="nb-code-cell-5-output-0-nb-4" specific-use="notebook-output">
+    <preformat>Spherical geometry (s2) switched off</preformat>
+    </sec>
+    <sec id="nb-code-cell-5-output-1-nb-4" specific-use="notebook-output">
+    <preformat>Reading layer `lcv_brandon_2006' from data source 
+  `/home/alex/Dropbox/MBFI/MBFI riparian study/riparian-grazing-manuscript/notebooks/lcv_brandon_2006_shp/lcv_brandon_2006.shp' 
+  using driver `ESRI Shapefile'
+Simple feature collection with 145146 features and 5 fields
+Geometry type: POLYGON
+Dimension:     XY
+Bounding box:  xmin: 429971 ymin: 5427260 xmax: 510011 ymax: 5542070
+Projected CRS: UTM
+Reading layer `lcv_minnedosa_2004_2006' from data source 
+  `/home/alex/Dropbox/MBFI/MBFI riparian study/riparian-grazing-manuscript/notebooks/lcv_minnedosa_2004_2006_shp/lcv_minnedosa_2004_2006.shp' 
+  using driver `ESRI Shapefile'
+Simple feature collection with 160653 features and 5 fields
+Geometry type: POLYGON
+Dimension:     XY
+Bounding box:  xmin: 429972 ymin: 5542070 xmax: 549972 ymax: 5656880
+Projected CRS: UTM</preformat>
+    </sec>
+    <sec id="nb-code-cell-5-output-2-nb-4" specific-use="notebook-output">
+    <preformat>although coordinates are longitude/latitude, st_intersection assumes that they
+are planar</preformat>
+    </sec>
+    <sec id="nb-code-cell-5-output-3-nb-4" specific-use="notebook-output">
+    <preformat>Warning: attribute variables are assumed to be spatially constant throughout
+all geometries</preformat>
+    </sec>
+    </sec>
+  </sec>
+</sec>
+<sec id="canada-nb-4">
+  <title>Canada</title>
+  <sec id="nb-code-cell-6-nb-4" specific-use="notebook-code">
+  <code language="r script">canada &lt;- ne_states(country = &quot;Canada&quot;, returnclass = &quot;sf&quot;) %&gt;%
+  st_transform(crs = 3348)
+  </code>
+  </sec>
+</sec>
+<sec id="maps-nb-4">
+  <title>Maps</title>
+  <sec id="land-use-nb-4">
+    <title>Land use</title>
+    <sec id="nb-code-cell-7-nb-4" specific-use="notebook-code">
+    <code language="r script">p3 &lt;- ggplot() +
+  theme_bw() +
+  geom_sf(data = land, aes(fill = Land_use), lwd = 0) +
+  scale_fill_manual(values=c(&quot;#458B00&quot;,  &quot;#CDAD00&quot;, &quot;#006400&quot;,&quot;#009ACD&quot;, &quot;#0096D194&quot;,  &quot;#C1CDCD&quot;), name = &quot;Land use&quot;) +
+  geom_point(data = sites, aes(x = long, y = lat), shape = 23, colour = &quot;red&quot;, fill = &quot;red&quot;, size = 2) +
+  coord_sf(ylim = c(49.992, 50.1), xlim = c(-99.965, -99.80418), crs = 4326) +
+  scale_y_continuous(expand = c(0,0)) +
+  scale_x_continuous(expand = c(0,0)) +
+  labs(tag = &quot;b)&quot;) +
+  annotation_scale(location = &quot;bl&quot;,
+                   height = unit(0.05, &quot;cm&quot;)) +
+  annotation_north_arrow(location = &quot;br&quot;, 
+                         height = unit(0.5, &quot;cm&quot;),
+                         width = unit(0.5, &quot;cm&quot;)) +
+  theme(axis.text = element_blank(),
+        axis.ticks = element_blank(),
+        axis.title = element_blank(),
+        plot.margin = unit(c(0,0,0,0), &quot;mm&quot;))
+    </code>
+    </sec>
+  </sec>
+  <sec id="open-street-nb-4">
+    <title>Open street</title>
+    <p>not used</p>
+    <sec id="nb-code-cell-8-nb-4" specific-use="notebook-code">
+    <code language="r script">p2 &lt;- ggplot(site) +
+  annotation_map_tile(type = &quot;osm&quot;, zoom = 15) +
+  geom_point(data = sites, aes(x = long, y = lat), shape = 23, colour = &quot;red&quot;, fill = &quot;red&quot;, size = 1) +
+  #coord_sf(ylim = c(50.056015 +.02, 50.056015 - 0.02), xlim = c(-99.924176 - 0.04, -99.924176 + 0.04), crs = 4326) +
+  coord_sf(ylim = c(50.056015 +.01, 50.056015 +.065), xlim = c(-99.924176 - 0.02, -99.924176 + 0.02), crs = 4326) +
+  annotation_scale(location = &quot;bl&quot;,
+                   height = unit(0.05, &quot;cm&quot;)) +
+  annotation_north_arrow(location = &quot;br&quot;, 
+                         height = unit(0.5, &quot;cm&quot;),
+                         width = unit(0.5, &quot;cm&quot;)) +
+  theme(axis.text = element_blank(),
+        axis.ticks = element_blank(),
+        axis.title = element_blank(),
+        plot.margin = unit(c(0,0,0,0), &quot;mm&quot;))
+    </code>
+    </sec>
+  </sec>
+  <sec id="canada-1-nb-4">
+    <title>Canada</title>
+    <sec id="nb-code-cell-9-nb-4" specific-use="notebook-code">
+    <code language="r script">p1 &lt;- ggplot() +
+  theme_bw() +
+  layer_spatial(canada, fill = &quot;white&quot;) +
+  layer_spatial(site, shape = 23, colour = &quot;red&quot;, fill = &quot;red&quot;, size = 2) +
+  labs(tag = &quot;a)&quot;) +
+  annotation_scale(location = &quot;bl&quot;,
+                   height = unit(0.05, &quot;cm&quot;)) +
+  annotation_north_arrow(location = &quot;br&quot;, 
+                         height = unit(0.5, &quot;cm&quot;),
+                         width = unit(0.5, &quot;cm&quot;)) +
+  theme(axis.text = element_blank(),
+        axis.ticks = element_blank(),
+        axis.title = element_blank(),
+        plot.margin = unit(c(0,0,0,0), &quot;mm&quot;),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.border = element_blank(),
+        panel.background = element_blank())
+    </code>
+    </sec>
+    <sec id="cell-fig-map-nb-4" specific-use="notebook-code">
+    <code language="r script">#|
+p1 + p3 + plot_layout(guides = &quot;collect&quot;) &amp; theme(legend.position = &quot;right&quot;)
+
+#ggsave(filename = &quot;Figures/Maps.png&quot;, plot = p4, height = 75, width = 180, units = &quot;mm&quot;, dpi = 600)
+    </code>
+    <fig id="fig-map-nb-4">
+      <caption><p>Showing a) the study site in southwestern Manitoba and
+      b) the four riparian areas included in this study and the regional
+      land use (data from https://mli.gov.mb.ca/).</p></caption>
+      <graphic mimetype="image" mime-subtype="png" xlink:href="05_Map_files/figure-jats/fig-map-1.png" />
+    </fig>
+    </sec>
+  </sec>
+</sec>
+</body>
+
+
+
+<back>
+</back>
+
+
+</sub-article>
+<sub-article article-type="notebook" id="nb-20-nb-5">
+<front-stub>
+<title-group>
+<article-title>Riparian litter WEP in response to
 grazing</article-title>
 </title-group>
 <contrib-group>
@@ -5091,6 +5087,9 @@ grazing</article-title>
   <code language="r script">library(DHARMa)
   </code>
   <code language="r script">library(emmeans)
+library(viridis)
+  </code>
+  <code language="r script">library(patchwork)
   </code>
   <sec id="nb-code-cell-1-output-0-nb-5" specific-use="notebook-output">
   <preformat>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
@@ -5113,13 +5112,17 @@ Please re-install glmmTMB from source or restore original 'TMB' package (see '?r
   <sec id="nb-code-cell-1-output-2-nb-5" specific-use="notebook-output">
   <preformat>This is DHARMa 0.4.6. For overview type '?DHARMa'. For recent changes, type news(package = 'DHARMa')</preformat>
   </sec>
+  <sec id="nb-code-cell-1-output-3-nb-5" specific-use="notebook-output">
+  <preformat>Loading required package: viridisLite</preformat>
+  </sec>
   </sec>
 </sec>
-<sec id="read-in-clean-data-nb-5">
-  <title>Read in clean data</title>
+<sec id="read-in-data-nb-5">
+  <title>Read in data</title>
   <sec id="nb-code-cell-2-nb-5" specific-use="notebook-code">
-  <code language="r script">conc &lt;- read_csv(here::here(&quot;notebooks/Data/P_concentration.csv&quot;)) %&gt;%
-  rename(&quot;conc&quot; = &quot;ak_content&quot;)
+  <code language="r script">conc &lt;- read_csv(&quot;P_concentration.csv&quot;)
+  </code>
+  <code language="r script">mass_data &lt;- read_csv(&quot;mass.csv&quot;)
   </code>
   <sec id="nb-code-cell-2-output-0-nb-5" specific-use="notebook-output">
   <preformat>Rows: 1141 Columns: 8
@@ -5131,124 +5134,155 @@ dbl (3): site, ak_content, year
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</preformat>
   </sec>
+  <sec id="nb-code-cell-2-output-1-nb-5" specific-use="notebook-output">
+  <preformat>Rows: 576 Columns: 8
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: &quot;,&quot;
+chr (5): sample_type, timing, plot, location, treatment
+dbl (3): site, dryweight, year
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</preformat>
+  </sec>
   </sec>
 </sec>
-<sec id="organics-data-nb-5">
-  <title>Organics data</title>
+<sec id="merge-data-nb-5">
+  <title>Merge data</title>
   <sec id="nb-code-cell-3-nb-5" specific-use="notebook-code">
-  <code language="r script">organic_diff &lt;- conc %&gt;%
-  filter(sample_type == &quot;Organic&quot;) %&gt;%
-  pivot_wider(names_from = timing, values_from = conc) %&gt;%
-  mutate(diff = Before - After) %&gt;%
-  mutate(treatment = fct_recode(treatment, &quot;Graze&quot; = &quot;Regular Graze&quot;)) %&gt;%
-  mutate(treatment = fct_relevel(treatment, c(&quot;Control&quot;, &quot;Graze&quot;, &quot;High Graze&quot;, &quot;Mow&quot;))) %&gt;%
-  mutate(location = fct_relevel(location, c(&quot;Upper&quot;, &quot;Middle&quot;, &quot;Lower&quot;)))
+  <code language="r script">veg_data &lt;- mass_data %&gt;%
+  right_join(conc) %&gt;%
+  rename(conc = ak_content) %&gt;% # mg/kg
+  mutate(p_total = conc * dryweight/1000 /0.25) # mg/m2
   </code>
+  <sec id="nb-code-cell-3-output-0-nb-5" specific-use="notebook-output">
+  <preformat>Joining with `by = join_by(sample_type, site, timing, plot, location, year,
+treatment)`</preformat>
+  </sec>
   </sec>
 </sec>
-<sec id="soil-data-nb-5">
-  <title>Soil data</title>
+<sec id="litter-data-nb-5">
+  <title>Litter data</title>
   <sec id="nb-code-cell-4-nb-5" specific-use="notebook-code">
-  <code language="r script">soil_diff &lt;- conc %&gt;%
-  filter(sample_type == &quot;Soil&quot;) %&gt;%
-  pivot_wider(names_from = timing, values_from = conc) %&gt;%
-  mutate(diff = Before - After) %&gt;%
-  mutate(treatment = fct_recode(treatment, &quot;Graze&quot; = &quot;Regular Graze&quot;)) %&gt;%
-  mutate(treatment = fct_relevel(treatment, c(&quot;Control&quot;, &quot;Graze&quot;, &quot;High Graze&quot;, &quot;Mow&quot;))) %&gt;%
-  mutate(location = fct_relevel(location, c(&quot;Upper&quot;, &quot;Middle&quot;, &quot;Lower&quot;)))
+  <code language="r script">litter_diff &lt;- veg_data %&gt;%
+  filter(sample_type == &quot;Litter&quot;) %&gt;%
+  mutate(dryweight = dryweight/1000 /0.25) %&gt;%
+  pivot_longer(cols = c(dryweight, p_total, conc), names_to = &quot;measure&quot;, values_to = &quot;value&quot;) %&gt;%
+  pivot_wider(names_from = timing, values_from = value) %&gt;%
+  mutate(diff = Before - After) 
   </code>
   </sec>
 </sec>
-<sec id="organics-analysis-nb-5">
-  <title>Organics analysis</title>
-  <sec id="nb-code-cell-5-nb-5" specific-use="notebook-code">
-  <code language="r script">m7 &lt;- glmmTMB(diff ~ treatment * location + (1|site) + (1|year),
-              data = organic_diff)
-  </code>
-  </sec>
-  <sec id="cell-fig-resid1-nb-5" specific-use="notebook-code">
-  <code language="r script">simulateResiduals(m7, n = 1000, plot = TRUE)
-  </code>
-  <fig id="fig-resid1-nb-5">
-    <caption><p></p></caption>
-    <graphic id="fig-resid1-nb-5" mimetype="image" mime-subtype="png" xlink:href="03_Soils_analysis_files/figure-jats/fig-resid1-1.png" />
-  </fig>
-  <sec id="cell-fig-resid1-output-0-nb-5" specific-use="notebook-output">
-  <preformat>Object of Class DHARMa with simulated residuals based on 1000 simulations with refit = FALSE . See ?DHARMa::simulateResiduals for help. 
+<sec id="litter-analysis-nb-5">
+  <title>Litter Analysis</title>
+  <sec id="p-total-nb-5">
+    <title>P-total</title>
+    <sec id="nb-code-cell-5-nb-5" specific-use="notebook-code">
+    <code language="r script">m4 &lt;- glmmTMB(diff ~ treatment * location + (1|site) + (1|year),
+             data = filter(litter_diff, measure == &quot;p_total&quot;))
+simulateResiduals(m4, n = 1000, plot = TRUE) 
+    </code>
+    <graphic mimetype="image" mime-subtype="png" xlink:href="02_Litter_analysis_files/figure-jats/unnamed-chunk-5-1.png" />
+    <code language="r script">car::Anova(m4, type = &quot;III&quot;) # No interaction
+    </code>
+    <sec id="nb-code-cell-5-output-0-nb-5" specific-use="notebook-output">
+    <preformat>Object of Class DHARMa with simulated residuals based on 1000 simulations with refit = FALSE . See ?DHARMa::simulateResiduals for help. 
  
-Scaled residual values: 0.238 0.027 0.226 0.24 0.719 0.392 0.179 0.09 0.368 0.246 0.39 0.748 0.864 0.689 0.362 0.796 0.846 0.507 0.995 0.711 ...</preformat>
-  </sec>
-  </sec>
-  <sec id="nb-code-cell-6-nb-5" specific-use="notebook-code">
-  <code language="r script">car::Anova(m7, type = &quot;III&quot;)  # No interaction
-  </code>
-  <sec id="nb-code-cell-6-output-0-nb-5" specific-use="notebook-output">
-  <preformat>Analysis of Deviance Table (Type III Wald chisquare tests)
+Scaled residual values: 0.78 0.652 0.998 0.43 0.789 0.365 0.765 0.871 0.046 0.873 0.903 0.276 0.639 0.764 1 0.845 0.556 0.028 0.655 0.815 ...</preformat>
+    </sec>
+    <sec id="nb-code-cell-5-output-1-nb-5" specific-use="notebook-output">
+    <preformat>Analysis of Deviance Table (Type III Wald chisquare tests)
 
 Response: diff
-                    Chisq Df Pr(&gt;Chisq)
-(Intercept)        0.0818  1     0.7748
-treatment          3.4925  3     0.3217
-location           0.4320  2     0.8057
-treatment:location 2.8110  6     0.8322</preformat>
-  </sec>
-  </sec>
-  <sec id="nb-code-cell-7-nb-5" specific-use="notebook-code">
-  <code language="r script">m7 &lt;- glmmTMB(diff ~ treatment + location + (1|site) + (1|year),
-              data = organic_diff)
-simulateResiduals(m7, n = 1000, plot = TRUE) # No interaction
-  </code>
-  <graphic mimetype="image" mime-subtype="png" xlink:href="03_Soils_analysis_files/figure-jats/unnamed-chunk-8-1.png" />
-  <code language="r script">performance::check_collinearity(m7)
-  </code>
-  <code language="r script">car::Anova(m7, type = &quot;III&quot;)
-  </code>
-  <sec id="nb-code-cell-7-output-0-nb-5" specific-use="notebook-output">
-  <preformat>Object of Class DHARMa with simulated residuals based on 1000 simulations with refit = FALSE . See ?DHARMa::simulateResiduals for help. 
+                    Chisq Df Pr(&gt;Chisq)  
+(Intercept)        2.8105  1    0.09365 .
+treatment          2.3622  3    0.50070  
+location           2.4062  2    0.30026  
+treatment:location 3.3590  6    0.76263  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</preformat>
+    </sec>
+    </sec>
+    <p>Removing interaction</p>
+    <sec id="nb-code-cell-6-nb-5" specific-use="notebook-code">
+    <code language="r script">temp4 &lt;- filter(litter_diff, measure == &quot;p_total&quot;) ## otherwise issue with emmeans()
+m4 &lt;- glmmTMB(diff ~ treatment + location + (1|site) + (1|year),
+             data = temp4)
+simulateResiduals(m4, n = 1000, plot = TRUE)
+    </code>
+    <graphic mimetype="image" mime-subtype="png" xlink:href="02_Litter_analysis_files/figure-jats/unnamed-chunk-6-1.png" />
+    <code language="r script">performance::check_collinearity(m4)
+    </code>
+    <code language="r script">car::Anova(m4, type = &quot;III&quot;) # No sig impact of treatment or position
+    </code>
+    <sec id="nb-code-cell-6-output-0-nb-5" specific-use="notebook-output">
+    <preformat>Object of Class DHARMa with simulated residuals based on 1000 simulations with refit = FALSE . See ?DHARMa::simulateResiduals for help. 
  
-Scaled residual values: 0.246 0.033 0.186 0.226 0.693 0.435 0.183 0.12 0.31 0.257 0.319 0.8 0.865 0.745 0.32 0.802 0.881 0.428 0.995 0.63 ...</preformat>
-  </sec>
-  <sec id="nb-code-cell-7-output-1-nb-5" specific-use="notebook-output">
-  <preformat># Check for Multicollinearity
+Scaled residual values: 0.773 0.556 0.999 0.475 0.824 0.268 0.697 0.896 0.053 0.886 0.883 0.291 0.576 0.791 1 0.842 0.469 0.046 0.675 0.788 ...</preformat>
+    </sec>
+    <sec id="nb-code-cell-6-output-1-nb-5" specific-use="notebook-output">
+    <preformat># Check for Multicollinearity
 
 Low Correlation
 
-      Term  VIF      VIF  CI Increased SE Tolerance
- treatment 1.00 [1.00, 1.00]         1.00      1.00
-  location 1.00 [1.00, 1.00]         1.00      1.00</preformat>
-  </sec>
-  <sec id="nb-code-cell-7-output-2-nb-5" specific-use="notebook-output">
-  <preformat>Analysis of Deviance Table (Type III Wald chisquare tests)
+      Term  VIF  VIF 95% CI Increased SE Tolerance Tolerance 95% CI
+ treatment 1.00 [1.00, Inf]         1.00      1.00     [0.00, 1.00]
+  location 1.00 [1.00, Inf]         1.00      1.00     [0.00, 1.00]</preformat>
+    </sec>
+    <sec id="nb-code-cell-6-output-2-nb-5" specific-use="notebook-output">
+    <preformat>Analysis of Deviance Table (Type III Wald chisquare tests)
 
 Response: diff
-             Chisq Df Pr(&gt;Chisq)  
-(Intercept) 0.9723  1    0.32411  
-treatment   8.2398  3    0.04131 *
-location    0.5743  2    0.75039  
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</preformat>
+             Chisq Df Pr(&gt;Chisq)
+(Intercept) 0.9539  1     0.3287
+treatment   4.3029  3     0.2306
+location    1.1534  2     0.5617</preformat>
+    </sec>
+    </sec>
   </sec>
-  </sec>
-  <p>Post-hoc</p>
-  <sec id="nb-code-cell-8-nb-5" specific-use="notebook-code">
-  <code language="r script">m_emms7 &lt;- emmeans(m7, ~treatment)
-pairs(m_emms7, adjust = &quot;fdr&quot;)
-  </code>
-  <sec id="nb-code-cell-8-output-0-nb-5" specific-use="notebook-output">
-  <preformat> contrast             estimate    SE  df t.ratio p.value
- Control - Graze        -1.486 0.594 135  -2.501  0.0656
- Control - High Graze   -0.625 0.594 135  -1.052  0.3534
- Control - Mow          -1.378 0.594 135  -2.319  0.0656
- Graze - High Graze      0.861 0.594 135   1.449  0.2994
- Graze - Mow             0.108 0.594 135   0.182  0.8560
- High Graze - Mow       -0.753 0.594 135  -1.267  0.3110
-
-Results are averaged over the levels of: location 
-P value adjustment: fdr method for 6 tests </preformat>
-  </sec>
+  <sec id="summary-nb-5">
+    <title>Summary</title>
+    <sec id="nb-code-cell-7-nb-5" specific-use="notebook-code">
+    <code language="r script">litter_diff %&gt;%
+  filter(measure == &quot;p_total&quot;) %&gt;%
+  group_by(treatment) %&gt;%
+  summarise(median = median(diff, na.rm =T),
+            mean = mean(diff, na.rm =T))
+    </code>
+    <code language="r script">litter_diff %&gt;%
+  filter(measure == &quot;p_total&quot;) %&gt;%
+  group_by(location) %&gt;%
+  summarise(median = median(diff, na.rm =T),
+            mean = mean(diff, na.rm =T))
+    </code>
+    <sec id="nb-code-cell-7-output-0-nb-5" specific-use="notebook-output">
+    <preformat># A tibble: 4 × 3
+  treatment     median  mean
+  &lt;chr&gt;          &lt;dbl&gt; &lt;dbl&gt;
+1 Control        -1.05 -2.22
+2 High Graze     -1.39 -2.36
+3 Mow            -5.70 -7.94
+4 Regular Graze  -1.66 -6.05</preformat>
+    </sec>
+    <sec id="nb-code-cell-7-output-1-nb-5" specific-use="notebook-output">
+    <preformat># A tibble: 3 × 3
+  location median  mean
+  &lt;chr&gt;     &lt;dbl&gt; &lt;dbl&gt;
+1 Lower     -5.88 -5.53
+2 Middle    -2.44 -5.56
+3 Upper     -1.22 -2.72</preformat>
+    </sec>
+    </sec>
   </sec>
   <sec id="plots-nb-5">
     <title>Plots</title>
+    <p>Reorder factors</p>
+    <sec id="nb-code-cell-8-nb-5" specific-use="notebook-code">
+    <code language="r script">plot_data &lt;- litter_diff %&gt;% 
+  mutate(treatment = fct_recode(treatment, &quot;Graze&quot; = &quot;Regular Graze&quot;)) %&gt;%
+  mutate(treatment = fct_relevel(treatment, c(&quot;Control&quot;, &quot;Graze&quot;, &quot;High Graze&quot;, &quot;Mow&quot;))) %&gt;%
+  mutate(location = fct_relevel(location, c(&quot;Upper&quot;, &quot;Middle&quot;, &quot;Lower&quot;)))
+    </code>
+    </sec>
     <p>Extra</p>
     <sec id="nb-code-cell-9-nb-5" specific-use="notebook-code">
     <code language="r script">df &lt;- data.frame(x1 = c(-Inf, -Inf), x2 = c(Inf, Inf), y2 = c(Inf, 0), y1 = c(0, -Inf), difference = c(&quot;Net removal&quot;, &quot;Net addition&quot;)) %&gt;%
@@ -5256,123 +5290,38 @@ P value adjustment: fdr method for 6 tests </preformat>
     </code>
     </sec>
     <p>Plots</p>
-    <sec id="cell-fig-organic-WEP-nb-5" specific-use="notebook-code">
+    <sec id="cell-fig-litter-WEP-nb-5" specific-use="notebook-code">
     <code language="r script">#|
-p1 &lt;- ggplot(data = organic_diff) +
-  theme_bw(base_size = 12) + 
+p1 &lt;- ggplot(data = filter(plot_data, measure == &quot;p_total&quot;)) +
+  theme_bw(base_size = 12) +
   geom_rect(data = df, aes(xmin = x1, xmax = x2, ymin = y1, ymax = y2, fill = difference), alpha = 0.15) +
   #scale_fill_manual(values = c(&quot;white&quot;, &quot;black&quot;)) +
   #ggnewscale::new_scale_fill() +
   geom_boxplot(aes(x = treatment, y = diff, fill = location)) +
+  labs(y = expression(paste(&quot;Net WEP Difference (&quot;, mg~m^{-2}, &quot;)&quot;)), x = &quot;Treatment&quot;) +
   #scale_fill_viridis_d(name = &quot;Location&quot;, begin = 0.3, end = 1) +
   scale_fill_manual(values = c(&quot;white&quot;, &quot;black&quot;, &quot;#35608DFF&quot;, &quot;#2FB47CFF&quot;, &quot;#FDE725FF&quot;)) +
   guides(fill = guide_legend(override.aes = list(colour = &quot;black&quot;, size = 1))) +
-  labs(y = expression(paste(&quot;Net WEP Difference (&quot;, mg~kg^{-1}, &quot;)&quot;)), x = &quot;Treatment&quot;) +
   theme(axis.title.x = element_blank(),
         axis.text.x = element_text(angle = 0, vjust = 1, hjust = 0.5),
-        legend.position = 'bottom', legend.title = element_blank())
+        legend.position = &quot;bottom&quot;,
+        legend.title = element_blank())
 p1
-#ggsave(plot = p1, filename = &quot;Figures/Organics_WEP.png&quot;, width = 150, height = 100, units = &quot;mm&quot;, dpi = 600)
     </code>
-    <fig id="fig-organic-WEP-nb-5">
-      <caption><p>Change in riparian organic layer WEP concentration
-      following grazing or mowing in each of the riparian zones. A
-      significant effect of treatment was detected; however, the
-      post-hoc analysis was not able to detect any significant (p &lt;
-      0.05) pairwise contrasts.</p></caption>
-      <graphic mimetype="image" mime-subtype="png" xlink:href="03_Soils_analysis_files/figure-jats/fig-organic-WEP-1.png" />
-    </fig>
-    </sec>
-  </sec>
-</sec>
-<sec id="mineral-soil-analysis-nb-5">
-  <title>Mineral soil analysis</title>
-  <sec id="nb-code-cell-10-nb-5" specific-use="notebook-code">
-  <code language="r script">m8 &lt;- glmmTMB(diff ~ treatment * location + (1|site) + (1|year),
-              data = soil_diff)
-simulateResiduals(m8, n = 1000, plot = TRUE) 
-  </code>
-  <graphic mimetype="image" mime-subtype="png" xlink:href="03_Soils_analysis_files/figure-jats/unnamed-chunk-12-1.png" />
-  <code language="r script">car::Anova(m8, type = &quot;III&quot;) # No interaction
-  </code>
-  <sec id="nb-code-cell-10-output-0-nb-5" specific-use="notebook-output">
-  <preformat>Object of Class DHARMa with simulated residuals based on 1000 simulations with refit = FALSE . See ?DHARMa::simulateResiduals for help. 
- 
-Scaled residual values: 0.041 0.077 0.008 0.313 0.396 0.023 0.231 0.106 0.047 0.023 0.015 0 0.083 0.149 0.197 0.225 0.155 0.19 0.274 0.108 ...</preformat>
-  </sec>
-  <sec id="nb-code-cell-10-output-1-nb-5" specific-use="notebook-output">
-  <preformat>Analysis of Deviance Table (Type III Wald chisquare tests)
-
-Response: diff
-                    Chisq Df Pr(&gt;Chisq)
-(Intercept)        0.7086  1     0.3999
-treatment          1.8322  3     0.6080
-location           1.0737  2     0.5846
-treatment:location 4.3582  6     0.6283</preformat>
-  </sec>
-  </sec>
-  <p>No interaction</p>
-  <sec id="nb-code-cell-11-nb-5" specific-use="notebook-code">
-  <code language="r script">m8 &lt;- glmmTMB(diff ~ treatment + location + (1|site) + (1|year),
-              data = soil_diff)
-simulateResiduals(m8, n = 1000, plot = TRUE) 
-  </code>
-  <graphic mimetype="image" mime-subtype="png" xlink:href="03_Soils_analysis_files/figure-jats/unnamed-chunk-13-1.png" />
-  <code language="r script">performance::check_collinearity(m8)
-  </code>
-  <code language="r script">car::Anova(m8, type = &quot;III&quot;)
-  </code>
-  <sec id="nb-code-cell-11-output-0-nb-5" specific-use="notebook-output">
-  <preformat>Object of Class DHARMa with simulated residuals based on 1000 simulations with refit = FALSE . See ?DHARMa::simulateResiduals for help. 
- 
-Scaled residual values: 0.021 0.097 0.01 0.402 0.365 0.018 0.208 0.101 0.057 0.027 0.015 0 0.081 0.179 0.276 0.202 0.115 0.134 0.315 0.129 ...</preformat>
-  </sec>
-  <sec id="nb-code-cell-11-output-1-nb-5" specific-use="notebook-output">
-  <preformat># Check for Multicollinearity
-
-Low Correlation
-
-      Term  VIF      VIF  CI Increased SE Tolerance
- treatment 1.00 [1.00, 1.00]         1.00      1.00
-  location 1.00 [1.00, 1.00]         1.00      1.00</preformat>
-  </sec>
-  <sec id="nb-code-cell-11-output-2-nb-5" specific-use="notebook-output">
-  <preformat>Analysis of Deviance Table (Type III Wald chisquare tests)
-
-Response: diff
-             Chisq Df Pr(&gt;Chisq)
-(Intercept) 0.2055  1     0.6503
-treatment   2.5923  3     0.4588
-location    1.1674  2     0.5578</preformat>
-  </sec>
-  </sec>
-  <sec id="plots-1-nb-5">
-    <title>plots</title>
-    <sec id="cell-fig-soil-WEP-nb-5" specific-use="notebook-code">
     <code language="r script">#|
-p2 &lt;- ggplot(data = soil_diff) +
-  theme_bw(base_size = 12) + 
-  geom_rect(data = df, aes(xmin = x1, xmax = x2, ymin = y1, ymax = y2, fill = difference), alpha = 0.15) +
-  #scale_fill_manual(values = c(&quot;white&quot;, &quot;black&quot;)) +
-  #ggnewscale::new_scale_fill() +
-  geom_boxplot(aes(x = treatment, y = diff, fill = location)) +
-  #scale_fill_viridis_d(name = &quot;Location&quot;, begin = 0.3, end = 1) +
-  scale_fill_manual(values = c(&quot;white&quot;, &quot;black&quot;, &quot;#35608DFF&quot;, &quot;#2FB47CFF&quot;, &quot;#FDE725FF&quot;)) +
-  guides(fill = guide_legend(override.aes = list(colour = &quot;black&quot;, size = 1))) +
-  labs(y = expression(paste(&quot;Net WEP Difference (&quot;, mg~kg^{-1}, &quot;)&quot;)), x = &quot;Treatment&quot;) +
-  theme(axis.title.x = element_blank(),
-        axis.text.x = element_text(angle = 0, vjust = 1, hjust = 0.5),
-        legend.position = 'bottom', legend.title = element_blank())
-p2
-#ggsave(plot = p2, filename = &quot;Figures/Soil_WEP.png&quot;, width = 150, height = 100, units = &quot;mm&quot;, dpi = 600)
+#ggsave(plot = p1, filename = &quot;Figures/Litter_WEP.png&quot;, width = 150, height = 100, units = &quot;mm&quot;, dpi = 600)
     </code>
-    <fig id="fig-soil-WEP-nb-5">
-      <caption><p>Change in riparian Ah layer (0-10cm) WEP concentration
-      following grazing or mowing in each of the riparian zones. No
-      significant effect of treatment or zone was
-      detected.</p></caption>
-      <graphic mimetype="image" mime-subtype="png" xlink:href="03_Soils_analysis_files/figure-jats/fig-soil-WEP-1.png" />
+    <fig id="fig-litter-WEP-nb-5">
+      <caption><p>Change in riparian litter WEP following grazing or
+      mowing in each of the riparian zones. No significant effect of
+      treatment or riparian zone on the litter WEP content was
+      detected</p></caption>
+      <graphic mimetype="image" mime-subtype="png" xlink:href="02_Litter_analysis_files/figure-jats/fig-litter-WEP-1.png" />
     </fig>
+    <sec id="cell-fig-litter-WEP-output-0-nb-5" specific-use="notebook-output">
+    <preformat>Warning: Removed 11 rows containing non-finite outside the scale range
+(`stat_boxplot()`).</preformat>
+    </sec>
     </sec>
   </sec>
 </sec>
@@ -5388,7 +5337,7 @@ p2
 <sub-article article-type="notebook" id="nb-24-nb-6">
 <front-stub>
 <title-group>
-<article-title>Map of study area</article-title>
+<article-title>Vertical profile of WEP</article-title>
 </title-group>
 <contrib-group>
 <contrib contrib-type="author">
@@ -5408,10 +5357,7 @@ p2
   <sec id="nb-code-cell-1-nb-6" specific-use="notebook-code">
   <code language="r script">library(tidyverse)
   </code>
-  <code language="r script">library(ggspatial)
-library(sf)
-  </code>
-  <code language="r script">library(rnaturalearth)
+  <code language="r script">library(viridis)
   </code>
   <code language="r script">library(patchwork)
   </code>
@@ -5428,198 +5374,270 @@ library(sf)
 ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</preformat>
   </sec>
   <sec id="nb-code-cell-1-output-1-nb-6" specific-use="notebook-output">
-  <preformat>Linking to GEOS 3.10.2, GDAL 3.4.3, PROJ 8.2.1; sf_use_s2() is TRUE</preformat>
-  </sec>
-  <sec id="nb-code-cell-1-output-2-nb-6" specific-use="notebook-output">
-  <preformat>The legacy packages maptools, rgdal, and rgeos, underpinning the sp package,
-which was just loaded, will retire in October 2023.
-Please refer to R-spatial evolution reports for details, especially
-https://r-spatial.org/r/2023/05/15/evolution4.html.
-It may be desirable to make the sf package available;
-package maintainers should consider adding sf to Suggests:.
-The sp package is now running under evolution status 2
-     (status 2 uses the sf package in place of rgdal)
-Support for Spatial objects (`sp`) will be deprecated in {rnaturalearth} and will be removed in a future release of the package. Please use `sf` objects with {rnaturalearth}. For example: `ne_download(returnclass = 'sf')`</preformat>
+  <preformat>Loading required package: viridisLite</preformat>
   </sec>
   </sec>
 </sec>
-<sec id="important-coordinants-nb-6">
-  <title>Important coordinants</title>
-  <p>Regional site location</p>
+<sec id="read-in-data-nb-6">
+  <title>Read in data</title>
   <sec id="nb-code-cell-2-nb-6" specific-use="notebook-code">
-  <code language="r script">site &lt;- st_sfc(st_point(c(-99.924176, 50.056015)), crs = 4326)
-box = c(xmin = -99.99, xmax = -99.924176 + 0.12, ymax = 50.056015 +.065, ymin = 50.056015 - 0.065)
+  <code language="r script">conc &lt;- read_csv(&quot;P_concentration.csv&quot;) %&gt;%
+  rename(&quot;conc&quot; = &quot;ak_content&quot;) %&gt;%
+  filter(timing == &quot;Before&quot;) %&gt;%
+  mutate(sample_type = fct_recode(sample_type, &quot;Ah&quot; = &quot;Soil&quot;)) %&gt;%
+  mutate(sample_type = fct_relevel(sample_type, c(&quot;Ah&quot;, &quot;Organic&quot;, &quot;Litter&quot;,&quot;Biomass&quot;))) %&gt;%
+  mutate(location = fct_relevel(location, c(&quot;Upper&quot;, &quot;Middle&quot;, &quot;Lower&quot;)))
   </code>
+  <code language="r script">mass_data &lt;- read_csv(&quot;mass.csv&quot;) %&gt;%
+  filter(timing == &quot;Before&quot;) %&gt;%
+  mutate(sample_type = fct_relevel(sample_type, c(&quot;Biomass&quot;, &quot;Litter&quot;)))
+  </code>
+  <code language="r script">bd_data &lt;- read_csv(&quot;bulk density.csv&quot;) %&gt;% # Bulk density measurements
+  mutate(mass = bd * length_cm/100 * 1) %&gt;%
+  mutate(sample_type = fct_recode(sample_type, &quot;Organic&quot; = &quot;LFH&quot;))
+  </code>
+  <sec id="nb-code-cell-2-output-0-nb-6" specific-use="notebook-output">
+  <preformat>Rows: 1141 Columns: 8
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: &quot;,&quot;
+chr (5): sample_type, timing, plot, location, treatment
+dbl (3): site, ak_content, year
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</preformat>
   </sec>
-  <p>Study plot locations</p>
-  <sec id="nb-code-cell-3-nb-6" specific-use="notebook-code">
-  <code language="r script"># sites &lt;- st_as_sf(data.frame(site = c(1,2,3,4), lat = c(50.052525, 50.052209, 50.059208, 50.060235), long = c(-99.924242, -99.918429, -99.912849, -99.931591)), coords = c(&quot;long&quot;, &quot;lat&quot;), crs = 4362)
-                                                                                              
-sites &lt;- data.frame(site = c(1,2,3,4), lat = c(50.052525, 50.052209, 50.059208, 50.060235), long = c(-99.924242, -99.918429, -99.912849, -99.931591))
-  </code>
+  <sec id="nb-code-cell-2-output-1-nb-6" specific-use="notebook-output">
+  <preformat>Rows: 576 Columns: 8
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: &quot;,&quot;
+chr (5): sample_type, timing, plot, location, treatment
+dbl (3): site, dryweight, year
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</preformat>
+  </sec>
+  <sec id="nb-code-cell-2-output-2-nb-6" specific-use="notebook-output">
+  <preformat>Rows: 96 Columns: 7
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: &quot;,&quot;
+chr (4): plot, location, sample_type, treatment
+dbl (3): site, length_cm, bd
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</preformat>
+  </sec>
   </sec>
 </sec>
-<sec id="land-use-data-of-region-nb-6">
-  <title>Land use data of region</title>
-  <sec id="nb-code-cell-4-nb-6" specific-use="notebook-code">
-  <code language="r script">sf_use_s2(FALSE)
+<sec id="merge-data-nb-6">
+  <title>Merge data</title>
+  <sec id="nb-code-cell-3-nb-6" specific-use="notebook-code">
+  <code language="r script">total_data &lt;- conc %&gt;%
+  left_join(mass_data) %&gt;%
+  left_join(bd_data) %&gt;%
+  mutate(p_total = case_when(sample_type == &quot;Biomass&quot; ~ conc * dryweight/1000 /0.25,
+                             sample_type == &quot;Litter&quot; ~ conc * dryweight/1000 /0.25,
+                             sample_type == &quot;Organic&quot; ~ conc *mass,
+                             sample_type == &quot;Ah&quot;  ~ conc *mass)) %&gt;%
+  mutate(sample_type = fct_relevel(sample_type, c(&quot;Ah&quot;, &quot;Organic&quot;, &quot;Litter&quot;,&quot;Biomass&quot;))) %&gt;%
+  mutate(location = fct_relevel(location, c(&quot;Upper&quot;, &quot;Middle&quot;, &quot;Lower&quot;)))
   </code>
-  <code language="r script">land &lt;- st_read(here::here(&quot;notebooks/Data/lcv_brandon_2006_shp/lcv_brandon_2006.shp&quot;)) %&gt;%
-  bind_rows(st_read(here::here(&quot;notebooks/Data/lcv_minnedosa_2004_2006_shp/lcv_minnedosa_2004_2006.shp&quot;))) %&gt;%
-  st_transform(crs = 4326) %&gt;%
-  st_crop(st_bbox(box, crs = 4326)) %&gt;%
-  mutate(Land_use = recode(CLASSNAME, &quot;Agricultural Field&quot; = &quot;Agriculture&quot;, &quot;Agri - Forage Field&quot; = &quot;Forage&quot;, &quot;Water Body&quot; = &quot;Water&quot;, &quot;Wetland - Treed Bog&quot; = &quot;Wetland&quot;, &quot;Wetland - Marsh&quot; = &quot;Wetland&quot;, &quot;Decidious Forest&quot; = &quot;Forest&quot;, &quot;Open Decidious Forest&quot; = &quot;Forest&quot;, &quot;Mixedwood Forest&quot; = &quot;Forest&quot;, &quot;Forest Cut Blocks&quot; = &quot;Forest&quot;, &quot;Coniferous Forest&quot; = &quot;Forest&quot;,&quot;Roads Trails Rail Lines&quot; = &quot;Other&quot;, &quot;Sand and Gravel&quot; = &quot;Other&quot;, &quot;Cultural Features&quot; = &quot;Other&quot;, &quot;Range and Grassland&quot; = &quot;Forage&quot;, &quot;Water Bodies&quot; = &quot;Water&quot;)) %&gt;%
-  # group_by(Land_use) %&gt;%
-  # summarise(do_union = TRUE) %&gt;%
-  mutate(Land_use = factor(Land_use, levels=c(&quot;Agriculture&quot;, &quot;Forage&quot;, &quot;Forest&quot;,  &quot;Water&quot;, &quot;Wetland&quot;, &quot;Other&quot;)))
+  <sec id="nb-code-cell-3-output-0-nb-6" specific-use="notebook-output">
+  <preformat>Joining with `by = join_by(sample_type, site, timing, plot, location, year,
+treatment)`
+Joining with `by = join_by(sample_type, site, plot, location, treatment)`</preformat>
+  </sec>
+  </sec>
+</sec>
+<sec id="summary-nb-6">
+  <title>Summary</title>
+  <sec id="nb-code-cell-4-nb-6" specific-use="notebook-code">
+  <code language="r script">conc %&gt;%
+  group_by(sample_type) %&gt;%
+  summarise(mean = mean(conc, na.rm = T),
+            median = median(conc, na.rm = T),
+            sd = sd(conc, na.rm = T),
+            IQR = quantile(conc, 0.75, na.rm = T) -quantile(conc, 0.25, na.rm = T))
+  </code>
+  <code language="r script">conc %&gt;%
+  group_by(sample_type, location) %&gt;%
+  summarise(mean = mean(conc, na.rm = T),
+            median = median(conc, na.rm = T),
+            sd = sd(conc, na.rm = T),
+            IQR = quantile(conc, 0.75, na.rm = T) -quantile(conc, 0.25, na.rm = T))
+  </code>
+  <code language="r script">total_data %&gt;%
+  group_by(sample_type) %&gt;%
+  summarise(mean = mean(p_total, na.rm = T),
+            median = median(p_total, na.rm = T),
+            sd = sd(p_total, na.rm = T),
+            IQR = quantile(p_total, 0.75, na.rm = T) -quantile(p_total, 0.25, na.rm = T))
+  </code>
+  <code language="r script">total_data %&gt;%
+  group_by(sample_type, location) %&gt;%
+  summarise(mean = mean(p_total, na.rm = T),
+            median = median(p_total, na.rm = T),
+            sd = sd(p_total, na.rm = T),
+            IQR = quantile(p_total, 0.75, na.rm = T) -quantile(p_total, 0.25, na.rm = T))
   </code>
   <sec id="nb-code-cell-4-output-0-nb-6" specific-use="notebook-output">
-  <preformat>Spherical geometry (s2) switched off</preformat>
+  <preformat># A tibble: 4 × 5
+  sample_type  mean median     sd    IQR
+  &lt;fct&gt;       &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
+1 Ah           1.12  0.953  0.651  0.785
+2 Organic      3.99  3.40   2.54   2.38 
+3 Litter      39.7  39.0   23.2   32.9  
+4 Biomass     91.7  82.8   46.4   54.3  </preformat>
   </sec>
   <sec id="nb-code-cell-4-output-1-nb-6" specific-use="notebook-output">
-  <preformat>Reading layer `lcv_brandon_2006' from data source 
-  `/home/alex/Dropbox/MBFI/MBFI riparian study/riparian-grazing-manuscript/notebooks/Data/lcv_brandon_2006_shp/lcv_brandon_2006.shp' 
-  using driver `ESRI Shapefile'
-Simple feature collection with 145146 features and 5 fields
-Geometry type: POLYGON
-Dimension:     XY
-Bounding box:  xmin: 429971 ymin: 5427260 xmax: 510011 ymax: 5542070
-Projected CRS: UTM
-Reading layer `lcv_minnedosa_2004_2006' from data source 
-  `/home/alex/Dropbox/MBFI/MBFI riparian study/riparian-grazing-manuscript/notebooks/Data/lcv_minnedosa_2004_2006_shp/lcv_minnedosa_2004_2006.shp' 
-  using driver `ESRI Shapefile'
-Simple feature collection with 160653 features and 5 fields
-Geometry type: POLYGON
-Dimension:     XY
-Bounding box:  xmin: 429972 ymin: 5542070 xmax: 549972 ymax: 5656880
-Projected CRS: UTM</preformat>
+  <preformat>`summarise()` has grouped output by 'sample_type'. You can override using the
+`.groups` argument.</preformat>
   </sec>
   <sec id="nb-code-cell-4-output-2-nb-6" specific-use="notebook-output">
-  <preformat>although coordinates are longitude/latitude, st_intersection assumes that they
-are planar</preformat>
+  <preformat># A tibble: 12 × 6
+# Groups:   sample_type [4]
+   sample_type location    mean median     sd    IQR
+   &lt;fct&gt;       &lt;fct&gt;      &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
+ 1 Ah          Upper      1.38   1.24   0.803  0.901
+ 2 Ah          Middle     1.13   1.02   0.499  0.704
+ 3 Ah          Lower      0.864  0.726  0.507  0.387
+ 4 Organic     Upper      4.35   4.03   2.49   2.40 
+ 5 Organic     Middle     4.32   3.53   2.98   2.27 
+ 6 Organic     Lower      3.29   2.93   1.97   2.03 
+ 7 Litter      Upper     29.5   29.7   15.7   22.0  
+ 8 Litter      Middle    40.5   38.8   23.2   34.0  
+ 9 Litter      Lower     48.7   49.2   25.8   31.6  
+10 Biomass     Upper     86.1   82.9   40.6   56.3  
+11 Biomass     Middle    88.5   82.7   47.8   49.6  
+12 Biomass     Lower    100.    82.6   49.8   63.6  </preformat>
   </sec>
   <sec id="nb-code-cell-4-output-3-nb-6" specific-use="notebook-output">
-  <preformat>Warning: attribute variables are assumed to be spatially constant throughout
-all geometries</preformat>
+  <preformat># A tibble: 4 × 5
+  sample_type  mean median    sd   IQR
+  &lt;fct&gt;       &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+1 Ah           49.5   42.5  29.5  32.0
+2 Organic      19.9   17.7  13.7  15.6
+3 Litter       15.7   11.1  14.3  14.3
+4 Biomass      31.9   26.3  23.5  23.3</preformat>
+  </sec>
+  <sec id="nb-code-cell-4-output-4-nb-6" specific-use="notebook-output">
+  <preformat>`summarise()` has grouped output by 'sample_type'. You can override using the
+`.groups` argument.</preformat>
+  </sec>
+  <sec id="nb-code-cell-4-output-5-nb-6" specific-use="notebook-output">
+  <preformat># A tibble: 12 × 6
+# Groups:   sample_type [4]
+   sample_type location  mean median    sd   IQR
+   &lt;fct&gt;       &lt;fct&gt;    &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+ 1 Ah          Upper    64.5   57.7  35.8  41.5 
+ 2 Ah          Middle   49.0   44.6  21.5  26.0 
+ 3 Ah          Lower    35.1   28.9  21.4  18.3 
+ 4 Organic     Upper    23.1   22.1  13.1  17.1 
+ 5 Organic     Middle   19.2   17.8  12.6  10.4 
+ 6 Organic     Lower    17.4   12.8  14.8  11.8 
+ 7 Litter      Upper     8.75   6.66  7.50  8.25
+ 8 Litter      Middle   14.4    9.29 12.2  13.4 
+ 9 Litter      Lower    23.7   17.4  17.1  21.1 
+10 Biomass     Upper    22.7   18.6  14.9  14.6 
+11 Biomass     Middle   26.6   18.6  18.9  18.3 
+12 Biomass     Lower    46.0   34.3  27.7  28.1 </preformat>
   </sec>
   </sec>
 </sec>
-<sec id="canada-nb-6">
-  <title>Canada</title>
+<sec id="plots-nb-6">
+  <title>Plots</title>
+  <p>Bulk Density</p>
   <sec id="nb-code-cell-5-nb-6" specific-use="notebook-code">
-  <code language="r script">canada &lt;- ne_states(country = &quot;Canada&quot;, returnclass = &quot;sf&quot;) %&gt;%
-  st_transform(crs = 3348)
+  <code language="r script">p5 &lt;- ggplot(data = bd_data, aes(y = sample_type, x = bd, fill = location)) + 
+  geom_boxplot() +
+  theme_bw(base_size = 12) +
+  labs(x = expression(paste(&quot;Bulk Density (&quot;, kg~m^{-3}, &quot;)&quot;)), tag = &quot;b)&quot;) +
+  scale_fill_viridis_d(begin = 0.3, end = 1) +
+  theme(legend.position = &quot;bottom&quot;, 
+        legend.title = element_blank(),
+        axis.title.y = element_blank())
   </code>
   </sec>
-</sec>
-<sec id="maps-nb-6">
-  <title>Maps</title>
-  <sec id="land-use-nb-6">
-    <title>Land use</title>
-    <sec id="nb-code-cell-6-nb-6" specific-use="notebook-code">
-    <code language="r script">p3 &lt;- ggplot() +
-  theme_bw() +
-  geom_sf(data = land, aes(fill = Land_use), lwd = 0) +
-  scale_fill_manual(values=c(&quot;#458B00&quot;,  &quot;#CDAD00&quot;, &quot;#006400&quot;,&quot;#009ACD&quot;, &quot;#0096D194&quot;,  &quot;#C1CDCD&quot;), name = &quot;Land use&quot;) +
-  geom_point(data = sites, aes(x = long, y = lat), shape = 23, colour = &quot;red&quot;, fill = &quot;red&quot;, size = 2) +
-  coord_sf(ylim = c(49.992, 50.1), xlim = c(-99.965, -99.80418), crs = 4326) +
-  scale_y_continuous(expand = c(0,0)) +
-  scale_x_continuous(expand = c(0,0)) +
-  labs(tag = &quot;b)&quot;) +
-  annotation_scale(location = &quot;bl&quot;,
-                   height = unit(0.05, &quot;cm&quot;)) +
-  annotation_north_arrow(location = &quot;br&quot;, 
-                         height = unit(0.5, &quot;cm&quot;),
-                         width = unit(0.5, &quot;cm&quot;)) +
-  theme(axis.text = element_blank(),
-        axis.ticks = element_blank(),
-        axis.title = element_blank(),
-        plot.margin = unit(c(0,0,0,0), &quot;mm&quot;))
-    </code>
-    </sec>
+  <p>biomass and litter weights</p>
+  <sec id="nb-code-cell-6-nb-6" specific-use="notebook-code">
+  <code language="r script">p4 &lt;- ggplot(data = mass_data, aes(y = sample_type, x = dryweight/1000 /0.25, fill = location)) + 
+  geom_boxplot() +
+  theme_bw(base_size = 12) +
+  labs(x = expression(paste(&quot;Mass (&quot;, kg~m^{-2}, &quot;)&quot;)), y = &quot;P Source&quot;, tag = &quot;a)&quot;) +
+  scale_fill_viridis_d(begin = 0.3, end = 1) +
+  theme(legend.position = &quot;bottom&quot;, 
+        legend.title = element_blank())
+  </code>
   </sec>
-  <sec id="open-street-nb-6">
-    <title>Open street</title>
-    <p>not used</p>
-    <sec id="nb-code-cell-7-nb-6" specific-use="notebook-code">
-    <code language="r script">p2 &lt;- ggplot(site) +
-  annotation_map_tile(type = &quot;osm&quot;, zoom = 15) +
-  geom_point(data = sites, aes(x = long, y = lat), shape = 23, colour = &quot;red&quot;, fill = &quot;red&quot;, size = 1) +
-  #coord_sf(ylim = c(50.056015 +.02, 50.056015 - 0.02), xlim = c(-99.924176 - 0.04, -99.924176 + 0.04), crs = 4326) +
-  coord_sf(ylim = c(50.056015 +.01, 50.056015 +.065), xlim = c(-99.924176 - 0.02, -99.924176 + 0.02), crs = 4326) +
-  annotation_scale(location = &quot;bl&quot;,
-                   height = unit(0.05, &quot;cm&quot;)) +
-  annotation_north_arrow(location = &quot;br&quot;, 
-                         height = unit(0.5, &quot;cm&quot;),
-                         width = unit(0.5, &quot;cm&quot;)) +
-  theme(axis.text = element_blank(),
-        axis.ticks = element_blank(),
-        axis.title = element_blank(),
-        plot.margin = unit(c(0,0,0,0), &quot;mm&quot;))
+  <sec id="nb-code-cell-7-nb-6" specific-use="notebook-code">
+  <code language="r script">#|
+p4 + p5 + plot_layout(guides = 'collect') &amp; theme(legend.position = 'bottom', legend.title = element_blank())
+  </code>
+  <fig>
+    <caption><p>a) Mass of biomass and litter before grazing and mowing
+    and b) the bulk density of the organic layer and 10 cm Ah
+    horizon</p></caption>
+    <graphic mimetype="image" mime-subtype="png" xlink:href="04_Vertical_profile_files/figure-jats/suppfig-weights-bd-1.png" />
+  </fig>
+  </sec>
+  <sec id="nb-code-cell-8-nb-6" specific-use="notebook-code">
+  <code language="r script">p1 &lt;- ggplot(data = conc, aes(y = sample_type, x = conc, fill = location)) + 
+  geom_boxplot() + 
+  #scale_x_log10() +
+  theme_bw(base_size = 12) +
+  theme(legend.position = c(0.2, 0.8),
+        legend.title = element_blank()) +
+  labs(x = expression(paste(&quot;WEP Concentration (&quot;, mg~kg^{-1}, &quot;)&quot;)), y = &quot;P Source&quot;, tag = &quot;a)&quot;) +
+  scale_fill_viridis_d(name = &quot;Location&quot;, begin = 0.3, end = 1)
+  </code>
+  <code language="r script">p1
+  </code>
+  <graphic mimetype="image" mime-subtype="png" xlink:href="04_Vertical_profile_files/figure-jats/unnamed-chunk-8-1.png" />
+  <code language="r script">p2 &lt;- ggplot(data = total_data, aes(y = sample_type, x = p_total, fill = location)) + 
+  geom_boxplot() + 
+  #scale_x_log10() +
+  theme_bw(base_size = 12) +
+  theme(axis.title.y = element_blank(),
+        legend.position = &quot;none&quot;) +
+  labs(x = expression(paste(&quot;WEP Total (&quot;, mg~m^{-2}, &quot;)&quot;)), tag = &quot;b)&quot;) +
+  scale_fill_viridis_d(name = &quot;Location&quot;, begin = 0.3, end = 1)
 p2
-    </code>
-    <graphic mimetype="image" mime-subtype="png" xlink:href="05_Map_files/figure-jats/unnamed-chunk-7-1.png" />
-    <sec id="nb-code-cell-7-output-0-nb-6" specific-use="notebook-output">
-    <preformat>Loading required namespace: raster</preformat>
-    </sec>
-    <sec id="nb-code-cell-7-output-1-nb-6" specific-use="notebook-output">
-    <preformat>Please note that rgdal will be retired during October 2023,
-plan transition to sf/stars/terra functions using GDAL and PROJ
-at your earliest convenience.
-See https://r-spatial.org/r/2023/05/15/evolution4.html and https://github.com/r-spatial/evolution
-rgdal: version: 1.6-7, (SVN revision 1203)
-Geospatial Data Abstraction Library extensions to R successfully loaded
-Loaded GDAL runtime: GDAL 3.4.3, released 2022/04/22
-Path to GDAL shared files: /usr/share/gdal
-GDAL binary built with GEOS: TRUE 
-Loaded PROJ runtime: Rel. 8.2.1, January 1st, 2022, [PJ_VERSION: 821]
-Path to PROJ shared files: /home/alex/.local/share/proj:/usr/share/proj
-PROJ CDN enabled: TRUE
-Linking to sp version:2.0-0
-To mute warnings of possible GDAL/OSR exportToProj4() degradation,
-use options(&quot;rgdal_show_exportToProj4_warnings&quot;=&quot;none&quot;) before loading sp or rgdal.</preformat>
-    </sec>
-    <sec id="nb-code-cell-7-output-2-nb-6" specific-use="notebook-output">
-    <preformat>Zoom: 15</preformat>
-    </sec>
-    </sec>
+  </code>
+  <graphic mimetype="image" mime-subtype="png" xlink:href="04_Vertical_profile_files/figure-jats/unnamed-chunk-8-2.png" />
+  <sec id="nb-code-cell-8-output-0-nb-6" specific-use="notebook-output">
+  <preformat>Warning: A numeric `legend.position` argument in `theme()` was deprecated in ggplot2
+3.5.0.
+ℹ Please use the `legend.position.inside` argument of `theme()` instead.</preformat>
   </sec>
-  <sec id="canada-1-nb-6">
-    <title>Canada</title>
-    <sec id="nb-code-cell-8-nb-6" specific-use="notebook-code">
-    <code language="r script">p1 &lt;- ggplot() +
-  theme_bw() +
-  layer_spatial(canada, fill = &quot;white&quot;) +
-  layer_spatial(site, shape = 23, colour = &quot;red&quot;, fill = &quot;red&quot;, size = 2) +
-  labs(tag = &quot;a)&quot;) +
-  annotation_scale(location = &quot;bl&quot;,
-                   height = unit(0.05, &quot;cm&quot;)) +
-  annotation_north_arrow(location = &quot;br&quot;, 
-                         height = unit(0.5, &quot;cm&quot;),
-                         width = unit(0.5, &quot;cm&quot;)) +
-  theme(axis.text = element_blank(),
-        axis.ticks = element_blank(),
-        axis.title = element_blank(),
-        plot.margin = unit(c(0,0,0,0), &quot;mm&quot;),
-        panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank(),
-        panel.border = element_blank(),
-        panel.background = element_blank())
-    </code>
-    </sec>
-    <sec id="cell-fig-map-nb-6" specific-use="notebook-code">
-    <code language="r script">#|
-p4 &lt;- p1 + p3 + plot_layout(guides = &quot;collect&quot;) &amp; theme(legend.position = &quot;right&quot;)
-p4
-#ggsave(filename = &quot;Figures/Maps.png&quot;, plot = p4, height = 75, width = 180, units = &quot;mm&quot;, dpi = 600)
-    </code>
-    <fig id="fig-map-nb-6">
-      <caption><p>Showing a) the study site in southwestern Manitoba and
-      b) the four riparian areas included in this study and the regional
-      land use.</p></caption>
-      <graphic mimetype="image" mime-subtype="png" xlink:href="05_Map_files/figure-jats/fig-map-1.png" />
-    </fig>
-    </sec>
+  <sec id="nb-code-cell-8-output-1-nb-6" specific-use="notebook-output">
+  <preformat>Warning: Removed 2 rows containing non-finite outside the scale range
+(`stat_boxplot()`).</preformat>
+  </sec>
+  <sec id="nb-code-cell-8-output-2-nb-6" specific-use="notebook-output">
+  <preformat>Warning: Removed 2 rows containing non-finite outside the scale range
+(`stat_boxplot()`).</preformat>
+  </sec>
+  </sec>
+  <sec id="cell-fig-vertical-WEP-nb-6" specific-use="notebook-code">
+  <code language="r script">#|
+p3 &lt;- p1+p2 + plot_layout(guides = 'collect') &amp; theme(legend.position = 'bottom', legend.title = element_blank())  
+
+p3
+  </code>
+  <code language="r script">#|
+#ggsave(plot = p3, filename = &quot;Figures/Profile P.png&quot;, width = 174, height = 100, units = &quot;mm&quot;, dpi = 600) 
+  </code>
+  <fig id="fig-vertical-WEP-nb-6">
+    <caption><p>Vertical and longitudinal profiles of a) WEP
+    concentration and b) WEP content in the riparian areas prior to
+    grazing and mowing treatments.</p></caption>
+    <graphic mimetype="image" mime-subtype="png" xlink:href="04_Vertical_profile_files/figure-jats/fig-vertical-WEP-1.png" />
+  </fig>
+  <sec id="cell-fig-vertical-WEP-output-0-nb-6" specific-use="notebook-output">
+  <preformat>Warning: Removed 2 rows containing non-finite outside the scale range
+(`stat_boxplot()`).
+Removed 2 rows containing non-finite outside the scale range
+(`stat_boxplot()`).</preformat>
+  </sec>
   </sec>
 </sec>
 </body>

@@ -27,11 +27,35 @@ sites <- data.frame(site = c(1,2,3,4), lat = c(50.052525, 50.052209, 50.059208, 
 ```
 
 ## Land use data of region
+### Get data
+```{r}
+minnedosa_data <- "lcv_minnedosa_2004_2006_shp"
+if (file.exists(minnedosa_data)) {
+  print("The data already exists!")
+} else {
+  download.file("https://mli.gov.mb.ca/landuse/shp_zip_files/lcv_minnedosa_2004_2006_shp.zip", 
+                destfile = "lcv_minnedosa_2004_2006_shp.zip")
+  unzip("lcv_minnedosa_2004_2006_shp.zip", exdir = "lcv_minnedosa_2004_2006_shp")
+}
+
+brandon_data <- "lcv_brandon_2006_shp"
+if (file.exists(brandon_data)) {
+  print("The data already exists!")
+} else {
+  download.file("https://mli.gov.mb.ca/landuse/shp_zip_files/lcv_brandon_2006_shp.zip", 
+                destfile = "lcv_brandon_2006_shp.zip")
+  unzip("lcv_brandon_2006_shp.zip", exdir = "lcv_brandon_2006_shp")
+}
+
+```
+
+
+
 ```{r}
 
 sf_use_s2(FALSE)
-land <- st_read(here::here("notebooks/Data/lcv_brandon_2006_shp/lcv_brandon_2006.shp")) %>%
-  bind_rows(st_read(here::here("notebooks/Data/lcv_minnedosa_2004_2006_shp/lcv_minnedosa_2004_2006.shp"))) %>%
+land <- st_read("lcv_brandon_2006_shp/lcv_brandon_2006.shp") %>%
+  bind_rows(st_read("lcv_minnedosa_2004_2006_shp/lcv_minnedosa_2004_2006.shp")) %>%
   st_transform(crs = 4326) %>%
   st_crop(st_bbox(box, crs = 4326)) %>%
   mutate(Land_use = recode(CLASSNAME, "Agricultural Field" = "Agriculture", "Agri - Forage Field" = "Forage", "Water Body" = "Water", "Wetland - Treed Bog" = "Wetland", "Wetland - Marsh" = "Wetland", "Decidious Forest" = "Forest", "Open Decidious Forest" = "Forest", "Mixedwood Forest" = "Forest", "Forest Cut Blocks" = "Forest", "Coniferous Forest" = "Forest","Roads Trails Rail Lines" = "Other", "Sand and Gravel" = "Other", "Cultural Features" = "Other", "Range and Grassland" = "Forage", "Water Bodies" = "Water")) %>%
@@ -86,7 +110,7 @@ p2 <- ggplot(site) +
         axis.ticks = element_blank(),
         axis.title = element_blank(),
         plot.margin = unit(c(0,0,0,0), "mm"))
-p2
+
 ```
 ### Canada
 ```{r}
@@ -112,11 +136,11 @@ p1 <- ggplot() +
 
 ```{r}
 #| label: fig-map
-#| fig-cap: "Showing a) the study site in southwestern Manitoba and b) the four riparian areas included in this study and the regional land use."
+#| fig-cap: "Showing a) the study site in southwestern Manitoba and b) the four riparian areas included in this study and the regional land use (data from https://mli.gov.mb.ca/)."
 #| fig-alt: "Map of Canada with red dot showing location of stite. Regional landuse with red dots showing the location of the four riparian areas included in this study"
 #|   
-p4 <- p1 + p3 + plot_layout(guides = "collect") & theme(legend.position = "right")
-p4
+p1 + p3 + plot_layout(guides = "collect") & theme(legend.position = "right")
+
 #ggsave(filename = "Figures/Maps.png", plot = p4, height = 75, width = 180, units = "mm", dpi = 600)
 ```
 

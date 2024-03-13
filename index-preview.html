@@ -392,17 +392,17 @@ The stations data frame hasn't been updated in over 4 weeks. Consider running `s
 <p>The study was conducted at the Manitoba Beef and Forage Initiatives (MBFI) research farm (50.06<span class="math inline">\(^\circ\)</span>N, 99.92<span class="math inline">\(^\circ\)</span>W), approximately 25 km north of Brandon, Manitoba, Canada, in the Prairie Pothole region of North America (<a href="#fig-map" class="quarto-xref">Figure&nbsp;1</a>). The normal (1981 – 2010) average daily air temperature was 2.2 <span class="math inline">\(^\circ\)</span>C and the cumulative annual precipitation at Brandon was 474.2 mm with 24.8 % falling as snow <span class="citation" data-cites="environmentandclimatechangecanada2024">(<a href="#ref-environmentandclimatechangecanada2024" role="doc-biblioref">Environment and Climate Change Canada, 2024</a>)</span>. The Köppen-Geiger climate classification is cold, without dry season, and with warm summer (Dfb) <span class="citation" data-cites="beck2018">(<a href="#ref-beck2018" role="doc-biblioref">Beck et al., 2018</a>)</span>. The land use in the region is predominately agriculture including annual crops (grains and oil seeeds) and grazing/forage. MBFI is a 260 ha research and demonstration farm with a mix of pasture, hay, and cropland. Prior to the establishment of MBFI the site was part of the Manitoba Zero Tillage Research Association farm (1993-2014) where annual crops, including oil seeds and grains, were grown. There are also numerous small permanent and ephemeral wetlands (potholes) and associated riparian areas which account for ~35% of the total farm land <span class="citation" data-cites="manitobabeefforageinitiatives2024">(<a href="#ref-manitobabeefforageinitiatives2024" role="doc-biblioref">Manitoba Beef &amp; Forage Initiatives, 2024</a>)</span>. The riparian areas surrounding the larger permanent wetlands are fenced off to exclude livestock and are not actively managed. The farm has an irregular undulating to hummocky relief with soils developed on fine loamy, moderately calcareous glacial till. The riparian soils are poorly drained and primarily consist of Humic and Luvic Gleysols and generally the soil profile can be described by a 1-10 cm organic layer overlying a 10-18 cm Ah horizon <span class="citation" data-cites="podolsky1993">(<a href="#ref-podolsky1993" role="doc-biblioref">Podolsky and Schindler, 1993</a>)</span>. The vegetation in the riparian areas are dominated by grasses, sedges, and forbs.</p>
 <div class="quarto-embed-nb-cell" data-notebook="/home/runner/work/riparian-grazing-manuscript/riparian-grazing-manuscript/notebooks/05_Map.qmd" data-notebook-title="Map of study area" data-notebook-cellid="cell-fig-map">
 <div class="cell-container"><div class="cell-decorator"><pre>In [2]:</pre></div><div id="cell-fig-map" class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>p4 <span class="op">&lt;-</span> p1 <span class="op">+</span> p3 <span class="op">+</span> plot_layout(guides <span class="op">=</span> <span class="st">"collect"</span>) <span class="op">&amp;</span> theme(legend.position <span class="op">=</span> <span class="st">"right"</span>)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>p4</span>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>p1 <span class="op">+</span> p3 <span class="op">+</span> plot_layout(guides <span class="op">=</span> <span class="st">"collect"</span>) <span class="op">&amp;</span> theme(legend.position <span class="op">=</span> <span class="st">"right"</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co">#ggsave(filename = "Figures/Maps.png", plot = p4, height = 75, width = 180, units = "mm", dpi = 600)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="fig-map" class="quarto-figure quarto-figure-center quarto-float anchored" alt="Map of Canada with red dot showing location of stite. Regional landuse with red dots showing the location of the four riparian areas included in this study">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca" class="">
-<a href="index_files/figure-html/notebooks-05_Map-fig-map-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: Showing a) the study site in southwestern Manitoba and b) the four riparian areas included in this study and the regional land use."><img src="index_files/figure-html/notebooks-05_Map-fig-map-output-1.png" alt="Map of Canada with red dot showing location of stite. Regional landuse with red dots showing the location of the four riparian areas included in this study" width="672" height="480" class="figure-img"></a>
+<a href="index_files/figure-html/notebooks-05_Map-fig-map-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: Showing a) the study site in southwestern Manitoba and b) the four riparian areas included in this study and the regional land use (data from https://mli.gov.mb.ca/)."><img src="index_files/figure-html/notebooks-05_Map-fig-map-output-1.png" alt="Map of Canada with red dot showing location of stite. Regional landuse with red dots showing the location of the four riparian areas included in this study" width="672" height="480" class="figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Showing a) the study site in southwestern Manitoba and b) the four riparian areas included in this study and the regional land use.
+Figure&nbsp;1: Showing a) the study site in southwestern Manitoba and b) the four riparian areas included in this study and the regional land use (data from https://mli.gov.mb.ca/).
 </figcaption>
 </figure>
 </div>
@@ -435,8 +435,10 @@ Figure&nbsp;1: Showing a) the study site in southwestern Manitoba and b) the fou
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>p3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_boxplot()`).
-Removed 2 rows containing non-finite values (`stat_boxplot()`).</code></pre>
+<pre><code>Warning: Removed 2 rows containing non-finite outside the scale range
+(`stat_boxplot()`).
+Removed 2 rows containing non-finite outside the scale range
+(`stat_boxplot()`).</code></pre>
 </div>
 <div class="cell-output cell-output-display">
 <div id="fig-vertical-wep" class="quarto-figure quarto-figure-center quarto-float anchored" alt="Vertical and longitudinal profiles of a) WEP concentration and b) WEP content in the riparian areas prior to grazing and mowing treatments.">
@@ -1206,7 +1208,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>  </div> <!-- /content -->  <script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":false,"descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom"});
+</script>  </div> <!-- /content -->  <script>var lightboxQuarto = GLightbox({"loop":false,"descPosition":"bottom","selector":".lightbox","closeEffect":"zoom","openEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;

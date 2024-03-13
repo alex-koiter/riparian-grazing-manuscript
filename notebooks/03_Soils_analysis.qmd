@@ -1,0 +1,137 @@
+---
+title: Riparian organic and mineral soil WEP in response to grazing
+author: Alex Koiter
+---
+
+## Load Libraries
+```{r}
+library(tidyverse)
+library(glmmTMB)
+library(DHARMa)
+library(emmeans)
+```
+
+## Read in clean data 
+```{r}
+conc <- read_csv(here::here("notebooks/Data/P_concentration.csv")) %>%
+  rename("conc" = "ak_content")
+```
+
+## Organics data
+```{r}
+
+organic_diff <- conc %>%
+  filter(sample_type == "Organic") %>%
+  pivot_wider(names_from = timing, values_from = conc) %>%
+  mutate(diff = Before - After) %>%
+  mutate(treatment = fct_recode(treatment, "Graze" = "Regular Graze")) %>%
+  mutate(treatment = fct_relevel(treatment, c("Control", "Graze", "High Graze", "Mow"))) %>%
+  mutate(location = fct_relevel(location, c("Upper", "Middle", "Lower")))
+
+```
+
+## Soil data
+```{r}
+soil_diff <- conc %>%
+  filter(sample_type == "Soil") %>%
+  pivot_wider(names_from = timing, values_from = conc) %>%
+  mutate(diff = Before - After) %>%
+  mutate(treatment = fct_recode(treatment, "Graze" = "Regular Graze")) %>%
+  mutate(treatment = fct_relevel(treatment, c("Control", "Graze", "High Graze", "Mow"))) %>%
+  mutate(location = fct_relevel(location, c("Upper", "Middle", "Lower")))
+
+```
+
+
+## Organics analysis
+```{r}
+m7 <- glmmTMB(diff ~ treatment * location + (1|site) + (1|year),
+              data = organic_diff)
+simulateResiduals(m7, n = 1000, plot = TRUE)
+car::Anova(m7, type = "III")  # No interaction
+```
+
+```{r}
+m7 <- glmmTMB(diff ~ treatment + location + (1|site) + (1|year),
+              data = organic_diff)
+simulateResiduals(m7, n = 1000, plot = TRUE) # No interaction
+performance::check_collinearity(m7)
+car::Anova(m7, type = "III")
+```
+
+
+Post-hoc
+```{r}
+m_emms7 <- emmeans(m7, ~treatment)
+pairs(m_emms7, adjust = "fdr")
+```
+
+### Plots
+Extra
+```{r}
+
+df <- data.frame(x1 = c(-Inf, -Inf), x2 = c(Inf, Inf), y2 = c(Inf, 0), y1 = c(0, -Inf), difference = c("Net removal", "Net addition")) %>%
+  mutate(difference = fct_relevel(difference, c("Net removal", "Net addition"))) 
+```
+Plots
+```{r}
+#| label: fig-organic-WEP
+#| fig-cap: "Change in riparian organic layer WEP concentration following grazing or mowing in each of the riparian zones. A significant effect of treatment was detected; however, the post-hoc analysis was not able to detect any significant (p < 0.05) pairwise contrasts."
+#| fig-alt: "Boxplots showing the change in riparian organic layer WEP concentration following grazing or mowing."
+#|  
+p1 <- ggplot(data = organic_diff) +
+  theme_bw(base_size = 12) + 
+  geom_hline(yintercept = 0) +
+  geom_rect(data = df, aes(xmin = x1, xmax = x2, ymin = y1, ymax = y2, fill = difference), alpha = 0.15, colour = "black") +
+  scale_fill_manual(values = c("white", "black")) +
+  ggnewscale::new_scale_fill() +
+  geom_boxplot(aes(x = treatment, y = diff, fill = location)) +
+  scale_fill_viridis_d(name = "Location", begin = 0.3, end = 1) +
+  labs(y = expression(paste("Net WEP Difference (", mg~kg^{-1}, ")")), x = "Treatment") +
+  theme(axis.title.x = element_blank(),
+        axis.text.x = element_text(angle = 0, vjust = 1, hjust = 0.5),
+        legend.position = 'bottom', legend.title = element_blank())
+p1
+#ggsave(plot = p1, filename = "Figures/Organics_WEP.png", width = 150, height = 100, units = "mm", dpi = 600)
+```
+
+## Mineral soil analysis
+```{r}
+m8 <- glmmTMB(diff ~ treatment * location + (1|site) + (1|year),
+              data = soil_diff)
+simulateResiduals(m8, n = 1000, plot = TRUE) 
+car::Anova(m8, type = "III") # No interaction
+```
+
+No interaction
+```{r}
+
+m8 <- glmmTMB(diff ~ treatment + location + (1|site) + (1|year),
+              data = soil_diff)
+simulateResiduals(m8, n = 1000, plot = TRUE) 
+performance::check_collinearity(m8)
+car::Anova(m8, type = "III")
+```
+
+### plots
+```{r}
+#| label: fig-soil-WEP
+#| fig-cap: "Change in riparian Ah layer (0-10cm) WEP concentration following grazing or mowing in each of the riparian zones. No significant effect of treatment or zone was detected."
+#| fig-alt: "Boxplots showing the change in riparian  Ah layer (0-10cm) WEP concentration following grazing or mowing."
+#|  
+p2 <- ggplot(data = soil_diff) +
+  theme_bw(base_size = 12) + 
+  geom_hline(yintercept = 0) +
+  geom_rect(data = df, aes(xmin = x1, xmax = x2, ymin = y1, ymax = y2, fill = difference), alpha = 0.15, colour = "black") +
+  scale_fill_manual(values = c("white", "black")) +
+  ggnewscale::new_scale_fill() +
+  geom_boxplot(aes(x = treatment, y = diff, fill = location)) +
+  scale_fill_viridis_d(name = "Location", begin = 0.3, end = 1) +
+  labs(y = expression(paste("Net WEP Difference (", mg~kg^{-1}, ")")), x = "Treatment") +
+  theme(axis.title.x = element_blank(),
+        axis.text.x = element_text(angle = 0, vjust = 1, hjust = 0.5),
+        legend.position = 'bottom', legend.title = element_blank())
+p2
+#ggsave(plot = p2, filename = "Figures/Soil_WEP.png", width = 150, height = 100, units = "mm", dpi = 600)
+```
+

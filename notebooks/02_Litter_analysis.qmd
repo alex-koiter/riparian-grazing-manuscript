@@ -1,0 +1,120 @@
+---
+title: Riparian litter WEP in response to grazing
+author: Alex Koiter
+---
+
+## Load Libraries
+```{r}
+library(tidyverse)
+library(glmmTMB)
+library(DHARMa)
+library(emmeans)
+library(viridis)
+library(patchwork)
+```
+
+## Read in data
+```{r}
+conc <- read_csv(here::here("notebooks/Data/P_concentration.csv"))
+mass_data <- read_csv(here::here("notebooks/Data/mass.csv"))
+```
+
+## Merge data
+```{r}
+veg_data <- mass_data %>%
+  right_join(conc) %>%
+  rename(conc = ak_content) %>% # mg/kg
+  mutate(p_total = conc * dryweight/1000 /0.25) # mg/m2
+```
+
+
+
+## Litter data
+```{r}
+litter_diff <- veg_data %>%
+  filter(sample_type == "Litter") %>%
+  mutate(dryweight = dryweight/1000 /0.25) %>%
+  pivot_longer(cols = c(dryweight, p_total, conc), names_to = "measure", values_to = "value") %>%
+  pivot_wider(names_from = timing, values_from = value) %>%
+  mutate(diff = Before - After) 
+```
+
+
+## Litter Analysis
+### P-total
+```{r}
+m4 <- glmmTMB(diff ~ treatment * location + (1|site) + (1|year),
+             data = filter(litter_diff, measure == "p_total"))
+simulateResiduals(m4, n = 1000, plot = TRUE) 
+car::Anova(m4, type = "III") # No interaction
+```
+
+Removing interaction
+
+```{r}
+
+temp4 <- filter(litter_diff, measure == "p_total") ## otherwise issue with emmeans()
+m4 <- glmmTMB(diff ~ treatment + location + (1|site) + (1|year),
+             data = temp4)
+simulateResiduals(m4, n = 1000, plot = TRUE)
+performance::check_collinearity(m4)
+car::Anova(m4, type = "III") # No sig impact of treatment or position
+```
+
+
+### Summary
+
+```{r}
+litter_diff %>%
+  filter(measure == "p_total") %>%
+  group_by(treatment) %>%
+  summarise(median = median(diff, na.rm =T),
+            mean = mean(diff, na.rm =T))
+
+litter_diff %>%
+  filter(measure == "p_total") %>%
+  group_by(location) %>%
+  summarise(median = median(diff, na.rm =T),
+            mean = mean(diff, na.rm =T))
+```
+
+### Plots
+Reorder factors
+
+```{r}
+
+plot_data <- litter_diff %>% 
+  mutate(treatment = fct_recode(treatment, "Graze" = "Regular Graze")) %>%
+  mutate(treatment = fct_relevel(treatment, c("Control", "Graze", "High Graze", "Mow"))) %>%
+  mutate(location = fct_relevel(location, c("Upper", "Middle", "Lower")))
+
+```
+  
+Extra
+```{r}  
+df <- data.frame(x1 = c(-Inf, -Inf), x2 = c(Inf, Inf), y2 = c(Inf, 0), y1 = c(0, -Inf), difference = c("Net removal", "Net addition")) %>%
+  mutate(difference = fct_relevel(difference, c("Net removal", "Net addition"))) 
+```
+
+Plots
+```{r}
+#| label: fig-litter-WEP
+#| fig-cap: "Change in riparian litter WEP following grazing or mowing in each of the riparian zones. No significant effect of treatment or riparian zone on the litter WEP content was detected"
+#| fig-alt: "Boxplots showing the change in riparian litter WEP following grazing or mowing."
+#|  
+p1 <- ggplot(data = filter(plot_data, measure == "p_total")) +
+  theme_bw(base_size = 12) +
+  geom_hline(yintercept = 0) +
+  geom_rect(data = df, aes(xmin = x1, xmax = x2, ymin = y1, ymax = y2, fill = difference), alpha = 0.15, colour = "black") +
+  scale_fill_manual(values = c("white", "black")) +
+  ggnewscale::new_scale_fill() +
+  geom_boxplot(aes(x = treatment, y = diff, fill = location)) +
+  labs(y = expression(paste("Net WEP Difference (", mg~m^{-2}, ")")), x = "Treatment") +
+  scale_fill_viridis_d(name = "Location", begin = 0.3, end = 1) +
+  theme(axis.title.x = element_blank(),
+        axis.text.x = element_text(angle = 0, vjust = 1, hjust = 0.5),
+        legend.position = "bottom",
+        legend.title = element_blank())
+p1
+#ggsave(plot = p1, filename = "Figures/Litter_WEP.png", width = 150, height = 100, units = "mm", dpi = 600)
+```

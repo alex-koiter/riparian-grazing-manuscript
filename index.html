@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-99.9.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Alexander J Koiter">
+<meta name="author" content="Tamaragh Y Malone">
+<meta name="keywords" content="Phosphorus, Grazing, Riparian">
+
+<title>Effects of Riparian Grazing on Distinct Phosphorus Sources</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta name="citation_title" content="Effects of Riparian Grazing on Distinct Phosphorus Sources">
+<meta name="citation_abstract" content="Riparian areas play an important role in maintaining water quality in agricultural watersheds by buffering sediment, nutrients, and other pollutants. Additionally, these areas are also an important sources of forage, particularly during drought. Recent studies have shown that riparian areas are less effective buffers and, in some cases, are a net source of phosphorus (P) in cold climates. The repeated freeze-thaw cycles increase the availability of P in both the vegetation and soil sources. Cattle grazing or harvesting of riparian areas prior to the onset of winter conditions may be a viable management practice to reduce the loss of P during the spring snowmelt. This study measured the water-extractable phosphorus (WEP) in four distinctive sources: biomass, litter, organic layer, and Ah horizon. Overall, the Ah (0-10cm) soil was the largest (~44%) source of WEP; however, the biomass (i.e., standing vegetation) was a considerable proportion (~25%) of the total. In addition to control plots, the riparian areas were subjected to grazing, high density grazing, and mowing treatments. Findings revealed significant reductions in biomass WEP with high density grazing and mowing treatments, particularly in lower riparian zones. There were no detectable changes in the other sources of WEP. This suggests that autumn short-term grazing may be a mechanism to use this important forage resource and reduce the potential P loss during the snowmelt period.
+">
+<meta name="citation_keywords" content="Phosphorus,Grazing,Riparian">
+<meta name="citation_author" content="Alexander J Koiter">
+<meta name="citation_author" content="Tamaragh Y Malone">
+<meta name="citation_language" content="en">
+<meta name="citation_journal_title" content="TBD">
+<meta name="citation_reference" content="citation_title=The behavioural characteristics of sediment properties and their implications for sediment fingerprinting as an approach for identifying sediment sources in river basins;,citation_author=A. J. Koiter;,citation_author=P. N. Owens;,citation_author=E. L. Petticrew;,citation_author=D. A. Lobb;,citation_publication_date=2013-10;,citation_cover_date=2013-10;,citation_year=2013;,citation_fulltext_html_url=http://www.sciencedirect.com/science/article/pii/S0012825213001074;,citation_doi=https://doi.org/10.1016/j.earscirev.2013.05.009;,citation_volume=125;,citation_journal_title=Earth-Science Reviews;">
+<meta name="citation_reference" content="citation_title=Investigating the role of connectivity and scale in assessing the sources of sediment in an agricultural watershed in the canadian prairies using sediment source fingerprinting;,citation_author=A. J. Koiter;,citation_author=D A Lobb;,citation_author=P. N Owens;,citation_author=E. L. Petticrew;,citation_author=Sheng Li;,citation_author=Kevin H. D. Tiessen;,citation_publication_date=2013;,citation_cover_date=2013;,citation_year=2013;,citation_issue=10;,citation_doi=https://doi.org/10.1007/s11368-013-0762-7;,citation_volume=13;,citation_journal_title=Journal of Soils and Sediments;">
+<meta name="citation_reference" content="citation_title=Caring for the green zone: Riparian areas and grazing management;,citation_author=L Fitch;,citation_author=B Adams;,citation_author=K O’Shaughnessy;,citation_publication_date=2003;,citation_cover_date=2003;,citation_year=2003;">
+<meta name="citation_reference" content="citation_title=Hot spots and hot moments in riparian zones: Potential for improved water quality management;,citation_author=Philippe Vidon;,citation_author=C. Allan;,citation_author=Douglas Burns;,citation_author=Tim P. Duval;,citation_author=Noel Gurwick;,citation_author=Shreeram Inamdar;,citation_author=Richard Lowrance;,citation_author=Judy Okay;,citation_author=Durelle Scott;,citation_author=Steve Sebestyen;,citation_publication_date=2010-04;,citation_cover_date=2010-04;,citation_year=2010;,citation_fulltext_html_url=http://onlinelibrary.wiley.com/doi/10.1111/j.1752-1688.2010.00420.x/pdf;,citation_issue=2;,citation_doi=10.1111/j.1752-1688.2010.00420.x;,citation_volume=46;,citation_journal_title=Journal of the American Water Resources Association;">
+<meta name="citation_reference" content="citation_title=Present and future Köppen-Geiger climate classification maps at 1-km resolution;,citation_author=Hylke E. Beck;,citation_author=Niklaus E. Zimmermann;,citation_author=Tim R. McVicar;,citation_author=Noemi Vergopolan;,citation_author=Alexis Berg;,citation_author=Eric F. Wood;,citation_publication_date=2018-10-30;,citation_cover_date=2018-10-30;,citation_year=2018;,citation_fulltext_html_url=https://www.nature.com/articles/sdata2018214;,citation_issue=1;,citation_doi=10.1038/sdata.2018.214;,citation_volume=5;,citation_language=en;,citation_journal_title=Scientific Data;">
+<meta name="citation_reference" content="citation_title=Canadian Climate Normals;,citation_author=undefined Environment;,citation_author=undefined Climate Change Canada;,citation_publication_date=2024;,citation_cover_date=2024;,citation_year=2024;,citation_fulltext_html_url=https://climate.weather.gc.ca/climate_normals/index_e.html;,citation_language=eng;">
+<meta name="citation_reference" content="citation_title=Soils of the manitoba zero tillage research association farm;,citation_author=G P Podolsky;,citation_author=D Schindler;,citation_publication_date=1993;,citation_cover_date=1993;,citation_year=1993;,citation_fulltext_html_url=https://www.manitoba.ca/agriculture/soil/soil-survey/pubs/fss02s00943.pdf;">
+<meta name="citation_reference" content="citation_title=Environmental soil phosphorus indices;,citation_author=A. N Sharpley;,citation_author=P. J. A. Kleinman;,citation_author=J. L. Weld;,citation_editor=M. R. Carter;,citation_editor=E. G. Gregorich;,citation_publication_date=2006;,citation_cover_date=2006;,citation_year=2006;,citation_inbook_title=undefined;">
+<meta name="citation_reference" content="citation_title=A modified single solution method for the determination of phosphate in natural waters;,citation_author=J. Murphy;,citation_author=J. P. Riley;,citation_publication_date=1962;,citation_cover_date=1962;,citation_year=1962;,citation_fulltext_html_url=https://www.sciencedirect.com/science/article/pii/S0003267000884445;,citation_doi=10.1016/S0003-2670(00)88444-5;,citation_volume=27;,citation_journal_title=Analytica Chimica Acta;">
+<meta name="citation_reference" content="citation_title=Manitoba agriculture weather program;,citation_author=undefined Manitoba Agriculture;,citation_publication_date=2023;,citation_cover_date=2023;,citation_year=2023;,citation_fulltext_html_url=https://www.gov.mb.ca/agriculture/weather/manitoba-ag-weather.html;">
+<meta name="citation_reference" content="citation_title=Agricultural water quality in cold climates: processes, drivers, management options, and research needs;,citation_author=Jian Liu;,citation_author=Helen M. Baulch;,citation_author=Merrin L. Macrae;,citation_author=Henry F. Wilson;,citation_author=Jane A. Elliott;,citation_author=Lars Bergström;,citation_author=Aaron J. Glenn;,citation_author=Peter A. Vadas;,citation_publication_date=2019-01;,citation_cover_date=2019-01;,citation_year=2019;,citation_fulltext_html_url=https://onlinelibrary.wiley.com/doi/10.2134/jeq2019.05.0220;,citation_issue=4;,citation_doi=10.2134/jeq2019.05.0220;,citation_volume=48;,citation_language=en;,citation_journal_title=Journal of Environmental Quality;">
+<meta name="citation_reference" content="citation_title=Evaluating the potential contribution of vegetation as a nutrient source in snowmelt runoff;,citation_author=Jane Elliott;,citation_publication_date=2013-09-01;,citation_cover_date=2013-09-01;,citation_year=2013;,citation_fulltext_html_url=https://cdnsciencepub.com/doi/10.4141/cjss2012-050;,citation_issue=4;,citation_doi=10.4141/cjss2012-050;,citation_volume=93;,citation_journal_title=Canadian Journal of Soil Science;">
+<meta name="citation_reference" content="citation_title=Winter phosphorus release from cover crops and linkages with runoff chemistry;,citation_author=James R. Cober;,citation_author=Merrin L. Macrae;,citation_author=Laura L. Van Eerd;,citation_publication_date=2019-07;,citation_cover_date=2019-07;,citation_year=2019;,citation_issue=4;,citation_doi=10.2134/jeq2018.08.0307;,citation_volume=48;,citation_language=eng;,citation_journal_title=Journal of Environmental Quality;">
+<meta name="citation_reference" content="citation_title=Potential phosphorus mobilization from above-soil winter vegetation assessed from laboratory water extractions following freezethaw cycles;,citation_author=Tatianna M. Lozier;,citation_author=Merrin L. Macrae;,citation_publication_date=2017-07-03;,citation_cover_date=2017-07-03;,citation_year=2017;,citation_fulltext_html_url=https://www.tandfonline.com/doi/full/10.1080/07011784.2017.1331140;,citation_issue=3;,citation_doi=10.1080/07011784.2017.1331140;,citation_volume=42;,citation_language=en;,citation_journal_title=Canadian Water Resources Journal;">
+<meta name="citation_reference" content="citation_title=Phosphorus Retention and Remobilization in Vegetated Buffer Strips: A Review;,citation_author=William M. Roberts;,citation_author=Marc I. Stutter;,citation_author=Philip M. Haygarth;,citation_publication_date=2012;,citation_cover_date=2012;,citation_year=2012;,citation_fulltext_html_url=https://onlinelibrary.wiley.com/doi/abs/10.2134/jeq2010.0543;,citation_issue=2;,citation_doi=10.2134/jeq2010.0543;,citation_volume=41;,citation_language=en;,citation_journal_title=Journal of Environmental Quality;">
+<meta name="citation_reference" content="citation_title=Phosphorus dynamics in vegetated buffer strips in cold climates: A review;,citation_author=Kristen A. Kieta;,citation_author=Philip N. Owens;,citation_author=David A. Lobb;,citation_author=Jason A. Vanrobaeys;,citation_author=Don N. Flaten;,citation_publication_date=2018-05-09;,citation_cover_date=2018-05-09;,citation_year=2018;,citation_fulltext_html_url=https://www.nrcresearchpress.com/doi/10.1139/er-2017-0077;,citation_issue=3;,citation_doi=10.1139/er-2017-0077;,citation_volume=26;,citation_journal_title=Environmental Reviews;">
+<meta name="citation_reference" content="citation_title=Phosphorus Concentrations in Soil and Subsurface Water: A Field Study among Cropland and Riparian Buffers;,citation_author=Eric O. Young;,citation_author=Russell D. Briggs;,citation_publication_date=2008;,citation_cover_date=2008;,citation_year=2008;,citation_fulltext_html_url=https://onlinelibrary.wiley.com/doi/abs/10.2134/jeq2006.0422;,citation_issue=1;,citation_doi=10.2134/jeq2006.0422;,citation_volume=37;,citation_language=en;,citation_journal_title=Journal of Environmental Quality;">
+<meta name="citation_reference" content="citation_title=Vegetative filter strips for agricultural nonpoint source pollution control;,citation_author=T. A Dillaha;,citation_author=R. B. Reneau;,citation_author=S. Mostaghimi;,citation_author=D. Lee;,citation_publication_date=1989;,citation_cover_date=1989;,citation_year=1989;,citation_issue=2;,citation_doi=10.13031/2013.31033;,citation_volume=32;,citation_journal_title=Transactions of the American Society of Agricultural Engineers;">
+<meta name="citation_reference" content="citation_title=Effectiveness of buffer strips in removing pollutants in runoff from a cultivated field in north-east italy;,citation_author=Maurizio. Borin;,citation_author=Monica. Vianello;,citation_author=Francesco. Morari;,citation_author=Giuseppe. Zanin;,citation_publication_date=2005;,citation_cover_date=2005;,citation_year=2005;,citation_issue=1;,citation_doi=doi:10.1016/j.agee.2004.05.011;,citation_volume=105;,citation_journal_title=Agriculture, Ecosystems &amp;amp;amp; Environment;">
+<meta name="citation_reference" content="citation_title=The effect of grass buffer strips on phosphorus dynamics - a critical review and synthesis as a basis for application in agricultural landscapes in france;,citation_author=J. M. Dorioz;,citation_author=D. Wang;,citation_author=J. Poulenard;,citation_author=D. Trevisan;,citation_publication_date=2006-10;,citation_cover_date=2006-10;,citation_year=2006;,citation_issue=1;,citation_doi=10.1016/j.agee.2006.03.029;,citation_volume=117;,citation_journal_title=Agriculture, Ecosystems &amp;amp;amp; Environment;">
+<meta name="citation_reference" content="citation_title=Using grassed strips to limit pesticide transfer to surface water: A review;,citation_author=Jean-Guillaume Lacas;,citation_author=Marc Voltz;,citation_author=Véronique Gouy;,citation_author=Nadia Carluer;,citation_author=Jean-Joël Gril;,citation_publication_date=2005-04;,citation_cover_date=2005-04;,citation_year=2005;,citation_issue=2;,citation_doi=10.1051/agro:2005001;,citation_volume=25;,citation_journal_title=Agronomy for Sustainable Development;">
+<meta name="citation_reference" content="citation_title=Evaluation of contrasting buffer features within an agricultural landscape for reducing sediment and sediment-associated phosphorus delivery to surface waters;,citation_author=P. N. Owens;,citation_author=J. H. Duzant;,citation_author=L. K. Deeks;,citation_author=G. A. Wood;,citation_author=R. P. C. Morgan;,citation_author=A. J. Collins;,citation_publication_date=2007-09;,citation_cover_date=2007-09;,citation_year=2007;,citation_fulltext_html_url=http://library.unbc.ca:2649/doi/10.1111/j.1475-2743.2007.00121.x/pdf;,citation_issue=s1;,citation_doi=10.1111/j.1475-2743.2007.00121.x;,citation_volume=23;,citation_journal_title=Soil Use and Management;">
+<meta name="citation_reference" content="citation_title=Hydrological connectivity of hillslopes and streams: Characteristic time scales and nonlinearities;,citation_author=K. J McGuire;,citation_author=J. J McDonnell;,citation_publication_date=2010;,citation_cover_date=2010;,citation_year=2010;,citation_issue=10;,citation_doi=10.1029/2010WR009341;,citation_volume=46;,citation_journal_title=Water Resources Research;">
+<meta name="citation_reference" content="citation_title=Phosphorus release from shoots of phleum pretense l. After repeated freeze-thaw cycles and harvests;,citation_author=Kristen A. Kieta;,citation_author=Philip N. Owens;,citation_publication_date=2019;,citation_cover_date=2019;,citation_year=2019;,citation_doi=10.1016/j.ecoleng.2018.11.024;,citation_volume=127;,citation_language=en-US;,citation_journal_title=Ecological Engineering;">
+<meta name="citation_reference" content="citation_title=Biogeochemical hot spots and hot moments at the interface of terrestrial and aquatic ecosystems;,citation_author=M. E McClain;,citation_author=E. W Boyer;,citation_author=C. L Dent;,citation_author=S. E Gergel;,citation_author=N. B Grimm;,citation_author=P. M Groffman;,citation_author=S. C Hart;,citation_author=J. W Harvey;,citation_author=C. A Johnston;,citation_author=E. Mayorga;,citation_author=undefined others;,citation_publication_date=2003;,citation_cover_date=2003;,citation_year=2003;,citation_issue=4;,citation_doi=10.1007/s10021-003-0161-9;,citation_volume=6;,citation_journal_title=Ecosystems;">
+<meta name="citation_reference" content="citation_title=Assessing the impact of local habitat variables and landscape context on riparian birds in agricultural, urbanized, and native landscapes;,citation_author=David Luther;,citation_author=Jodi Hilty;,citation_author=Jack Weiss;,citation_author=Caitlin Cornwall;,citation_author=Missy Wipf;,citation_author=Grant Ballard;,citation_publication_date=2008-07;,citation_cover_date=2008-07;,citation_year=2008;,citation_issue=8;,citation_doi=10.1007/s10531-008-9332-5;,citation_volume=17;,citation_language=en-US;,citation_journal_title=Biodiversity and Conservation;">
+<meta name="citation_reference" content="citation_title=Riparian areas reservoirs of diversity;,citation_author=Gerald Montgomery;,citation_publication_date=1996;,citation_cover_date=1996;,citation_year=1996;,citation_fulltext_html_url=https://www.nrcs.usda.gov/wps/portal/nrcs/detail/?cid=nrcs143_014206;">
+<meta name="citation_reference" content="citation_title=An ecosystem perspective of riparian zones;,citation_author=S. V Gregory;,citation_author=F. J Swanson;,citation_author=W. A McKee;,citation_author=K. W Cummins;,citation_publication_date=1991;,citation_cover_date=1991;,citation_year=1991;,citation_issue=8;,citation_doi=10.2307/1311607;,citation_volume=41;,citation_journal_title=BioScience;">
+<meta name="citation_reference" content="citation_title=Uncertainties in vegetated buffer strip function in controlling phosphorus export from agricultural land in the canadian prairies;,citation_author=Reza Habibiandehkordi;,citation_author=David A. Lobb;,citation_author=Steve C. Sheppard;,citation_author=Don N. Flaten;,citation_author=Philip N. Owens;,citation_publication_date=2017-08;,citation_cover_date=2017-08;,citation_year=2017;,citation_issue=22;,citation_doi=10.1007/s11356-017-9406-6;,citation_volume=24;,citation_language=en-US;,citation_journal_title=Environmental Science and Pollution Research;">
+<meta name="citation_reference" content="citation_title=Effectiveness of vegetated buffer strips in controlling legacy phosphorus exports from agricultural land;,citation_author=Reza Habibiandehkordi;,citation_author=David A. Lobb;,citation_author=Philip N. Owens;,citation_author=Don N. Flaten;,citation_publication_date=2019-03;,citation_cover_date=2019-03;,citation_year=2019;,citation_fulltext_html_url=https://dl.sciencesocieties.org/publications/jeq/abstracts/48/2/314;,citation_issue=2;,citation_doi=10.2134/jeq2018.04.0129;,citation_volume=48;,citation_language=en;,citation_journal_title=Journal of Environmental Quality;">
+<meta name="citation_reference" content="citation_title=Impacts of cover crops and crop residues on phosphorus losses in cold climates: a review;,citation_author=Jian Liu;,citation_author=Merrin L. Macrae;,citation_author=Jane A. Elliott;,citation_author=Helen M. Baulch;,citation_author=Henry F. Wilson;,citation_author=Peter J. A. Kleinman;,citation_publication_date=2019-01;,citation_cover_date=2019-01;,citation_year=2019;,citation_fulltext_html_url=https://onlinelibrary.wiley.com/doi/10.2134/jeq2019.03.0119;,citation_issue=4;,citation_doi=10.2134/jeq2019.03.0119;,citation_volume=48;,citation_language=en;,citation_journal_title=Journal of Environmental Quality;">
+<meta name="citation_reference" content="citation_title=Components of phosphorus loss from agricultural landscapes, and how to incorporate them into risk assessment tools;,citation_author=Keith Reid;,citation_author=Kimberly Schneider;,citation_author=Brian McConkey;,citation_publication_date=2018;,citation_cover_date=2018;,citation_year=2018;,citation_fulltext_html_url=https://www.frontiersin.org/article/10.3389/feart.2018.00135;,citation_volume=6;,citation_journal_title=Frontiers in Earth Science;">
+<meta name="citation_reference" content="citation_title=Response of Riparian Vegetation, Instream Habitat, and Aquatic Biota to Riparian Grazing Exclosures;,citation_author=Daniel C. Dauwalter;,citation_author=Kurt A. Fesenmyer;,citation_author=Scott W. Miller;,citation_author=Tucker Porter;,citation_publication_date=2018;,citation_cover_date=2018;,citation_year=2018;,citation_fulltext_html_url=https://onlinelibrary.wiley.com/doi/abs/10.1002/nafm.10224;,citation_issue=5;,citation_doi=10.1002/nafm.10224;,citation_volume=38;,citation_language=en;,citation_journal_title=North American Journal of Fisheries Management;">
+<meta name="citation_reference" content="citation_title=Small Patches of Riparian Woody Vegetation Enhance Biodiversity of Invertebrates;,citation_author=Marie Anne Eurie Forio;,citation_author=Niels De Troyer;,citation_author=Koen Lock;,citation_author=Felix Witing;,citation_author=Lotte Baert;,citation_author=Nancy De Saeyer;,citation_author=Geta Rîșnoveanu;,citation_author=Cristina Popescu;,citation_author=Francis J. Burdon;,citation_author=Benjamin Kupilas;,citation_author=Nikolai Friberg;,citation_author=Pieter Boets;,citation_author=Martin Volk;,citation_author=Brendan G. McKie;,citation_author=Peter Goethals;,citation_publication_date=2020-11;,citation_cover_date=2020-11;,citation_year=2020;,citation_fulltext_html_url=https://www.mdpi.com/2073-4441/12/11/3070;,citation_issue=11;,citation_doi=10.3390/w12113070;,citation_volume=12;,citation_language=en;,citation_journal_title=Water;">
+<meta name="citation_reference" content="citation_title=Managing riparian buffer strips to optimise ecosystem services: A review;,citation_author=Lorna J. Cole;,citation_author=Jenni Stockan;,citation_author=Rachel Helliwell;,citation_publication_date=2020;,citation_cover_date=2020;,citation_year=2020;,citation_fulltext_html_url=https://www.sciencedirect.com/science/article/pii/S0167880920300761;,citation_doi=10.1016/j.agee.2020.106891;,citation_volume=296;,citation_journal_title=Agriculture, Ecosystems &amp;amp;amp; Environment;">
+<meta name="citation_reference" content="citation_title=The rapid eutrophication of lake winnipeg: Greening under global change;,citation_author=David W. Schindler;,citation_author=Robert E. Hecky;,citation_author=Gregory K. McCullough;,citation_publication_date=2012;,citation_cover_date=2012;,citation_year=2012;,citation_fulltext_html_url=http://www.sciencedirect.com/science/article/pii/S0380133012000676;,citation_doi=10.1016/j.jglr.2012.04.003;,citation_volume=38, Supplement 3;,citation_journal_title=Journal of Great Lakes Research;">
+<meta name="citation_reference" content="citation_title=Ecological Functions and Management of Large Wood in Fluvial Systems;,citation_author=Piet F. M. Verdonschot;,citation_author=Ralf C. M. Verdonschot;,citation_publication_date=2024-02-01;,citation_cover_date=2024-02-01;,citation_year=2024;,citation_fulltext_html_url=https://doi.org/10.1007/s40725-023-00209-x;,citation_issue=1;,citation_doi=10.1007/s40725-023-00209-x;,citation_volume=10;,citation_language=en;,citation_journal_title=Current Forestry Reports;">
+<meta name="citation_reference" content="citation_title=An updated review of the efficacy of buffer zones in warm/temperate and cold climates: Insights into processes and drivers of nutrient retention;,citation_author=Mathieu Nsenga Kumwimba;,citation_author=Jinlou Huang;,citation_author=Mawuli Dzakpasu;,citation_author=Koshila De Silva;,citation_author=Okugbe Ebiotubo Ohore;,citation_author=Fidelis Odedishemi Ajibade;,citation_author=Xuyong Li;,citation_author=Su Jingjun;,citation_author=Diana Kavidia Muyembe;,citation_author=Huang Kaixuan;,citation_publication_date=2023;,citation_cover_date=2023;,citation_year=2023;,citation_fulltext_html_url=https://www.sciencedirect.com/science/article/pii/S0301479723004346;,citation_doi=10.1016/j.jenvman.2023.117646;,citation_volume=336;,citation_journal_title=Journal of Environmental Management;">
+<meta name="citation_reference" content="citation_title=The effects of riparian forest disturbance on stream temperature, sedimentation, and morphology;,citation_author=Jered M. Studinski;,citation_author=Kyle J. Hartman;,citation_author=Jonathan M. Niles;,citation_author=Patrick Keyser;,citation_publication_date=2012-05;,citation_cover_date=2012-05;,citation_year=2012;,citation_fulltext_html_url=https://www.webofscience.com/api/gateway?GWVersion=2&amp;amp;amp;SrcAuth=DOISource&amp;SrcApp=WOS&amp;KeyAID=10.1007%2Fs10750-012-1002-7&amp;DestApp=DOI&amp;SrcAppSID=USW2EC0C3C9OL0whJ8zP8XkLMASfg&amp;SrcJTitle=HYDROBIOLOGIA&amp;DestDOIRegistrantName=Springer-Verlag;,citation_issue=1;,citation_doi=10.1007/s10750-012-1002-7;,citation_volume=686;,citation_language=en-US;,citation_journal_title=Hydrobiologia;">
+<meta name="citation_reference" content="citation_title=Riparian buffer strips: Their role in the conservation of insect pollinators in intensive grassland systems;,citation_author=Lorna J. Cole;,citation_author=Sarah Brocklehurst;,citation_author=Duncan Robertson;,citation_author=William Harrison;,citation_author=David I. McCracken;,citation_publication_date=2015;,citation_cover_date=2015;,citation_year=2015;,citation_fulltext_html_url=https://www.sciencedirect.com/science/article/pii/S0167880915002327;,citation_doi=10.1016/j.agee.2015.06.012;,citation_volume=211;,citation_journal_title=Agriculture, Ecosystems &amp;amp;amp; Environment;">
+<meta name="citation_reference" content="citation_title=Effects of livestock exclusion on stream habitat and aquatic biota: A review and recommendations for implementation and monitoring;,citation_author=Michelle Krall;,citation_author=Philip Roni;,citation_publication_date=2023-04;,citation_cover_date=2023-04;,citation_year=2023;,citation_fulltext_html_url=https://www.webofscience.com/api/gateway?GWVersion=2&amp;amp;amp;SrcAuth=DynamicDOIArticle&amp;SrcApp=WOS&amp;KeyAID=10.1002%2Fnafm.10863&amp;DestApp=DOI&amp;SrcAppSID=USW2EC0C3C9OL0whJ8zP8XkLMASfg&amp;SrcJTitle=NORTH+AMERICAN+JOURNAL+OF+FISHERIES+MANAGEMENT&amp;DestDOIRegistrantName=Wiley+%28John+Wiley+%26+Sons%29;,citation_issue=2;,citation_doi=10.1002/nafm.10863;,citation_volume=43;,citation_language=en-US;,citation_journal_title=North American Journal of Fisheries Management;">
+<meta name="citation_reference" content="citation_title=Experimental and model investigations of vegetative filter strips for contaminant removal: A review;,citation_author=Congrong Yu;,citation_author=Peiyi Duan;,citation_author=Zhongbo Yu;,citation_author=Bin Gao;,citation_publication_date=2019-01-01;,citation_cover_date=2019-01-01;,citation_year=2019;,citation_fulltext_html_url=https://www.sciencedirect.com/science/article/pii/S0925857418303975;,citation_doi=10.1016/j.ecoleng.2018.10.020;,citation_volume=126;,citation_journal_title=Ecological Engineering;">
+<meta name="citation_reference" content="citation_title=Nitrogen retention effect of riparian zones in agricultural areas: A meta-analysis;,citation_author=Chunjian Lyu;,citation_author=Xiaojie Li;,citation_author=Peng Yuan;,citation_author=Yonghui Song;,citation_author=Hongjie Gao;,citation_author=Xiaoling Liu;,citation_author=Ruixia Liu;,citation_author=Huibin Yu;,citation_publication_date=2021;,citation_cover_date=2021;,citation_year=2021;,citation_fulltext_html_url=https://www.sciencedirect.com/science/article/pii/S0959652621023611;,citation_doi=10.1016/j.jclepro.2021.128143;,citation_volume=315;,citation_journal_title=Journal of Cleaner Production;">
+<meta name="citation_reference" content="citation_title=MBFI farm stations;,citation_author=undefined Manitoba Beef &amp;amp;amp; Forage Initiatives;,citation_publication_date=2024;,citation_cover_date=2024;,citation_year=2024;,citation_fulltext_html_url=https://www.mbfi.ca/farm-station;,citation_language=en-ca;">
+<meta name="citation_reference" content="citation_title=Freezing and drying effects on potential plant contributions to phosphorus in runoff;,citation_author=Tiffany Roberson;,citation_author=Larry G. Bundy;,citation_author=Todd W. Andraski;,citation_publication_date=2007;,citation_cover_date=2007;,citation_year=2007;,citation_fulltext_html_url=http://onlinelibrary.wiley.com/doi/abs/10.2134/jeq2006.0169;,citation_issue=2;,citation_doi=10.2134/jeq2006.0169;,citation_volume=36;,citation_language=en;,citation_journal_title=Journal of Environmental Quality;">
+<meta name="citation_reference" content="citation_title=Phosphorus uptake during four years by different vegetative cover types in a riparian buffer;,citation_author=J. M. Kelly;,citation_author=J. L. Kovar;,citation_author=R. Sokolowsky;,citation_author=T. B. Moorman;,citation_publication_date=2007-07-01;,citation_cover_date=2007-07-01;,citation_year=2007;,citation_fulltext_html_url=https://doi.org/10.1007/s10705-007-9088-4;,citation_issue=3;,citation_doi=10.1007/s10705-007-9088-4;,citation_volume=78;,citation_language=en;,citation_journal_title=Nutrient Cycling in Agroecosystems;">
+<meta name="citation_reference" content="citation_title=Management Options to Reduce Phosphorus Leaching from Vegetated Buffer Strips;,citation_author=Sandra Hille;,citation_author=Daniel Graeber;,citation_author=Brian Kronvang;,citation_author=Gitte H. Rubæk;,citation_author=Nils Onnen;,citation_author=Eugenio Molina-Navarro;,citation_author=Annette Baattrup-Pedersen;,citation_author=Goswin J. Heckrath;,citation_author=Marc I. Stutter;,citation_publication_date=2019;,citation_cover_date=2019;,citation_year=2019;,citation_fulltext_html_url=https://onlinelibrary.wiley.com/doi/abs/10.2134/jeq2018.01.0042;,citation_issue=2;,citation_doi=10.2134/jeq2018.01.0042;,citation_volume=48;,citation_language=en;,citation_journal_title=Journal of Environmental Quality;">
+<meta name="citation_reference" content="citation_title=Short-term impacts of winter bale grazing beef cows on forage production and soil nutrient status in the eastern canadian prairies;,citation_author=Gwen Donohoe;,citation_author=Don Flaten;,citation_author=Faith Omonijo;,citation_author=Kim Ominski;,citation_publication_date=2021-12-01;,citation_cover_date=2021-12-01;,citation_year=2021;,citation_fulltext_html_url=https://cdnsciencepub.com/doi/10.1139/cjss-2021-0028;,citation_issue=4;,citation_doi=10.1139/cjss-2021-0028;,citation_volume=101;,citation_journal_title=Canadian Journal of Soil Science;">
+<meta name="citation_reference" content="citation_title=Grazing systems to retain and redistribute soil phosphorus and to reduce phosphorus losses in runoff;,citation_author=Anish Subedi;,citation_author=Dorcas Franklin;,citation_author=Miguel Cabrera;,citation_author=Amanda McPherson;,citation_author=Subash Dahal;,citation_publication_date=2020-12;,citation_cover_date=2020-12;,citation_year=2020;,citation_fulltext_html_url=https://www.mdpi.com/2571-8789/4/4/66;,citation_issue=4;,citation_doi=10.3390/soilsystems4040066;,citation_volume=4;,citation_language=en;,citation_journal_title=Soil Systems;">
+<meta name="citation_reference" content="citation_title=Soil-surface nutrient distributions in grazed pastures of North Carolina;,citation_author=A. J. Franzluebbers;,citation_author=M. H. Poore;,citation_author=S. R. Freeman;,citation_author=J. R. Rogers;,citation_publication_date=2019-11-01;,citation_cover_date=2019-11-01;,citation_year=2019;,citation_fulltext_html_url=https://www.jswconline.org/content/74/6/571;,citation_issue=6;,citation_doi=10.2489/jswc.74.6.571;,citation_volume=74;,citation_language=en;,citation_journal_title=Journal of Soil and Water Conservation;">
+<meta name="citation_reference" content="citation_title=Using Grazing to Manage Herbaceous Structure for a Heterogeneity-Dependent Bird;,citation_author=John D. Kraft;,citation_author=David A. Haukos;,citation_author=Matthew R. Bain;,citation_author=Mindy B. Rice;,citation_author=Samantha Robinson;,citation_author=Dan S. Sullins;,citation_author=Christian A. Hagen;,citation_author=James Pitman;,citation_author=Joseph Lautenbach;,citation_author=Reid Plumb;,citation_author=Jonathan Lautenbach;,citation_publication_date=2021;,citation_cover_date=2021;,citation_year=2021;,citation_issue=2;,citation_doi=10.1002/jwmg.21984;,citation_volume=85;,citation_language=en;,citation_journal_title=The Journal of Wildlife Management;">
+<meta name="citation_reference" content="citation_title=Dairy farm impacts of fencing riparian land: Pasture production and farm productivity;,citation_author=Sharon R. Aarons;,citation_author=Alice R. Melland;,citation_author=Lianne Dorling;,citation_publication_date=00;,citation_cover_date=00;,citation_year=0;,citation_fulltext_html_url=https://www.sciencedirect.com/science/article/pii/S0301479713005859;,citation_doi=10.1016/j.jenvman.2013.08.060;,citation_volume=130;,citation_journal_title=Journal of Environmental Management;">
+<meta name="citation_reference" content="citation_title=Agriculture rotational grazing;,citation_author=undefined Manitoba Agriculture;,citation_publication_date=2024;,citation_cover_date=2024;,citation_year=2024;,citation_fulltext_html_url=https://www.gov.mb.ca/agriculture/;">
+<meta name="citation_reference" content="citation_title=Effects of twice-over rotational grazing on songbird nesting success in years with and without flooding;,citation_author=Stacey Jalane Carnochan;,citation_author=Christopher Charles De Ruyck;,citation_author=Nicola Koper;,citation_publication_date=2018-11;,citation_cover_date=2018-11;,citation_year=2018;,citation_fulltext_html_url=https://www.webofscience.com/wos/woscc/summary/793cb0af-b2ce-4c54-aac9-52d7014ced7f-d151e15d/recently-added/1;,citation_issue=6;,citation_doi=10.1016/j.rama.2018.04.013;,citation_volume=71;,citation_language=en-US;,citation_journal_title=Rangeland Ecology &amp;amp;amp; Management;">
+<meta name="citation_reference" content="citation_title=Livestock grazing effects on riparian bird breeding behaviour in agricultural landscapes;,citation_author=Birgita D. Hansen;,citation_author=Hannah S. Fraser;,citation_author=Christopher S. Jones;,citation_publication_date=2019;,citation_cover_date=2019;,citation_year=2019;,citation_fulltext_html_url=https://www.sciencedirect.com/science/article/pii/S0167880918304390;,citation_doi=10.1016/j.agee.2018.10.016;,citation_volume=270-271;,citation_journal_title=Agriculture, Ecosystems &amp;amp;amp; Environment;">
+<meta name="citation_reference" content="citation_title=Avian Responses to Late-Season Grazing in a Shrub-Willow Floodplain;,citation_author=Thomas R. Stanley;,citation_author=Fritz L. Knopf;,citation_publication_date=2002;,citation_cover_date=2002;,citation_year=2002;,citation_fulltext_html_url=https://onlinelibrary.wiley.com/doi/abs/10.1046/j.1523-1739.2002.00269.x;,citation_issue=1;,citation_doi=10.1046/j.1523-1739.2002.00269.x;,citation_volume=16;,citation_language=en;,citation_journal_title=Conservation Biology;">
+<meta name="citation_reference" content="citation_title=Soil compaction and soil management  a review;,citation_author=Tom. Batey;,citation_publication_date=2009;,citation_cover_date=2009;,citation_year=2009;,citation_fulltext_html_url=https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1475-2743.2009.00236.x;,citation_issue=4;,citation_doi=10.1111/j.1475-2743.2009.00236.x;,citation_volume=25;,citation_language=en;,citation_journal_title=Soil Use and Management;">
+<meta name="citation_reference" content="citation_title=Scales that matter: Guiding effective monitoring of soil properties in restored riparian zones;,citation_author=Robin Hale;,citation_author=Paul Reich;,citation_author=Tom Daniel;,citation_author=Philip S. Lake;,citation_author=Timothy R. Cavagnaro;,citation_publication_date=2014-09-01;,citation_cover_date=2014-09-01;,citation_year=2014;,citation_fulltext_html_url=https://www.sciencedirect.com/science/article/pii/S0016706113003479;,citation_doi=10.1016/j.geoderma.2013.09.019;,citation_volume=228-229;,citation_journal_title=Geoderma;,citation_series_title=Properties, processes and ecological functions of floodplain, peatland, and paddy soils;">
+<meta name="citation_reference" content="citation_title=Groundwater phosphate dynamics in a river riparian zone: Effects of hydrologic flowpaths, lithology and redox chemistry;,citation_author=G. C. Carlyle;,citation_author=A. R. Hill;,citation_publication_date=2001-07-02;,citation_cover_date=2001-07-02;,citation_year=2001;,citation_fulltext_html_url=https://www.sciencedirect.com/science/article/pii/S0022169401003754;,citation_issue=3;,citation_doi=10.1016/S0022-1694(01)00375-4;,citation_volume=247;,citation_journal_title=Journal of Hydrology;">
+<meta name="citation_reference" content="citation_title=Spatial patterns of sediment and phosphorus in a riparian buffer in western iowa;,citation_author=M. D. Tomer;,citation_author=T. B. Moorman;,citation_author=J. L. Kovar;,citation_author=D. E. James;,citation_author=M. R. Burkart;,citation_publication_date=2007-10;,citation_cover_date=2007-10;,citation_year=2007;,citation_issue=5;,citation_volume=62;,citation_language=en-US;,citation_journal_title=Journal of Soil and Water Conservation;">
+</head>
+
+<body>
+
+<header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Effects of Riparian Grazing on Distinct Phosphorus Sources</h1>
+          </div>
+
+    
+    <div class="quarto-title-meta-container">
+      <div class="quarto-title-meta-column-start">
+            <div class="quarto-title-meta-author">
+          <div class="quarto-title-meta-heading">Authors</div>
+          <div class="quarto-title-meta-heading">Affiliations</div>
+          
+                <div class="quarto-title-meta-contents">
+            <p class="author">Alexander J Koiter <a href="mailto:koitera@brandonu.ca" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> <a href="https://orcid.org/0000-0002-9355-9561" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+          </div>
+                <div class="quarto-title-meta-contents">
+                    <p class="affiliation">
+                        Brandon University, Department of Geography and Environment
+                      </p>
+                  </div>
+                      <div class="quarto-title-meta-contents">
+            <p class="author">Tamaragh Y Malone <a href="mailto:malonety35@brandonu.ca" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> <a href="https://orcid.org/0009-0002-5887-5574" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+          </div>
+                <div class="quarto-title-meta-contents">
+                    <p class="affiliation">
+                        Brandon University, Department of Biology
+                      </p>
+                  </div>
+                    </div>
+        
+        <div class="quarto-title-meta">
+
+                      
+          
+                <div>
+            <div class="quarto-title-meta-heading">Modified</div>
+            <div class="quarto-title-meta-contents">
+              <p class="date-modified">March 13, 2024</p>
+            </div>
+          </div>
+                
+              </div>
+      </div>
+      <div class="quarto-title-meta-column-end quarto-other-formats-target">
+      <div class="quarto-alternate-formats"><div class="quarto-title-meta-heading">Other Formats</div><div class="quarto-title-meta-contents"><p><a href="index.docx"><i class="bi bi-file-word"></i>MS Word</a></p></div><div class="quarto-title-meta-contents"><p><a href="index.pdf"><i class="bi bi-file-pdf"></i>PDF (agu)</a></p></div><div class="quarto-title-meta-contents"><p><a href="index-meca.zip" data-meca-link="true"><i class="bi bi-archive"></i>MECA Bundle</a></p></div></div></div>
+    </div>
+
+    <div>
+      <div class="abstract">
+        <div class="block-title">Abstract</div>
+        <p>Riparian areas play an important role in maintaining water quality in agricultural watersheds by buffering sediment, nutrients, and other pollutants. Additionally, these areas are also an important sources of forage, particularly during drought. Recent studies have shown that riparian areas are less effective buffers and, in some cases, are a net source of phosphorus (P) in cold climates. The repeated freeze-thaw cycles increase the availability of P in both the vegetation and soil sources. Cattle grazing or harvesting of riparian areas prior to the onset of winter conditions may be a viable management practice to reduce the loss of P during the spring snowmelt. This study measured the water-extractable phosphorus (WEP) in four distinctive sources: biomass, litter, organic layer, and Ah horizon. Overall, the Ah (0-10cm) soil was the largest (~44%) source of WEP; however, the biomass (i.e., standing vegetation) was a considerable proportion (~25%) of the total. In addition to control plots, the riparian areas were subjected to grazing, high density grazing, and mowing treatments. Findings revealed significant reductions in biomass WEP with high density grazing and mowing treatments, particularly in lower riparian zones. There were no detectable changes in the other sources of WEP. This suggests that autumn short-term grazing may be a mechanism to use this important forage resource and reduce the potential P loss during the snowmelt period.</p>
+      </div>
+    </div>
+
+    <div>
+      <div class="keywords">
+        <div class="block-title">Keywords</div>
+        <p>Phosphorus, Grazing, Riparian</p>
+      </div>
+    </div>
+
+    <div class="quarto-other-links-text-target">
+    </div>  </div>
+</header><div id="quarto-content" class="page-columns page-rows-contents page-layout-article toc-left">
+<div id="quarto-sidebar-toc-left" class="sidebar toc-left">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a></li>
+  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods"><span class="header-section-number">2</span> Methods</a>
+  <ul class="collapse">
+  <li><a href="#site-description" id="toc-site-description" class="nav-link" data-scroll-target="#site-description"><span class="header-section-number">2.1</span> Site description</a></li>
+  <li><a href="#experimental-design" id="toc-experimental-design" class="nav-link" data-scroll-target="#experimental-design"><span class="header-section-number">2.2</span> Experimental design</a></li>
+  <li><a href="#sampling-and-analysis" id="toc-sampling-and-analysis" class="nav-link" data-scroll-target="#sampling-and-analysis"><span class="header-section-number">2.3</span> Sampling and analysis</a></li>
+  <li><a href="#statistical-analysis" id="toc-statistical-analysis" class="nav-link" data-scroll-target="#statistical-analysis"><span class="header-section-number">2.4</span> Statistical analysis</a></li>
+  </ul></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results"><span class="header-section-number">3</span> Results</a></li>
+  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion"><span class="header-section-number">4</span> Discussion</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">5</span> Conclusion</a></li>
+  <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements">Acknowledgements</a></li>
+  <li><a href="#data-availability" id="toc-data-availability" class="nav-link" data-scroll-target="#data-availability">Data availability</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  <li><a href="#supplemental-materials" id="toc-supplemental-materials" class="nav-link" data-scroll-target="#supplemental-materials">Supplemental materials</a></li>
+  </ul>
+<div class="quarto-alternate-notebooks"><h2>Notebooks</h2><ul><li><a href="index-preview.html"><i class="bi bi-journal-code"></i>Article Notebook</a></li><li><a href="notebooks/05_Map-preview.html"><i class="bi bi-journal-code"></i>Map of study area</a></li><li><a href="notebooks/02_Litter_analysis-preview.html"><i class="bi bi-journal-code"></i>Riparian litter WEP in response to grazing</a></li><li><a href="notebooks/03_Soils_analysis-preview.html"><i class="bi bi-journal-code"></i>Riparian organic and mineral soil WEP in response to grazing</a></li><li><a href="notebooks/01_Biomass_analysis-preview.html"><i class="bi bi-journal-code"></i>Riparian vegetation WEP in response to grazing</a></li><li><a href="notebooks/04_Vertical_profile-preview.html"><i class="bi bi-journal-code"></i>Vertical profile of WEP</a></li><li><a href="notebooks/06_Weather-preview.html"><i class="bi bi-journal-code"></i>Weather</a></li></ul></div></nav>
+</div>
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+</div>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+  
+
+
+<p><strong>Core ideas</strong></p>
+<ul>
+<li>Biomass and litter are substantial sources of WEP in riparian areas</li>
+<li>Autumn cattle grazing and mowing treatments reduced the amount of WEP in riparian biomass</li>
+<li>No Measurable change in the amount of WEP in the litter, organic layer, or Ah horizon post grazing</li>
+<li>Large spatial variability in WEP exists in riparian areas</li>
+</ul>
+<p><strong>Abbreviations</strong></p>
+<p>FTC, freeze-thaw cycle; MBFI, Manitoba Beef and Forage Initiatives; P, phosphorus; WEP, water extractable phosphorus</p>
+<section id="introduction" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">1</span> Introduction</h2>
+<p>Riparian areas are transitional areas within watersheds that are important for the health and functionality of both terrestrial and aquatic environments <span class="citation" data-cites="gregory1991">(<a href="#ref-gregory1991" role="doc-biblioref">Gregory et al., 1991</a>)</span>. Riparian areas buffer the delivery of water, sediment, nutrients, and pollutants from upland areas before they enter surface water and are commonly conserved, restored, or managed in an effort to improve downstream water quality <span class="citation" data-cites="dillaha1989 borin2005 dorioz2006">(<a href="#ref-dillaha1989" role="doc-biblioref">Dillaha et al., 1989</a>; <a href="#ref-borin2005" role="doc-biblioref">Borin et al., 2005</a>; <a href="#ref-dorioz2006" role="doc-biblioref">Dorioz et al., 2006</a>)</span>. Additionally, riparian areas also provide essential habitat and corridors for range of plants and animals, particularly in highly fragmented or modified landscapes <span class="citation" data-cites="montgomery1996 luther2008 forio2020">(<a href="#ref-montgomery1996" role="doc-biblioref">Montgomery, 1996</a>; <a href="#ref-luther2008" role="doc-biblioref">Luther et al., 2008</a>; <a href="#ref-forio2020" role="doc-biblioref">Forio et al., 2020</a>)</span>. Within the aquatic environment riparian vegetation stabilizes banks, regulates water temperature, provides woody debris and other organic matter, and generally supports aquatic habitat and biodiversity <span class="citation" data-cites="studinski2012 dauwalter2018 verdonschot2024">(<a href="#ref-studinski2012" role="doc-biblioref">Studinski et al., 2012</a>; <a href="#ref-dauwalter2018" role="doc-biblioref">Dauwalter et al., 2018</a>; <a href="#ref-verdonschot2024" role="doc-biblioref">Verdonschot and Verdonschot, 2024</a>)</span>. Beyond ecosystem services, riparian zones can offer recreational opportunities (e.g., hiking, fishing, canoeing, foraging) and are key components of the agricultural landscape. Beyond improving water quality, riparian areas benefit agricultural production through providing habitat for beneficial organisms (e.g., pollination, pest control), a source of forage during drought (livestock health and productivity), and other opportunities (e.g., agroforestry, carbon sequestration) <span class="citation" data-cites="cole2015 cole2020">(<a href="#ref-cole2015" role="doc-biblioref">Cole et al., 2015</a>, <a href="#ref-cole2020" role="doc-biblioref">2020</a>)</span>.</p>
+<p>Increasing frequency and extent of algal blooms are typically linked to increased nutrient loading into lake and rivers. Of particular concern is phosphorus (P) loading as this is generally the limiting nutrient in fresh water systems <span class="citation" data-cites="schindler2012">(<a href="#ref-schindler2012" role="doc-biblioref">Schindler et al., 2012</a>)</span>. There have been many lab and field studies demonstrating the role and functionality of riparian areas to reduce P loading to surface water in agricultural settings <span class="citation" data-cites="yu2019">(<a href="#ref-yu2019" role="doc-biblioref">Yu et al., 2019</a>)</span>. Infiltration, absorption, biological uptake, microbial activity, and sedimentation are the key processes that intercept and buffer the delivery of P <span class="citation" data-cites="lacas2005 owens2007 mcguire2010">(<a href="#ref-lacas2005" role="doc-biblioref">Lacas et al., 2005</a>; <a href="#ref-owens2007" role="doc-biblioref">Owens et al., 2007</a>; <a href="#ref-mcguire2010" role="doc-biblioref">McGuire and McDonnell, 2010</a>)</span>. Convergence within the landscape coupled with climatic/weather conditions creates variability in hydrologic conditions and pathways reducing the buffering capacity of riparian areas and ultimately resulting in reduced, inconsistent and/or unsustainable reductions in P loading relative to many controlled experimental studies <span class="citation" data-cites="roberts2012 habibiandehkordi2017">(<a href="#ref-roberts2012" role="doc-biblioref">Roberts et al., 2012</a>; <a href="#ref-habibiandehkordi2017" role="doc-biblioref">Habibiandehkordi et al., 2017</a>)</span>.</p>
+<p>In cold climates, the the reduced infiltration due frozen ground, limited vegetation uptake, and low microbial activity coupled with a flashy hydrograph during snowmelt creates conditions that further compromise buffering capacity of riparian areas <span class="citation" data-cites="kieta2018 nsengakumwimba2023">(<a href="#ref-kieta2018" role="doc-biblioref">Kieta et al., 2018</a>; <a href="#ref-nsengakumwimba2023" role="doc-biblioref">Nsenga Kumwimba et al., 2023</a>)</span>. Additionally, research increasingly shows that riparian areas can contribute P (i.e., net source) to the surrounding environment <span class="citation" data-cites="roberts2012">(<a href="#ref-roberts2012" role="doc-biblioref">Roberts et al., 2012</a>)</span>. The sources of this riparian-derived P are soil and vegetation. As soil P content increases over time, so does the risk of P loss through leaching and runoff <span class="citation" data-cites="habibiandehkordi2019">(<a href="#ref-habibiandehkordi2019" role="doc-biblioref">Habibiandehkordi et al., 2019</a>)</span>. This process can be intensified during periods of inundation, in addition to a longer period of soil-water contact, the solubility of iron-bound P increases as redox conditions lower <span class="citation" data-cites="carlyle2001 young2008">(<a href="#ref-carlyle2001" role="doc-biblioref">Carlyle and Hill, 2001</a>; <a href="#ref-young2008" role="doc-biblioref">Young and Briggs, 2008</a>)</span>. Furthermore, mineralization of P from dead vegetation near the soil surface will also contribute to the P available to be lost during runoff <span class="citation" data-cites="liu2019a">(<a href="#ref-liu2019a" role="doc-biblioref">Liu et al., 2019b</a>)</span>. Both the soil and vegetation P sources can also be affected by freeze-thaw cycles (FTC). Repeated FTCs result in the cell disruption of microbial and plant biomass, releasing inter-cellular P to the surrounding environment <span class="citation" data-cites="kieta2019">(<a href="#ref-kieta2019" role="doc-biblioref">Kieta and Owens, 2019</a>)</span>. Removing or harvesting the vegetation prior to freeze-up will help draw-down the soil P content and reduce the amount of vegetation contributing P during the spring snowmelt.</p>
+<p>Environmental conditions, particularly hydrological and temperature fluctuations, create considerable spatial and temporal variability in both P sources, transformations, and transport processes. These hot spots and hot moments in riparian processes create challenges for effective management <span class="citation" data-cites="mcclain2003 vidon2010">(<a href="#ref-mcclain2003" role="doc-biblioref">McClain et al., 2003</a>; <a href="#ref-vidon2010" role="doc-biblioref">Vidon et al., 2010</a>)</span>. From a surface water quality perspective, understanding the near-surface P distribution, both vertically and longitudinal will help in the development and identification of best management practices for reducing P loading. There are often four identifiable sources of near-surface P: 1) biomass consisting of living standing vegetation; 2) litter consisting of fresh (~1-3 yrs) residues; 3) partially to well decomposed organic material; and 4) mineral soil <span class="citation" data-cites="reid2018">(<a href="#ref-reid2018" role="doc-biblioref">Reid et al., 2018</a>)</span>. A better understanding of the spatial variability and relative contributions of the different sources of P is needed assess the risks and benefits of different management strategies.</p>
+<p>Management of riparian areas to maintain or enhance the buffering capacity of P is typically needed in the long term. Unlike nitrogen (N) where there can be significant loss of N to the atmosphere through the processes of nitrification and denitrification to offset the continued input <span class="citation" data-cites="lyu2021">(<a href="#ref-lyu2021" role="doc-biblioref">Lyu et al., 2021</a>)</span>, P is only generally lost through runoff or leaching. Harvesting and removal of biomass from the riparian area can be a practice to remove P and use the biomass for forage. However, mechanized harvesting of biomass may be impractical or unsafe due to steep gradients, wet soil, and other obstacles such as trees. Livestock grazing of riparian areas (riparian pastures) is a common practice in the Canadian Prairies due to the abundance of forage, particularly during time of drought. Livestock exclusion from riparian areas have been suggested as a best management practices to reduce the direct inputs of P, limit bank erosion, and avoid soil compaction <span class="citation" data-cites="krall2023">(<a href="#ref-krall2023" role="doc-biblioref">Krall and Roni, 2023</a>)</span>. However, alternative water sources, rotational, timed-controlled, or rest-rotation grazing, and corridor fencing are strategies that can all reduce those risks <span class="citation" data-cites="fitch2003">(<a href="#ref-fitch2003" role="doc-biblioref">Fitch et al., 2003</a>)</span>.</p>
+<p>Significant efforts have been put into managing P in agricultural systems, through in-field management practices, and also the use of riparian areas (includes vegetative filter or buffer strips) adjacent to ditches and streams. Unfortunately, many conservation practices are less effective under cold climates <span class="citation" data-cites="liu2019">(<a href="#ref-liu2019" role="doc-biblioref">Liu et al., 2019a</a>)</span>. Thus, conservation practices adapted for the Canadian environment are needed. This is especially important in the Prairie region where a greater proportion of the total runoff occurs during the spring snow melt period, when vegetation in the landscape (including riparian vegetation, cover crops, crop residues) can be a significant P source <span class="citation" data-cites="elliott2013">(<a href="#ref-elliott2013" role="doc-biblioref">Elliott, 2013</a>)</span> due to repeated FTCs. These processes appear to have less of an impact on P release in the more temperate regions, where FTCs are less severe <span class="citation" data-cites="cober2019">(<a href="#ref-cober2019" role="doc-biblioref">Cober et al., 2019</a>)</span> and there is more interaction between P and the soil, which buffers P released by plants <span class="citation" data-cites="lozier2017">(<a href="#ref-lozier2017" role="doc-biblioref">Lozier and Macrae, 2017</a>)</span>.</p>
+<p>Given the timing and processes of P dynamics with riparian areas in cold climates, like the Canadian Prairies, reducing the near-surface concentration of soluble P prior to spring snowmelt would be a strategy to limit the contribution of P from the riparian area to surface water. Because of the difficulties in harvesting forage from riparian areas short term livestock grazing might be an effective strategy that both uses the forage and reduces potential P loss. The objectives of this study were to assess the: 1) vertical and longitudinal profile of WEP; and 2) change in the sources of WEP in response to grazing and harvesting of biomass. Understanding how riparian management practices affect the sources of P can be used to help tailor management strategies in cold climates and ultimately reduce P loss and improve downstream water quality.</p>
+</section>
+<section id="methods" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="methods"><span class="header-section-number">2</span> Methods</h2>
+<section id="site-description" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="site-description"><span class="header-section-number">2.1</span> Site description</h3>
+<p>The study was conducted at the Manitoba Beef and Forage Initiatives (MBFI) research farm (50.06<span class="math inline">\(^\circ\)</span>N, 99.92<span class="math inline">\(^\circ\)</span>W), approximately 25 km north of Brandon, Manitoba, Canada, in the Prairie Pothole region of North America (<a href="#fig-map" class="quarto-xref">Figure&nbsp;1</a>). The normal (1981 – 2010) average daily air temperature was 2.2 <span class="math inline">\(^\circ\)</span>C and the cumulative annual precipitation at Brandon was 474.2 mm with 24.8 % falling as snow <span class="citation" data-cites="environmentandclimatechangecanada2024">(<a href="#ref-environmentandclimatechangecanada2024" role="doc-biblioref">Environment and Climate Change Canada, 2024</a>)</span>. The Köppen-Geiger climate classification is cold, without dry season, and with warm summer (Dfb) <span class="citation" data-cites="beck2018">(<a href="#ref-beck2018" role="doc-biblioref">Beck et al., 2018</a>)</span>. The land use in the region is predominately agriculture including annual crops (grains and oil seeeds) and grazing/forage. MBFI is a 260 ha research and demonstration farm with a mix of pasture, hay, and cropland. Prior to the establishment of MBFI the site was part of the Manitoba Zero Tillage Research Association farm (1993-2014) where annual crops, including oil seeds and grains, were grown. There are also numerous small permanent and ephemeral wetlands (potholes) and associated riparian areas which account for ~35% of the total farm land <span class="citation" data-cites="manitobabeefforageinitiatives2024">(<a href="#ref-manitobabeefforageinitiatives2024" role="doc-biblioref">Manitoba Beef &amp; Forage Initiatives, 2024</a>)</span>. The riparian areas surrounding the larger permanent wetlands are fenced off to exclude livestock and are not actively managed. The farm has an irregular undulating to hummocky relief with soils developed on fine loamy, moderately calcareous glacial till. The riparian soils are poorly drained and primarily consist of Humic and Luvic Gleysols and generally the soil profile can be described by a 1-10 cm organic layer overlying a 10-18 cm Ah horizon <span class="citation" data-cites="podolsky1993">(<a href="#ref-podolsky1993" role="doc-biblioref">Podolsky and Schindler, 1993</a>)</span>. The vegetation in the riparian areas are dominated by grasses, sedges, and forbs.</p>
+<div class="quarto-embed-nb-cell">
+<div id="cell-fig-map" class="cell">
+<div class="cell-output cell-output-display">
+<div id="fig-map" class="quarto-figure quarto-figure-center quarto-float anchored" alt="Map of Canada with red dot showing location of stite. Regional landuse with red dots showing the location of the four riparian areas included in this study">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="index_files/figure-html/notebooks-05_Map-fig-map-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: Showing a) the study site in southwestern Manitoba and b) the four riparian areas included in this study and the regional land use."><img src="index_files/figure-html/notebooks-05_Map-fig-map-output-1.png" alt="Map of Canada with red dot showing location of stite. Regional landuse with red dots showing the location of the four riparian areas included in this study" width="672" height="480" class="figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Showing a) the study site in southwestern Manitoba and b) the four riparian areas included in this study and the regional land use.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="experimental-design" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="experimental-design"><span class="header-section-number">2.2</span> Experimental design</h3>
+<p>Four riparian areas surrounding permanent wetlands were selected (<a href="#fig-map" class="quarto-xref">Figure&nbsp;1</a>) and were subdivided into four ~450 <span class="math inline">\(m^2\)</span> plots. Within each riparian area each plot was randomly assigned a treatment. The treatments consisted of a: 1) control, 2) graze, 3) high density graze, and 4) mow and harvest. The grazing treatments consisted of a five hour grazing period with the graze treatment having ~3.1-3.5 animal units (AU) per plot and the high density graze with ~11.75-12 AU. For the mowing treatment, the vegetation was cut to a height of ~10cm and the vegetation manually raked out of the plot. The cattle were rotated daily over four consecutive days among the four riparian areas and the grazed plots were fenced on all four sides, including the waters edge, and provided with supplemental water. Treatments were applied early to mid September, before the first frost, in three consecutive years (2019-2021) (<a href="#suppfig-weather-plot" class="quarto-xref">Figure S1</a>) Within each plot three distinctive sampling zones, or landscape positions, were established, adjacent to the waters edged (Lower), adjacent to the field/pasture (Upper), and the mid-point (Mid). To assess the impact of grazing and mowing, samples were collected in each plot and zone 1-3 days prior and immediately adjacent 1-3 days following the treatments (including the control).</p>
+</section>
+<section id="sampling-and-analysis" class="level3" data-number="2.3">
+<h3 data-number="2.3" class="anchored" data-anchor-id="sampling-and-analysis"><span class="header-section-number">2.3</span> Sampling and analysis</h3>
+<p>Four types of samples were collected: 1) biomass, 2) litter, 3) organic layer, and 4) Ah horizon. Using a 0.25 <span class="math inline">\(m^2\)</span> quadrate, biomass was collected by cutting the standing live vegetation and litter by raking the surface and picking up previous years growth. Both the biomass and litter were dried at 40 <span class="math inline">\(^\circ C\)</span>, weighed, and homogenized using a blade grinder (&lt;1cm). A composite of five soil samples were collected within the same quadrate as the biomass/litter using a 19 mm diameter soil probe and were divided into the organic layer and the top 10 cm of the Ah horizon. The organic layer and Ah soil were air-dried, disaggregated with a mortar and pestle, and passed through a 2-mm sieve. Additional bulk density samples of both the organic layer and Ah and the depth of the organic layer were collected in 2023. Daily air temperature and rainfall data were collected from an onsite station (<a href="#suppfig-weather-plot" class="quarto-xref">Figure S1</a>) <span class="citation" data-cites="manitobaagriculture2023">(<a href="#ref-manitobaagriculture2023" role="doc-biblioref">Manitoba Agriculture, 2023</a>)</span>.</p>
+<p>Water Extractable Phosphorus (WEP), an environmental soil and vegetation P test, was used to mimic soil P release to runoff water. Dried and homogenized samples were extracted by shaking (150 RPM) with deionized water for one hour at a mass to volume ratio of 1:30 for the biomass and litter samples (1 g) and 1:15 for the organic and Ah samples (2 g). Extractions were gravity filtered through a Whatman 42 filter followed by syringe filtration with a 0.45 <span class="math inline">\(\mu m\)</span> nylon filter. WEP in the extract was measured spectrophotometrically by the colorimetric molybdate–ascorbic acid method <span class="citation" data-cites="murphy1962 sharpley">(<a href="#ref-murphy1962" role="doc-biblioref">Murphy and Riley, 1962</a>; <a href="#ref-sharpley" role="doc-biblioref">Sharpley et al., 2006</a>)</span>.</p>
+<p>The concentration of WEP in the biomass and litter combined with the mass of material in collected from the quadrate was used to calculate the total WEP (<span class="math inline">\(mg~kg^{-1}\)</span>). Only the change in concentration (<span class="math inline">\(mg~kg^{-1}\)</span>) was measured for the organic layer and Ah horizon. The vertical profile of WEP within the riparian area was assessed using samples collected before treatments were implemented across the 3-year study. The total WEP in the organic layer and Ah were estimated using the bulk density and depth measurements collected in 2023 (<a href="#fig-vertical-wep" class="quarto-xref">Figure&nbsp;2</a> b).</p>
+</section>
+<section id="statistical-analysis" class="level3" data-number="2.4">
+<h3 data-number="2.4" class="anchored" data-anchor-id="statistical-analysis"><span class="header-section-number">2.4</span> Statistical analysis</h3>
+<p>All statistical analysis was undertaken using the R Statistical Software (v4.3.3), through the RStudio Integrated Development Environment v2023.12.1.402. Generalized Linear Mixed Models (R package <code>glmmTMB</code> v1.1.8) were used to investigate the relation between the change in WEP (before - after treatment) and treatment and riparian zone for each of the four sources of WEP. Year and riparian area were included as crossed random factors to control for the variability between years and riparian areas. Additionally, when investigating the change in biomass WEP the WEP prior to the treatment was included as a co-variate the because the magnitude of the difference (i.e., before - after) is directly related to the amount initially available.</p>
+<p>If there were no significant (p &lt;0.5) interaction between main effects the interaction term was removed. When a main effect or interaction were significant a post-hoc pairwise comparisons with a Benjamini-Hochberg p value adjustment were used (<code>emmeans</code> v1.8.9). Model assumptions were assessed using DHARMa residual plots (<code>DHARMa</code> v0.4.6), main effects were tested for collinearity (<code>performance</code> v0.10.8.7), and results are presented as type III ANOVA (<code>car</code> v3.1.2). All plots were created using the R package <code>ggplot2</code> (v3.5.0).</p>
+</section>
+</section>
+<section id="results" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="results"><span class="header-section-number">3</span> Results</h2>
+<p>There is strong vertical stratification in both the concentration and total WEP (<a href="#fig-vertical-wep" class="quarto-xref">Figure&nbsp;2</a>). The median concentration in the vegetation sources (82.8 - 39.0 <span class="math inline">\(mg~kg^{-1}\)</span>; biomass and litter) are more than an order of magnitude greater than the soil components (0.9 - 3.4 <span class="math inline">\(mg~kg^{-1}\)</span>; Ah and organic). The median concentrations are similar between the upper, mid, and lower positions in the biomass, organic, and Ah sources. There is a gradient in the median WEP concentration for the litter where an increase of ~20 <span class="math inline">\(mg~kg^{-1}\)</span> is observed from the upper to lower riparian zone. There is considerable variability in the WEP concentration in the biomass and litter sources with interquatile ranges (IQR) of 54.3 and 32.9 <span class="math inline">\(mg~kg^{-1}\)</span> for the biomass and litter sources, respectively. In contrast, the IQR for the organic and Ah sources were &lt;2.5 <span class="math inline">\(mg~kg^{-1}\)</span>. Overall, in terms of the total amount of WEP, the top 10 cm of the Ah horizon is the largest source of WEP (42.5 <span class="math inline">\(mg~m^{-2}\)</span>) followed by the biomass (26.3 <span class="math inline">\(mg~m^{-2}\)</span>), organic layer (14.3 <span class="math inline">\(mg~m^{-2}\)</span>), and lastly the litter (13.7 <span class="math inline">\(mg~m^{-2}\)</span>). In contrast to the concentration the total WEP does show an impact of the riparian zone. For the biomass and litter sources the lower riparian zones had greater amounts of WEP whereas the organic and Ah sources had greater amount of WEP in the upper riparian zones. The amount of variability is greatest in the Ah (IQR = 32.0 <span class="math inline">\(mg~kg^{-1}\)</span>) and biomass (IQR = 23.3 <span class="math inline">\(mg~kg^{-1}\)</span>) sources. The variability of the other two sources were similar with IQRS of 15.6 and 14.3 <span class="math inline">\(mg~kg^{-1}\)</span> for the litter and organic layer, respectively.</p>
+<div class="quarto-embed-nb-cell">
+<div id="cell-fig-vertical-WEP" class="cell">
+<div class="cell-output cell-output-display">
+<div id="fig-vertical-wep" class="quarto-figure quarto-figure-center quarto-float anchored" alt="Vertical and longitudinal profiles of a) WEP concentration and b) WEP content in the riparian areas prior to grazing and mowing treatments.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-vertical-wep-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="index_files/figure-html/notebooks-04_Vertical_profile-fig-vertical-wep-output-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;2: Vertical and longitudinal profiles of a) WEP concentration and b) WEP content in the riparian areas prior to grazing and mowing treatments."><img src="index_files/figure-html/notebooks-04_Vertical_profile-fig-vertical-wep-output-2.png" alt="Vertical and longitudinal profiles of a) WEP concentration and b) WEP content in the riparian areas prior to grazing and mowing treatments." width="672" height="480" class="figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-vertical-wep-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Vertical and longitudinal profiles of a) WEP concentration and b) WEP content in the riparian areas prior to grazing and mowing treatments.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>Both the high density grazing and mowing treatments significantly (p&lt;0.05) reduced the total amount of the biomass WEP compared to the control and graze treatments (<a href="#fig-vegetation-wep" class="quarto-xref">Figure&nbsp;3</a> a). The mowing and high density grazing reduced the average WEP amount by 7.4 and 4.2 <span class="math inline">\(mg~m^{-2}\)</span> relative to the control, respectively. The reduction in biomass WEP was significantly (p&lt;0.05) greater in the lower zones as compared to the upper and mid zones (<a href="#fig-vegetation-wep" class="quarto-xref">Figure&nbsp;3</a> b) with a difference in average WEP of 10.2 <span class="math inline">\(mg~m^{-2}\)</span> between the lower and upper zones of the riparian area.</p>
+<div class="quarto-embed-nb-cell">
+<div id="cell-fig-vegetation-WEP" class="cell">
+<div class="cell-output cell-output-display">
+<div id="fig-vegetation-wep" class="quarto-figure quarto-figure-center quarto-float anchored" alt="Boxplots showing the change in riparian biomass WEP following grazing or mowing.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-vegetation-wep-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="index_files/figure-html/notebooks-01_Biomass_analysis-fig-vegetation-wep-output-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;3: Change in riparian biomass WEP following grazing or mowing in each riparian zone. Within each plot significant differences (p<0.05) between treatments or riparian zones are denoted with different letters."><img src="index_files/figure-html/notebooks-01_Biomass_analysis-fig-vegetation-wep-output-2.png" alt="Boxplots showing the change in riparian biomass WEP following grazing or mowing." width="672" height="480" class="figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-vegetation-wep-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Change in riparian biomass WEP following grazing or mowing in each riparian zone. Within each plot significant differences (p&lt;0.05) between treatments or riparian zones are denoted with different letters.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>There were no significant impacts of either treatment or riparian zone on the amount of litter WEP (<a href="#fig-litter-wep" class="quarto-xref">Figure&nbsp;4</a>). The ANOVA detected a significant (p = 0.04) effect of treatment on the WEP concentration in the organic layer; however, no significant differences were observed between any post-hoc pairwise comparisons (<a href="#fig-organic-wep" class="quarto-xref">Figure&nbsp;5</a>). Lastly, there was no significant effect of treatment or riparian zone in the concentration of WEP in the top 10 cm of the Ah horizon (<a href="#fig-soil-wep" class="quarto-xref">Figure&nbsp;6</a>). There was considerable variation across all treatments and riparian zones in all four sources of P. This high variability in WEP amount/concentration is best reflected in the control treatment were the expected difference is 0 but there were measured WEP losses and gains despite no treatment being applied.</p>
+<div class="quarto-embed-nb-cell">
+<div id="cell-fig-litter-WEP" class="cell">
+<div class="cell-output cell-output-display">
+<div id="fig-litter-wep" class="quarto-figure quarto-figure-center quarto-float anchored" alt="Boxplots showing the change in riparian litter WEP following grazing or mowing.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-litter-wep-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="index_files/figure-html/notebooks-02_Litter_analysis-fig-litter-wep-output-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;4: Change in riparian litter WEP following grazing or mowing in each of the riparian zones. No significant effect of treatment or riparian zone on the litter WEP content was detected"><img src="index_files/figure-html/notebooks-02_Litter_analysis-fig-litter-wep-output-2.png" alt="Boxplots showing the change in riparian litter WEP following grazing or mowing." width="672" height="480" class="figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-litter-wep-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Change in riparian litter WEP following grazing or mowing in each of the riparian zones. No significant effect of treatment or riparian zone on the litter WEP content was detected
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="quarto-embed-nb-cell">
+<div id="cell-fig-organic-WEP" class="cell">
+<div class="cell-output cell-output-display">
+<div id="fig-organic-wep" class="quarto-figure quarto-figure-center quarto-float anchored" alt="Boxplots showing the change in riparian organic layer WEP concentration following grazing or mowing.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-organic-wep-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="index_files/figure-html/notebooks-03_Soils_analysis-fig-organic-wep-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;5: Change in riparian organic layer WEP concentration following grazing or mowing in each of the riparian zones. A significant effect of treatment was detected; however, the post-hoc analysis was not able to detect any significant (p < 0.05) pairwise contrasts."><img src="index_files/figure-html/notebooks-03_Soils_analysis-fig-organic-wep-output-1.png" alt="Boxplots showing the change in riparian organic layer WEP concentration following grazing or mowing." width="672" height="480" class="figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-organic-wep-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Change in riparian organic layer WEP concentration following grazing or mowing in each of the riparian zones. A significant effect of treatment was detected; however, the post-hoc analysis was not able to detect any significant (p &lt; 0.05) pairwise contrasts.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="quarto-embed-nb-cell">
+<div id="cell-fig-soil-WEP" class="cell">
+<div class="cell-output cell-output-display">
+<div id="fig-soil-wep" class="quarto-figure quarto-figure-center quarto-float anchored" alt="Boxplots showing the change in riparian  Ah layer (0-10cm) WEP concentration following grazing or mowing.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-soil-wep-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="index_files/figure-html/notebooks-03_Soils_analysis-fig-soil-wep-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;6: Change in riparian Ah layer (0-10cm) WEP concentration following grazing or mowing in each of the riparian zones. No significant effect of treatment or zone was detected."><img src="index_files/figure-html/notebooks-03_Soils_analysis-fig-soil-wep-output-1.png" alt="Boxplots showing the change in riparian  Ah layer (0-10cm) WEP concentration following grazing or mowing." width="672" height="480" class="figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-soil-wep-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: Change in riparian Ah layer (0-10cm) WEP concentration following grazing or mowing in each of the riparian zones. No significant effect of treatment or zone was detected.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="discussion" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="discussion"><span class="header-section-number">4</span> Discussion</h2>
+<p>The vertical profile of WEP in riparian areas (<a href="#fig-vertical-wep" class="quarto-xref">Figure&nbsp;2</a>) observed in this study supports the concept that a soil test P alone is likely missing a large proportion of the near-surface P that can be potentially lost during the spring snowmelt <span class="citation" data-cites="cober2019 liu2019 liu2019a">(<a href="#ref-liu2019" role="doc-biblioref">Liu et al., 2019a</a>; <a href="#ref-liu2019a" role="doc-biblioref">b</a>; <a href="#ref-cober2019" role="doc-biblioref">Cober et al., 2019</a>)</span>. The substantial proportion of WEP above the soil surface provides evidence that that managing the biomass in riparian areas in the autumn may reduce the contribution of P lost directly from this area during the spring. The measured WEP in this study may underestimate the total WEP during the spring snowmelt as the as repeated and severity of FTC on WEP was not characterized <span class="citation" data-cites="roberson2007 lozier2017">(<a href="#ref-roberson2007" role="doc-biblioref">Roberson et al., 2007</a>; <a href="#ref-lozier2017" role="doc-biblioref">Lozier and Macrae, 2017</a>)</span>. Additionally, harvesting of this biomass results in an export of P which can maintain or enhance the buffering or storage capacity of P derived from upslope sources further improving downstream water quality <span class="citation" data-cites="kelly2007 hille2019">(<a href="#ref-kelly2007" role="doc-biblioref">Kelly et al., 2007</a>; <a href="#ref-hille2019" role="doc-biblioref">Hille et al., 2019</a>)</span>. The longitudinal gradient of WEP shows an inverted symmetry where the biomass WEP is largest near the waters edge and the Ah soil WEP is larger in the upper zone adjacent to the fields (<a href="#fig-vertical-wep" class="quarto-xref">Figure&nbsp;2</a> b). The high soil water content in the lower zone creates conditions that favour high biomass production (<a href="#suppfig-bd-plot" class="quarto-xref">Figure S2</a>) coupled with high biomass WEP concentrations (<a href="#fig-vertical-wep" class="quarto-xref">Figure&nbsp;2</a> a) results in a considerable source of P. The higher amount of WEP in the Ah soil in the upper zone of the riparian area is due to the higher bulk density (<a href="#suppfig-bd-plot" class="quarto-xref">Figure S2</a>) and higher WEP concentration (<a href="#fig-vertical-wep" class="quarto-xref">Figure&nbsp;2</a> a). The higher bulk density is most likely due to the lower soil organic matter content and the higher WEP concentration may be related to the interception of P-rich runoff from upslope areas <span class="citation" data-cites="tomer2007">(<a href="#ref-tomer2007" role="doc-biblioref">Tomer et al., 2007</a>)</span>. Understanding and quantifying the sources and patterns of P within riparian areas is a key part of assessing the risk of P loss and designing effective management plans <span class="citation" data-cites="reid2018">(<a href="#ref-reid2018" role="doc-biblioref">Reid et al., 2018</a>)</span>.</p>
+<p>The results of this study suggest that short-term autumn high density grazing may be a potential management tool that can reduce the amount of P lost directly from the riparian area (<a href="#fig-vegetation-wep" class="quarto-xref">Figure&nbsp;3</a> a). In addition to managing P loss, grazing riparian areas can also provide an important source of forage, particularly during drought. Mechanized harvesting of biomass will also achieve this reduction in P loss (<a href="#fig-vegetation-wep" class="quarto-xref">Figure&nbsp;3</a> a) if the landscape and soil conditions are favourable. Despite the cycling of nutrients by the removal of P through grazing of biomass (<a href="#fig-vegetation-wep" class="quarto-xref">Figure&nbsp;3</a>) and the deposition through excretion no differences were detected in the litter and Ah sources of P (<a href="#fig-litter-wep" class="quarto-xref">Figure&nbsp;4</a>, and <a href="#fig-soil-wep" class="quarto-xref">6</a>). The ANOVA did detect a significant effect of treatment on the organic layer WEP; however, the pairwise comparisons was not able to detect any significant differences and the exact nature of the impact of the treatments remains unclear. The ability to detect changes in the WEP sources in riparian areas is difficult due to both the inherent and post-grazing treatment spatial variability. Even within the control plots, both net addition and removal of WEP were measured and in many cases the amount of variability was similar across treatments. This inherent variability (i.e., pre-grazing) is a result of a combination of hydrological factors like ground water fluctuations, soil attributes such as texture, ecological dynamics involving plant community composition, and anthropogenic influences like historic land management practices <span class="citation" data-cites="mcclain2003 vidon2010">(<a href="#ref-mcclain2003" role="doc-biblioref">McClain et al., 2003</a>; <a href="#ref-vidon2010" role="doc-biblioref">Vidon et al., 2010</a>)</span>. Post-grazing treatment, the added urine and manure creates additional hotspots of P that may carry forward to subsequent years <span class="citation" data-cites="donohoe2021 subedi2020">(<a href="#ref-subedi2020" role="doc-biblioref">Subedi et al., 2020</a>; <a href="#ref-donohoe2021" role="doc-biblioref">Donohoe et al., 2021</a>)</span>. The single 0.25 <span class="math inline">\(m^2\)</span> sampling quadrate within each riparian zone may have been insufficient to capture the spatial variability. Therefore, larger, composite, and/or several sampling locations within each zone is recommended. Appropriate sampling design becomes more important as the scale of observation of similar research increases to the farm scale so will the amount and source of variability. As the scope of research is expanded to the farm level, the importance of using an appropriate sampling design becomes increasingly critical <span class="citation" data-cites="hale2014">(<a href="#ref-hale2014" role="doc-biblioref">Hale et al., 2014</a>)</span>.</p>
+<p>Autumn was selected for the mowing and grazing treatments for three reasons. First was to reduce the amount of biomass P available that can contribute to the P loss during the spring snowmelt. Secondly, the drier soil conditions reduced the amount of pugging and soil compaction which limits the disruption of soil structure and damage to plants <span class="citation" data-cites="batey2009">(<a href="#ref-batey2009" role="doc-biblioref">Batey, 2009</a>)</span>. Lastly, the prairie potholes and associated riparian areas are important breeding habitat for migratory birds and late season grazing may reduce the ecological impact <span class="citation" data-cites="stanley2002">(<a href="#ref-stanley2002" role="doc-biblioref">Stanley and Knopf, 2002</a>)</span>. However, the type of grazing system (timing, stocking rate and density etc.) may impact habitat quality and breeding success <span class="citation" data-cites="carnochan2018 hansen2019 kraft2021">(<a href="#ref-carnochan2018" role="doc-biblioref">Carnochan et al., 2018</a>; <a href="#ref-hansen2019" role="doc-biblioref">Hansen et al., 2019</a>; <a href="#ref-kraft2021" role="doc-biblioref">Kraft et al., 2021</a>)</span>. Corridor fencing at the waters edge and alternative water sources were used in this study to limit livestock access to prevent bank erosion and protect water quality (e.g., direct deposition) <span class="citation" data-cites="dauwalter2018">(<a href="#ref-dauwalter2018" role="doc-biblioref">Dauwalter et al., 2018</a>)</span>. Scaling this up to the farm level will be expensive (fencing infrastructure) <span class="citation" data-cites="aarons2013">(<a href="#ref-aarons2013" role="doc-biblioref">Aarons et al.,</a>)</span> and time consuming (short-term grazing), especially in prairie pothole region were there are numerous and small riparian areas <span class="citation" data-cites="manitobaagriculture2024">(<a href="#ref-manitobaagriculture2024" role="doc-biblioref">Manitoba Agriculture, 2024</a>)</span>. The long-term impacts of repeated grazing of riparian areas also needs to be considered. From a nutrient loss reduction perspective, a shift in the magnitude of the sources of P could be expected as less biomass is available to be added to the litter source, which in turn effects the organic layer and Ah sources of P. The regular inclusion of cattle will also introduce new manure source of P which can spatially redistribute P, and initially be more water soluble and readily transported <span class="citation" data-cites="franzluebbers2019">(<a href="#ref-franzluebbers2019" role="doc-biblioref">Franzluebbers et al., 2019</a>)</span>. Grazing can also reduce the litter layer through trampling increasing the soil-vegetation contact speeding up the decomposition process. These changes in biomass and litter quantities may result in changes to habitat structure. Understanding how of forage management directly impacts both the plant and soil P dynamics is important for understanding both the agronomic and environmental P considerations <span class="citation" data-cites="subedi2020">(<a href="#ref-subedi2020" role="doc-biblioref">Subedi et al., 2020</a>)</span>.</p>
+</section>
+<section id="conclusion" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">5</span> Conclusion</h2>
+<p>Biomass and litter are significant sources of near surface WEP in riparian areas that historically have been disregarded as important. Management of the biomass prior to the onset of winter conditions in cold climates has the potential to reduce the amount of P directly lost during the spring snowmelt and maintain or enhance the nutrient buffering capacity. The results from this experiment demonstrated that short-term high density cattle grazing and mowing both resulted in a reduction in the amount of biomass WEP, particularly in the lower riparian zones. The grazing and mowing treatments had no detectable effect on the other three near-surface sources of WEP. However, detecting changes in the near-surface sources of WEP is challenging due to high spatial variability.</p>
+<p>Comparatively less riparian research has occurred in landscapes that experience a cold climate with strong temperature seasonality (e.g., Canadian prairies). In these regions the runoff and nutrient losses occur predominately during the spring snowmelt period. The repeated FTC of the vegetation and soils increase the potential P losses during this key time. Continued research to identify, quantify, and manage these sources of P to improve water quality remains a priority. In addition to water quality improvement, the development of riparian management strategies should also prioritize the protection other ecological goods and services and recognize these areas as an integral part of the farm.</p>
+</section>
+<section id="acknowledgements" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="acknowledgements">Acknowledgements</h2>
+<p>This project was undertaken with the financial support of the Government of Canada through the federal Department of Environment and Climate Change and a Lake Winnipeg Basin Program grant awarded to the Manitoba Association of Watersheds. Additional research funding was provided through a Brandon University Research Committee grant awarded to AK. Thank you to A. Avila, M. Luna, C Sobchuk, and A. Tan for all the help with lab and field work. Special thanks to the Manitoba Beef and Forage Initiatives research farm staff for the use of their facilities and managing the cattle grazing and mowing treatments. Lastly, thank you to R. Canart and M. Elsinger for helping to develop the experimental design.</p>
+</section>
+<section id="data-availability" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="data-availability">Data availability</h2>
+<p>Data and source code for analysis and manuscript available on GitHub: <a href="https://github.com/alex-koiter/riparian-grazing-manuscript" class="uri">https://github.com/alex-koiter/riparian-grazing-manuscript</a></p>
+</section>
+<section id="references" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="references">References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-aarons2013" class="csl-entry" role="listitem">
+Aarons, S.R., A.R. Melland, and L. Dorling. Dairy farm impacts of fencing riparian land: Pasture production and farm productivity. Journal of Environmental Management 130: 255–266. doi: <a href="https://doi.org/10.1016/j.jenvman.2013.08.060">10.1016/j.jenvman.2013.08.060</a>.
+</div>
+<div id="ref-batey2009" class="csl-entry" role="listitem">
+Batey, Tom. 2009. Soil compaction and soil management <span></span> a review. Soil Use and Management 25(4): 335–345. doi: <a href="https://doi.org/10.1111/j.1475-2743.2009.00236.x">10.1111/j.1475-2743.2009.00236.x</a>.
+</div>
+<div id="ref-beck2018" class="csl-entry" role="listitem">
+Beck, H.E., N.E. Zimmermann, T.R. McVicar, N. Vergopolan, A. Berg, et al. 2018. Present and future Köppen-Geiger climate classification maps at 1-km resolution. Scientific Data 5(1): 180214. doi: <a href="https://doi.org/10.1038/sdata.2018.214">10.1038/sdata.2018.214</a>.
+</div>
+<div id="ref-borin2005" class="csl-entry" role="listitem">
+Borin, Maurizio., Monica. Vianello, Francesco. Morari, and Giuseppe. Zanin. 2005. Effectiveness of buffer strips in removing pollutants in runoff from a cultivated field in north-east italy. Agriculture, Ecosystems &amp; Environment 105(1): 101114. doi: <a href="https://doi.org/doi:10.1016/j.agee.2004.05.011">doi:10.1016/j.agee.2004.05.011</a>.
+</div>
+<div id="ref-carlyle2001" class="csl-entry" role="listitem">
+Carlyle, G.C., and A.R. Hill. 2001. Groundwater phosphate dynamics in a river riparian zone: Effects of hydrologic flowpaths, lithology and redox chemistry. Journal of Hydrology 247(3): 151–168. doi: <a href="https://doi.org/10.1016/S0022-1694(01)00375-4">10.1016/S0022-1694(01)00375-4</a>.
+</div>
+<div id="ref-carnochan2018" class="csl-entry" role="listitem">
+Carnochan, S.J., C.C. De Ruyck, and N. Koper. 2018. Effects of twice-over rotational grazing on songbird nesting success in years with and without flooding. Rangeland Ecology &amp; Management 71(6): 776–782. doi: <a href="https://doi.org/10.1016/j.rama.2018.04.013">10.1016/j.rama.2018.04.013</a>.
+</div>
+<div id="ref-cober2019" class="csl-entry" role="listitem">
+Cober, J.R., M.L. Macrae, and L.L. Van Eerd. 2019. Winter phosphorus release from cover crops and linkages with runoff chemistry. Journal of Environmental Quality 48(4): 907–914. doi: <a href="https://doi.org/10.2134/jeq2018.08.0307">10.2134/jeq2018.08.0307</a>.
+</div>
+<div id="ref-cole2015" class="csl-entry" role="listitem">
+Cole, L.J., S. Brocklehurst, D. Robertson, W. Harrison, and D.I. McCracken. 2015. Riparian buffer strips: Their role in the conservation of insect pollinators in intensive grassland systems. Agriculture, Ecosystems &amp; Environment 211: 207–220. doi: <a href="https://doi.org/10.1016/j.agee.2015.06.012">10.1016/j.agee.2015.06.012</a>.
+</div>
+<div id="ref-cole2020" class="csl-entry" role="listitem">
+Cole, L.J., J. Stockan, and R. Helliwell. 2020. Managing riparian buffer strips to optimise ecosystem services: A review. Agriculture, Ecosystems &amp; Environment 296: 106891. doi: <a href="https://doi.org/10.1016/j.agee.2020.106891">10.1016/j.agee.2020.106891</a>.
+</div>
+<div id="ref-dauwalter2018" class="csl-entry" role="listitem">
+Dauwalter, D.C., K.A. Fesenmyer, S.W. Miller, and T. Porter. 2018. Response of Riparian Vegetation, Instream Habitat, and Aquatic Biota to Riparian Grazing Exclosures. North American Journal of Fisheries Management 38(5): 1187–1200. doi: <a href="https://doi.org/10.1002/nafm.10224">10.1002/nafm.10224</a>.
+</div>
+<div id="ref-dillaha1989" class="csl-entry" role="listitem">
+Dillaha, T.A., R.B. Reneau, S. Mostaghimi, and D. Lee. 1989. Vegetative filter strips for agricultural nonpoint source pollution control. Transactions of the American Society of Agricultural Engineers 32(2): 513519. doi: <a href="https://doi.org/10.13031/2013.31033">10.13031/2013.31033</a>.
+</div>
+<div id="ref-donohoe2021" class="csl-entry" role="listitem">
+Donohoe, G., D. Flaten, F. Omonijo, and K. Ominski. 2021. Short-term impacts of winter bale grazing beef cows on forage production and soil nutrient status in the eastern canadian prairies. Canadian Journal of Soil Science 101(4): 717–733. doi: <a href="https://doi.org/10.1139/cjss-2021-0028">10.1139/cjss-2021-0028</a>.
+</div>
+<div id="ref-dorioz2006" class="csl-entry" role="listitem">
+Dorioz, J.M., D. Wang, J. Poulenard, and D. Trevisan. 2006. The effect of grass buffer strips on phosphorus dynamics - a critical review and synthesis as a basis for application in agricultural landscapes in france. Agriculture, Ecosystems &amp; Environment 117(1): 4–21. doi: <a href="https://doi.org/10.1016/j.agee.2006.03.029">10.1016/j.agee.2006.03.029</a>.
+</div>
+<div id="ref-elliott2013" class="csl-entry" role="listitem">
+Elliott, J. 2013. Evaluating the potential contribution of vegetation as a nutrient source in snowmelt runoff. Canadian Journal of Soil Science 93(4): 435–443. doi: <a href="https://doi.org/10.4141/cjss2012-050">10.4141/cjss2012-050</a>.
+</div>
+<div id="ref-environmentandclimatechangecanada2024" class="csl-entry" role="listitem">
+Environment, and Climate Change Canada. 2024. Canadian Climate Normals. <a href="https://climate.weather.gc.ca/climate_normals/index_e.html">https://climate.weather.gc.ca/climate_normals/index_e.html</a>.
+</div>
+<div id="ref-fitch2003" class="csl-entry" role="listitem">
+Fitch, L., B. Adams, and K. O’Shaughnessy. 2003. Caring for the green zone: Riparian areas and grazing management. 3rd ed. Cows; Fish Program, Lethbridge, Alberta.
+</div>
+<div id="ref-forio2020" class="csl-entry" role="listitem">
+Forio, M.A.E., N. De Troyer, K. Lock, F. Witing, L. Baert, et al. 2020. Small Patches of Riparian Woody Vegetation Enhance Biodiversity of Invertebrates. Water 12(11): 3070. doi: <a href="https://doi.org/10.3390/w12113070">10.3390/w12113070</a>.
+</div>
+<div id="ref-franzluebbers2019" class="csl-entry" role="listitem">
+Franzluebbers, A.J., M.H. Poore, S.R. Freeman, and J.R. Rogers. 2019. Soil-surface nutrient distributions in grazed pastures of North Carolina. Journal of Soil and Water Conservation 74(6): 571–583. doi: <a href="https://doi.org/10.2489/jswc.74.6.571">10.2489/jswc.74.6.571</a>.
+</div>
+<div id="ref-gregory1991" class="csl-entry" role="listitem">
+Gregory, S.V., F.J. Swanson, W.A. McKee, and K.W. Cummins. 1991. An ecosystem perspective of riparian zones. BioScience 41(8): 540551. doi: <a href="https://doi.org/10.2307/1311607">10.2307/1311607</a>.
+</div>
+<div id="ref-habibiandehkordi2019" class="csl-entry" role="listitem">
+Habibiandehkordi, R., D.A. Lobb, P.N. Owens, and D.N. Flaten. 2019. Effectiveness of vegetated buffer strips in controlling legacy phosphorus exports from agricultural land. Journal of Environmental Quality 48(2): 314–321. doi: <a href="https://doi.org/10.2134/jeq2018.04.0129">10.2134/jeq2018.04.0129</a>.
+</div>
+<div id="ref-habibiandehkordi2017" class="csl-entry" role="listitem">
+Habibiandehkordi, R., D.A. Lobb, S.C. Sheppard, D.N. Flaten, and P.N. Owens. 2017. Uncertainties in vegetated buffer strip function in controlling phosphorus export from agricultural land in the canadian prairies. Environmental Science and Pollution Research 24(22): 18372–18382. doi: <a href="https://doi.org/10.1007/s11356-017-9406-6">10.1007/s11356-017-9406-6</a>.
+</div>
+<div id="ref-hale2014" class="csl-entry" role="listitem">
+Hale, R., P. Reich, T. Daniel, P.S. Lake, and T.R. Cavagnaro. 2014. Scales that matter: Guiding effective monitoring of soil properties in restored riparian zones. Geoderma 228-229: 173–181. doi: <a href="https://doi.org/10.1016/j.geoderma.2013.09.019">10.1016/j.geoderma.2013.09.019</a>.
+</div>
+<div id="ref-hansen2019" class="csl-entry" role="listitem">
+Hansen, B.D., H.S. Fraser, and C.S. Jones. 2019. Livestock grazing effects on riparian bird breeding behaviour in agricultural landscapes. Agriculture, Ecosystems &amp; Environment 270-271: 93–102. doi: <a href="https://doi.org/10.1016/j.agee.2018.10.016">10.1016/j.agee.2018.10.016</a>.
+</div>
+<div id="ref-hille2019" class="csl-entry" role="listitem">
+Hille, S., D. Graeber, B. Kronvang, G.H. Rubæk, N. Onnen, et al. 2019. Management Options to Reduce Phosphorus Leaching from Vegetated Buffer Strips. Journal of Environmental Quality 48(2): 322–329. doi: <a href="https://doi.org/10.2134/jeq2018.01.0042">10.2134/jeq2018.01.0042</a>.
+</div>
+<div id="ref-kelly2007" class="csl-entry" role="listitem">
+Kelly, J.M., J.L. Kovar, R. Sokolowsky, and T.B. Moorman. 2007. Phosphorus uptake during four years by different vegetative cover types in a riparian buffer. Nutrient Cycling in Agroecosystems 78(3): 239–251. doi: <a href="https://doi.org/10.1007/s10705-007-9088-4">10.1007/s10705-007-9088-4</a>.
+</div>
+<div id="ref-kieta2019" class="csl-entry" role="listitem">
+Kieta, K.A., and P.N. Owens. 2019. Phosphorus release from shoots of phleum pretense l. After repeated freeze-thaw cycles and harvests. Ecological Engineering 127: 204–211. doi: <a href="https://doi.org/10.1016/j.ecoleng.2018.11.024">10.1016/j.ecoleng.2018.11.024</a>.
+</div>
+<div id="ref-kieta2018" class="csl-entry" role="listitem">
+Kieta, K.A., P.N. Owens, D.A. Lobb, J.A. Vanrobaeys, and D.N. Flaten. 2018. Phosphorus dynamics in vegetated buffer strips in cold climates: A review. Environmental Reviews 26(3): 255–272. doi: <a href="https://doi.org/10.1139/er-2017-0077">10.1139/er-2017-0077</a>.
+</div>
+<div id="ref-kraft2021" class="csl-entry" role="listitem">
+Kraft, J.D., D.A. Haukos, M.R. Bain, M.B. Rice, S. Robinson, et al. 2021. Using Grazing to Manage Herbaceous Structure for a Heterogeneity-Dependent Bird. The Journal of Wildlife Management 85(2): 354–368. doi: <a href="https://doi.org/10.1002/jwmg.21984">10.1002/jwmg.21984</a>.
+</div>
+<div id="ref-krall2023" class="csl-entry" role="listitem">
+Krall, M., and P. Roni. 2023. Effects of livestock exclusion on stream habitat and aquatic biota: A review and recommendations for implementation and monitoring. North American Journal of Fisheries Management 43(2): 476–504. doi: <a href="https://doi.org/10.1002/nafm.10863">10.1002/nafm.10863</a>.
+</div>
+<div id="ref-lacas2005" class="csl-entry" role="listitem">
+Lacas, J.-G., M. Voltz, V. Gouy, N. Carluer, and J.-J. Gril. 2005. Using grassed strips to limit pesticide transfer to surface water: A review. Agronomy for Sustainable Development 25(2): 253–266. doi: <a href="https://doi.org/10.1051/agro:2005001">10.1051/agro:2005001</a>.
+</div>
+<div id="ref-liu2019" class="csl-entry" role="listitem">
+Liu, J., H.M. Baulch, M.L. Macrae, H.F. Wilson, J.A. Elliott, et al. 2019a. Agricultural water quality in cold climates: processes, drivers, management options, and research needs. Journal of Environmental Quality 48(4): 792–802. doi: <a href="https://doi.org/10.2134/jeq2019.05.0220">10.2134/jeq2019.05.0220</a>.
+</div>
+<div id="ref-liu2019a" class="csl-entry" role="listitem">
+Liu, J., M.L. Macrae, J.A. Elliott, H.M. Baulch, H.F. Wilson, et al. 2019b. Impacts of cover crops and crop residues on phosphorus losses in cold climates: a review. Journal of Environmental Quality 48(4): 850–868. doi: <a href="https://doi.org/10.2134/jeq2019.03.0119">10.2134/jeq2019.03.0119</a>.
+</div>
+<div id="ref-lozier2017" class="csl-entry" role="listitem">
+Lozier, T.M., and M.L. Macrae. 2017. Potential phosphorus mobilization from above-soil winter vegetation assessed from laboratory water extractions following freeze<span></span>thaw cycles. Canadian Water Resources Journal 42(3): 276–288. doi: <a href="https://doi.org/10.1080/07011784.2017.1331140">10.1080/07011784.2017.1331140</a>.
+</div>
+<div id="ref-luther2008" class="csl-entry" role="listitem">
+Luther, D., J. Hilty, J. Weiss, C. Cornwall, M. Wipf, et al. 2008. Assessing the impact of local habitat variables and landscape context on riparian birds in agricultural, urbanized, and native landscapes. Biodiversity and Conservation 17(8): 1923–1935. doi: <a href="https://doi.org/10.1007/s10531-008-9332-5">10.1007/s10531-008-9332-5</a>.
+</div>
+<div id="ref-lyu2021" class="csl-entry" role="listitem">
+Lyu, C., X. Li, P. Yuan, Y. Song, H. Gao, et al. 2021. Nitrogen retention effect of riparian zones in agricultural areas: A meta-analysis. Journal of Cleaner Production 315: 128143. doi: <a href="https://doi.org/10.1016/j.jclepro.2021.128143">10.1016/j.jclepro.2021.128143</a>.
+</div>
+<div id="ref-manitobaagriculture2023" class="csl-entry" role="listitem">
+Manitoba Agriculture. 2023. Manitoba agriculture weather program. <a href="https://www.gov.mb.ca/agriculture/weather/manitoba-ag-weather.html">https://www.gov.mb.ca/agriculture/weather/manitoba-ag-weather.html</a>.
+</div>
+<div id="ref-manitobaagriculture2024" class="csl-entry" role="listitem">
+Manitoba Agriculture. 2024. Agriculture rotational grazing. <a href="https://www.gov.mb.ca/agriculture/">https://www.gov.mb.ca/agriculture/</a>.
+</div>
+<div id="ref-manitobabeefforageinitiatives2024" class="csl-entry" role="listitem">
+Manitoba Beef &amp; Forage Initiatives. 2024. MBFI farm stations. <a href="https://www.mbfi.ca/farm-station">https://www.mbfi.ca/farm-station</a>.
+</div>
+<div id="ref-mcclain2003" class="csl-entry" role="listitem">
+McClain, M.E., E.W. Boyer, C.L. Dent, S.E. Gergel, N.B. Grimm, et al. 2003. Biogeochemical hot spots and hot moments at the interface of terrestrial and aquatic ecosystems. Ecosystems 6(4): 301312. doi: <a href="https://doi.org/10.1007/s10021-003-0161-9">10.1007/s10021-003-0161-9</a>.
+</div>
+<div id="ref-mcguire2010" class="csl-entry" role="listitem">
+McGuire, K.J., and J.J. McDonnell. 2010. Hydrological connectivity of hillslopes and streams: Characteristic time scales and nonlinearities. Water Resources Research 46(10): W10543. doi: <a href="https://doi.org/10.1029/2010WR009341">10.1029/2010WR009341</a>.
+</div>
+<div id="ref-montgomery1996" class="csl-entry" role="listitem">
+Montgomery, G. 1996. <a href="https://www.nrcs.usda.gov/wps/portal/nrcs/detail/?cid=nrcs143_014206">Riparian areas reservoirs of diversity</a>. Lincoln, Nebraska, USA.
+</div>
+<div id="ref-murphy1962" class="csl-entry" role="listitem">
+Murphy, J., and J.P. Riley. 1962. A modified single solution method for the determination of phosphate in natural waters. Analytica Chimica Acta 27: 31–36. doi: <a href="https://doi.org/10.1016/S0003-2670(00)88444-5">10.1016/S0003-2670(00)88444-5</a>.
+</div>
+<div id="ref-nsengakumwimba2023" class="csl-entry" role="listitem">
+Nsenga Kumwimba, M., J. Huang, M. Dzakpasu, K. De Silva, O.E. Ohore, et al. 2023. An updated review of the efficacy of buffer zones in warm/temperate and cold climates: Insights into processes and drivers of nutrient retention. Journal of Environmental Management 336: 117646. doi: <a href="https://doi.org/10.1016/j.jenvman.2023.117646">10.1016/j.jenvman.2023.117646</a>.
+</div>
+<div id="ref-owens2007" class="csl-entry" role="listitem">
+Owens, P.N., J.H. Duzant, L.K. Deeks, G.A. Wood, R.P.C. Morgan, et al. 2007. Evaluation of contrasting buffer features within an agricultural landscape for reducing sediment and sediment-associated phosphorus delivery to surface waters. Soil Use and Management 23(s1): 165–175. doi: <a href="https://doi.org/10.1111/j.1475-2743.2007.00121.x">10.1111/j.1475-2743.2007.00121.x</a>.
+</div>
+<div id="ref-podolsky1993" class="csl-entry" role="listitem">
+Podolsky, G.P., and D. Schindler. 1993. <a href="https://www.manitoba.ca/agriculture/soil/soil-survey/pubs/fss02s00943.pdf">Soils of the manitoba zero tillage research association farm</a>. Winnipeg, Manitoba.
+</div>
+<div id="ref-reid2018" class="csl-entry" role="listitem">
+Reid, K., K. Schneider, and B. McConkey. 2018. Components of phosphorus loss from agricultural landscapes, and how to incorporate them into risk assessment tools. Frontiers in Earth Science 6. <a href="https://www.frontiersin.org/article/10.3389/feart.2018.00135">https://www.frontiersin.org/article/10.3389/feart.2018.00135</a>.
+</div>
+<div id="ref-roberson2007" class="csl-entry" role="listitem">
+Roberson, T., L.G. Bundy, and T.W. Andraski. 2007. Freezing and drying effects on potential plant contributions to phosphorus in runoff. Journal of Environmental Quality 36(2): 532–539. doi: <a href="https://doi.org/10.2134/jeq2006.0169">10.2134/jeq2006.0169</a>.
+</div>
+<div id="ref-roberts2012" class="csl-entry" role="listitem">
+Roberts, W.M., M.I. Stutter, and P.M. Haygarth. 2012. Phosphorus Retention and Remobilization in Vegetated Buffer Strips: A Review. Journal of Environmental Quality 41(2): 389–399. doi: <a href="https://doi.org/10.2134/jeq2010.0543">10.2134/jeq2010.0543</a>.
+</div>
+<div id="ref-schindler2012" class="csl-entry" role="listitem">
+Schindler, D.W., R.E. Hecky, and G.K. McCullough. 2012. The rapid eutrophication of lake winnipeg: Greening under global change. Journal of Great Lakes Research 38, Supplement 3: 6–13. doi: <a href="https://doi.org/10.1016/j.jglr.2012.04.003">10.1016/j.jglr.2012.04.003</a>.
+</div>
+<div id="ref-sharpley" class="csl-entry" role="listitem">
+Sharpley, A.N., P.J.A. Kleinman, and J.L. Weld. 2006. Environmental soil phosphorus indices. In: Carter, M.R. and Gregorich, E.G., editors. 2nd ed. CRC Press, Boca Raton, FL, U.S.A
+</div>
+<div id="ref-stanley2002" class="csl-entry" role="listitem">
+Stanley, T.R., and F.L. Knopf. 2002. Avian Responses to Late-Season Grazing in a Shrub-Willow Floodplain. Conservation Biology 16(1): 225–231. doi: <a href="https://doi.org/10.1046/j.1523-1739.2002.00269.x">10.1046/j.1523-1739.2002.00269.x</a>.
+</div>
+<div id="ref-studinski2012" class="csl-entry" role="listitem">
+Studinski, J.M., K.J. Hartman, J.M. Niles, and P. Keyser. 2012. The effects of riparian forest disturbance on stream temperature, sedimentation, and morphology. Hydrobiologia 686(1): 107–117. doi: <a href="https://doi.org/10.1007/s10750-012-1002-7">10.1007/s10750-012-1002-7</a>.
+</div>
+<div id="ref-subedi2020" class="csl-entry" role="listitem">
+Subedi, A., D. Franklin, M. Cabrera, A. McPherson, and S. Dahal. 2020. Grazing systems to retain and redistribute soil phosphorus and to reduce phosphorus losses in runoff. Soil Systems 4(4): 66. doi: <a href="https://doi.org/10.3390/soilsystems4040066">10.3390/soilsystems4040066</a>.
+</div>
+<div id="ref-tomer2007" class="csl-entry" role="listitem">
+Tomer, M.D., T.B. Moorman, J.L. Kovar, D.E. James, and M.R. Burkart. 2007. Spatial patterns of sediment and phosphorus in a riparian buffer in western iowa. Journal of Soil and Water Conservation 62(5): 329–338.
+</div>
+<div id="ref-verdonschot2024" class="csl-entry" role="listitem">
+Verdonschot, P.F.M., and R.C.M. Verdonschot. 2024. Ecological Functions and Management of Large Wood in Fluvial Systems. Current Forestry Reports 10(1): 39–55. doi: <a href="https://doi.org/10.1007/s40725-023-00209-x">10.1007/s40725-023-00209-x</a>.
+</div>
+<div id="ref-vidon2010" class="csl-entry" role="listitem">
+Vidon, P., C. Allan, D. Burns, T.P. Duval, N. Gurwick, et al. 2010. Hot spots and hot moments in riparian zones: Potential for improved water quality management. Journal of the American Water Resources Association 46(2): 278–298. doi: <a href="https://doi.org/10.1111/j.1752-1688.2010.00420.x">10.1111/j.1752-1688.2010.00420.x</a>.
+</div>
+<div id="ref-young2008" class="csl-entry" role="listitem">
+Young, E.O., and R.D. Briggs. 2008. Phosphorus Concentrations in Soil and Subsurface Water: A Field Study among Cropland and Riparian Buffers. Journal of Environmental Quality 37(1): 69–78. doi: <a href="https://doi.org/10.2134/jeq2006.0422">10.2134/jeq2006.0422</a>.
+</div>
+<div id="ref-yu2019" class="csl-entry" role="listitem">
+Yu, C., P. Duan, Z. Yu, and B. Gao. 2019. Experimental and model investigations of vegetative filter strips for contaminant removal: A review. Ecological Engineering 126: 25–36. doi: <a href="https://doi.org/10.1016/j.ecoleng.2018.10.020">10.1016/j.ecoleng.2018.10.020</a>.
+</div>
+</div>
+</section>
+<section id="supplemental-materials" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="supplemental-materials">Supplemental materials</h2>
+<div id="suppfig-weather-plot" class="quarto-float">
+<figure class="quarto-float quarto-float-suppfig figure">
+<div aria-describedby="suppfig-weather-plot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="supp-weather-plot-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Figure S1: Average daily air temperature and cumulative rainfall over the growing season over the three year study. Red bars indicate sampling dates"><img src="supp-weather-plot-1.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-suppfig" id="suppfig-weather-plot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure S1: Average daily air temperature and cumulative rainfall over the growing season over the three year study. Red bars indicate sampling dates
+</figcaption>
+</figure>
+</div>
+<div id="suppfig-bd-plot" class="quarto-float">
+<figure class="quarto-float quarto-float-suppfig figure">
+<div aria-describedby="suppfig-bd-plot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="supp-weights-bd-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Figure S2: a) Mass of biomass and litter before grazing and mowing (2019-2021) and b) the bulk density of the organic layer and 10 cm Ah horizon (2023)"><img src="supp-weights-bd-1.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-suppfig" id="suppfig-bd-plot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure S2: a) Mass of biomass and litter before grazing and mowing (2019-2021) and b) the bulk density of the organic layer and 10 cm Ah horizon (2023)
+</figcaption>
+</figure>
+</div>
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{j koiter,
+  author = {J Koiter, Alexander and Y Malone, Tamaragh},
+  title = {Effects of {Riparian} {Grazing} on {Distinct} {Phosphorus}
+    {Sources}},
+  langid = {en},
+  abstract = {Riparian areas play an important role in maintaining water
+    quality in agricultural watersheds by buffering sediment, nutrients,
+    and other pollutants. Additionally, these areas are also an
+    important sources of forage, particularly during drought. Recent
+    studies have shown that riparian areas are less effective buffers
+    and, in some cases, are a net source of phosphorus (P) in cold
+    climates. The repeated freeze-thaw cycles increase the availability
+    of P in both the vegetation and soil sources. Cattle grazing or
+    harvesting of riparian areas prior to the onset of winter conditions
+    may be a viable management practice to reduce the loss of P during
+    the spring snowmelt. This study measured the water-extractable
+    phosphorus (WEP) in four distinctive sources: biomass, litter,
+    organic layer, and Ah horizon. Overall, the Ah (0-10cm) soil was the
+    largest (\textasciitilde44\%) source of WEP; however, the biomass
+    (i.e., standing vegetation) was a considerable proportion
+    (\textasciitilde25\%) of the total. In addition to control plots,
+    the riparian areas were subjected to grazing, high density grazing,
+    and mowing treatments. Findings revealed significant reductions in
+    biomass WEP with high density grazing and mowing treatments,
+    particularly in lower riparian zones. There were no detectable
+    changes in the other sources of WEP. This suggests that autumn
+    short-term grazing may be a mechanism to use this important forage
+    resource and reduce the potential P loss during the snowmelt
+    period.}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-j koiter" class="csl-entry quarto-appendix-citeas" role="listitem">
+J Koiter, A., and T. Y Malone. Effects of Riparian Grazing on Distinct
+Phosphorus Sources. TBD.
+</div></div></section></div></main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"loop":false,"openEffect":"zoom","closeEffect":"zoom","descPosition":"bottom","selector":".lightbox"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
+
+
+
+
+</body></html>

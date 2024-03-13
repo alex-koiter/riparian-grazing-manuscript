@@ -47,7 +47,14 @@ soil_diff <- conc %>%
 ```{r}
 m7 <- glmmTMB(diff ~ treatment * location + (1|site) + (1|year),
               data = organic_diff)
+```
+
+```{r}
+#| label: fig-resid1
 simulateResiduals(m7, n = 1000, plot = TRUE)
+```
+
+```{r}
 car::Anova(m7, type = "III")  # No interaction
 ```
 
@@ -81,12 +88,13 @@ Plots
 #|  
 p1 <- ggplot(data = organic_diff) +
   theme_bw(base_size = 12) + 
-  geom_hline(yintercept = 0) +
-  geom_rect(data = df, aes(xmin = x1, xmax = x2, ymin = y1, ymax = y2, fill = difference), alpha = 0.15, colour = "black") +
-  scale_fill_manual(values = c("white", "black")) +
-  ggnewscale::new_scale_fill() +
+  geom_rect(data = df, aes(xmin = x1, xmax = x2, ymin = y1, ymax = y2, fill = difference), alpha = 0.15) +
+  #scale_fill_manual(values = c("white", "black")) +
+  #ggnewscale::new_scale_fill() +
   geom_boxplot(aes(x = treatment, y = diff, fill = location)) +
-  scale_fill_viridis_d(name = "Location", begin = 0.3, end = 1) +
+  #scale_fill_viridis_d(name = "Location", begin = 0.3, end = 1) +
+  scale_fill_manual(values = c("white", "black", "#35608DFF", "#2FB47CFF", "#FDE725FF")) +
+  guides(fill = guide_legend(override.aes = list(colour = "black", size = 1))) +
   labs(y = expression(paste("Net WEP Difference (", mg~kg^{-1}, ")")), x = "Treatment") +
   theme(axis.title.x = element_blank(),
         axis.text.x = element_text(angle = 0, vjust = 1, hjust = 0.5),
@@ -121,12 +129,13 @@ car::Anova(m8, type = "III")
 #|  
 p2 <- ggplot(data = soil_diff) +
   theme_bw(base_size = 12) + 
-  geom_hline(yintercept = 0) +
-  geom_rect(data = df, aes(xmin = x1, xmax = x2, ymin = y1, ymax = y2, fill = difference), alpha = 0.15, colour = "black") +
-  scale_fill_manual(values = c("white", "black")) +
-  ggnewscale::new_scale_fill() +
+  geom_rect(data = df, aes(xmin = x1, xmax = x2, ymin = y1, ymax = y2, fill = difference), alpha = 0.15) +
+  #scale_fill_manual(values = c("white", "black")) +
+  #ggnewscale::new_scale_fill() +
   geom_boxplot(aes(x = treatment, y = diff, fill = location)) +
-  scale_fill_viridis_d(name = "Location", begin = 0.3, end = 1) +
+  #scale_fill_viridis_d(name = "Location", begin = 0.3, end = 1) +
+  scale_fill_manual(values = c("white", "black", "#35608DFF", "#2FB47CFF", "#FDE725FF")) +
+  guides(fill = guide_legend(override.aes = list(colour = "black", size = 1))) +
   labs(y = expression(paste("Net WEP Difference (", mg~kg^{-1}, ")")), x = "Treatment") +
   theme(axis.title.x = element_blank(),
         axis.text.x = element_text(angle = 0, vjust = 1, hjust = 0.5),

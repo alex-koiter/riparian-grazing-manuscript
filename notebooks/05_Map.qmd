@@ -86,6 +86,7 @@ p2 <- ggplot(site) +
         axis.ticks = element_blank(),
         axis.title = element_blank(),
         plot.margin = unit(c(0,0,0,0), "mm"))
+p2
 ```
 ### Canada
 ```{r}

@@ -104,13 +104,14 @@ Plots
 #|  
 p1 <- ggplot(data = filter(plot_data, measure == "p_total")) +
   theme_bw(base_size = 12) +
-  geom_hline(yintercept = 0) +
-  geom_rect(data = df, aes(xmin = x1, xmax = x2, ymin = y1, ymax = y2, fill = difference), alpha = 0.15, colour = "black") +
-  scale_fill_manual(values = c("white", "black")) +
-  ggnewscale::new_scale_fill() +
+  geom_rect(data = df, aes(xmin = x1, xmax = x2, ymin = y1, ymax = y2, fill = difference), alpha = 0.15) +
+  #scale_fill_manual(values = c("white", "black")) +
+  #ggnewscale::new_scale_fill() +
   geom_boxplot(aes(x = treatment, y = diff, fill = location)) +
   labs(y = expression(paste("Net WEP Difference (", mg~m^{-2}, ")")), x = "Treatment") +
-  scale_fill_viridis_d(name = "Location", begin = 0.3, end = 1) +
+  #scale_fill_viridis_d(name = "Location", begin = 0.3, end = 1) +
+  scale_fill_manual(values = c("white", "black", "#35608DFF", "#2FB47CFF", "#FDE725FF")) +
+  guides(fill = guide_legend(override.aes = list(colour = "black", size = 1))) +
   theme(axis.title.x = element_blank(),
         axis.text.x = element_text(angle = 0, vjust = 1, hjust = 0.5),
         legend.position = "bottom",

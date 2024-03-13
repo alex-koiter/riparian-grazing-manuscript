@@ -107,7 +107,7 @@ df <- data.frame(x1 = c(-Inf, -Inf), x2 = c(Inf, Inf), y2 = c(Inf, 0), y1 = c(0,
 Plots
 ```{r}
 p1 <- ggplot(data = filter(plot_data, measure == "p_total")) +
-  geom_rect(data = df, aes(xmin = x1, xmax = x2, ymin = y1, ymax = y2, fill = difference), alpha = 0.15, colour = "black") +
+  geom_rect(data = df, aes(xmin = x1, xmax = x2, ymin = y1, ymax = y2, fill = difference), alpha = 0.15) +
   #geom_hline(yintercept = 0) +
   scale_y_continuous(breaks = seq(-40, 120, 40)) +
   geom_boxplot(data = filter(plot_data, measure == "p_total"), aes(x = treatment, y = diff)) +
@@ -117,13 +117,13 @@ p1 <- ggplot(data = filter(plot_data, measure == "p_total")) +
   annotate("text", x = "Graze", y = 130, label = "a") + 
   annotate("text", x = "High Graze", y = 130, label = "b") + 
   annotate("text", x = "Mow", y = 130, label = "c") +
-  scale_fill_manual(values = c("white", "black")) +
+  scale_fill_manual(values = c("white", "black"), guide = guide_legend(override.aes = list(colour = "black"))) +
   theme(axis.title.x = element_blank(),
         axis.text.x = element_text(angle = 0, vjust = 1, hjust = 0.5))
 p1
 
 p2 <- ggplot() +
-  geom_rect(data = df, aes(xmin = x1, xmax = x2, ymin = y1, ymax = y2, fill = difference), alpha = 0.15, colour = "black") +
+  geom_rect(data = df, aes(xmin = x1, xmax = x2, ymin = y1, ymax = y2, fill = difference), alpha = 0.15) +
   geom_boxplot(data = filter(plot_data, measure == "p_total"), aes(x = location, y = diff)) +
   theme_bw(base_size = 12) + 
   scale_y_continuous(breaks = seq(-40, 120, 40)) +
@@ -131,7 +131,7 @@ p2 <- ggplot() +
   annotate("text", x = "Upper", y = 130, label = "a") + 
   annotate("text", x = "Middle", y = 130, label = "ab") + 
   annotate("text", x = "Lower", y = 130, label = "c") +
-  scale_fill_manual(values = c("white", "black")) +
+  scale_fill_manual(values = c("white", "black"), guide = guide_legend(override.aes = list(colour = "black"))) +
   theme(axis.title.y = element_blank(),
         axis.title.x = element_blank(),
         axis.text.x = element_text(angle = 0, vjust = 1, hjust = 0.5))

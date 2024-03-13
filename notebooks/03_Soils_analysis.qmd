@@ -13,7 +13,7 @@ library(emmeans)
 
 ## Read in clean data 
 ```{r}
-conc <- read_csv(here::here("notebooks/Data/P_concentration.csv")) %>%
+conc <- read_csv("P_concentration.csv") %>%
   rename("conc" = "ak_content")
 ```
 

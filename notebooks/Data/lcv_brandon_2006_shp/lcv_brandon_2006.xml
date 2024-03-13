@@ -1,3 +1,0 @@
-<?xml version="1.0"?>
-<!--<!DOCTYPE metadata SYSTEM "http://www.esri.com/metadata/esriprof80.dtd">-->
-<metadata xml:lang="en"><Esri><MetaID>{1A335D9A-0732-4A72-9A48-EAE0757F9D82}</MetaID><CreaDate>20140207</CreaDate><CreaTime>10590500</CreaTime><SyncOnce>TRUE</SyncOnce><DataProperties><lineage><Process ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Conversion Tools.tbx\RasterToPolygon" Date="20140207" Time="105905">RasterToPolygon Brandon2006.tif C:\Geomatica_V91\user\AgroMbShapefiles2004-2006\BrandonShapefiles2006\RasterT_Brandon1.shp NO_SIMPLIFY Value</Process></lineage></DataProperties></Esri></metadata>

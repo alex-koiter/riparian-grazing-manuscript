@@ -15,8 +15,8 @@ library(patchwork)
 
 ## Read in data
 ```{r}
-conc <- read_csv(here::here("notebooks/Data/P_concentration.csv"))
-mass_data <- read_csv(here::here("notebooks/Data/mass.csv"))
+conc <- read_csv("P_concentration.csv")
+mass_data <- read_csv("mass.csv")
 ```
 
 

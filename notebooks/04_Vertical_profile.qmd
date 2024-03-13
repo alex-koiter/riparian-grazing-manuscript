@@ -100,7 +100,7 @@ p4 <- ggplot(data = mass_data, aes(y = sample_type, x = dryweight/1000 /0.25, fi
 ```
 
 ```{r}
-#| label: supp-weights-bd
+#| label: suppfig-weights-bd
 #| fig-cap: "a) Mass of biomass and litter before grazing and mowing and b) the bulk density of the organic layer and 10 cm Ah horizon"
 #| fig-alt: "a) Mass of biomass and litter before grazing and mowing and b) the bulk density of the organic layer and 10 cm Ah horizon"
 #| 

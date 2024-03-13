@@ -11,14 +11,16 @@ format:
       hypothesis: false
   docx:
     reference-doc: custom-reference-doc.docx
+    link-citations: true
+    link-bibliography: true
   jats: default
   agu-pdf: default
-  
+
 crossref:
   custom:
     - kind: float
-      reference-prefix: "Figure S"
-      key: supp
-
-
-
+      key: suppfig
+      latex-env: suppfig
+      reference-prefix: Figure S
+      space-before-numbering: false
+      latex-list-of-description: Supplementary Figure

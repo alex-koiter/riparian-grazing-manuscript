@@ -49,7 +49,7 @@ sampling <- tribble(
 ```
 
 ```{r}
-#| label: fig-weather-plot
+#| label: supp-weather-plot
 #| fig-cap: "Average daily air temperature and cumulative rainfall over the growing season over the three year study. Red bars indicate sampling dates"
 #| fig-alt: "Average daily air temperature (blue) and cumulative rainfall (black) over the growing season over the three year study. Red bars indicate sampling dates"
 

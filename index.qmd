@@ -1,5 +1,5 @@
 ---
-title: Effects of riparian grazing on distinct phosphorus sources
+title: Effects of Riparian Grazing on Distinct Phosphorus Sources
 
 author:
   - name: Alexander J Koiter
@@ -12,16 +12,24 @@ author:
       - Statistics
       - Visualization
     affiliations:
-      - Brandon University, Department of Geography and Environment
-    author:
+      - name: Brandon University, Department of Geography and Environment
+        address: 270 18th St
+        city: Brandon
+        state: MB
+        postal-code: R7A 6A9
   - name: Tamaragh Y Malone
+    orcid: 0009-0002-5887-5574
     corresponding: false
     email: malonety35@brandonu.ca
     roles:
       - Research Assistant
       - Lab analysis
     affiliations:
-      - Brandon University, Department of Biology
+      - name: Brandon University, Department of Biology
+        address: 270 18th St
+        city: Brandon
+        state: MB
+        postal-code: R7A 6A9
 keywords:
   - Phosphorus
   - Grazing
@@ -29,20 +37,54 @@ keywords:
 abstract: |
  Riparian areas play an important role in maintaining water quality in agricultural watersheds by buffering sediment, nutrients, and other pollutants. Additionally, these areas are also an important sources of forage, particularly during drought. Recent studies have shown that riparian areas are less effective buffers and, in some cases, are a net source of phosphorus (P) in cold climates. The repeated freeze-thaw cycles increase the availability of P in both the vegetation and soil sources. Cattle grazing or harvesting of riparian areas prior to the onset of winter conditions may be a viable management practice to reduce the loss of P during the spring snowmelt. This study measured the water-extractable phosphorus (WEP) in four distinctive sources: biomass, litter, organic layer, and Ah horizon. Overall, the Ah (0-10cm) soil was the largest (~44%) source of WEP; however, the biomass (i.e., standing vegetation) was a considerable proportion (~25%) of the total. In addition to control plots, the riparian areas were subjected to grazing, high density grazing, and mowing treatments. Findings revealed significant reductions in biomass WEP with high density grazing and mowing treatments, particularly in lower riparian zones. There were no detectable changes in the other sources of WEP. This suggests that autumn short-term grazing may be a mechanism to use this important forage resource and reduce the potential P loss during the snowmelt period.
 plain-language-summary: |
- Short-term grazing can reduce the amount of near-surface P in riparian areas.
+ Riparian areas are important for keeping water clean in agricultural watersheds because they help filter out sediment, nutrients, and other pollutants. Some recent studies found that in cold climates, like the Canadian Prairies, riparian areas are not as effective at filtering out nutrients. During the spring snowmelt riparian areas can be a source of phosphorus to the water instead of removing it. This happens because the freezing and thawing of the ground and vegetation releases more phosphorus. To see if we can reduce the loss of phosphorus we looked at different sources of phosphorus in riparian areas including plants, dead vegetation, and soil. The top layer of soil was the biggest source of phosphorus, followed by the plants. Two intensities of cattle grazing, along with mowing, were tested as ways of managing the riparain areas. Both cattle grazing and mowing in the fall before winter helped reduce the amount of plant-based phosphorus without increasing the amount of phosphorus in other sources. This shows that letting cows graze in the fall might be a good way to use this forage and also prevent too much phosphorus from getting into the water when the snow melts in the spring.
 key-points:
   - Biomass and litter are substantial sources of WEP in riparian areas 
   - Autumn cattle grazing and mowing treatments reduced the amount of WEP in riparian biomass
   - No Measurable change in the amount of WEP in the litter, organic layer, or Ah horizon post grazing
   - Large spatial variability in WEP exists in riparian areas
   
-date: last-modified
+date-modified: last-modified
 bibliography: references.bib
 csl: journal-of-environmental-quality.csl
 citation:
   container-title: TBD
 number-sections: true
 ---
+
+**Core ideas**
+
+-   Biomass and litter are substantial sources of WEP in riparian areas
+-   Autumn cattle grazing and mowing treatments reduced the amount of WEP in riparian biomass
+-   No Measurable change in the amount of WEP in the litter, organic layer, or Ah horizon post grazing
+-   Large spatial variability in WEP exists in riparian areas
+
+::: {.content-visible when-format="docx"}
+**Effects of Riparian Grazing on Distinct Phosphorus Sources**
+
+Alexander J Koiter^\*1^ and Tamaragh Y Malone^2^
+
+^\*^corresponding author
+
+^1^Brandon University, Department of Geography & Environment\
+270 18th St, Brandon, MB Canada, R7A 6A9\
+email: koitera\@brandonu.ca\
+ORCID: 0000-0002-9355-9561
+
+^2^Brandon University, Department of Biology, 270 18th St, Brandon, MB Canada, R7A 6A9\
+email: malonety35\@brandonu.ca\
+ORCID: 0009-0002-5887-5574
+:::
+
+**Abbreviations**
+
+FTC, freeze-thaw cycle; MBFI, Manitoba Beef and Forage Initiatives; P, phosphorus; WEP, water extractable phosphorus
+
+::: {.content-visible when-format="docx"}
+## Abstract {.unnumbered}
+
+Riparian areas play an important role in maintaining water quality in agricultural watersheds by buffering sediment, nutrients, and other pollutants. Additionally, these areas are also an important sources of forage, particularly during drought. Recent studies have shown that riparian areas are less effective buffers and, in some cases, are a net source of phosphorus (P) in cold climates. The repeated freeze-thaw cycles increase the availability of P in both the vegetation and soil sources. Cattle grazing or harvesting of riparian areas prior to the onset of winter conditions may be a viable management practice to reduce the loss of P during the spring snowmelt. This study measured the water-extractable phosphorus (WEP) in four distinctive sources: biomass, litter, organic layer, and Ah horizon. Overall, the Ah (0-10cm) soil was the largest (\~44%) source of WEP; however, the biomass (i.e., standing vegetation) was a considerable proportion (\~25%) of the total. In addition to control plots, the riparian areas were subjected to grazing, high density grazing, and mowing treatments. Findings revealed significant reductions in biomass WEP with high density grazing and mowing treatments, particularly in lower riparian zones. There were no detectable changes in the other sources of WEP. This suggests that autumn short-term grazing may be a mechanism to use this important forage resource and reduce the potential P loss during the snowmelt period.
+:::
 
 ## Introduction
 
@@ -62,6 +104,8 @@ Given the timing and processes of P dynamics with riparian areas in cold climate
 
 ## Methods
 
+### Site description
+
 ```{r}
 station <- weathercan::stations_search("Brandon", normals_years = "current")
 climate_normal <- weathercan::normals_dl(climate_ids = 5010480, normals_years = "1981-2010") |>
@@ -69,21 +113,19 @@ climate_normal <- weathercan::normals_dl(climate_ids = 5010480, normals_years = 
   dplyr::select(period, temp_daily_average, precip, snow)
 ```
 
-### Site description
-
 The study was conducted at the Manitoba Beef and Forage Initiatives (MBFI) research farm (50.06$^\circ$N, 99.92$^\circ$W), approximately 25 km north of Brandon, Manitoba, Canada, in the Prairie Pothole region of North America (@fig-map). The normal (1981 -- 2010) average daily air temperature was `r dplyr::filter(climate_normal, period == "Year")$temp_daily_average` $^\circ$C and the cumulative annual precipitation at Brandon was `r dplyr::filter(climate_normal, period == "Year")$precip` mm with `r round( dplyr::filter(climate_normal, period == "Year")$snow/dplyr::filter(climate_normal, period == "Year")$precip *100, 1)` % falling as snow [@environmentandclimatechangecanada2024]. The Köppen-Geiger climate classification is cold, without dry season, and with warm summer (Dfb) [@beck2018]. The land use in the region is predominately agriculture including annual crops (grains and oil seeeds) and grazing/forage. MBFI is a 260 ha research and demonstration farm with a mix of pasture, hay, and cropland. Prior to the establishment of MBFI the site was part of the Manitoba Zero Tillage Research Association farm (1993-2014) where annual crops, including oil seeds and grains, were grown. There are also numerous small permanent and ephemeral wetlands (potholes) and associated riparian areas which account for \~35% of the total farm land [@manitobabeefforageinitiatives2024]. The riparian areas surrounding the larger permanent wetlands are fenced off to exclude livestock and are not actively managed. The farm has an irregular undulating to hummocky relief with soils developed on fine loamy, moderately calcareous glacial till. The riparian soils are poorly drained and primarily consist of Humic and Luvic Gleysols and generally the soil profile can be described by a 1-10 cm organic layer overlying a 10-18 cm Ah horizon [@podolsky1993]. The vegetation in the riparian areas are dominated by grasses, sedges, and forbs.
 
 {{< embed notebooks/05_Map.qmd#fig-map >}}
 
 ### Experimental design
 
-Four riparian areas surrounding permanent wetlands were selected (@fig-map) and were subdivided into four \~450 $m^2$ plots. Within each riparian area each plot was randomly assigned a treatment. The treatments consisted of a: 1) control, 2) graze, 3) high density graze, and 4) mow and harvest. The grazing treatments consisted of a five hour grazing period with the graze treatment having \~3.1-3.5 animal units (AU) and the high desnity graze with \~11.75-12 AU. For the mowing treatment, the vegetation was cut to a height of \~10cm and the vegetation manually raked out of the plot. The cattle were rotated daily over four consecutive days among the four riparian areas and the grazed plots were fenced on all four sides, including the waters edge, and provided with supplemental water. Treatments were applied early to mid September, before the first frost, in three consecutive years (2019-2021) (@supp-weather-plot) Within each plot three distinctive sampling zones, or landscape positions, were established, adjacent to the waters edged (Lower), adjacent to the field/pasture (Upper), and the mid-point (Mid). To assess the impact of grazing and mowing, samples were collected in each plot and zone 1-3 days prior and immediately adjacent 1-3 days following the treatments (including the control).
+Four riparian areas surrounding permanent wetlands were selected (@fig-map) and were subdivided into four \~450 $m^2$ plots. Within each riparian area each plot was randomly assigned a treatment. The treatments consisted of a: 1) control, 2) graze, 3) high density graze, and 4) mow and harvest. The grazing treatments consisted of a five hour grazing period with the graze treatment having \~3.1-3.5 animal units (AU) per plot and the high density graze with \~11.75-12 AU. For the mowing treatment, the vegetation was cut to a height of \~10cm and the vegetation manually raked out of the plot. The cattle were rotated daily over four consecutive days among the four riparian areas and the grazed plots were fenced on all four sides, including the waters edge, and provided with supplemental water. Treatments were applied early to mid September, before the first frost, in three consecutive years (2019-2021) (@suppfig-weather-plot) Within each plot three distinctive sampling zones, or landscape positions, were established, adjacent to the waters edged (Lower), adjacent to the field/pasture (Upper), and the mid-point (Mid). To assess the impact of grazing and mowing, samples were collected in each plot and zone 1-3 days prior and immediately adjacent 1-3 days following the treatments (including the control).
 
 ### Sampling and analysis
 
-Four types of samples were collected: 1) biomass, 2) litter, 3) organic layer, and 4) Ah horizon. Using a 0.25 $m^2$ quadrate, biomass was collected by cutting the standing live vegetation and litter by raking the surface and picking up previous years growth. Both the biomass and litter were dried at 40 $^\circ C$, weighed, and homogenized using a blade grinder (\<1cm). A composite of five soil samples were collected within the same quadrate as the biomass/litter using a 19 mm diameter soil probe and were divided into the organic layer and the top 10 cm of the Ah horizon. The organic layer and Ah soil were air-dried, disaggregated with a mortar and pestle, and passed through a 2-mm sieve. Additional bulk density samples of both the organic layer and Ah and the depth of the organic layer were collected in 2023. Daily air temperature and rainfall data were collected from an onsite station (@supp-weather-plot) [@manitobaagriculture2023].
+Four types of samples were collected: 1) biomass, 2) litter, 3) organic layer, and 4) Ah horizon. Using a 0.25 $m^2$ quadrate, biomass was collected by cutting the standing live vegetation and litter by raking the surface and picking up previous years growth. Both the biomass and litter were dried at 40 $^\circ C$, weighed, and homogenized using a blade grinder (\<1cm). A composite of five soil samples were collected within the same quadrate as the biomass/litter using a 19 mm diameter soil probe and were divided into the organic layer and the top 10 cm of the Ah horizon. The organic layer and Ah soil were air-dried, disaggregated with a mortar and pestle, and passed through a 2-mm sieve. Additional bulk density samples of both the organic layer and Ah and the depth of the organic layer were collected in 2023. Daily air temperature and rainfall data were collected from an onsite station (@suppfig-weather-plot) [@manitobaagriculture2023].
 
-Water Extractable Phosphorus (WEP), an environmental soil and vegetation P test, was used to mimic soil P release to runoff water. Dried and homogenized samples were extracted by shaking (200 RPM) with deionized water for one hour at a mass to volume ratio of 1:30 for the biomass and litter samples (1 g) and 1:15 for the organic and Ah samples (2 g). Extractions were gravity filtered through a Whatman 42 filter followed by syringe filtration with a 0.45 $\mu m$ nylon filter. WEP in the extract was measured spectrophotometrically by the colorimetric molybdate--ascorbic acid method [@murphy1962; @sharpley].
+Water Extractable Phosphorus (WEP), an environmental soil and vegetation P test, was used to mimic soil P release to runoff water. Dried and homogenized samples were extracted by shaking (150 RPM) with deionized water for one hour at a mass to volume ratio of 1:30 for the biomass and litter samples (1 g) and 1:15 for the organic and Ah samples (2 g). Extractions were gravity filtered through a Whatman 42 filter followed by syringe filtration with a 0.45 $\mu m$ nylon filter. WEP in the extract was measured spectrophotometrically by the colorimetric molybdate--ascorbic acid method [@murphy1962; @sharpley].
 
 The concentration of WEP in the biomass and litter combined with the mass of material in collected from the quadrate was used to calculate the total WEP ($mg~kg^{-1}$). Only the change in concentration ($mg~kg^{-1}$) was measured for the organic layer and Ah horizon. The vertical profile of WEP within the riparian area was assessed using samples collected before treatments were implemented across the 3-year study. The total WEP in the organic layer and Ah were estimated using the bulk density and depth measurements collected in 2023 (@fig-vertical-wep b).
 
@@ -113,7 +155,7 @@ There were no significant impacts of either treatment or riparian zone on the am
 
 ## Discussion
 
-The vertical profile of WEP in riparian areas (@fig-vertical-wep) observed in this study supports the concept that a soil test P alone is likely missing a large proportion of the near-surface P that can be potentially lost during the spring snowmelt [@cober2019; @liu2019; @liu2019a]. The substantial proportion of WEP above the soil surface provides evidence that that managing the biomass in riparian areas in the autumn may reduce the contribution of P lost directly from this area during the spring. The measured WEP in this study may underestimate the total WEP during the spring snowmelt as the as repeated and severity of FTC on WEP was not characterized [@roberson2007; @lozier2017]. Additionally, harvesting of this biomass results in an export of P which can maintain or enhance the buffering or storage capacity of P derived from upslope sources further improving downstream water quality [@kelly2007; @hille2019]. The longitudinal gradient of WEP shows an inverted symmetry where the biomass WEP is largest near the waters edge and the Ah soil WEP is larger in the upper zone adjacent to the fields (@fig-vertical-wep b). The high soil water content in the lower zone creates conditions that favour high biomass production (@supp-bd-plot) coupled with high biomass WEP concentrations (@fig-vertical-wep a) results in a considerable source of P. The higher amount of WEP in the Ah soil in the upper zone of the riparian area is due to the higher bulk density (@supp-bd-plot) and higher WEP concentration (@fig-vertical-wep a). The higher bulk density is most likely due to the lower soil organic matter content and the higher WEP concentration may be related to the interception of P-rich runoff from upslope areas [@tomer2007]. Understanding and quantifying the sources and patterns of P within riparian areas is a key part of assessing the risk of P loss and designing effective management plans [@reid2018].
+The vertical profile of WEP in riparian areas (@fig-vertical-wep) observed in this study supports the concept that a soil test P alone is likely missing a large proportion of the near-surface P that can be potentially lost during the spring snowmelt [@cober2019; @liu2019; @liu2019a]. The substantial proportion of WEP above the soil surface provides evidence that that managing the biomass in riparian areas in the autumn may reduce the contribution of P lost directly from this area during the spring. The measured WEP in this study may underestimate the total WEP during the spring snowmelt as the as repeated and severity of FTC on WEP was not characterized [@roberson2007; @lozier2017]. Additionally, harvesting of this biomass results in an export of P which can maintain or enhance the buffering or storage capacity of P derived from upslope sources further improving downstream water quality [@kelly2007; @hille2019]. The longitudinal gradient of WEP shows an inverted symmetry where the biomass WEP is largest near the waters edge and the Ah soil WEP is larger in the upper zone adjacent to the fields (@fig-vertical-wep b). The high soil water content in the lower zone creates conditions that favour high biomass production (@suppfig-bd-plot) coupled with high biomass WEP concentrations (@fig-vertical-wep a) results in a considerable source of P. The higher amount of WEP in the Ah soil in the upper zone of the riparian area is due to the higher bulk density (@suppfig-bd-plot) and higher WEP concentration (@fig-vertical-wep a). The higher bulk density is most likely due to the lower soil organic matter content and the higher WEP concentration may be related to the interception of P-rich runoff from upslope areas [@tomer2007]. Understanding and quantifying the sources and patterns of P within riparian areas is a key part of assessing the risk of P loss and designing effective management plans [@reid2018].
 
 The results of this study suggest that short-term autumn high density grazing may be a potential management tool that can reduce the amount of P lost directly from the riparian area (@fig-vegetation-wep a). In addition to managing P loss, grazing riparian areas can also provide an important source of forage, particularly during drought. Mechanized harvesting of biomass will also achieve this reduction in P loss (@fig-vegetation-wep a) if the landscape and soil conditions are favourable. Despite the cycling of nutrients by the removal of P through grazing of biomass (@fig-vegetation-wep) and the deposition through excretion no differences were detected in the litter and Ah sources of P (@fig-litter-wep, and [-@fig-soil-wep]). The ANOVA did detect a significant effect of treatment on the organic layer WEP; however, the pairwise comparisons was not able to detect any significant differences and the exact nature of the impact of the treatments remains unclear. The ability to detect changes in the WEP sources in riparian areas is difficult due to both the inherent and post-grazing treatment spatial variability. Even within the control plots, both net addition and removal of WEP were measured and in many cases the amount of variability was similar across treatments. This inherent variability (i.e., pre-grazing) is a result of a combination of hydrological factors like ground water fluctuations, soil attributes such as texture, ecological dynamics involving plant community composition, and anthropogenic influences like historic land management practices [@mcclain2003; @vidon2010]. Post-grazing treatment, the added urine and manure creates additional hotspots of P that may carry forward to subsequent years [@donohoe2021; @subedi2020]. The single 0.25 $m^2$ sampling quadrate within each riparian zone may have been insufficient to capture the spatial variability. Therefore, larger, composite, and/or several sampling locations within each zone is recommended. Appropriate sampling design becomes more important as the scale of observation of similar research increases to the farm scale so will the amount and source of variability. As the scope of research is expanded to the farm level, the importance of using an appropriate sampling design becomes increasingly critical [@hale2014].
 
@@ -127,7 +169,11 @@ Comparatively less riparian research has occurred in landscapes that experience 
 
 ## Acknowledgements {.unnumbered}
 
-This research was funded through a Brandon University Research Committee grant awarded to AK and a Lake Winnipeg Basin Program grant awarded to the Manitoba Association of Watersheds. Thank you to A. Avila, M. Luna, C Sobchuk, and A. Tan for all the help with lab and field work. Special thanks to the Manitoba Beef and Forage Initiatives research farm staff for the use of their facilities and managing the cattle grazing and mowing treatments. Lastly, thank you to R. Canart and M. Elsinger for helping to develop the experimental design.
+This project was undertaken with the financial support of the Government of Canada through the federal Department of Environment and Climate Change and a Lake Winnipeg Basin Program grant awarded to the Manitoba Association of Watersheds. Additional research funding was provided through a Brandon University Research Committee grant awarded to AK. Thank you to A. Avila, M. Luna, C Sobchuk, and A. Tan for all the help with lab and field work. Special thanks to the Manitoba Beef and Forage Initiatives research farm staff for the use of their facilities and managing the cattle grazing and mowing treatments. Lastly, thank you to R. Canart and M. Elsinger for helping to develop the experimental design.
+
+## Data availability {.unnumbered}
+
+Data and source code for analysis and manuscript available on GitHub: <https://github.com/alex-koiter/riparian-grazing-manuscript>
 
 ## References {.unnumbered}
 
@@ -136,15 +182,14 @@ This research was funded through a Brandon University Research Committee grant a
 
 ## Supplemental materials {.unnumbered}
 
-::: {#supp-weather-plot}
+::: {#suppfig-weather-plot}
 ![](supp-weather-plot-1.png)
 
 Average daily air temperature and cumulative rainfall over the growing season over the three year study. Red bars indicate sampling dates
 :::
 
-::: {#supp-bd-plot}
+::: {#suppfig-bd-plot}
 ![](supp-weights-bd-1.png)
 
 a\) Mass of biomass and litter before grazing and mowing (2019-2021) and b) the bulk density of the organic layer and 10 cm Ah horizon (2023)
 :::
-

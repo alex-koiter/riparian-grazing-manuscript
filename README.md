@@ -1,15 +1,15 @@
 ## Effects of Riparian Grazing on Distinct Phosphorus Sources
 
-Alexander J Koiter^\*1^ and Tamaragh Y Malone^2^
+Alexander J Koiter<sup>*1</sup> and Tamaragh Y Malone<sup>2</sup>
 
-^\*^corresponding author
+<sup>*</sup>corresponding author
 
-^1^Brandon University, Department of Geography & Environment\
+<sup>1</sup>Brandon University, Department of Geography & Environment\
 270 18th St, Brandon, MB Canada, R7A 6A9\
 email: koitera\@brandonu.ca\
 ORCID: 0000-0002-9355-9561
 
-^2^Brandon University, Department of Biology, 270 18th St, Brandon, MB Canada, R7A 6A9\
+<sup>2</sup>Brandon University, Department of Biology, 270 18th St, Brandon, MB Canada, R7A 6A9\
 ORCID: 0009-0002-5887-5574
 
 This manuscript that has been submitted for peer-reviewed at the Journal of Environmental Quality.

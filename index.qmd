@@ -8,7 +8,7 @@ author:
     email: koitera@brandonu.ca
     roles:
       - Principle investigator
-      - Primarary author
+      - Primary author
       - Statistics
       - Visualization
     affiliations:
@@ -23,7 +23,8 @@ author:
     email: malonety35@brandonu.ca
     roles:
       - Research Assistant
-      - Lab analysis
+      - Data collection
+      - Technical and editorial review
     affiliations:
       - name: Brandon University, Department of Biology
         address: 270 18th St
@@ -37,7 +38,7 @@ keywords:
 abstract: |
  Riparian areas play an important role in maintaining water quality in agricultural watersheds by buffering sediment, nutrients, and other pollutants. Additionally, these areas are also an important sources of forage, particularly during drought. Recent studies have shown that riparian areas are less effective buffers and, in some cases, are a net source of phosphorus (P) in cold climates. The repeated freeze-thaw cycles increase the availability of P in both the vegetation and soil sources. Cattle grazing or harvesting of riparian areas prior to the onset of winter conditions may be a viable management practice to reduce the loss of P during the spring snowmelt. This study measured the water-extractable phosphorus (WEP) in four distinctive sources: biomass, litter, organic layer, and Ah horizon. Overall, the Ah (0-10cm) soil was the largest (~44%) source of WEP; however, the biomass (i.e., standing vegetation) was a considerable proportion (~25%) of the total. In addition to control plots, the riparian areas were subjected to grazing, high density grazing, and mowing treatments. Findings revealed significant reductions in biomass WEP with high density grazing and mowing treatments, particularly in lower riparian zones. There were no detectable changes in the other sources of WEP. This suggests that autumn short-term grazing may be a mechanism to use this important forage resource and reduce the potential P loss during the snowmelt period.
 plain-language-summary: |
- Riparian areas are important for keeping water clean in agricultural watersheds because they help filter out sediment, nutrients, and other pollutants. Some recent studies found that in cold climates, like the Canadian Prairies, riparian areas are not as effective at filtering out nutrients. During the spring snowmelt riparian areas can be a source of phosphorus to the water instead of removing it. This happens because the freezing and thawing of the ground and vegetation releases more phosphorus. To see if we can reduce the loss of phosphorus we looked at different sources of phosphorus in riparian areas including plants, dead vegetation, and soil. The top layer of soil was the biggest source of phosphorus, followed by the plants. Two intensities of cattle grazing, along with mowing, were tested as ways of managing the riparain areas. Both cattle grazing and mowing in the fall before winter helped reduce the amount of plant-based phosphorus without increasing the amount of phosphorus in other sources. This shows that letting cows graze in the fall might be a good way to use this forage and also prevent too much phosphorus from getting into the water when the snow melts in the spring.
+ Riparian areas are important for keeping water clean in agricultural watersheds because they help filter out sediment, nutrients, and other pollutants. Some recent studies found that in cold climates, like the Canadian Prairies, riparian areas are not as effective at filtering out nutrients. Because of the freez and thaw of soil and vegetation during the spring snowmelt riparian areas can be a source of phosphorus to the water instead of removing it. To see if we can reduce the loss of phosphorus we looked at different sources of phosphorus in riparian areas including plants, dead vegetation, and soil. Cattle grazing and mowing were tested as ways of managing the riparian areas. Both cattle grazing and mowing reduced the amount of plant-based phosphorus without increasing the other sources. This shows that letting cows graze in the fall might be a good way to use this forage and also prevent too much phosphorus from getting into the water when the snow melts in the spring.
 key-points:
   - Biomass and litter are substantial sources of WEP in riparian areas 
   - Autumn cattle grazing and mowing treatments reduced the amount of WEP in riparian biomass
@@ -51,6 +52,7 @@ citation:
   container-title: TBD
 number-sections: true
 ---
+
 
 **Core ideas**
 
@@ -174,6 +176,12 @@ This project was undertaken with the financial support of the Government of Cana
 ## Data availability {.unnumbered}
 
 Data and source code for analysis and manuscript available on GitHub: <https://github.com/alex-koiter/riparian-grazing-manuscript>
+
+## Conflict of interest statement {.unnumbered}
+The authors have no competing interests to declare that are relevant to the content of this article.
+
+## Author contributions {.unnumbered}
+The authors confirm contribution to the paper as follows: study conception and design: A. Koiter; data collection: T. Malone; analysis and interpretation of results: A. Koiter; draft manuscript preparation: A. Koiter and T. Malone. All authors reviewed the results and approved the final version of the manuscript.
 
 ## References {.unnumbered}
 

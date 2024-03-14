@@ -38,7 +38,7 @@ Sources</article-title>
 
 <email>koitera@brandonu.ca</email>
 <role>Principle investigator</role>
-<role>Primarary author</role>
+<role>Primary author</role>
 <role>Statistics</role>
 <role vocab="https://credit.niso.org" vocab-term="visualization" vocab-term-identifier="https://credit.niso.org/contributor-roles/visualization/">Visualization</role>
 <xref ref-type="aff" rid="aff-1">a</xref>
@@ -54,7 +54,8 @@ Sources</article-title>
 
 <email>malonety35@brandonu.ca</email>
 <role>Research Assistant</role>
-<role>Lab analysis</role>
+<role>Data collection</role>
+<role>Technical and editorial review</role>
 <xref ref-type="aff" rid="aff-2">b</xref>
 </contrib>
 </contrib-group>
@@ -826,6 +827,19 @@ P, phosphorus; WEP, water extractable phosphorus</p>
   <p>Data and source code for analysis and manuscript available on
   GitHub:
   <ext-link ext-link-type="uri" xlink:href="https://github.com/alex-koiter/riparian-grazing-manuscript">https://github.com/alex-koiter/riparian-grazing-manuscript</ext-link></p>
+</sec>
+<sec id="conflict-of-interest-statement">
+  <title>Conflict of interest statement</title>
+  <p>The authors have no competing interests to declare that are
+  relevant to the content of this article.</p>
+</sec>
+<sec id="author-contributions">
+  <title>Author contributions</title>
+  <p>The authors confirm contribution to the paper as follows: study
+  conception and design: A. Koiter; data collection: T. Malone; analysis
+  and interpretation of results: A. Koiter; draft manuscript
+  preparation: A. Koiter and T. Malone. All authors reviewed the results
+  and approved the final version of the manuscript.</p>
 </sec>
 <sec id="references">
   <title>References</title>
@@ -1919,7 +1933,7 @@ Sources</article-title>
 
 <email>koitera@brandonu.ca</email>
 <role>Principle investigator</role>
-<role>Primarary author</role>
+<role>Primary author</role>
 <role>Statistics</role>
 <role vocab="https://credit.niso.org" vocab-term="visualization" vocab-term-identifier="https://credit.niso.org/contributor-roles/visualization/">Visualization</role>
 <xref ref-type="aff" rid="aff-1-nb-article">a</xref>
@@ -1935,7 +1949,8 @@ Sources</article-title>
 
 <email>malonety35@brandonu.ca</email>
 <role>Research Assistant</role>
-<role>Lab analysis</role>
+<role>Data collection</role>
+<role>Technical and editorial review</role>
 <xref ref-type="aff" rid="aff-2-nb-article">b</xref>
 </contrib>
 </contrib-group>
@@ -2790,6 +2805,19 @@ p2
   <p>Data and source code for analysis and manuscript available on
   GitHub:
   <ext-link ext-link-type="uri" xlink:href="https://github.com/alex-koiter/riparian-grazing-manuscript">https://github.com/alex-koiter/riparian-grazing-manuscript</ext-link></p>
+</sec>
+<sec id="conflict-of-interest-statement-nb-article">
+  <title>Conflict of interest statement</title>
+  <p>The authors have no competing interests to declare that are
+  relevant to the content of this article.</p>
+</sec>
+<sec id="author-contributions-nb-article">
+  <title>Author contributions</title>
+  <p>The authors confirm contribution to the paper as follows: study
+  conception and design: A. Koiter; data collection: T. Malone; analysis
+  and interpretation of results: A. Koiter; draft manuscript
+  preparation: A. Koiter and T. Malone. All authors reviewed the results
+  and approved the final version of the manuscript.</p>
 </sec>
 <sec id="references-nb-article">
   <title>References</title>

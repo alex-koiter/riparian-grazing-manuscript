@@ -1,6 +1,7 @@
 ---
 title: Riparian organic and mineral soil WEP in response to grazing
 author: Alex Koiter
+html-table-processing: none
 ---
 
 ## Load Libraries
@@ -9,11 +10,12 @@ library(tidyverse)
 library(glmmTMB)
 library(DHARMa)
 library(emmeans)
+library(gt)
 ```
 
 ## Read in clean data 
 ```{r}
-conc <- read_csv("P_concentration.csv") %>%
+conc <- read_csv(here::here("./notebooks/P_concentration.csv")) %>%
   rename("conc" = "ak_content")
 ```
 
@@ -50,7 +52,6 @@ m7 <- glmmTMB(diff ~ treatment * location + (1|site) + (1|year),
 ```
 
 ```{r}
-#| label: fig-resid1
 simulateResiduals(m7, n = 1000, plot = TRUE)
 ```
 
@@ -71,6 +72,26 @@ Post-hoc
 ```{r}
 m_emms7 <- emmeans(m7, ~treatment)
 pairs(m_emms7, adjust = "fdr")
+
+
+location_pair <- summary(pairs(m_emms7, adjust = "fdr")) 
+
+pairs <- location_pair %>%
+  rename("Contrast" = "contrast", "Estimate" = "estimate", "t ratio" = "t.ratio", "p value" = "p.value")
+
+```
+
+```{r}
+#| label: tbl-organic-posthoc
+#| tbl-cap: Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value adjustment for differences in the net organic layer WEP ($mg~kg^{-1}$) between the four treatments.
+
+pairs |>
+  gt() |>
+  fmt_number(columns = c("Estimate", "SE", "t ratio"), decimal = 2)|>
+  fmt_number(columns = c("p value"), decimal = 3)|>
+  sub_small_vals(threshold = 0.001) |>
+  tab_style(style =  cell_text(weight = "bold", align = "center"), locations =  cells_row_groups()) |>
+  tab_options(column_labels.font.weight = "bold")
 ```
 
 ### Plots
@@ -83,7 +104,7 @@ df <- data.frame(x1 = c(-Inf, -Inf), x2 = c(Inf, Inf), y2 = c(Inf, 0), y1 = c(0,
 Plots
 ```{r}
 #| label: fig-organic-WEP
-#| fig-cap: "Change in riparian organic layer WEP concentration following grazing or mowing in each of the riparian zones. A significant effect of treatment was detected; however, the post-hoc analysis was not able to detect any significant (p < 0.05) pairwise contrasts."
+#| fig-cap: "Change in riparian organic layer WEP concentration following grazing or mowing in each of the riparian locations. A significant effect of treatment was detected; however, the post-hoc analysis was not able to detect any significant (p < 0.05) pairwise contrasts. Lower sampling locations are adjacent to the edge of the waterbody and Upper locations are adjacent to the field."
 #| fig-alt: "Boxplots showing the change in riparian organic layer WEP concentration following grazing or mowing."
 #|  
 p1 <- ggplot(data = organic_diff) +
@@ -124,7 +145,7 @@ car::Anova(m8, type = "III")
 ### plots
 ```{r}
 #| label: fig-soil-WEP
-#| fig-cap: "Change in riparian Ah layer (0-10cm) WEP concentration following grazing or mowing in each of the riparian zones. No significant effect of treatment or zone was detected."
+#| fig-cap: "Change in riparian Ah layer (0-10cm) WEP concentration following grazing or mowing in each of the riparian locations. No significant effect of treatment or location was detected. Lower sampling locations are adjacent to the edge of the waterbody and Upper locations are adjacent to the field."
 #| fig-alt: "Boxplots showing the change in riparian  Ah layer (0-10cm) WEP concentration following grazing or mowing."
 #|  
 p2 <- ggplot(data = soil_diff) +

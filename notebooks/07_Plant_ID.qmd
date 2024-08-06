@@ -1,0 +1,51 @@
+---
+title: "Plant composition"
+author: Alex Koiter
+---
+
+
+## Load Libraries
+```{r}
+library(tidyverse)
+library(readxl)
+library(RColorBrewer)
+```
+
+## Load data
+```{r}
+data <- read_excel(here::here("./notebooks/MBFI EXT 28 Keep Grazing Data 2019.xlsx"), sheet = 1)  %>% 
+  mutate_all(~str_replace(., "<1", "0.1")) %>% 
+  mutate(across(everything(), ~replace_na(.x, "0"))) %>% 
+  mutate(across(`Poa pratensis`: `Phragmites australis`, ~as.numeric(.x))) %>%
+  mutate(Plot = case_when(Plot == "High Density" ~ "High Graze",
+                          Plot == "Low Density" ~ "Regular Graze", 
+                          TRUE ~ Plot)) %>%
+  mutate(`Area in landscape` = case_when(`Area in landscape` == "Upland" ~ "Upper",
+                                         `Area in landscape` == "Midland" ~ "Middle",
+                                         `Area in landscape` == "Lowland" ~ "Lower")) %>%
+  pivot_longer(cols = `Poa pratensis`: `Phragmites australis`, names_to = "Plant", values_to = "Cover (%)") %>%
+  mutate(location = paste(Plot, `Area in landscape`, sep= "-")) %>%
+  mutate(total = sum(`Cover (%)`), .by = "Plant") %>%
+  filter(total > 0) %>%
+  arrange(total) %>%
+  mutate(Plant = factor(Plant, level = unique(Plant)))
+```
+
+```{r}
+
+#| label: fig-cover-plant
+#| fig-cap: "Initial year (2019) cover assessment using the foliar cover method for each plot within the four riparian zones"
+#| fig-alt: "Heat map showing the plant species composition using the foliar cover method (%)."
+#| 
+p1 <- ggplot(data, aes(location, Plant, fill = `Cover (%)`)) + 
+  geom_tile() +
+  theme_bw(base_size = 12) +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1),
+        axis.title = element_blank(),
+        legend.position = "bottom") +
+  scale_fill_distiller(palette = "Greens", direction = 0) +
+  facet_wrap(~Site, ncol = 4, scales = "free_x")
+p1
+#ggsave(plot = p1, filename = "plant_composition.png", width = 300, height = 250, units = "mm", dpi = 600) 
+```
+

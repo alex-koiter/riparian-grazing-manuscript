@@ -12,18 +12,18 @@ library(patchwork)
 
 ## Read in data
 ```{r}
-conc <- read_csv("P_concentration.csv") %>%
+conc <- read_csv(here::here("./notebooks/P_concentration.csv")) %>%
   rename("conc" = "ak_content") %>%
   filter(timing == "Before") %>%
   mutate(sample_type = fct_recode(sample_type, "Ah" = "Soil")) %>%
   mutate(sample_type = fct_relevel(sample_type, c("Ah", "Organic", "Litter","Biomass"))) %>%
   mutate(location = fct_relevel(location, c("Upper", "Middle", "Lower")))
 
-mass_data <- read_csv("mass.csv") %>%
+mass_data <- read_csv(here::here("./notebooks/mass.csv")) %>%
   filter(timing == "Before") %>%
   mutate(sample_type = fct_relevel(sample_type, c("Biomass", "Litter")))
 
-bd_data <- read_csv("bulk density.csv") %>% # Bulk density measurements
+bd_data <- read_csv(here::here("./notebooks/bulk density.csv")) %>% # Bulk density measurements
   mutate(mass = bd * length_cm/100 * 1) %>%
   mutate(sample_type = fct_recode(sample_type, "Organic" = "LFH"))
 ```

@@ -1,6 +1,7 @@
 ---
 title: Riparian vegetation WEP in response to grazing
 author: Alex Koiter
+html-table-processing: none
 ---
 
 ## Load Libraries
@@ -11,12 +12,13 @@ library(DHARMa)
 library(emmeans)
 library(viridis)
 library(patchwork)
+library(gt)
 ```
 
 ## Read in data
 ```{r}
-conc <- read_csv("P_concentration.csv")
-mass_data <- read_csv("mass.csv")
+conc <- read_csv(here::here("./notebooks/P_concentration.csv"))
+mass_data <- read_csv(here::here("./notebooks/mass.csv"))
 ```
 
 
@@ -65,9 +67,31 @@ Post-hoc
 m_emms1 <- emmeans(m, ~treatment)
 m_emms2 <- emmeans(m, ~location)
 
-pairs(m_emms1, adjust = "fdr")
-pairs(m_emms2, adjust = "fdr")
+treat_pair <- summary(pairs(m_emms1, adjust = "fdr")) %>%
+  mutate(type = "Treatment")
+location_pair <- summary(pairs(m_emms2, adjust = "fdr")) %>%
+  mutate(type = "Location")
+
+pairs <- treat_pair %>%
+  bind_rows(location_pair) %>%
+  rename("Contrast" = "contrast", "Estimate" = "estimate", "t ratio" = "t.ratio", "p value" = "p.value")
+
 ```
+
+```{r}
+#| label: tbl-biomass-posthoc
+#| tbl-cap: Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value adjustment for differences in the net biomass WEP ($mg~m^{-2}$) between the four treatments and three riparian sampling locations.
+
+pairs |>
+  group_by(type) |>
+  gt() |>
+  fmt_number(columns = c("Estimate", "SE", "t ratio"), decimal = 2)|>
+  fmt_number(columns = c("p value"), decimal = 3)|>
+  sub_small_vals(threshold = 0.001) |>
+  tab_style(style =  cell_text(weight = "bold", align = "center"), locations =  cells_row_groups()) |>
+  tab_options(column_labels.font.weight = "bold")
+```
+
 
 ### Summary
 
@@ -116,7 +140,7 @@ p1 <- ggplot(data = filter(plot_data, measure == "p_total")) +
   annotate("text", x = "Control", y = 130, label = "a") + 
   annotate("text", x = "Graze", y = 130, label = "a") + 
   annotate("text", x = "High Graze", y = 130, label = "b") + 
-  annotate("text", x = "Mow", y = 130, label = "c") +
+  annotate("text", x = "Mow", y = 130, label = "b") +
   scale_fill_manual(values = c("white", "black"), guide = guide_legend(override.aes = list(colour = "black"))) +
   theme(axis.title.x = element_blank(),
         axis.text.x = element_text(angle = 0, vjust = 1, hjust = 0.5))
@@ -140,7 +164,7 @@ p2
 
 ```{r}
 #| label: fig-vegetation-WEP
-#| fig-cap: "Change in riparian biomass WEP following grazing or mowing in each riparian zone. Within each plot significant differences (p<0.05) between treatments or riparian zones are denoted with different letters."
+#| fig-cap: "Change in riparian biomass WEP following grazing or mowing in each riparian location. Within each plot significant differences (p<0.05) between treatments or riparian locations are denoted with different letters. Lower sampling locations are adjacent to the edge of the waterbody and Upper locations are adjacent to the field."
 #| fig-alt: "Boxplots showing the change in riparian biomass WEP following grazing or mowing."
 #|   
 p3 <- p1 + p2 + plot_layout(guides = 'collect') & theme(legend.position = 'bottom', legend.title = element_blank())

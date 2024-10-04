@@ -124,23 +124,23 @@ Four riparian areas surrounding permanent wetlands were selected (@fig-mapr) and
 
 ### Sampling and analysis
 
-Four types of samples were collected: 1) biomass, 2) litter, 3) organic layer, and 4) Ah horizon. Using a 0.25 $m^2$ quadrate, biomass was collected by cutting the standing live vegetation and litter by raking the surface and picking up the previous years growth. Both the biomass and litter were dried at 40 $^\circ C$, weighed, and homogenized using a blade grinder (\<1cm). A composite of five soil samples was collected within the same quadrate as the biomass/litter using a 19 mm diameter soil probe and was divided into the organic layer and the top 10 cm of the Ah horizon. The organic layer and Ah soil were air-dried, disaggregated with a mortar and pestle, and passed through a 2-mm sieve. Additional bulk density samples of both the organic layer and Ah and the depth of the organic layer were collected in 2023. Daily air temperature and rainfall data were collected from an onsite station (@suppfig-weather-plot) [@manitobaagriculture2023].
+Four types of samples were collected: 1) biomass, 2) litter, 3) organic layer, and 4) Ah horizon. Using a 0.25 $m^2$ quadrate, biomass was collected by cutting the standing live vegetation and litter by raking the surface and picking up the previous years growth. Both the biomass and litter were dried at 40 $^\circ C$, weighed, and homogenized using a blade grinder (\<1cm). A composite of five soil samples was collected within the same quadrat as the biomass/litter using a 19 mm diameter soil probe and was divided into the organic layer and the top 10 cm of the Ah horizon. The organic layer and Ah soil were air-dried, disaggregated with a mortar and pestle, and passed through a 2-mm sieve. Additional bulk density samples of both the organic layer and Ah and the depth of the organic layer were collected in 2023. Daily air temperature and rainfall data were collected from an onsite station (@suppfig-weather-plot) [@manitobaagriculture2023].
 
 Water Extractable Phosphorus (WEP), an environmental soil and vegetation P test, was used to mimic soil P release to runoff water. Dried and homogenized samples were extracted by shaking (150 RPM) with deionized water for one hour at a mass to volume ratio of 1:30 for the biomass and litter samples (1 g) and 1:15 for the organic and Ah samples (2 g). Extractions were gravity filtered through a Whatman 42 filter followed by syringe filtration with a 0.45 $\mu m$ nylon filter. WEP in the extract was measured spectrophotometrically by the colorimetric molybdate--ascorbic acid method [@murphy1962; @sharpley].
 
-The concentration of WEP in the biomass and litter combined with the mass of material collected from the quadrate was used to calculate the total WEP ($mg~kg^{-1}$). Only the change in concentration ($mg~kg^{-1}$) was measured for the organic layer and Ah horizon. The vertical profile of WEP within the riparian area was assessed using samples collected before treatments were implemented across the 3-year study. The total WEP in the organic layer and Ah were estimated using the bulk density and depth measurements collected in 2023 (@fig-vertical-wep b).
+The concentration of WEP in the biomass and litter combined with the mass of material collected from the quadrat was used to calculate the total WEP ($mg~kg^{-1}$). Only the change in concentration ($mg~kg^{-1}$) was measured for the organic layer and Ah horizon. The vertical profile of WEP within the riparian area was assessed using samples collected before treatments were implemented across the 3-year study. The total WEP in the organic layer and Ah were estimated using the bulk density and depth measurements collected in 2023 (@fig-vertical-wep b).
 
 ### Statistical analysis
 
 All statistical analysis, plotting, and mapping was undertaken using the R Statistical Software (v`r paste(R.Version()$major, R.Version()$minor, sep = ".")`; @rcoreteam2024), through the RStudio Integrated Development Environment v2023.12.1.402 [@rstudio2024]. All plots and maps were created using the R package `ggplot2` (v`r packageVersion("ggplot2")`; @wickham2016). Country and regional maps were created using data from the `rnaturalearth` package [@massicotte2023] and other maps using ESRI imagery and the `OpenStreetMap` package [@fellows2023]. Generalized Linear Mixed Models (R package `glmmTMB` v`r packageVersion("glmmTMB")`; @brooks2017) were used to investigate the relation between the change in WEP (before - after treatment) and treatment and riparian sampling location for each of the four sources of WEP. Year and riparian area were included as crossed random factors to control for the variability between years and riparian areas. Additionally, when investigating the change in biomass WEP the WEP prior to the treatment was included as a covariate because the magnitude of the difference (i.e., before - after) is directly related to the amount initially available.
 
-The interaction term was removed if there were no significant interactiona between the main effects (p \<0.5). When a main effect or interaction were significant post-hoc pairwise comparisons with a Benjamini-Hochberg p-value adjustment was used (`emmeans` v`r packageVersion("emmeans")`; @lenth2024). Model assumptions were assessed using DHARMa residual plots (`DHARMa` v`r packageVersion("DHARMa")`; @hartig2022), main effects were tested for collinearity (`performance` v`r packageVersion("performance")`; @ludecke2021), and results were presented as type III ANOVA (`car` v`r packageVersion("car")`; @fox2019). For each unique source of WEP, the null hypotheses are that there is no difference in the net WEP between treatments or riparian sampling locations and there is no interaction between these two factors.
+The interaction term was removed if there were no significant interactions between the main effects (p \<0.5). When a main effect or interaction were significant post-hoc pairwise comparisons with a Benjamini-Hochberg p-value adjustment was used (`emmeans` v`r packageVersion("emmeans")`; @lenth2024). Model assumptions were assessed using DHARMa residual plots (`DHARMa` v`r packageVersion("DHARMa")`; @hartig2022), main effects were tested for collinearity (`performance` v`r packageVersion("performance")`; @ludecke2021), and results were presented as type III ANOVA (`car` v`r packageVersion("car")`; @fox2019). For each unique source of WEP, the null hypotheses are that there is no difference in the net WEP between treatments or riparian sampling locations and there is no interaction between these two factors.
 
 ## Results and Discussion
 
 ### Vertical and longitudinal profiles of P
 
-The four distinctive sources of P demonstrate is strong vertical stratification in both the concentration and total WEP (@fig-vertical-wep). The median concentrations in the vegetation sources were 82.8 and 39.0 $mg~kg^{-1}$ for the biomass and litter components, respectively, which is more than an order of magnitude greater than the soil components (0.9 and 3.4 $mg~kg^{-1}$; Ah and organic, respectively). Considerable variability in the WEP concentration in the biomass and litter sources were observed with interquatile ranges (IQR) of 54.3 and 32.9 $mg~kg^{-1}$ for the biomass and litter sources, respectively. In contrast, the IQR for the organic and Ah sources was \<2.5 $mg~kg^{-1}$. Overall, in terms of the total amount of WEP, the top 10 cm of the Ah horizon is the largest source of WEP (42.5 $mg~m^{-2}$) followed by the biomass (26.3 $mg~m^{-2}$), organic layer (14.3 $mg~m^{-2}$), and lastly the litter (13.7 $mg~m^{-2}$). The vertical profile of WEP in riparian areas (@fig-vertical-wep) observed in this study supports the concept that a soil test P alone is likely missing a large proportion of the near-surface P that can be potentially lost during the spring snowmelt [@cober2019; @liu2019; @liu2019a]. The substantial proportion of WEP above the soil surface provides evidence that managing the biomass in riparian areas in autumn may reduce the contribution of P lost directly from this area during spring. Specifically, the harvesting of this biomass results in an export of P which can maintain or enhance the buffering or storage capacity of P derived from upslope sources further improving downstream water quality [@kelly2007; @hille2019].
+The four distinctive sources of P demonstrate is strong vertical stratification in both the concentration and total WEP (@fig-vertical-wep). The median concentrations in the vegetation sources were 82.8 and 39.0 $mg~kg^{-1}$ for the biomass and litter components, respectively, which is more than an order of magnitude greater than the soil components (0.9 and 3.4 $mg~kg^{-1}$; Ah and organic, respectively). Considerable variability in the WEP concentration in the biomass and litter sources were observed with interquartile ranges (IQR) of 54.3 and 32.9 $mg~kg^{-1}$ for the biomass and litter sources, respectively. In contrast, the IQR for the organic and Ah sources was \<2.5 $mg~kg^{-1}$. Overall, in terms of the total amount of WEP, the top 10 cm of the Ah horizon is the largest source of WEP (42.5 $mg~m^{-2}$) followed by the biomass (26.3 $mg~m^{-2}$), organic layer (14.3 $mg~m^{-2}$), and lastly the litter (13.7 $mg~m^{-2}$). The vertical profile of WEP in riparian areas (@fig-vertical-wep) observed in this study supports the concept that a soil test P alone is likely missing a large proportion of the near-surface P that can be potentially lost during the spring snowmelt [@cober2019; @liu2019; @liu2019a]. The substantial proportion of WEP above the soil surface provides evidence that managing the biomass in riparian areas in autumn may reduce the contribution of P lost directly from this area during spring. Specifically, the harvesting of this biomass results in an export of P which can maintain or enhance the buffering or storage capacity of P derived from upslope sources further improving downstream water quality [@kelly2007; @hille2019].
 
 {{< embed notebooks/04_Vertical_profile.qmd#fig-vertical-WEP >}}
 
@@ -205,6 +205,12 @@ The authors confirm contribution to the paper as follows: study conception and d
 
 ## Supplemental materials {.unnumbered}
 
+::: {#suppfig-workflow-plot}
+![](Workflow.png)
+
+Workflow diagram showing the experimental setup (yellow), field work (green), sample preparation (brown), and laboratory analysis (blue).
+:::
+
 ::: {#suppfig-plant-plot}
 ![](plant_composition.png)
 
@@ -221,4 +227,16 @@ Average daily air temperature and cumulative rainfall over the growing season ov
 ![](supp-weights-bd-1.png)
 
 a\) Mass of biomass and litter before grazing and mowing (2019-2021) and b) the bulk density of the organic layer and 10 cm Ah horizon (2023)
+:::
+
+::: {#suppfig-pairs-plot}
+![](pair_plot.png)
+
+Generalized pairs plot showing the data and relationships between WEP concentration between the different sources of Phosphorus at the lower (purple), middle (blue), and lower (green) topographic positions. Data set only includes samples collected before grazing and mowing treatments were applied. Corr indicates the pearson correlation coefficient. *** p-value < 0.001, ** p-value < 0.01, ** p-value < 0.05.
+:::
+
+::: {#suppfig-pairs-plot}
+![](P_conc_year.png)
+
+Mean and standard deviation WEP concentration for each of the different sources of Phosphorus at each topographic position over the three year period of observations. Data set only includes samples collected before grazing and mowing treatments were applied.
 :::

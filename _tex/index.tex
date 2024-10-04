@@ -78,15 +78,17 @@
 \makesavenoteenv{longtable}
 \usepackage{graphicx}
 \makeatletter
-\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
-\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
-\makeatother
-% Scale images if necessary, so that they will not overflow the page
-% margins by default, and it is still possible to overwrite the defaults
-% using explicit options in \includegraphics[width, height, ...]{}
-\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
 % Set default figure placement to htbp
-\makeatletter
 \def\fps@figure{htbp}
 \makeatother
 % definitions for citeproc citations
@@ -181,9 +183,6 @@
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
 
-\ifLuaTeX
-  \usepackage{selnolig}  % disable illegal ligatures
-\fi
 \usepackage{bookmark}
 
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
@@ -446,7 +445,7 @@ investigated in this study were adjacent to actively grazed pastures.
 
 \centering{
 
-\includegraphics{index_files/figure-latex/notebooks-05_Map-fig-mapr-output-2.png}
+\pandocbounded{\includegraphics[keepaspectratio]{index_files/figure-latex/notebooks-05_Map-fig-mapr-output-2.png}}
 
 }
 
@@ -492,7 +491,7 @@ collected by cutting the standing live vegetation and litter by raking
 the surface and picking up the previous years growth. Both the biomass
 and litter were dried at 40 \(^\circ C\), weighed, and homogenized using
 a blade grinder (\textless1cm). A composite of five soil samples was
-collected within the same quadrate as the biomass/litter using a 19 mm
+collected within the same quadrat as the biomass/litter using a 19 mm
 diameter soil probe and was divided into the organic layer and the top
 10 cm of the Ah horizon. The organic layer and Ah soil were air-dried,
 disaggregated with a mortar and pestle, and passed through a 2-mm sieve.
@@ -513,7 +512,7 @@ molybdate--ascorbic acid method (Murphy and Riley, 1962; Sharpley et
 al., 2006).
 
 The concentration of WEP in the biomass and litter combined with the
-mass of material collected from the quadrate was used to calculate the
+mass of material collected from the quadrat was used to calculate the
 total WEP (\(mg~kg^{-1}\)). Only the change in concentration
 (\(mg~kg^{-1}\)) was measured for the organic layer and Ah horizon. The
 vertical profile of WEP within the riparian area was assessed using
@@ -543,7 +542,7 @@ the difference (i.e., before - after) is directly related to the amount
 initially available.
 
 The interaction term was removed if there were no significant
-interactiona between the main effects (p \textless0.5). When a main
+interactions between the main effects (p \textless0.5). When a main
 effect or interaction were significant post-hoc pairwise comparisons
 with a Benjamini-Hochberg p-value adjustment was used (\texttt{emmeans}
 v1.10.1; Lenth (2024)). Model assumptions were assessed using DHARMa
@@ -568,7 +567,7 @@ litter components, respectively, which is more than an order of
 magnitude greater than the soil components (0.9 and 3.4 \(mg~kg^{-1}\);
 Ah and organic, respectively). Considerable variability in the WEP
 concentration in the biomass and litter sources were observed with
-interquatile ranges (IQR) of 54.3 and 32.9 \(mg~kg^{-1}\) for the
+interquartile ranges (IQR) of 54.3 and 32.9 \(mg~kg^{-1}\) for the
 biomass and litter sources, respectively. In contrast, the IQR for the
 organic and Ah sources was \textless2.5 \(mg~kg^{-1}\). Overall, in
 terms of the total amount of WEP, the top 10 cm of the Ah horizon is the
@@ -591,7 +590,7 @@ derived from upslope sources further improving downstream water quality
 
 \centering{
 
-\includegraphics{index_files/figure-latex/notebooks-04_Vertical_profile-fig-vertical-wep-output-2.png}
+\pandocbounded{\includegraphics[keepaspectratio]{index_files/figure-latex/notebooks-04_Vertical_profile-fig-vertical-wep-output-2.png}}
 
 }
 
@@ -656,7 +655,7 @@ and upper locations of the riparian area.
 
 \centering{
 
-\includegraphics{index_files/figure-latex/notebooks-01_Biomass_analysis-fig-vegetation-wep-output-2.png}
+\pandocbounded{\includegraphics[keepaspectratio]{index_files/figure-latex/notebooks-01_Biomass_analysis-fig-vegetation-wep-output-2.png}}
 
 }
 
@@ -731,7 +730,7 @@ gains were measured despite no treatment being applied.
 
 \centering{
 
-\includegraphics{index_files/figure-latex/notebooks-02_Litter_analysis-fig-litter-wep-output-2.png}
+\pandocbounded{\includegraphics[keepaspectratio]{index_files/figure-latex/notebooks-02_Litter_analysis-fig-litter-wep-output-2.png}}
 
 }
 
@@ -751,7 +750,7 @@ litter WEP in response to grazing}}
 
 \centering{
 
-\includegraphics{index_files/figure-latex/notebooks-03_Soils_analysis-fig-organic-wep-output-1.png}
+\pandocbounded{\includegraphics[keepaspectratio]{index_files/figure-latex/notebooks-03_Soils_analysis-fig-organic-wep-output-1.png}}
 
 }
 
@@ -800,7 +799,7 @@ organic and mineral soil WEP in response to grazing}}
 
 \centering{
 
-\includegraphics{index_files/figure-latex/notebooks-03_Soils_analysis-fig-soil-wep-output-1.png}
+\pandocbounded{\includegraphics[keepaspectratio]{index_files/figure-latex/notebooks-03_Soils_analysis-fig-soil-wep-output-1.png}}
 
 }
 
@@ -1352,7 +1351,21 @@ review. Ecological Engineering 126: 25--36. doi:
 
 \centering{
 
-\includegraphics{plant_composition.png}
+\pandocbounded{\includegraphics[keepaspectratio]{Workflow.png}}
+
+}
+
+\caption{\label{suppfig-workflow-plot}Workflow diagram showing the
+experimental setup (yellow), field work (green), sample preparation
+(brown), and laboratory analysis (blue).}
+
+\end{suppfig}%
+
+\begin{suppfig}
+
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{plant_composition.png}}
 
 }
 
@@ -1366,7 +1379,7 @@ locations}
 
 \centering{
 
-\includegraphics{supp-weather-plot-1.png}
+\pandocbounded{\includegraphics[keepaspectratio]{supp-weather-plot-1.png}}
 
 }
 
@@ -1380,13 +1393,47 @@ Red bars indicate sampling dates}
 
 \centering{
 
-\includegraphics{supp-weights-bd-1.png}
+\pandocbounded{\includegraphics[keepaspectratio]{supp-weights-bd-1.png}}
 
 }
 
 \caption{\label{suppfig-bd-plot}a) Mass of biomass and litter before
 grazing and mowing (2019-2021) and b) the bulk density of the organic
 layer and 10 cm Ah horizon (2023)}
+
+\end{suppfig}%
+
+\begin{suppfig}
+
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{pair_plot.png}}
+
+}
+
+\caption{\label{suppfig-pairs-plot}Generalized pairs plot showing the
+data and relationships between WEP concentration between the different
+sources of Phosphorus at the lower (purple), middle (blue), and lower
+(green) topographic positions. Data set only includes samples collected
+before grazing and mowing treatments were applied. Corr indicates the
+pearson correlation coefficient. *** p-value \textless{} 0.001, **
+p-value \textless{} 0.01, ** p-value \textless{} 0.05.}
+
+\end{suppfig}%
+
+\begin{suppfig}
+
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{P_conc_year.png}}
+
+}
+
+\caption{\label{suppfig-pairs-plot}Mean and standard deviation WEP
+concentration for each of the different sources of Phosphorus at each
+topographic position over the three year period of observations. Data
+set only includes samples collected before grazing and mowing treatments
+were applied.}
 
 \end{suppfig}%
 

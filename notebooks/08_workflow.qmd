@@ -1,0 +1,76 @@
+---
+title: Workflow
+author: Alex Koiter
+html-table-processing: none
+prefer-html: true
+---
+  
+
+```{r}
+library(DiagrammeR)
+```
+
+
+```{r}
+workflow <- grViz("digraph boxes_and_circles {
+
+  compound=true;
+
+  # a 'graph' statement
+  graph [overlap = true, fontsize = 10]
+
+  # several 'node' statements
+  node [shape = rectangle,
+        fixedsize = false, style=filled, fillcolor=white]
+        
+  # Helpers
+  riparian_area [label = 'Select 4 riparian areas' fillcolor = 'khaki1']
+  plots [label = 'Subdivide each into 4 equal sized plots' fillcolor = 'khaki1']
+  location [label = 'Indentify sampling zones\n (Upper, Middle, Lower)' fillcolor = 'khaki1']
+  assign_treatment [label = 'Randomly assign treatment\n (Control, Graze, High-graze, Mow)' fillcolor = 'khaki1'] 
+  pre_treatment [label = 'Pre-treatment sampling' fillcolor = '#5C945C']
+  treatment [label = 'Apply treatments' fillcolor = '#5C945C']
+  post_treatment [label = 'Post-treatment sampling' fillcolor = '#5C945C']
+  biomass [label = 'Biomass \n(Living vegetation)' fillcolor = '#5C945C']
+  litter [label = 'Litter \n(Dead vegetation)' fillcolor = '#5C945C']
+  org [label = 'Organic layer \n(Humus)' fillcolor = '#5C945C']
+  ah [label = 'Ah horizon \n(0-10cm)' fillcolor = '#5C945C']
+  quadrat [label = '0.5 x 0.5m quadrat' fillcolor = '#5C945C']
+  probe [label = 'Soil probe \n(Composite of 5 cores)' fillcolor = '#5C945C']
+  veg_prep [label = 'Dried, weighed, and homogenized' fillcolor = '#8F784F']
+  soil_prep [label = 'Dried, disaggregated, and sieved (2mm)' fillcolor = '#8F784F']
+  wep_soil [label = 'Water Extraction \n(1:15)' fillcolor = '#5C8194']
+  wep_veg [label = 'Water Extraction \n(1:30)' fillcolor = '#5C8194']
+  filter_1 [label = 'Gravity filtration \n(Whatman 42 filter)' fillcolor = '#5C8194']
+  filter_2 [label = 'Syringe filtration \n(0.45um filter)' fillcolor = '#5C8194']
+  wep [label = 'Colorimetric analysis \n(molybdate-ascorbic acid)' fillcolor = '#5C8194']
+  
+
+  # several 'edge' statements
+  edge []
+  
+  riparian_area->plots->location -> assign_treatment->pre_treatment->treatment->post_treatment
+  quadrat -> biomass -> veg_prep
+  quadrat -> litter  -> veg_prep
+  probe -> org -> soil_prep
+  probe -> ah-> soil_prep
+  soil_prep-> wep_soil -> filter_1
+  veg_prep-> wep_veg ->  filter_1
+  filter_1 -> filter_2 -> wep
+  post_treatment -> quadrat
+  pre_treatment -> quadrat
+  post_treatment -> probe
+  pre_treatment -> probe
+}")
+#workflow
+```
+
+```{r}
+# library(DiagrammeRsvg)
+# workflow %>%
+#   export_svg() |>
+#   charToRaw() |>
+#   #rsvg::rsvg_pdf("Workflow.pdf") |>
+#   rsvg::rsvg_png("Workflow.png")
+```
+

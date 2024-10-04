@@ -1,0 +1,163 @@
+---
+title: Correlation
+author: Alex Koiter
+html-table-processing: none
+---
+  
+## Load Libraries
+```{r}
+library(tidyverse)
+library(patchwork)
+library(GGally)
+```
+
+## Read in data
+```{r}
+conc <- read_csv(here::here("./notebooks/P_concentration.csv"))
+mass_data <- read_csv(here::here("./notebooks/mass.csv"))
+```
+
+## Merge data
+```{r}
+veg_data <- mass_data %>%
+  right_join(conc) %>%
+  rename(conc = ak_content) %>% # mg/kg
+  mutate(p_total = conc * dryweight/1000 /0.25) %>% # mg/m2
+  filter(timing == "Before",
+         sample_type != "Soil")
+```
+
+```{r}
+soil_data <- conc %>%
+  filter(timing == "Before",
+         sample_type == "Soil") %>%
+  rename(soil_conc = ak_content) %>%
+  select(site, timing, plot,  location, year, treatment, soil_conc) 
+
+## Join
+corr_data <- soil_data %>%
+  right_join(veg_data) 
+
+corr_data %>%
+  group_by(sample_type) %>%
+  summarise(corr = cor(conc, soil_conc, use = "complete.obs"))
+
+cor.test(~ conc + soil_conc, data = filter(corr_data, sample_type == "Biomass"))
+cor.test(~ conc + soil_conc, data = filter(corr_data, sample_type == "Litter"))
+cor.test(~ conc + soil_conc, data = filter(corr_data, sample_type == "Organic"))
+
+cor.test(~ dryweight + soil_conc, data = filter(corr_data, sample_type == "Biomass"))
+cor.test(~ dryweight + soil_conc, data = filter(corr_data, sample_type == "Litter"))
+
+filter(corr_data, soil_conc >4)
+```
+
+```{r}
+p1 <- ggplot(data = filter(corr_data, sample_type == "Biomass"), aes(x = soil_conc, y = conc, colour = location,)) +
+  geom_point() +
+  theme_bw(base_size = 12) +
+  labs(colour = "Topograhic Position", y = expression(paste("Biomass WEP Concentration (", mg~kg^{-1}, ")")), x = bquote('Ah (0-10cm) WEP Concentration ('*mg~kg^{-1}*')')) +
+  scale_y_continuous(limits = c(0,300), breaks = seq(0,300,50), expand = c(0,0)) +
+  scale_x_continuous(limits = c(0,5.5), expand = c(0,0)) +
+  scale_colour_manual(values = c("#35608DFF", "#2FB47CFF", "#FDE725FF")) +
+  facet_wrap(~sample_type, scales = "free")
+
+p2 <- ggplot(data = filter(corr_data, sample_type == "Litter"), aes(x = soil_conc, y = conc, colour = location,)) +
+  geom_point() +
+  theme_bw(base_size = 12) +
+  labs(colour = "Topograhic Position", y = expression(paste("Litter WEP Concentration (", mg~kg^{-1}, ")")), x = bquote('Ah (0-10cm) WEP Concentration ('*mg~kg^{-1}*')')) +
+  scale_y_continuous(limits = c(0,150), breaks = seq(0,150,25), expand = c(0,0)) +
+  scale_x_continuous(limits = c(0,5.5), expand = c(0,0)) +
+  scale_colour_manual(values = c("#35608DFF", "#2FB47CFF", "#FDE725FF")) +
+  facet_wrap(~sample_type, scales = "free")
+
+p3 <- ggplot(data = filter(corr_data, sample_type == "Organic"), aes(x = soil_conc, y = conc, colour = location,)) +
+  geom_point() +
+  theme_bw(base_size = 12) +
+  labs(colour = "Topograhic Position", y = expression(paste("Organic WEP Concentration (", mg~kg^{-1}, ")")), x = bquote('Ah (0-10cm) WEP Concentration ('*mg~kg^{-1}*')')) +
+  scale_y_continuous(limits = c(0,20), breaks = seq(0,20,5), expand = c(0,0)) +
+  scale_x_continuous(limits = c(0,5.5), expand = c(0,0)) +
+  scale_colour_manual(values = c("#35608DFF", "#2FB47CFF", "#FDE725FF")) +
+  facet_wrap(~sample_type, scales = "free")
+
+p1 + p2 + p3 + plot_layout(axis_titles = "collect", guides = 'collect') & theme(legend.position = "top")
+
+```
+
+ 
+```{r}
+p4 <- ggplot(data = filter(corr_data, sample_type == "Biomass"), aes(x = soil_conc, y = dryweight, colour = location,)) +
+  geom_point() +
+  theme_bw(base_size = 12) +
+  labs(colour = "Topograhic Position", y = expression(paste("Biomass WEP Concentration (", mg~kg^{-1}, ")")), x = bquote('Ah (0-10cm) WEP Concentration ('*mg~kg^{-1}*')')) +
+  scale_y_continuous(limits = c(0,250), breaks = seq(0,250,50), expand = c(0,0)) +
+  scale_x_continuous(limits = c(0,5.5), expand = c(0,0)) +
+  scale_colour_manual(values = c("#35608DFF", "#2FB47CFF", "#FDE725FF")) +
+  facet_wrap(~sample_type, scales = "free")
+
+p5 <- ggplot(data = filter(corr_data, sample_type == "Litter"), aes(x = soil_conc, y = dryweight, colour = location,)) +
+  geom_point() +
+  theme_bw(base_size = 12) +
+  labs(colour = "Topograhic Position", y = expression(paste("Litter WEP Concentration (", mg~kg^{-1}, ")")), x = bquote('Ah (0-10cm) WEP Concentration ('*mg~kg^{-1}*')')) +
+  scale_y_continuous(limits = c(0,350), breaks = seq(0,350,100), expand = c(0,0)) +
+  scale_x_continuous(limits = c(0,5.5), expand = c(0,0)) +
+  scale_colour_manual(values = c("#35608DFF", "#2FB47CFF", "#FDE725FF")) +
+  facet_wrap(~sample_type, scales = "free")
+
+p6 <- p4 + p5 + plot_layout(axis_titles = "collect", guides = 'collect') & theme(legend.position = "top")
+p6
+```
+
+```{r}
+
+veg_data2 <- mass_data %>%
+  right_join(conc) %>%
+  rename(conc = ak_content) %>% # mg/kg
+  mutate(p_total = conc * dryweight/1000 /0.25) %>% # mg/m2
+  filter(timing == "Before") %>%
+  group_by(year, treatment, location, sample_type) %>%
+  summarise(mean_total = mean(p_total, na.rm = T),
+            sd_total = sd(p_total, na.rm = T),
+            mean_conc = mean(conc, na.rm = T),
+            sd_conc = sd(conc, na.rm = T)) %>%
+  ungroup() %>%
+  mutate(treatment = fct_recode(treatment, "Graze" = "Regular Graze")) %>%
+  mutate(treatment = fct_relevel(treatment, "Control", "Graze", "High Graze", "Mow"))
+
+year_plot <- ggplot(data = veg_data2, aes(y = mean_conc, x = year, colour = treatment)) +
+  geom_point(position=position_dodge(width = 0.2)) +
+  geom_line(position=position_dodge(width = 0.2)) +
+  geom_errorbar(aes(ymin = mean_conc - sd_conc, ymax = mean_conc + sd_conc), width = 0.1, position=position_dodge(width = 0.2)) +
+  theme_bw(base_size = 12) +
+  scale_x_continuous(breaks = c(2019, 2020, 2021)) +
+  labs(x = "Year", y = bquote('WEP Concentration ('*mg~kg^{-1}*')')) + 
+  scale_colour_manual(values = c("#440154", "#3b528b", "#21918c", "#5ec962")) +
+  theme(legend.title = element_blank(),
+        legend.position = "bottom") +
+  facet_grid(sample_type~location, scales = "free_y")
+year_plot
+#ggsave(plot = year_plot, filename = "P_conc_year.png", width = 174+50, height = 100+50, units = "mm", dpi = 600) 
+```
+
+
+```{r}
+p_data3 <- mass_data %>%
+  right_join(conc) %>%
+  rename(conc = ak_content) %>% # mg/kg
+  mutate(p_total = conc * dryweight/1000 /0.25) %>% # mg/m2
+  filter(timing == "Before") %>%
+  select(-p_total, - dryweight) %>%
+  pivot_wider(names_from = sample_type, values_from = conc) %>%
+  mutate(year = factor(year)) %>%
+  rename("Location" = "location")
+
+pair_plot <- ggpairs(select(p_data3, Biomass, Litter, Organic, Soil, Location), aes(colour = Location)) +
+  scale_colour_manual(values = c("#440154", "#35608DFF", "#2FB47CFF")) +
+  scale_fill_manual(values = c("#440154", "#35608DFF", "#2FB47CFF")) +
+  labs(x = bquote('WEP Concentration ('*mg~kg^{-1}*')            '), y = bquote('WEP Concentration ('*mg~kg^{-1}*')            ')) +
+  theme_bw(base_size = 12)
+pair_plot
+#ggsave(plot = pair_plot, filename = "pair_plot.png", width = 250, height = 250, units = "mm", dpi = 600) 
+```
+ 
+ 

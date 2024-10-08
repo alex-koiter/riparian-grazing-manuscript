@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
     <meta charset="utf-8">
-    <meta name="generator" content="quarto-1.6.20">
+    <meta name="generator" content="quarto-1.6.24">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -156,7 +156,7 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-018089954d508eae8a473f0b7f0491f0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-f9d477f1d62ddffd2fa441715a11aa79.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-7a6c7608d79196830f248dfc2336d5b1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -407,36 +407,37 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 
 <div class="cell-container"><div class="cell-decorator"><pre>In [9]:</pre></div><div><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>pairs <span class="sc">|&gt;</span></span>
-<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(type) <span class="sc">|&gt;</span></span>
-<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">|&gt;</span></span>
-<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fmt_number</span>(<span class="at">columns =</span> <span class="fu">c</span>(<span class="st">"Estimate"</span>, <span class="st">"SE"</span>, <span class="st">"t ratio"</span>), <span class="at">decimal =</span> <span class="dv">2</span>)<span class="sc">|&gt;</span></span>
-<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fmt_number</span>(<span class="at">columns =</span> <span class="fu">c</span>(<span class="st">"p value"</span>), <span class="at">decimal =</span> <span class="dv">3</span>)<span class="sc">|&gt;</span></span>
-<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sub_small_vals</span>(<span class="at">threshold =</span> <span class="fl">0.001</span>) <span class="sc">|&gt;</span></span>
-<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_style</span>(<span class="at">style =</span>  <span class="fu">cell_text</span>(<span class="at">weight =</span> <span class="st">"bold"</span>, <span class="at">align =</span> <span class="st">"center"</span>), <span class="at">locations =</span>  <span class="fu">cells_row_groups</span>()) <span class="sc">|&gt;</span></span>
-<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_options</span>(<span class="at">column_labels.font.weight =</span> <span class="st">"bold"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div><div id="tbl-biomass-posthoc" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Contrast =</span> <span class="fu">fct_recode</span>(Contrast, <span class="st">"Control - Graze"</span> <span class="ot">=</span> <span class="st">"Control - Regular Graze"</span>, <span class="st">"High Graze - Graze"</span> <span class="ot">=</span> <span class="st">"High Graze - Regular Graze"</span>, <span class="st">"Mow - Graze"</span> <span class="ot">=</span> <span class="st">"Mow - Regular Graze"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(type) <span class="sc">|&gt;</span></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">|&gt;</span></span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fmt_number</span>(<span class="at">columns =</span> <span class="fu">c</span>(<span class="st">"Estimate"</span>, <span class="st">"SE"</span>, <span class="st">"t ratio"</span>), <span class="at">decimal =</span> <span class="dv">2</span>)<span class="sc">|&gt;</span></span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fmt_number</span>(<span class="at">columns =</span> <span class="fu">c</span>(<span class="st">"p value"</span>), <span class="at">decimal =</span> <span class="dv">3</span>)<span class="sc">|&gt;</span></span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sub_small_vals</span>(<span class="at">threshold =</span> <span class="fl">0.001</span>) <span class="sc">|&gt;</span></span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_style</span>(<span class="at">style =</span>  <span class="fu">cell_text</span>(<span class="at">weight =</span> <span class="st">"bold"</span>, <span class="at">align =</span> <span class="st">"center"</span>), <span class="at">locations =</span>  <span class="fu">cells_row_groups</span>()) <span class="sc">|&gt;</span></span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_options</span>(<span class="at">column_labels.font.weight =</span> <span class="st">"bold"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div><div id="tbl-biomass-posthoc" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-biomass-posthoc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value adjustment for differences in the net biomass WEP (<span class="math inline">\(mg~m^{-2}\)</span>) between the four treatments and three riparian sampling locations.
 </figcaption>
 <div aria-describedby="tbl-biomass-posthoc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="mkwhgfjlqv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#mkwhgfjlqv table {
+<div id="ehfvfbnkum" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ehfvfbnkum table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#mkwhgfjlqv thead, #mkwhgfjlqv tbody, #mkwhgfjlqv tfoot, #mkwhgfjlqv tr, #mkwhgfjlqv td, #mkwhgfjlqv th {
+#ehfvfbnkum thead, #ehfvfbnkum tbody, #ehfvfbnkum tfoot, #ehfvfbnkum tr, #ehfvfbnkum td, #ehfvfbnkum th {
   border-style: none;
 }
 
-#mkwhgfjlqv p {
+#ehfvfbnkum p {
   margin: 0;
   padding: 0;
 }
 
-#mkwhgfjlqv .gt_table {
+#ehfvfbnkum .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -462,12 +463,12 @@ Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value a
   border-left-color: #D3D3D3;
 }
 
-#mkwhgfjlqv .gt_caption {
+#ehfvfbnkum .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#mkwhgfjlqv .gt_title {
+#ehfvfbnkum .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -479,7 +480,7 @@ Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value a
   border-bottom-width: 0;
 }
 
-#mkwhgfjlqv .gt_subtitle {
+#ehfvfbnkum .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -491,7 +492,7 @@ Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value a
   border-top-width: 0;
 }
 
-#mkwhgfjlqv .gt_heading {
+#ehfvfbnkum .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -503,13 +504,13 @@ Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value a
   border-right-color: #D3D3D3;
 }
 
-#mkwhgfjlqv .gt_bottom_border {
+#ehfvfbnkum .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#mkwhgfjlqv .gt_col_headings {
+#ehfvfbnkum .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -524,7 +525,7 @@ Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value a
   border-right-color: #D3D3D3;
 }
 
-#mkwhgfjlqv .gt_col_heading {
+#ehfvfbnkum .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -544,7 +545,7 @@ Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value a
   overflow-x: hidden;
 }
 
-#mkwhgfjlqv .gt_column_spanner_outer {
+#ehfvfbnkum .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -556,15 +557,15 @@ Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value a
   padding-right: 4px;
 }
 
-#mkwhgfjlqv .gt_column_spanner_outer:first-child {
+#ehfvfbnkum .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#mkwhgfjlqv .gt_column_spanner_outer:last-child {
+#ehfvfbnkum .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#mkwhgfjlqv .gt_column_spanner {
+#ehfvfbnkum .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -576,11 +577,11 @@ Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value a
   width: 100%;
 }
 
-#mkwhgfjlqv .gt_spanner_row {
+#ehfvfbnkum .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#mkwhgfjlqv .gt_group_heading {
+#ehfvfbnkum .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -606,7 +607,7 @@ Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value a
   text-align: left;
 }
 
-#mkwhgfjlqv .gt_empty_group_heading {
+#ehfvfbnkum .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -621,15 +622,15 @@ Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value a
   vertical-align: middle;
 }
 
-#mkwhgfjlqv .gt_from_md > :first-child {
+#ehfvfbnkum .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#mkwhgfjlqv .gt_from_md > :last-child {
+#ehfvfbnkum .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#mkwhgfjlqv .gt_row {
+#ehfvfbnkum .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -648,7 +649,7 @@ Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value a
   overflow-x: hidden;
 }
 
-#mkwhgfjlqv .gt_stub {
+#ehfvfbnkum .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -661,7 +662,7 @@ Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value a
   padding-right: 5px;
 }
 
-#mkwhgfjlqv .gt_stub_row_group {
+#ehfvfbnkum .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -675,15 +676,15 @@ Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value a
   vertical-align: top;
 }
 
-#mkwhgfjlqv .gt_row_group_first td {
+#ehfvfbnkum .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#mkwhgfjlqv .gt_row_group_first th {
+#ehfvfbnkum .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#mkwhgfjlqv .gt_summary_row {
+#ehfvfbnkum .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -693,16 +694,16 @@ Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value a
   padding-right: 5px;
 }
 
-#mkwhgfjlqv .gt_first_summary_row {
+#ehfvfbnkum .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#mkwhgfjlqv .gt_first_summary_row.thick {
+#ehfvfbnkum .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#mkwhgfjlqv .gt_last_summary_row {
+#ehfvfbnkum .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -712,7 +713,7 @@ Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value a
   border-bottom-color: #D3D3D3;
 }
 
-#mkwhgfjlqv .gt_grand_summary_row {
+#ehfvfbnkum .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -722,7 +723,7 @@ Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value a
   padding-right: 5px;
 }
 
-#mkwhgfjlqv .gt_first_grand_summary_row {
+#ehfvfbnkum .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -732,7 +733,7 @@ Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value a
   border-top-color: #D3D3D3;
 }
 
-#mkwhgfjlqv .gt_last_grand_summary_row_top {
+#ehfvfbnkum .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -742,11 +743,11 @@ Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value a
   border-bottom-color: #D3D3D3;
 }
 
-#mkwhgfjlqv .gt_striped {
+#ehfvfbnkum .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#mkwhgfjlqv .gt_table_body {
+#ehfvfbnkum .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -755,7 +756,7 @@ Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value a
   border-bottom-color: #D3D3D3;
 }
 
-#mkwhgfjlqv .gt_footnotes {
+#ehfvfbnkum .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -769,7 +770,7 @@ Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value a
   border-right-color: #D3D3D3;
 }
 
-#mkwhgfjlqv .gt_footnote {
+#ehfvfbnkum .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -778,7 +779,7 @@ Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value a
   padding-right: 5px;
 }
 
-#mkwhgfjlqv .gt_sourcenotes {
+#ehfvfbnkum .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -792,7 +793,7 @@ Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value a
   border-right-color: #D3D3D3;
 }
 
-#mkwhgfjlqv .gt_sourcenote {
+#ehfvfbnkum .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -800,70 +801,70 @@ Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value a
   padding-right: 5px;
 }
 
-#mkwhgfjlqv .gt_left {
+#ehfvfbnkum .gt_left {
   text-align: left;
 }
 
-#mkwhgfjlqv .gt_center {
+#ehfvfbnkum .gt_center {
   text-align: center;
 }
 
-#mkwhgfjlqv .gt_right {
+#ehfvfbnkum .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#mkwhgfjlqv .gt_font_normal {
+#ehfvfbnkum .gt_font_normal {
   font-weight: normal;
 }
 
-#mkwhgfjlqv .gt_font_bold {
+#ehfvfbnkum .gt_font_bold {
   font-weight: bold;
 }
 
-#mkwhgfjlqv .gt_font_italic {
+#ehfvfbnkum .gt_font_italic {
   font-style: italic;
 }
 
-#mkwhgfjlqv .gt_super {
+#ehfvfbnkum .gt_super {
   font-size: 65%;
 }
 
-#mkwhgfjlqv .gt_footnote_marks {
+#ehfvfbnkum .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#mkwhgfjlqv .gt_asterisk {
+#ehfvfbnkum .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#mkwhgfjlqv .gt_indent_1 {
+#ehfvfbnkum .gt_indent_1 {
   text-indent: 5px;
 }
 
-#mkwhgfjlqv .gt_indent_2 {
+#ehfvfbnkum .gt_indent_2 {
   text-indent: 10px;
 }
 
-#mkwhgfjlqv .gt_indent_3 {
+#ehfvfbnkum .gt_indent_3 {
   text-indent: 15px;
 }
 
-#mkwhgfjlqv .gt_indent_4 {
+#ehfvfbnkum .gt_indent_4 {
   text-indent: 20px;
 }
 
-#mkwhgfjlqv .gt_indent_5 {
+#ehfvfbnkum .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
 <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
   <thead>
     <tr class="gt_col_headings">
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="Contrast">Contrast</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="Contrast">Contrast</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Estimate">Estimate</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="SE">SE</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="df">df</th>
@@ -875,37 +876,37 @@ Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value a
     <tr class="gt_group_heading_row">
       <th colspan="6" class="gt_group_heading" style="text-align: center; font-weight: bold;" scope="colgroup" id="Treatment">Treatment</th>
     </tr>
-    <tr class="gt_row_group_first"><td headers="Treatment  Contrast" class="gt_row gt_left">Control - High Graze</td>
+    <tr class="gt_row_group_first"><td headers="Treatment  Contrast" class="gt_row gt_center">Control - High Graze</td>
 <td headers="Treatment  Estimate" class="gt_row gt_right">−4.83</td>
 <td headers="Treatment  SE" class="gt_row gt_right">2.42</td>
 <td headers="Treatment  df" class="gt_row gt_right">132</td>
 <td headers="Treatment  t ratio" class="gt_row gt_right">−2.00</td>
 <td headers="Treatment  p value" class="gt_row gt_right">0.072</td></tr>
-    <tr><td headers="Treatment  Contrast" class="gt_row gt_left">Control - Mow</td>
+    <tr><td headers="Treatment  Contrast" class="gt_row gt_center">Control - Mow</td>
 <td headers="Treatment  Estimate" class="gt_row gt_right">−8.52</td>
 <td headers="Treatment  SE" class="gt_row gt_right">2.42</td>
 <td headers="Treatment  df" class="gt_row gt_right">132</td>
 <td headers="Treatment  t ratio" class="gt_row gt_right">−3.52</td>
 <td headers="Treatment  p value" class="gt_row gt_right">0.002</td></tr>
-    <tr><td headers="Treatment  Contrast" class="gt_row gt_left">Control - Regular Graze</td>
+    <tr><td headers="Treatment  Contrast" class="gt_row gt_center">Control - Graze</td>
 <td headers="Treatment  Estimate" class="gt_row gt_right">2.47</td>
 <td headers="Treatment  SE" class="gt_row gt_right">2.40</td>
 <td headers="Treatment  df" class="gt_row gt_right">132</td>
 <td headers="Treatment  t ratio" class="gt_row gt_right">1.03</td>
 <td headers="Treatment  p value" class="gt_row gt_right">0.306</td></tr>
-    <tr><td headers="Treatment  Contrast" class="gt_row gt_left">High Graze - Mow</td>
+    <tr><td headers="Treatment  Contrast" class="gt_row gt_center">High Graze - Mow</td>
 <td headers="Treatment  Estimate" class="gt_row gt_right">−3.69</td>
 <td headers="Treatment  SE" class="gt_row gt_right">2.43</td>
 <td headers="Treatment  df" class="gt_row gt_right">132</td>
 <td headers="Treatment  t ratio" class="gt_row gt_right">−1.51</td>
 <td headers="Treatment  p value" class="gt_row gt_right">0.159</td></tr>
-    <tr><td headers="Treatment  Contrast" class="gt_row gt_left">High Graze - Regular Graze</td>
+    <tr><td headers="Treatment  Contrast" class="gt_row gt_center">High Graze - Graze</td>
 <td headers="Treatment  Estimate" class="gt_row gt_right">7.30</td>
 <td headers="Treatment  SE" class="gt_row gt_right">2.42</td>
 <td headers="Treatment  df" class="gt_row gt_right">132</td>
 <td headers="Treatment  t ratio" class="gt_row gt_right">3.02</td>
 <td headers="Treatment  p value" class="gt_row gt_right">0.006</td></tr>
-    <tr><td headers="Treatment  Contrast" class="gt_row gt_left">Mow - Regular Graze</td>
+    <tr><td headers="Treatment  Contrast" class="gt_row gt_center">Mow - Graze</td>
 <td headers="Treatment  Estimate" class="gt_row gt_right">10.99</td>
 <td headers="Treatment  SE" class="gt_row gt_right">2.42</td>
 <td headers="Treatment  df" class="gt_row gt_right">132</td>
@@ -914,19 +915,19 @@ Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value a
     <tr class="gt_group_heading_row">
       <th colspan="6" class="gt_group_heading" style="text-align: center; font-weight: bold;" scope="colgroup" id="Location">Location</th>
     </tr>
-    <tr class="gt_row_group_first"><td headers="Location  Contrast" class="gt_row gt_left">Lower - Middle</td>
+    <tr class="gt_row_group_first"><td headers="Location  Contrast" class="gt_row gt_center">Lower - Middle</td>
 <td headers="Location  Estimate" class="gt_row gt_right">−7.94</td>
 <td headers="Location  SE" class="gt_row gt_right">2.43</td>
 <td headers="Location  df" class="gt_row gt_right">132</td>
 <td headers="Location  t ratio" class="gt_row gt_right">−3.26</td>
 <td headers="Location  p value" class="gt_row gt_right">0.002</td></tr>
-    <tr><td headers="Location  Contrast" class="gt_row gt_left">Lower - Upper</td>
+    <tr><td headers="Location  Contrast" class="gt_row gt_center">Lower - Upper</td>
 <td headers="Location  Estimate" class="gt_row gt_right">−9.82</td>
 <td headers="Location  SE" class="gt_row gt_right">2.57</td>
 <td headers="Location  df" class="gt_row gt_right">132</td>
 <td headers="Location  t ratio" class="gt_row gt_right">−3.83</td>
 <td headers="Location  p value" class="gt_row gt_right">&lt;0.001</td></tr>
-    <tr><td headers="Location  Contrast" class="gt_row gt_left">Middle - Upper</td>
+    <tr><td headers="Location  Contrast" class="gt_row gt_center">Middle - Upper</td>
 <td headers="Location  Estimate" class="gt_row gt_right">−1.87</td>
 <td headers="Location  SE" class="gt_row gt_right">2.11</td>
 <td headers="Location  df" class="gt_row gt_right">132</td>
@@ -1642,7 +1643,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>  </div> <!-- /content -->  <script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","loop":false,"descPosition":"bottom","closeEffect":"zoom"});
+</script>  </div> <!-- /content -->  <script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","closeEffect":"zoom","openEffect":"zoom","loop":false});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {

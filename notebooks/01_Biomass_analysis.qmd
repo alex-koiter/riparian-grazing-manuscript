@@ -83,6 +83,7 @@ pairs <- treat_pair %>%
 #| tbl-cap: Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value adjustment for differences in the net biomass WEP ($mg~m^{-2}$) between the four treatments and three riparian sampling locations.
 
 pairs |>
+  mutate(Contrast = fct_recode(Contrast, "Control - Graze" = "Control - Regular Graze", "High Graze - Graze" = "High Graze - Regular Graze", "Mow - Graze" = "Mow - Regular Graze")) |>
   group_by(type) |>
   gt() |>
   fmt_number(columns = c("Estimate", "SE", "t ratio"), decimal = 2)|>

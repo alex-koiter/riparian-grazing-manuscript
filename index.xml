@@ -23,8 +23,8 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 
 
 <title-group>
-<article-title>Effects of Riparian Grazing on Distinct Phosphorus
-Sources</article-title>
+<article-title>Effects of Riparian Grazing on Distinct Water-Extractable
+Phosphorus Sources</article-title>
 </title-group>
 
 <contrib-group>
@@ -106,11 +106,11 @@ pollutants. Recent studies have shown that riparian areas are less
 effective as buffers and, in some cases, are a net source of phosphorus
 (P) in cold climates. This study assessed the impact of cattle grazing
 or harvesting of riparian areas on the spatial and vertical distribution
-of P. This study measured the water-extractable phosphorus (WEP) in four
-distinctive sources: biomass, litter, organic layer, and Ah horizon in
-three riparian locations extending from the edge of the waterbody to the
-field edge. Four treatments were examined: 1) control; 2) grazing; 3)
-high-density grazing; and 4) mowing. Prior to implementing the
+of water-extractable phosphorus (WEP). This study measured the WEP in
+four distinctive sources: biomass, litter, organic layer, and Ah horizon
+in three riparian locations extending from the edge of the waterbody to
+the field edge. Four treatments were examined: 1) control; 2) grazing;
+3) high-density grazing; and 4) mowing. Prior to implementing the
 treatments, the Ah (0-10cm) soil was the largest pool of WEP (42.5 mg
 m<sup>-2</sup>, ~44%); however, the biomass (i.e., standing vegetation)
 was a considerable proportion of the total (26.3 mg m<sup>-2</sup>,
@@ -129,7 +129,7 @@ that target vegetation, including harvesting and autumn short-term
 grazing, may be mechanisms to reduce the potential P loss during the
 snowmelt period. To fully assess the risk of P loss, studies
 investigating other important riparian processes that also have a
-demonstrated impact on the P mobility, including freeze-thaw cycles and
+demonstrated impact on P mobility, including freeze-thaw cycles and
 flooding, are needed.</p>
 </abstract>
 <kwd-group kwd-group-type="author">
@@ -180,7 +180,7 @@ P, phosphorus; WEP, water extractable phosphorus</p>
   demonstrating the role and functionality of riparian areas in reducing
   P loading to surface water in agricultural settings
   (<xref alt="Yu et al., 2019" rid="ref-yu2019" ref-type="bibr">Yu et
-  al., 2019</xref>). Infiltration, absorption, biological uptake,
+  al., 2019</xref>). Infiltration, adsorption, biological uptake,
   microbial activity, and sedimentation are the key processes that
   intercept and buffer the delivery of P
   (<xref alt="Lacas et al., 2005" rid="ref-lacas2005" ref-type="bibr">Lacas
@@ -200,8 +200,9 @@ P, phosphorus; WEP, water extractable phosphorus</p>
   et al., 2017</xref>).</p>
   <p>In cold climates, the reduced infiltration due to frozen ground,
   limited vegetation uptake, and low microbial activity coupled with a
-  flashy hydrograph during snowmelt creates conditions that further
-  compromise the buffering capacity of riparian areas
+  flashy hydrograph hydrograph (rapid rise and fall in discharge) during
+  snowmelt creates conditions that further compromise the buffering
+  capacity of riparian areas
   (<xref alt="Kieta et al., 2018" rid="ref-kieta2018" ref-type="bibr">Kieta
   et al., 2018</xref>;
   <xref alt="Nsenga Kumwimba et al., 2023" rid="ref-nsengakumwimba2023" ref-type="bibr">Nsenga
@@ -271,8 +272,8 @@ P, phosphorus; WEP, water extractable phosphorus</p>
   biomass and litter as well as soil properties including organic matter
   content and horizon thickness. A better understanding of the spatial
   variability and relative contributions of the different sources of P
-  is needed to assess the risks and benefits of different management
-  strategies.</p>
+  is is helpful in building a more complete representation of riparian
+  processes and function.</p>
   <p>Given the timing and processes of P dynamics within riparian areas
   in cold climates, like the Canadian Prairies, reducing the
   near-surface concentration of soluble P prior to spring snowmelt could
@@ -297,12 +298,13 @@ P, phosphorus; WEP, water extractable phosphorus</p>
   <sec id="site-description">
     <title>2.1 Site description</title>
     <p>A randomized complete block experimental design was used to
-    assess the sources of riparian P and investigate how it changes
-    following cattle grazing or mowing treatments. The four treatments
-    include control, graze, high-density graze, and mowing. Each
-    treatment was replicated in riparian areas surrounding four prairie
-    potholes (wetlands). Samples of biomass, litter, organic layer, and
-    Ah horizon, were collected in three locations both pre- and
+    assess the sources of riparian WEP and investigate how it changes
+    following cattle grazing or mowing treatments. In addition to a
+    control, the three treatments included grazing, high-density
+    grazing, and mowing. Each treatment, including a control, was
+    replicated in riparian areas surrounding four prairie potholes
+    (wetlands). Samples of biomass, litter, organic layer, and Ah
+    horizon, were collected in three locations both pre- and
     post-treatment. The three sampling locations aimed to capture the
     topography of the riparian areas and include near the edge of the
     waterbody (lower), close to the field edge (upper), and the
@@ -341,8 +343,8 @@ P, phosphorus; WEP, water extractable phosphorus</p>
     demonstration farm with a mix of pasture, hay, and forage/silage
     cropland. Prior to the establishment of MBFI the site was part of
     the Manitoba Zero Tillage Research Association farm (1993-2014)
-    where annual crops, including oil seeds and grains, were grown.
-    There are also numerous small permanent and ephemeral wetlands
+    where annual crops, including oil seeds and grains, were grown.</p>
+    <p>There are also numerous small permanent and ephemeral wetlands
     (potholes) and associated riparian areas which account for
     approximately 35% of the total farm land
     (<xref alt="Manitoba Beef &amp; Forage Initiatives, 2024" rid="ref-manitobabeefforageinitiatives2024" ref-type="bibr">Manitoba
@@ -354,20 +356,27 @@ P, phosphorus; WEP, water extractable phosphorus</p>
     loamy, moderately calcareous glacial till. The drainage class in
     upper slope positions are well to rapidly draining while lower slope
     and riparian soils are poorly drained and primarily consist of Humic
-    and Luvic Gleysols. The surface texture class of the riparian soil
-    is a clay loam and pH values range from 7.1 to 8.3 with a mean of
-    7.6. Generally the surface soil profile can be described by a 1-10
-    cm organic layer overlying a 10-18 cm Ah horizon
+    and Luvic Gleysols
     (<xref alt="Podolsky and Schindler, 1993" rid="ref-podolsky1993" ref-type="bibr">Podolsky
-    and Schindler, 1993</xref>). Vegetation was assessed using the
-    foliar cover method for each plot within each of the four riparian
-    areas. There was considerable variability among riparian areas,
-    plots, and sampling locations (upper, midle, and lower). The four
-    most dominant species identified were Sow Thistle (<italic>Sonchus
-    arvensis</italic>), Smooth Aster (<italic>Aster laevis</italic>),
-    Kentucky bluegrass (<italic>Poa pratensis</italic>), and Smooth
-    Brome (<italic>Bromus inermis</italic>) and the complete assessment
-    can be found in
+    and Schindler, 1993</xref>). The surface texture class of the
+    riparian soil is a clay loam and pH values range from 7.1 to 8.3
+    with a mean of 7.6. Generally the surface soil profiles surrounding
+    theses Prairie potholes can be described by a 1-10 cm organic layer
+    overlying a 10-18 cm Ah horizon
+    (<xref alt="Podolsky and Schindler, 1993" rid="ref-podolsky1993" ref-type="bibr">Podolsky
+    and Schindler, 1993</xref>). In the riparian areas used as part of
+    this study the average depth of the organic layer was found to be
+    approximately 1 cm for the upper and middle sampling locations and 2
+    cm for the lower sampling location. The Ah horizon was more than 10
+    cm deep at all sampling locations.</p>
+    <p>Vegetation was assessed using the foliar cover method for each
+    plot within each of the four riparian areas. There was considerable
+    variability among riparian areas, plots, and sampling locations
+    (upper, midle, and lower). The four most dominant species identified
+    were Sow Thistle (<italic>Sonchus arvensis</italic>), Smooth Aster
+    (<italic>Aster laevis</italic>), Kentucky bluegrass (<italic>Poa
+    pratensis</italic>), and Smooth Brome (<italic>Bromus
+    inermis</italic>) and the complete assessment can be found in
     <xref alt="Figure S2" rid="suppfig-plant-plot">Figure S2</xref>. All
     riparian areas investigated in this study were adjacent to actively
     grazed pastures.</p>
@@ -386,18 +395,24 @@ P, phosphorus; WEP, water extractable phosphorus</p>
     into four approximately 450 <inline-formula><alternatives>
     <tex-math><![CDATA[m^2]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msup><mml:mi>m</mml:mi><mml:mn>2</mml:mn></mml:msup></mml:math></alternatives></inline-formula>
-    plots. Within each riparian area, each plot was randomly assigned a
-    treatment. The treatments were 1) control, 2) graze, 3) high-density
-    graze, and 4) mow and harvest. The grazing treatments consisted of a
-    five-hour grazing period, with the grazing treatment having 3.1-3.5
-    animal units per plot and the high-density grazing having 11.75-12
-    animal units. For the mowing treatment, the vegetation was cut to a
-    height of 10cm, and the vegetation was manually raked out of the
-    plot. The grazed plots were fenced on all four sides, including the
-    edge of the waterbody. The cattle were rotated among the four
-    riparian areas daily over four consecutive days and provided with
-    supplemental water. Treatments were applied early to mid-September,
-    before the first frost, in three consecutive years (2019-2021)
+    plots. Within each riparian area, each plot was randomly assigned to
+    a treatment or control. The experimental groups (i.e., treatments)
+    were 1) control, 2) graze, 3) high-density graze, and 4) mow and
+    harvest. The grazing treatments consisted of a single five-hour
+    grazing period, with the grazing treatment having 3.1-3.5 animal
+    units per plot and the high-density grazing having 11.75-12 animal
+    units. These stocking densities were used to approximate a typical
+    rotational grazing and a mob grazing approach. The grazed plots were
+    fenced on all four sides, including the edge of the waterbody and
+    provided with supplemental water. The cattle grazing treatments
+    occurred over four consecutive days where each day the graze and
+    high-density graze treatments were completed at a given riparian
+    area. The cattle were transported between the riparian areas by
+    trailer and were placed in a holding area while not grazing the
+    experimental plots. For the mowing treatment, the vegetation was cut
+    to a height of 10cm, and the vegetation was manually raked out of
+    the plot. Treatments were applied early to mid-September, before the
+    first frost, in three consecutive years (2019-2021)
     (<xref alt="Figure S3" rid="suppfig-weather-plot">Figure S3</xref>).
     Within each plot three distinctive sampling locations, or
     topographic positions, were established, adjacent to the edge of the
@@ -423,17 +438,18 @@ P, phosphorus; WEP, water extractable phosphorus</p>
     weighed, and homogenized using a blade grinder (&lt;1cm). A
     composite of five soil samples was collected within the same quadrat
     as the biomass/litter using a 19 mm diameter soil probe and was
-    divided into the organic layer and the top 10 cm of the Ah horizon.
-    The organic layer and Ah soil were air-dried, disaggregated with a
-    mortar and pestle, and passed through a 2-mm sieve. Additional bulk
-    density samples of both the organic layer and Ah and the depth of
-    the organic layer were collected in 2023. Daily air temperature and
-    rainfall data were collected from an onsite station
+    divided into the organic layer (1 – 2 cm deep) and the top 10 cm of
+    the Ah horizon. The organic layer and Ah soil were air-dried,
+    disaggregated with a mortar and pestle, and passed through a 2-mm
+    sieve. Additional bulk density samples of both the organic layer and
+    Ah and the depth of the organic layer were collected in 2023. Daily
+    air temperature and rainfall data were collected from an onsite
+    station
     (<xref alt="Figure S3" rid="suppfig-weather-plot">Figure S3</xref>)
     (<xref alt="Manitoba Agriculture, 2023" rid="ref-manitobaagriculture2023" ref-type="bibr">Manitoba
     Agriculture, 2023</xref>).</p>
     <p>Water Extractable Phosphorus (WEP), an environmental soil and
-    vegetation P test, was used to mimic soil P release into runoff
+    vegetation P test, was used to infer soil P release into runoff
     water. Dried and homogenized samples were extracted by shaking (150
     RPM) with deionized water for one hour at a mass-to-volume ratio of
     1:30 for the biomass and litter samples (1 g) and 1:15 for the
@@ -456,9 +472,9 @@ P, phosphorus; WEP, water extractable phosphorus</p>
     concentration with the mass of material collected from the quadrat.
     The vertical profile of WEP within the riparian area assessed from
     samples collected before treatments were implemented across the
-    3-year study. For comparison, a rough estimation of areal density
-    WEP in the organic layer and Ah was calculated using the bulk
-    density and depth measurements collected in 2023
+    3-year study. For comparison, an approximate estimation of areal
+    density WEP in the organic layer and Ah was calculated using the
+    bulk density and depth measurements collected in 2023
     (<xref alt="Figure 2" rid="fig-vertical-wep">Figure 2</xref> b).</p>
   </sec>
   <sec id="statistical-analysis">
@@ -483,8 +499,8 @@ P, phosphorus; WEP, water extractable phosphorus</p>
     (<xref alt="2017" rid="ref-brooks2017" ref-type="bibr">2017</xref>))
     were used to investigate the effect of treatment and riparian
     sampling location (including interaction) on the change in WEP
-    (before — after treatment) of for each of the four distinct sources
-    of P (areal densities for biomass and litter; concentrations for
+    (before — after treatment) for each of the four distinct sources of
+    P (areal densities for biomass and litter; concentrations for
     organic matter and Ah). Year and riparian area were included as
     crossed random factors to control for the variability within years
     and riparian areas.</p>
@@ -505,7 +521,7 @@ P, phosphorus; WEP, water extractable phosphorus</p>
     (<monospace>emmeans</monospace> v1.10.1; Lenth
     (<xref alt="2024" rid="ref-lenth2024" ref-type="bibr">2024</xref>)).
     Model assumptions were assessed using DHARMa residual plots
-    (<monospace>DHARMa</monospace> v0.4.6; Hartig
+    (<monospace>DHARMa</monospace> v0.4.7; Hartig
     (<xref alt="2022" rid="ref-hartig2022" ref-type="bibr">2022</xref>)),
     main effects were tested for collinearity
     (<monospace>performance</monospace> v0.12.2; Lüdecke et al.
@@ -553,9 +569,9 @@ P, phosphorus; WEP, water extractable phosphorus</p>
     IQR for the organic and Ah sources both were &lt;2.5
     <inline-formula><alternatives>
     <tex-math><![CDATA[mg~kg^{-1}]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>m</mml:mi><mml:mi>g</mml:mi><mml:mspace width="0.222em"></mml:mspace><mml:mi>k</mml:mi><mml:msup><mml:mi>g</mml:mi><mml:mrow><mml:mi>−</mml:mi><mml:mn>1</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:math></alternatives></inline-formula>.
-    Overall, in terms of the areal density of WEP, the top 10 cm of the
-    Ah horizon was the largest source of WEP (42.5
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>m</mml:mi><mml:mi>g</mml:mi><mml:mspace width="0.222em"></mml:mspace><mml:mi>k</mml:mi><mml:msup><mml:mi>g</mml:mi><mml:mrow><mml:mi>−</mml:mi><mml:mn>1</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:math></alternatives></inline-formula>.</p>
+    <p>Overall, in terms of the areal density of WEP, the top 10 cm of
+    the Ah horizon was the largest source of WEP (42.5
     <inline-formula><alternatives>
     <tex-math><![CDATA[mg~m^{-2}]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>m</mml:mi><mml:mi>g</mml:mi><mml:mspace width="0.222em"></mml:mspace><mml:msup><mml:mi>m</mml:mi><mml:mrow><mml:mi>−</mml:mi><mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:math></alternatives></inline-formula>)
@@ -568,9 +584,11 @@ P, phosphorus; WEP, water extractable phosphorus</p>
     and lastly the litter (13.7 <inline-formula><alternatives>
     <tex-math><![CDATA[mg~m^{-2}]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>m</mml:mi><mml:mi>g</mml:mi><mml:mspace width="0.222em"></mml:mspace><mml:msup><mml:mi>m</mml:mi><mml:mrow><mml:mi>−</mml:mi><mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:math></alternatives></inline-formula>).
-    Although it should be noted that these are only rough estimates for
-    the organic layer and Ah horizon. Nevertheless, the vertical profile
-    of WEP in riparian areas
+    Although it should be noted that these are only approximate
+    estimates for the organic layer and Ah horizon because the values
+    for depth and bulk density measured in 2023 were used in the
+    calculations for all previous years. Nevertheless, the vertical
+    profile of WEP in riparian areas
     (<xref alt="Figure 2" rid="fig-vertical-wep">Figure 2</xref>)
     observed in this study supports the concept that a measure of P in
     soil alone is likely missing a large proportion of the near-surface
@@ -630,28 +648,17 @@ P, phosphorus; WEP, water extractable phosphorus</p>
     does not result in biomass with elevated WEP concentrations at this
     study site
     (<xref alt="Figure S5" rid="suppfig-pairs-plot">Figure S5</xref>).
-    The variability is greatest in the Ah (IQR = 32.0
-    <inline-formula><alternatives>
-    <tex-math><![CDATA[mg~kg^{-1}]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>m</mml:mi><mml:mi>g</mml:mi><mml:mspace width="0.222em"></mml:mspace><mml:mi>k</mml:mi><mml:msup><mml:mi>g</mml:mi><mml:mrow><mml:mi>−</mml:mi><mml:mn>1</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:math></alternatives></inline-formula>)
-    and biomass (IQR = 23.3 <inline-formula><alternatives>
-    <tex-math><![CDATA[mg~kg^{-1}]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>m</mml:mi><mml:mi>g</mml:mi><mml:mspace width="0.222em"></mml:mspace><mml:mi>k</mml:mi><mml:msup><mml:mi>g</mml:mi><mml:mrow><mml:mi>−</mml:mi><mml:mn>1</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:math></alternatives></inline-formula>)
-    sources. The variability of the other two sources were similar with
-    IQRs of 15.6 and 14.3 <inline-formula><alternatives>
-    <tex-math><![CDATA[mg~kg^{-1}]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>m</mml:mi><mml:mi>g</mml:mi><mml:mspace width="0.222em"></mml:mspace><mml:mi>k</mml:mi><mml:msup><mml:mi>g</mml:mi><mml:mrow><mml:mi>−</mml:mi><mml:mn>1</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:math></alternatives></inline-formula>
-    for the litter and organic layer, respectively. Although there is
-    some evidence that plants in P-rich environments will also be
-    enriched in P (e.g.,
+    Although there is some evidence that plants in P-rich environments
+    will also be enriched in P (e.g.,
     <xref alt="Kröger et al., 2007" rid="ref-kröger2007" ref-type="bibr">Kröger
-    et al., 2007</xref>)). For the biomass and litter sources the lower
-    riparian locations had greater areal densities of WEP whereas the
-    organic and Ah sources had greater areal densities of WEP in the
-    upper riparian locations. The longitudinal gradient of WEP showed an
-    inverted symmetry where the biomass WEP was largest near the lower
-    sampling location and the Ah soil WEP was largest in the upper
-    sampling location adjacent to the fields
+    et al., 2007</xref>)).</p>
+    <p>For the biomass and litter sources the lower riparian locations
+    had greater areal densities of WEP whereas the organic and Ah
+    sources had greater areal densities of WEP in the upper riparian
+    locations. The longitudinal gradient of WEP showed an inverted
+    symmetry where the biomass WEP was largest near the lower sampling
+    location and the Ah soil WEP was largest in the upper sampling
+    location adjacent to the fields
     (<xref alt="Figure 2" rid="fig-vertical-wep">Figure 2</xref> b). The
     high soil water content in the lower location created conditions
     that favor high biomass production
@@ -676,9 +683,14 @@ P, phosphorus; WEP, water extractable phosphorus</p>
     WEP areal density/concentration is best reflected in the control
     treatment where the expected difference was 0 (Figures 3-6), but WEP
     losses and gains were still observed despite no treatment being
-    applied. However, despite this variability, several patterns
-    demonstrating relationships among treatments and vertical and
-    longitudinal P emerged.</p>
+    applied. . For example, the control plots had a median biomass WEP
+    removal rate of 5.5 <inline-formula><alternatives>
+    <tex-math><![CDATA[mg~m^{-2}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>m</mml:mi><mml:mi>g</mml:mi><mml:mspace width="0.222em"></mml:mspace><mml:msup><mml:mi>m</mml:mi><mml:mrow><mml:mi>−</mml:mi><mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:math></alternatives></inline-formula>
+    (<xref alt="Figure 3" rid="fig-vegetation-wep">Figure 3</xref> a).
+    However, despite this variability, several patterns demonstrating
+    relationships among treatments and vertical and longitudinal P
+    emerged.</p>
     <p>Results of the linear mixed model of areal density of biomass WEP
     show a significant effect of treatment (X<sup>2</sup> = 24.8, df =
     3, p &lt; 0.001) and riparian location (X<sup>2</sup> = 15.7, df =
@@ -834,7 +846,7 @@ P, phosphorus; WEP, water extractable phosphorus</p>
     effect of treatment (X<sup>2</sup> = 8.24, df = 3, p = 0.04).
     However, the post-hoc pairwise comparisons
     (<xref alt="Table 2" rid="tbl-organic-posthoc">Table 2</xref>) found
-    no significant differences (p &lt;0.05) among the treatments.
+    no significant differences (p &lt; 0.05) among the treatments.
     Finally, there was no significant effect of treatment (X<sup>2</sup>
     = 2.59, df = 3, p = 0.46) or riparian position (X<sup>2</sup> =
     1.17, df = 2, p = 0.56) on the concentration of WEP in the Ah
@@ -959,12 +971,13 @@ P, phosphorus; WEP, water extractable phosphorus</p>
     significant effect of treatment on the organic layer WEP; however,
     the pairwise comparisons were not able to detect any significant
     differences and the exact nature of the impact of the treatments
-    remains unclear. The ability to detect changes in the WEP sources in
-    riparian areas is difficult due to spatial variability in both the
-    pre- and post-grazing treatments. Even within the control plots,
-    both net addition and removal of WEP were detected and in many cases
-    the variability was similar to that of the other treatments. This
-    inherent variability (i.e., pre-grazing) likely results from of a
+    remains unclear.</p>
+    <p>The ability to detect changes in the WEP sources in riparian
+    areas is difficult due to spatial variability in both the pre- and
+    post-grazing treatments. Even within the control plots, both net
+    addition and removal of WEP were detected and in many cases the
+    variability was similar to that of the other treatments. This
+    inherent variability (i.e., pre-grazing) likely results from a
     combination of hydrological factors like ground water fluctuations,
     soil attributes such as texture, ecological dynamics involving plant
     community composition, and anthropogenic influences like historical
@@ -1007,9 +1020,9 @@ P, phosphorus; WEP, water extractable phosphorus</p>
     duration information (i.e., redox) would be needed to fully assess
     the potential for P loss during the spring
     (<xref alt="Walton et al., 2020" rid="ref-walton2020" ref-type="bibr">Walton
-    et al., 2020</xref>). The WEP protocol used for both soil and
-    vegetation samples are not likely to capture mobilize
-    redox-sensitive P from the soil
+    et al., 2020</xref>).</p>
+    <p>The WEP protocol used for both soil and vegetation samples are
+    not likely to capture redox-sensitive mobilized P from the soil
     (<xref alt="Walton et al., 2020" rid="ref-walton2020" ref-type="bibr">Walton
     et al., 2020</xref>) or enhanced P leaching from vegetation
     (<xref alt="Lozier and Macrae, 2017" rid="ref-lozier2017" ref-type="bibr">Lozier
@@ -1029,8 +1042,8 @@ P, phosphorus; WEP, water extractable phosphorus</p>
     freeze-thaw cycles on P release. However, both the prolonged contact
     with water and freeze-thaw cycles are not captured in the WEP
     protocols and may result in an underestimation of the potential for
-    P loss from the each of the four distinctive sources of P in
-    riparian areas.</p>
+    P loss from each of the four distinctive sources of P in riparian
+    areas.</p>
     <p>In addition to climatic effects, there may be variability in P as
     a side effect of the study design. One source of variability could
     be from added urine and manure in grazed areas which likely created
@@ -1047,9 +1060,9 @@ P, phosphorus; WEP, water extractable phosphorus</p>
     conditions
     (<xref alt="Figure S3" rid="suppfig-weather-plot">Figure S3</xref>)
     were of greater importance in controlling the WEP concentrations
-    than P additions from cattle urine and manure. Another source of
-    variability may have been from sampling. As there was significant
-    variability among plots, the single 0.25
+    than P additions from cattle urine and manure.</p>
+    <p>Another source of variability may have been from sampling. As
+    there was significant variability among plots, the single 0.25
     <inline-formula><alternatives>
     <tex-math><![CDATA[m^2]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msup><mml:mi>m</mml:mi><mml:mn>2</mml:mn></mml:msup></mml:math></alternatives></inline-formula>
@@ -1062,29 +1075,6 @@ P, phosphorus; WEP, water extractable phosphorus</p>
     sources of variability. As the scope of research is expanded to the
     farm level, the importance of using an appropriate sampling design
     becomes increasingly critical
-    (<xref alt="Hale et al., 2014" rid="ref-hale2014" ref-type="bibr">Hale
-    et al., 2014</xref>).</p>
-    <p>The single 0.25 <inline-formula><alternatives>
-    <tex-math><![CDATA[m^2]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msup><mml:mi>m</mml:mi><mml:mn>2</mml:mn></mml:msup></mml:math></alternatives></inline-formula>
-    sampling quadrate within each riparian location may have been
-    insufficient to capture the spatial variability. Therefore, larger
-    composite and/or several sampling locations within each upper,
-    middle and lower locations are recommended. There was no indication
-    of P accumulation due to grazing in any of the four distinctive P
-    sources over the 3-year study period. The highest concentrations of
-    WEP were typically found in the second year of the study
-    (<xref alt="Figure S6" rid="suppfig-years-plot">Figure S6</xref>).
-    This suggests that other biophysical processes regulated by weather
-    conditions
-    (<xref alt="Figure S3" rid="suppfig-weather-plot">Figure S3</xref>)
-    were of greater importance in controlling the WEP concentration than
-    any possible P additions from cattle urine and manure. Appropriate
-    sampling design becomes critical as the scale of observation of
-    similar research increases to the farm scale, and so will the range
-    and sources of variability. As the scope of research is expanded to
-    the farm level, the importance of using an appropriate sampling
-    design becomes increasingly critical
     (<xref alt="Hale et al., 2014" rid="ref-hale2014" ref-type="bibr">Hale
     et al., 2014</xref>).</p>
   </sec>
@@ -1110,10 +1100,11 @@ P, phosphorus; WEP, water extractable phosphorus</p>
     <xref alt="Hansen et al., 2019" rid="ref-hansen2019" ref-type="bibr">Hansen
     et al., 2019</xref>;
     <xref alt="Kraft et al., 2021" rid="ref-kraft2021" ref-type="bibr">Kraft
-    et al., 2021</xref>). Corridor fencing at the edge of the waterbody
-    and alternative water sources were used in this study to limit
-    livestock access in order to prevent bank erosion and protect water
-    quality (e.g., direct deposition)
+    et al., 2021</xref>).</p>
+    <p>Corridor fencing at the edge of the waterbody and alternative
+    water sources were used in this study to limit livestock access in
+    order to prevent bank erosion and protect water quality (e.g.,
+    direct deposition)
     (<xref alt="Dauwalter et al., 2018" rid="ref-dauwalter2018" ref-type="bibr">Dauwalter
     et al., 2018</xref>). Scaling this to the farm level would require
     virtual fencing or infrastructure
@@ -1128,14 +1119,15 @@ P, phosphorus; WEP, water extractable phosphorus</p>
     <xref alt="Hulvey et al., 2021" rid="ref-hulvey2021" ref-type="bibr">Hulvey
     et al., 2021</xref>;
     <xref alt="Manitoba Agriculture, 2024" rid="ref-manitobaagriculture2024" ref-type="bibr">Manitoba
-    Agriculture, 2024</xref>). The long-term impacts of repeated grazing
-    of riparian areas also need to be considered. From a nutrient loss
-    reduction perspective, a shift in the magnitude of P sources could
-    be expected as less biomass is available to be added to the litter
-    source, affecting the organic layer and Ah sources of P. The regular
-    inclusion of cattle will also introduce a new manure source of P,
-    which can spatially redistribute P and initially be more water
-    soluble and readily transported
+    Agriculture, 2024</xref>).</p>
+    <p>The long-term impacts of repeated grazing of riparian areas also
+    need to be considered. From a nutrient loss reduction perspective, a
+    shift in the magnitude of P sources could be expected as less
+    biomass is available to be added to the litter source, affecting the
+    organic layer and Ah sources of P. The regular inclusion of cattle
+    will also introduce a new manure source of P, which can spatially
+    redistribute P and initially be more water soluble and readily
+    transported
     (<xref alt="Franzluebbers et al., 2019" rid="ref-franzluebbers2019" ref-type="bibr">Franzluebbers
     et al., 2019</xref>). Grazing can also reduce the litter layer
     through trampling increasing the soil-vegetation contact and
@@ -1172,8 +1164,8 @@ P, phosphorus; WEP, water extractable phosphorus</p>
   time. Continued research to identify, quantify, and manage these
   sources of P to improve water quality remains a priority. In addition
   to improving water quality, the development of riparian management
-  strategies should prioritize the protection other ecological goods and
-  services and recognize these areas as an integral part of the
+  strategies should prioritize the protection of other ecological goods
+  and services and recognize these areas as an integral part of the
   farm.</p>
 </sec>
 <sec id="acknowledgements">
@@ -2369,6 +2361,9 @@ P, phosphorus; WEP, water extractable phosphorus</p>
       <article-title>Potential phosphorus mobilization from riparian vegetation following freezing</article-title>
       <source>Journal of Environmental Management</source>
       <year iso-8601-date="2024">2024</year>
+      <volume>370</volume>
+      <issue>122710</issue>
+      <pub-id pub-id-type="doi">https://doi.org/10.1016/j.jenvman.2024.122710</pub-id>
     </element-citation>
   </ref>
   <ref id="ref-Schloerke2024">
@@ -2394,8 +2389,8 @@ P, phosphorus; WEP, water extractable phosphorus</p>
 <sub-article article-type="notebook" id="nb-40-nb-article">
 <front-stub>
 <title-group>
-<article-title>Effects of Riparian Grazing on Distinct Phosphorus
-Sources</article-title>
+<article-title>Effects of Riparian Grazing on Distinct Water-Extractable
+Phosphorus Sources</article-title>
 </title-group>
 <contrib-group>
 <contrib contrib-type="author" corresp="yes">
@@ -2464,11 +2459,11 @@ pollutants. Recent studies have shown that riparian areas are less
 effective as buffers and, in some cases, are a net source of phosphorus
 (P) in cold climates. This study assessed the impact of cattle grazing
 or harvesting of riparian areas on the spatial and vertical distribution
-of P. This study measured the water-extractable phosphorus (WEP) in four
-distinctive sources: biomass, litter, organic layer, and Ah horizon in
-three riparian locations extending from the edge of the waterbody to the
-field edge. Four treatments were examined: 1) control; 2) grazing; 3)
-high-density grazing; and 4) mowing. Prior to implementing the
+of water-extractable phosphorus (WEP). This study measured the WEP in
+four distinctive sources: biomass, litter, organic layer, and Ah horizon
+in three riparian locations extending from the edge of the waterbody to
+the field edge. Four treatments were examined: 1) control; 2) grazing;
+3) high-density grazing; and 4) mowing. Prior to implementing the
 treatments, the Ah (0-10cm) soil was the largest pool of WEP (42.5 mg
 m<sup>-2</sup>, ~44%); however, the biomass (i.e., standing vegetation)
 was a considerable proportion of the total (26.3 mg m<sup>-2</sup>,
@@ -2487,7 +2482,7 @@ that target vegetation, including harvesting and autumn short-term
 grazing, may be mechanisms to reduce the potential P loss during the
 snowmelt period. To fully assess the risk of P loss, studies
 investigating other important riparian processes that also have a
-demonstrated impact on the P mobility, including freeze-thaw cycles and
+demonstrated impact on P mobility, including freeze-thaw cycles and
 flooding, are needed.</p>
 </abstract>
 </front-stub>
@@ -2527,7 +2522,7 @@ P, phosphorus; WEP, water extractable phosphorus</p>
   demonstrating the role and functionality of riparian areas in reducing
   P loading to surface water in agricultural settings
   (<xref alt="Yu et al., 2019" rid="ref-yu2019-nb-article" ref-type="bibr">Yu et
-  al., 2019</xref>). Infiltration, absorption, biological uptake,
+  al., 2019</xref>). Infiltration, adsorption, biological uptake,
   microbial activity, and sedimentation are the key processes that
   intercept and buffer the delivery of P
   (<xref alt="Lacas et al., 2005" rid="ref-lacas2005-nb-article" ref-type="bibr">Lacas
@@ -2547,8 +2542,9 @@ P, phosphorus; WEP, water extractable phosphorus</p>
   et al., 2017</xref>).</p>
   <p>In cold climates, the reduced infiltration due to frozen ground,
   limited vegetation uptake, and low microbial activity coupled with a
-  flashy hydrograph during snowmelt creates conditions that further
-  compromise the buffering capacity of riparian areas
+  flashy hydrograph hydrograph (rapid rise and fall in discharge) during
+  snowmelt creates conditions that further compromise the buffering
+  capacity of riparian areas
   (<xref alt="Kieta et al., 2018" rid="ref-kieta2018-nb-article" ref-type="bibr">Kieta
   et al., 2018</xref>;
   <xref alt="Nsenga Kumwimba et al., 2023" rid="ref-nsengakumwimba2023-nb-article" ref-type="bibr">Nsenga
@@ -2618,8 +2614,8 @@ P, phosphorus; WEP, water extractable phosphorus</p>
   biomass and litter as well as soil properties including organic matter
   content and horizon thickness. A better understanding of the spatial
   variability and relative contributions of the different sources of P
-  is needed to assess the risks and benefits of different management
-  strategies.</p>
+  is is helpful in building a more complete representation of riparian
+  processes and function.</p>
   <p>Given the timing and processes of P dynamics within riparian areas
   in cold climates, like the Canadian Prairies, reducing the
   near-surface concentration of soluble P prior to spring snowmelt could
@@ -2655,14 +2651,31 @@ The stations data frame hasn't been updated in over 4 weeks. Consider running `s
     <boxed-text>
       <preformat>The stations data frame hasn't been updated in over 4 weeks. Consider running `stations_dl()` to check for updates and make sure you have the most recent stations list available</preformat>
     </boxed-text>
+    <boxed-text>
+      <preformat>Warning: There were 2 warnings in `dplyr::mutate()`.
+The first warning was:
+ℹ In argument: `frost = purrr::map2(...)`.
+Caused by warning:
+! 21 parsing failures.
+row col  expected     actual         file
+  4  -- 3 columns 15 columns literal data
+  5  -- 3 columns 15 columns literal data
+  6  -- 3 columns 15 columns literal data
+  7  -- 3 columns 15 columns literal data
+  8  -- 3 columns 15 columns literal data
+... ... ......... .......... ............
+See problems(...) for more details.
+ℹ Run `dplyr::last_dplyr_warnings()` to see the 1 remaining warning.</preformat>
+    </boxed-text>
     </sec>
     <p>A randomized complete block experimental design was used to
-    assess the sources of riparian P and investigate how it changes
-    following cattle grazing or mowing treatments. The four treatments
-    include control, graze, high-density graze, and mowing. Each
-    treatment was replicated in riparian areas surrounding four prairie
-    potholes (wetlands). Samples of biomass, litter, organic layer, and
-    Ah horizon, were collected in three locations both pre- and
+    assess the sources of riparian WEP and investigate how it changes
+    following cattle grazing or mowing treatments. In addition to a
+    control, the three treatments included grazing, high-density
+    grazing, and mowing. Each treatment, including a control, was
+    replicated in riparian areas surrounding four prairie potholes
+    (wetlands). Samples of biomass, litter, organic layer, and Ah
+    horizon, were collected in three locations both pre- and
     post-treatment. The three sampling locations aimed to capture the
     topography of the riparian areas and include near the edge of the
     waterbody (lower), close to the field edge (upper), and the
@@ -2701,8 +2714,8 @@ The stations data frame hasn't been updated in over 4 weeks. Consider running `s
     demonstration farm with a mix of pasture, hay, and forage/silage
     cropland. Prior to the establishment of MBFI the site was part of
     the Manitoba Zero Tillage Research Association farm (1993-2014)
-    where annual crops, including oil seeds and grains, were grown.
-    There are also numerous small permanent and ephemeral wetlands
+    where annual crops, including oil seeds and grains, were grown.</p>
+    <p>There are also numerous small permanent and ephemeral wetlands
     (potholes) and associated riparian areas which account for
     approximately 35% of the total farm land
     (<xref alt="Manitoba Beef &amp; Forage Initiatives, 2024" rid="ref-manitobabeefforageinitiatives2024-nb-article" ref-type="bibr">Manitoba
@@ -2714,20 +2727,27 @@ The stations data frame hasn't been updated in over 4 weeks. Consider running `s
     loamy, moderately calcareous glacial till. The drainage class in
     upper slope positions are well to rapidly draining while lower slope
     and riparian soils are poorly drained and primarily consist of Humic
-    and Luvic Gleysols. The surface texture class of the riparian soil
-    is a clay loam and pH values range from 7.1 to 8.3 with a mean of
-    7.6. Generally the surface soil profile can be described by a 1-10
-    cm organic layer overlying a 10-18 cm Ah horizon
+    and Luvic Gleysols
     (<xref alt="Podolsky and Schindler, 1993" rid="ref-podolsky1993-nb-article" ref-type="bibr">Podolsky
-    and Schindler, 1993</xref>). Vegetation was assessed using the
-    foliar cover method for each plot within each of the four riparian
-    areas. There was considerable variability among riparian areas,
-    plots, and sampling locations (upper, midle, and lower). The four
-    most dominant species identified were Sow Thistle (<italic>Sonchus
-    arvensis</italic>), Smooth Aster (<italic>Aster laevis</italic>),
-    Kentucky bluegrass (<italic>Poa pratensis</italic>), and Smooth
-    Brome (<italic>Bromus inermis</italic>) and the complete assessment
-    can be found in
+    and Schindler, 1993</xref>). The surface texture class of the
+    riparian soil is a clay loam and pH values range from 7.1 to 8.3
+    with a mean of 7.6. Generally the surface soil profiles surrounding
+    theses Prairie potholes can be described by a 1-10 cm organic layer
+    overlying a 10-18 cm Ah horizon
+    (<xref alt="Podolsky and Schindler, 1993" rid="ref-podolsky1993-nb-article" ref-type="bibr">Podolsky
+    and Schindler, 1993</xref>). In the riparian areas used as part of
+    this study the average depth of the organic layer was found to be
+    approximately 1 cm for the upper and middle sampling locations and 2
+    cm for the lower sampling location. The Ah horizon was more than 10
+    cm deep at all sampling locations.</p>
+    <p>Vegetation was assessed using the foliar cover method for each
+    plot within each of the four riparian areas. There was considerable
+    variability among riparian areas, plots, and sampling locations
+    (upper, midle, and lower). The four most dominant species identified
+    were Sow Thistle (<italic>Sonchus arvensis</italic>), Smooth Aster
+    (<italic>Aster laevis</italic>), Kentucky bluegrass (<italic>Poa
+    pratensis</italic>), and Smooth Brome (<italic>Bromus
+    inermis</italic>) and the complete assessment can be found in
     <xref alt="Figure S2" rid="suppfig-plant-plot-nb-article">Figure S2</xref>. All
     riparian areas investigated in this study were adjacent to actively
     grazed pastures.</p>
@@ -2756,18 +2776,24 @@ give correct results for longitude/latitude data</preformat>
     into four approximately 450 <inline-formula><alternatives>
     <tex-math><![CDATA[m^2]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msup><mml:mi>m</mml:mi><mml:mn>2</mml:mn></mml:msup></mml:math></alternatives></inline-formula>
-    plots. Within each riparian area, each plot was randomly assigned a
-    treatment. The treatments were 1) control, 2) graze, 3) high-density
-    graze, and 4) mow and harvest. The grazing treatments consisted of a
-    five-hour grazing period, with the grazing treatment having 3.1-3.5
-    animal units per plot and the high-density grazing having 11.75-12
-    animal units. For the mowing treatment, the vegetation was cut to a
-    height of 10cm, and the vegetation was manually raked out of the
-    plot. The grazed plots were fenced on all four sides, including the
-    edge of the waterbody. The cattle were rotated among the four
-    riparian areas daily over four consecutive days and provided with
-    supplemental water. Treatments were applied early to mid-September,
-    before the first frost, in three consecutive years (2019-2021)
+    plots. Within each riparian area, each plot was randomly assigned to
+    a treatment or control. The experimental groups (i.e., treatments)
+    were 1) control, 2) graze, 3) high-density graze, and 4) mow and
+    harvest. The grazing treatments consisted of a single five-hour
+    grazing period, with the grazing treatment having 3.1-3.5 animal
+    units per plot and the high-density grazing having 11.75-12 animal
+    units. These stocking densities were used to approximate a typical
+    rotational grazing and a mob grazing approach. The grazed plots were
+    fenced on all four sides, including the edge of the waterbody and
+    provided with supplemental water. The cattle grazing treatments
+    occurred over four consecutive days where each day the graze and
+    high-density graze treatments were completed at a given riparian
+    area. The cattle were transported between the riparian areas by
+    trailer and were placed in a holding area while not grazing the
+    experimental plots. For the mowing treatment, the vegetation was cut
+    to a height of 10cm, and the vegetation was manually raked out of
+    the plot. Treatments were applied early to mid-September, before the
+    first frost, in three consecutive years (2019-2021)
     (<xref alt="Figure S3" rid="suppfig-weather-plot-nb-article">Figure S3</xref>).
     Within each plot three distinctive sampling locations, or
     topographic positions, were established, adjacent to the edge of the
@@ -2793,17 +2819,18 @@ give correct results for longitude/latitude data</preformat>
     weighed, and homogenized using a blade grinder (&lt;1cm). A
     composite of five soil samples was collected within the same quadrat
     as the biomass/litter using a 19 mm diameter soil probe and was
-    divided into the organic layer and the top 10 cm of the Ah horizon.
-    The organic layer and Ah soil were air-dried, disaggregated with a
-    mortar and pestle, and passed through a 2-mm sieve. Additional bulk
-    density samples of both the organic layer and Ah and the depth of
-    the organic layer were collected in 2023. Daily air temperature and
-    rainfall data were collected from an onsite station
+    divided into the organic layer (1 – 2 cm deep) and the top 10 cm of
+    the Ah horizon. The organic layer and Ah soil were air-dried,
+    disaggregated with a mortar and pestle, and passed through a 2-mm
+    sieve. Additional bulk density samples of both the organic layer and
+    Ah and the depth of the organic layer were collected in 2023. Daily
+    air temperature and rainfall data were collected from an onsite
+    station
     (<xref alt="Figure S3" rid="suppfig-weather-plot-nb-article">Figure S3</xref>)
     (<xref alt="Manitoba Agriculture, 2023" rid="ref-manitobaagriculture2023-nb-article" ref-type="bibr">Manitoba
     Agriculture, 2023</xref>).</p>
     <p>Water Extractable Phosphorus (WEP), an environmental soil and
-    vegetation P test, was used to mimic soil P release into runoff
+    vegetation P test, was used to infer soil P release into runoff
     water. Dried and homogenized samples were extracted by shaking (150
     RPM) with deionized water for one hour at a mass-to-volume ratio of
     1:30 for the biomass and litter samples (1 g) and 1:15 for the
@@ -2826,9 +2853,9 @@ give correct results for longitude/latitude data</preformat>
     concentration with the mass of material collected from the quadrat.
     The vertical profile of WEP within the riparian area assessed from
     samples collected before treatments were implemented across the
-    3-year study. For comparison, a rough estimation of areal density
-    WEP in the organic layer and Ah was calculated using the bulk
-    density and depth measurements collected in 2023
+    3-year study. For comparison, an approximate estimation of areal
+    density WEP in the organic layer and Ah was calculated using the
+    bulk density and depth measurements collected in 2023
     (<xref alt="Figure 2" rid="fig-vertical-wep-nb-article">Figure 2</xref> b).</p>
   </sec>
   <sec id="statistical-analysis-nb-article">
@@ -2853,8 +2880,8 @@ give correct results for longitude/latitude data</preformat>
     (<xref alt="2017" rid="ref-brooks2017-nb-article" ref-type="bibr">2017</xref>))
     were used to investigate the effect of treatment and riparian
     sampling location (including interaction) on the change in WEP
-    (before — after treatment) of for each of the four distinct sources
-    of P (areal densities for biomass and litter; concentrations for
+    (before — after treatment) for each of the four distinct sources of
+    P (areal densities for biomass and litter; concentrations for
     organic matter and Ah). Year and riparian area were included as
     crossed random factors to control for the variability within years
     and riparian areas.</p>
@@ -2875,7 +2902,7 @@ give correct results for longitude/latitude data</preformat>
     (<monospace>emmeans</monospace> v1.10.1; Lenth
     (<xref alt="2024" rid="ref-lenth2024-nb-article" ref-type="bibr">2024</xref>)).
     Model assumptions were assessed using DHARMa residual plots
-    (<monospace>DHARMa</monospace> v0.4.6; Hartig
+    (<monospace>DHARMa</monospace> v0.4.7; Hartig
     (<xref alt="2022" rid="ref-hartig2022-nb-article" ref-type="bibr">2022</xref>)),
     main effects were tested for collinearity
     (<monospace>performance</monospace> v0.12.2; Lüdecke et al.
@@ -2923,9 +2950,9 @@ give correct results for longitude/latitude data</preformat>
     IQR for the organic and Ah sources both were &lt;2.5
     <inline-formula><alternatives>
     <tex-math><![CDATA[mg~kg^{-1}]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>m</mml:mi><mml:mi>g</mml:mi><mml:mspace width="0.222em"></mml:mspace><mml:mi>k</mml:mi><mml:msup><mml:mi>g</mml:mi><mml:mrow><mml:mi>−</mml:mi><mml:mn>1</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:math></alternatives></inline-formula>.
-    Overall, in terms of the areal density of WEP, the top 10 cm of the
-    Ah horizon was the largest source of WEP (42.5
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>m</mml:mi><mml:mi>g</mml:mi><mml:mspace width="0.222em"></mml:mspace><mml:mi>k</mml:mi><mml:msup><mml:mi>g</mml:mi><mml:mrow><mml:mi>−</mml:mi><mml:mn>1</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:math></alternatives></inline-formula>.</p>
+    <p>Overall, in terms of the areal density of WEP, the top 10 cm of
+    the Ah horizon was the largest source of WEP (42.5
     <inline-formula><alternatives>
     <tex-math><![CDATA[mg~m^{-2}]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>m</mml:mi><mml:mi>g</mml:mi><mml:mspace width="0.222em"></mml:mspace><mml:msup><mml:mi>m</mml:mi><mml:mrow><mml:mi>−</mml:mi><mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:math></alternatives></inline-formula>)
@@ -2938,9 +2965,11 @@ give correct results for longitude/latitude data</preformat>
     and lastly the litter (13.7 <inline-formula><alternatives>
     <tex-math><![CDATA[mg~m^{-2}]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>m</mml:mi><mml:mi>g</mml:mi><mml:mspace width="0.222em"></mml:mspace><mml:msup><mml:mi>m</mml:mi><mml:mrow><mml:mi>−</mml:mi><mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:math></alternatives></inline-formula>).
-    Although it should be noted that these are only rough estimates for
-    the organic layer and Ah horizon. Nevertheless, the vertical profile
-    of WEP in riparian areas
+    Although it should be noted that these are only approximate
+    estimates for the organic layer and Ah horizon because the values
+    for depth and bulk density measured in 2023 were used in the
+    calculations for all previous years. Nevertheless, the vertical
+    profile of WEP in riparian areas
     (<xref alt="Figure 2" rid="fig-vertical-wep-nb-article">Figure 2</xref>)
     observed in this study supports the concept that a measure of P in
     soil alone is likely missing a large proportion of the near-surface
@@ -3013,28 +3042,17 @@ Removed 2 rows containing non-finite outside the scale range
     does not result in biomass with elevated WEP concentrations at this
     study site
     (<xref alt="Figure S5" rid="suppfig-pairs-plot-nb-article">Figure S5</xref>).
-    The variability is greatest in the Ah (IQR = 32.0
-    <inline-formula><alternatives>
-    <tex-math><![CDATA[mg~kg^{-1}]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>m</mml:mi><mml:mi>g</mml:mi><mml:mspace width="0.222em"></mml:mspace><mml:mi>k</mml:mi><mml:msup><mml:mi>g</mml:mi><mml:mrow><mml:mi>−</mml:mi><mml:mn>1</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:math></alternatives></inline-formula>)
-    and biomass (IQR = 23.3 <inline-formula><alternatives>
-    <tex-math><![CDATA[mg~kg^{-1}]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>m</mml:mi><mml:mi>g</mml:mi><mml:mspace width="0.222em"></mml:mspace><mml:mi>k</mml:mi><mml:msup><mml:mi>g</mml:mi><mml:mrow><mml:mi>−</mml:mi><mml:mn>1</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:math></alternatives></inline-formula>)
-    sources. The variability of the other two sources were similar with
-    IQRs of 15.6 and 14.3 <inline-formula><alternatives>
-    <tex-math><![CDATA[mg~kg^{-1}]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>m</mml:mi><mml:mi>g</mml:mi><mml:mspace width="0.222em"></mml:mspace><mml:mi>k</mml:mi><mml:msup><mml:mi>g</mml:mi><mml:mrow><mml:mi>−</mml:mi><mml:mn>1</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:math></alternatives></inline-formula>
-    for the litter and organic layer, respectively. Although there is
-    some evidence that plants in P-rich environments will also be
-    enriched in P (e.g.,
+    Although there is some evidence that plants in P-rich environments
+    will also be enriched in P (e.g.,
     <xref alt="Kröger et al., 2007" rid="ref-kröger2007-nb-article" ref-type="bibr">Kröger
-    et al., 2007</xref>)). For the biomass and litter sources the lower
-    riparian locations had greater areal densities of WEP whereas the
-    organic and Ah sources had greater areal densities of WEP in the
-    upper riparian locations. The longitudinal gradient of WEP showed an
-    inverted symmetry where the biomass WEP was largest near the lower
-    sampling location and the Ah soil WEP was largest in the upper
-    sampling location adjacent to the fields
+    et al., 2007</xref>)).</p>
+    <p>For the biomass and litter sources the lower riparian locations
+    had greater areal densities of WEP whereas the organic and Ah
+    sources had greater areal densities of WEP in the upper riparian
+    locations. The longitudinal gradient of WEP showed an inverted
+    symmetry where the biomass WEP was largest near the lower sampling
+    location and the Ah soil WEP was largest in the upper sampling
+    location adjacent to the fields
     (<xref alt="Figure 2" rid="fig-vertical-wep-nb-article">Figure 2</xref> b). The
     high soil water content in the lower location created conditions
     that favor high biomass production
@@ -3059,9 +3077,14 @@ Removed 2 rows containing non-finite outside the scale range
     WEP areal density/concentration is best reflected in the control
     treatment where the expected difference was 0 (Figures 3-6), but WEP
     losses and gains were still observed despite no treatment being
-    applied. However, despite this variability, several patterns
-    demonstrating relationships among treatments and vertical and
-    longitudinal P emerged.</p>
+    applied. . For example, the control plots had a median biomass WEP
+    removal rate of 5.5 <inline-formula><alternatives>
+    <tex-math><![CDATA[mg~m^{-2}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>m</mml:mi><mml:mi>g</mml:mi><mml:mspace width="0.222em"></mml:mspace><mml:msup><mml:mi>m</mml:mi><mml:mrow><mml:mi>−</mml:mi><mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:math></alternatives></inline-formula>
+    (<xref alt="Figure 3" rid="fig-vegetation-wep-nb-article">Figure 3</xref> a).
+    However, despite this variability, several patterns demonstrating
+    relationships among treatments and vertical and longitudinal P
+    emerged.</p>
     <p>Results of the linear mixed model of areal density of biomass WEP
     show a significant effect of treatment (X<sup>2</sup> = 24.8, df =
     3, p &lt; 0.001) and riparian location (X<sup>2</sup> = 15.7, df =
@@ -3242,7 +3265,7 @@ Removed 2 rows containing non-finite outside the scale range
     effect of treatment (X<sup>2</sup> = 8.24, df = 3, p = 0.04).
     However, the post-hoc pairwise comparisons
     (<xref alt="Table 2" rid="tbl-organic-posthoc-nb-article">Table 2</xref>) found
-    no significant differences (p &lt;0.05) among the treatments.
+    no significant differences (p &lt; 0.05) among the treatments.
     Finally, there was no significant effect of treatment (X<sup>2</sup>
     = 2.59, df = 3, p = 0.46) or riparian position (X<sup>2</sup> =
     1.17, df = 2, p = 0.56) on the concentration of WEP in the Ah
@@ -3295,7 +3318,7 @@ p1</code>
         axis.text.x = element_text(angle = 0, vjust = 1, hjust = 0.5),
         legend.position = 'bottom', legend.title = element_blank())
 p1
-#ggsave(plot = p1, filename = &quot;Figures/Organics_WEP.png&quot;, width = 150, height = 100, units = &quot;mm&quot;, dpi = 600)</code>
+# ggsave(plot = p1, filename = here::here(&quot;./Figures/Figure 5.png&quot;), width = 174, height = 85, units = &quot;mm&quot;, dpi = 600)</code>
     <boxed-text>
       <fig id="fig-organic-wep-nb-article">
         <caption><p>Figure 5: Change in riparian organic layer WEP
@@ -3407,7 +3430,7 @@ p1
         axis.text.x = element_text(angle = 0, vjust = 1, hjust = 0.5),
         legend.position = 'bottom', legend.title = element_blank())
 p2
-#ggsave(plot = p2, filename = &quot;Figures/Soil_WEP.png&quot;, width = 150, height = 100, units = &quot;mm&quot;, dpi = 600)</code>
+# ggsave(plot = p2, filename = here::here(&quot;./Figures/Figure 6.png&quot;), width = 174, height = 85, units = &quot;mm&quot;, dpi = 600)</code>
     <boxed-text>
       <fig id="fig-soil-wep-nb-article">
         <caption><p>Figure 6: Change in riparian Ah layer (0-10cm) WEP
@@ -3439,12 +3462,13 @@ p2
     significant effect of treatment on the organic layer WEP; however,
     the pairwise comparisons were not able to detect any significant
     differences and the exact nature of the impact of the treatments
-    remains unclear. The ability to detect changes in the WEP sources in
-    riparian areas is difficult due to spatial variability in both the
-    pre- and post-grazing treatments. Even within the control plots,
-    both net addition and removal of WEP were detected and in many cases
-    the variability was similar to that of the other treatments. This
-    inherent variability (i.e., pre-grazing) likely results from of a
+    remains unclear.</p>
+    <p>The ability to detect changes in the WEP sources in riparian
+    areas is difficult due to spatial variability in both the pre- and
+    post-grazing treatments. Even within the control plots, both net
+    addition and removal of WEP were detected and in many cases the
+    variability was similar to that of the other treatments. This
+    inherent variability (i.e., pre-grazing) likely results from a
     combination of hydrological factors like ground water fluctuations,
     soil attributes such as texture, ecological dynamics involving plant
     community composition, and anthropogenic influences like historical
@@ -3487,9 +3511,9 @@ p2
     duration information (i.e., redox) would be needed to fully assess
     the potential for P loss during the spring
     (<xref alt="Walton et al., 2020" rid="ref-walton2020-nb-article" ref-type="bibr">Walton
-    et al., 2020</xref>). The WEP protocol used for both soil and
-    vegetation samples are not likely to capture mobilize
-    redox-sensitive P from the soil
+    et al., 2020</xref>).</p>
+    <p>The WEP protocol used for both soil and vegetation samples are
+    not likely to capture redox-sensitive mobilized P from the soil
     (<xref alt="Walton et al., 2020" rid="ref-walton2020-nb-article" ref-type="bibr">Walton
     et al., 2020</xref>) or enhanced P leaching from vegetation
     (<xref alt="Lozier and Macrae, 2017" rid="ref-lozier2017-nb-article" ref-type="bibr">Lozier
@@ -3509,8 +3533,8 @@ p2
     freeze-thaw cycles on P release. However, both the prolonged contact
     with water and freeze-thaw cycles are not captured in the WEP
     protocols and may result in an underestimation of the potential for
-    P loss from the each of the four distinctive sources of P in
-    riparian areas.</p>
+    P loss from each of the four distinctive sources of P in riparian
+    areas.</p>
     <p>In addition to climatic effects, there may be variability in P as
     a side effect of the study design. One source of variability could
     be from added urine and manure in grazed areas which likely created
@@ -3527,9 +3551,9 @@ p2
     conditions
     (<xref alt="Figure S3" rid="suppfig-weather-plot-nb-article">Figure S3</xref>)
     were of greater importance in controlling the WEP concentrations
-    than P additions from cattle urine and manure. Another source of
-    variability may have been from sampling. As there was significant
-    variability among plots, the single 0.25
+    than P additions from cattle urine and manure.</p>
+    <p>Another source of variability may have been from sampling. As
+    there was significant variability among plots, the single 0.25
     <inline-formula><alternatives>
     <tex-math><![CDATA[m^2]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msup><mml:mi>m</mml:mi><mml:mn>2</mml:mn></mml:msup></mml:math></alternatives></inline-formula>
@@ -3542,29 +3566,6 @@ p2
     sources of variability. As the scope of research is expanded to the
     farm level, the importance of using an appropriate sampling design
     becomes increasingly critical
-    (<xref alt="Hale et al., 2014" rid="ref-hale2014-nb-article" ref-type="bibr">Hale
-    et al., 2014</xref>).</p>
-    <p>The single 0.25 <inline-formula><alternatives>
-    <tex-math><![CDATA[m^2]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msup><mml:mi>m</mml:mi><mml:mn>2</mml:mn></mml:msup></mml:math></alternatives></inline-formula>
-    sampling quadrate within each riparian location may have been
-    insufficient to capture the spatial variability. Therefore, larger
-    composite and/or several sampling locations within each upper,
-    middle and lower locations are recommended. There was no indication
-    of P accumulation due to grazing in any of the four distinctive P
-    sources over the 3-year study period. The highest concentrations of
-    WEP were typically found in the second year of the study
-    (<xref alt="Figure S6" rid="suppfig-years-plot-nb-article">Figure S6</xref>).
-    This suggests that other biophysical processes regulated by weather
-    conditions
-    (<xref alt="Figure S3" rid="suppfig-weather-plot-nb-article">Figure S3</xref>)
-    were of greater importance in controlling the WEP concentration than
-    any possible P additions from cattle urine and manure. Appropriate
-    sampling design becomes critical as the scale of observation of
-    similar research increases to the farm scale, and so will the range
-    and sources of variability. As the scope of research is expanded to
-    the farm level, the importance of using an appropriate sampling
-    design becomes increasingly critical
     (<xref alt="Hale et al., 2014" rid="ref-hale2014-nb-article" ref-type="bibr">Hale
     et al., 2014</xref>).</p>
   </sec>
@@ -3590,10 +3591,11 @@ p2
     <xref alt="Hansen et al., 2019" rid="ref-hansen2019-nb-article" ref-type="bibr">Hansen
     et al., 2019</xref>;
     <xref alt="Kraft et al., 2021" rid="ref-kraft2021-nb-article" ref-type="bibr">Kraft
-    et al., 2021</xref>). Corridor fencing at the edge of the waterbody
-    and alternative water sources were used in this study to limit
-    livestock access in order to prevent bank erosion and protect water
-    quality (e.g., direct deposition)
+    et al., 2021</xref>).</p>
+    <p>Corridor fencing at the edge of the waterbody and alternative
+    water sources were used in this study to limit livestock access in
+    order to prevent bank erosion and protect water quality (e.g.,
+    direct deposition)
     (<xref alt="Dauwalter et al., 2018" rid="ref-dauwalter2018-nb-article" ref-type="bibr">Dauwalter
     et al., 2018</xref>). Scaling this to the farm level would require
     virtual fencing or infrastructure
@@ -3608,14 +3610,15 @@ p2
     <xref alt="Hulvey et al., 2021" rid="ref-hulvey2021-nb-article" ref-type="bibr">Hulvey
     et al., 2021</xref>;
     <xref alt="Manitoba Agriculture, 2024" rid="ref-manitobaagriculture2024-nb-article" ref-type="bibr">Manitoba
-    Agriculture, 2024</xref>). The long-term impacts of repeated grazing
-    of riparian areas also need to be considered. From a nutrient loss
-    reduction perspective, a shift in the magnitude of P sources could
-    be expected as less biomass is available to be added to the litter
-    source, affecting the organic layer and Ah sources of P. The regular
-    inclusion of cattle will also introduce a new manure source of P,
-    which can spatially redistribute P and initially be more water
-    soluble and readily transported
+    Agriculture, 2024</xref>).</p>
+    <p>The long-term impacts of repeated grazing of riparian areas also
+    need to be considered. From a nutrient loss reduction perspective, a
+    shift in the magnitude of P sources could be expected as less
+    biomass is available to be added to the litter source, affecting the
+    organic layer and Ah sources of P. The regular inclusion of cattle
+    will also introduce a new manure source of P, which can spatially
+    redistribute P and initially be more water soluble and readily
+    transported
     (<xref alt="Franzluebbers et al., 2019" rid="ref-franzluebbers2019-nb-article" ref-type="bibr">Franzluebbers
     et al., 2019</xref>). Grazing can also reduce the litter layer
     through trampling increasing the soil-vegetation contact and
@@ -3652,8 +3655,8 @@ p2
   time. Continued research to identify, quantify, and manage these
   sources of P to improve water quality remains a priority. In addition
   to improving water quality, the development of riparian management
-  strategies should prioritize the protection other ecological goods and
-  services and recognize these areas as an integral part of the
+  strategies should prioritize the protection of other ecological goods
+  and services and recognize these areas as an integral part of the
   farm.</p>
 </sec>
 <sec id="acknowledgements-nb-article">
@@ -4851,6 +4854,9 @@ p2
       <article-title>Potential phosphorus mobilization from riparian vegetation following freezing</article-title>
       <source>Journal of Environmental Management</source>
       <year iso-8601-date="2024">2024</year>
+      <volume>370</volume>
+      <issue>122710</issue>
+      <pub-id pub-id-type="doi">https://doi.org/10.1016/j.jenvman.2024.122710</pub-id>
     </element-citation>
   </ref>
   <ref id="ref-Schloerke2024-nb-article">
@@ -4915,7 +4921,7 @@ grazing</article-title>
 library(DHARMa)
   </code>
   <boxed-text>
-    <preformat>This is DHARMa 0.4.6. For overview type '?DHARMa'. For recent changes, type news(package = 'DHARMa')</preformat>
+    <preformat>This is DHARMa 0.4.7. For overview type '?DHARMa'. For recent changes, type news(package = 'DHARMa')</preformat>
   </boxed-text>
   <code language="r script">library(emmeans)
 library(viridis)
@@ -5123,7 +5129,7 @@ p1
 (`stat_boxplot()`).</preformat>
     </boxed-text>
     <code language="r script">#|
-#ggsave(plot = p1, filename = &quot;Figures/Litter_WEP.png&quot;, width = 150, height = 100, units = &quot;mm&quot;, dpi = 600)
+# ggsave(plot = p1, filename = here::here(&quot;./Figures/Figure 4.png&quot;), width = 174, height = 85, units = &quot;mm&quot;, dpi = 600)
     </code>
     <fig id="fig-litter-WEP-nb-1">
       <caption><p>Change in riparian litter WEP following grazing or
@@ -5186,7 +5192,7 @@ grazing</article-title>
 library(DHARMa)
   </code>
   <boxed-text>
-    <preformat>This is DHARMa 0.4.6. For overview type '?DHARMa'. For recent changes, type news(package = 'DHARMa')</preformat>
+    <preformat>This is DHARMa 0.4.7. For overview type '?DHARMa'. For recent changes, type news(package = 'DHARMa')</preformat>
   </boxed-text>
   <code language="r script">library(emmeans)
 library(viridis)
@@ -5469,7 +5475,7 @@ Removed 2 rows containing non-finite outside the scale range
 (`stat_boxplot()`).</preformat>
     </boxed-text>
     <code language="r script">#|
-# ggsave(plot = p3, filename = &quot;Figures/Biomass_WEP.png&quot;, width = 174, height = 85, units = &quot;mm&quot;, dpi = 600)
+# ggsave(plot = p3, filename = here::here(&quot;./Figures/Figure 3.png&quot;), width = 174, height = 85, units = &quot;mm&quot;, dpi = 600)
     </code>
     <fig id="fig-vegetation-WEP-nb-2">
       <caption><p>Change in riparian biomass WEP following grazing or
@@ -5888,7 +5894,7 @@ grazing</article-title>
 library(DHARMa)
   </code>
   <boxed-text>
-    <preformat>This is DHARMa 0.4.6. For overview type '?DHARMa'. For recent changes, type news(package = 'DHARMa')</preformat>
+    <preformat>This is DHARMa 0.4.7. For overview type '?DHARMa'. For recent changes, type news(package = 'DHARMa')</preformat>
   </boxed-text>
   <code language="r script">library(emmeans)
 library(gt)
@@ -6073,7 +6079,7 @@ p1 &lt;- ggplot(data = organic_diff) +
         axis.text.x = element_text(angle = 0, vjust = 1, hjust = 0.5),
         legend.position = 'bottom', legend.title = element_blank())
 p1
-#ggsave(plot = p1, filename = &quot;Figures/Organics_WEP.png&quot;, width = 150, height = 100, units = &quot;mm&quot;, dpi = 600)
+# ggsave(plot = p1, filename = here::here(&quot;./Figures/Figure 5.png&quot;), width = 174, height = 85, units = &quot;mm&quot;, dpi = 600)
     </code>
     <fig id="fig-organic-WEP-nb-5">
       <caption><p>Change in riparian organic layer WEP concentration
@@ -6167,7 +6173,7 @@ p2 &lt;- ggplot(data = soil_diff) +
         axis.text.x = element_text(angle = 0, vjust = 1, hjust = 0.5),
         legend.position = 'bottom', legend.title = element_blank())
 p2
-#ggsave(plot = p2, filename = &quot;Figures/Soil_WEP.png&quot;, width = 150, height = 100, units = &quot;mm&quot;, dpi = 600)
+# ggsave(plot = p2, filename = here::here(&quot;./Figures/Figure 6.png&quot;), width = 174, height = 85, units = &quot;mm&quot;, dpi = 600)
     </code>
     <fig id="fig-soil-WEP-nb-5">
       <caption><p>Change in riparian Ah layer (0-10cm) WEP concentration
@@ -6420,7 +6426,7 @@ p1 + p3 + plot_layout(guides = &quot;collect&quot;) &amp; theme(legend.position 
     </code>
     <boxed-text>
       <preformat>Reading layer `ne_10m_rivers_lake_centerlines' from data source 
-  `/tmp/Rtmpw49Zm2/ne_10m_rivers_lake_centerlines.shp' using driver `ESRI Shapefile'
+  `/tmp/RtmpFqbd9c/ne_10m_rivers_lake_centerlines.shp' using driver `ESRI Shapefile'
 Simple feature collection with 1473 features and 38 fields
 Geometry type: MULTILINESTRING
 Dimension:     XY
@@ -6442,7 +6448,7 @@ all geometries</preformat>
                   crs = st_crs(.)))
     </code>
     <boxed-text>
-      <preformat>Reading layer `ne_10m_lakes' from data source `/tmp/Rtmpw49Zm2/ne_10m_lakes.shp' using driver `ESRI Shapefile'
+      <preformat>Reading layer `ne_10m_lakes' from data source `/tmp/RtmpFqbd9c/ne_10m_lakes.shp' using driver `ESRI Shapefile'
 Simple feature collection with 1355 features and 41 fields
 Geometry type: MULTIPOLYGON
 Dimension:     XY
@@ -6558,6 +6564,9 @@ p6
       <preformat>Warning in st_point_on_surface.sfc(sf::st_zm(x)): st_point_on_surface may not
 give correct results for longitude/latitude data</preformat>
     </boxed-text>
+    <code language="r script">
+#ggsave(plot = p6, filename = here::here(&quot;./Figures/Figure 1.png&quot;), width = 174, height = 100, units = &quot;mm&quot;, dpi = 600) 
+    </code>
     <fig id="fig-mapr-nb-6">
       <caption><p>Showing a) the location of the study site in southern
       Manitoba with an inset map of Canada; and b) the locations of the
@@ -7389,7 +7398,7 @@ Removed 2 rows containing non-finite outside the scale range
 (`stat_boxplot()`).</preformat>
   </boxed-text>
   <code language="r script">#|
-#ggsave(plot = p3, filename = &quot;Figures/Profile P.png&quot;, width = 174, height = 100, units = &quot;mm&quot;, dpi = 600) 
+#ggsave(plot = p3, filename = here::here(&quot;./Figures/Figure 2.png&quot;), width = 174, height = 100, units = &quot;mm&quot;, dpi = 600) 
   </code>
   <fig id="fig-vertical-WEP-nb-9">
     <caption><p>Vertical and longitudinal profiles of a) WEP

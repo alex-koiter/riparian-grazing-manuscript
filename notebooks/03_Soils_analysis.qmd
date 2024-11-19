@@ -121,7 +121,7 @@ p1 <- ggplot(data = organic_diff) +
         axis.text.x = element_text(angle = 0, vjust = 1, hjust = 0.5),
         legend.position = 'bottom', legend.title = element_blank())
 p1
-#ggsave(plot = p1, filename = "Figures/Organics_WEP.png", width = 150, height = 100, units = "mm", dpi = 600)
+# ggsave(plot = p1, filename = here::here("./Figures/Figure 5.png"), width = 174, height = 85, units = "mm", dpi = 600)
 ```
 
 ## Mineral soil analysis
@@ -162,6 +162,6 @@ p2 <- ggplot(data = soil_diff) +
         axis.text.x = element_text(angle = 0, vjust = 1, hjust = 0.5),
         legend.position = 'bottom', legend.title = element_blank())
 p2
-#ggsave(plot = p2, filename = "Figures/Soil_WEP.png", width = 150, height = 100, units = "mm", dpi = 600)
+# ggsave(plot = p2, filename = here::here("./Figures/Figure 6.png"), width = 174, height = 85, units = "mm", dpi = 600)
 ```
 

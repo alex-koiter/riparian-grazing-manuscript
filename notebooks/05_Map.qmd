@@ -237,5 +237,7 @@ p5 <- OpenStreetMap::autoplot.OpenStreetMap(sa_map2) +
    
 p6 <- p4 + inset_element(p1, left = 0.6, bottom = 0.6, right = 1, top = 1) + p5
 p6
+
+#ggsave(plot = p6, filename = here::here("./Figures/Figure 1.png"), width = 174, height = 100, units = "mm", dpi = 600) 
 ```
 

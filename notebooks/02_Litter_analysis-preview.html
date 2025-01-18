@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
     <meta charset="utf-8">
-    <meta name="generator" content="quarto-1.6.36">
+    <meta name="generator" content="quarto-1.7.13">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -148,15 +148,16 @@
     
 <script src="../site_libs/manuscript-notebook/headroom.min.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-01c78b5cd655e4cd89133cf59d535862.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-66ab7fd5e73b7f0a764e0d49b3e29ab1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-86e67f1fcd594f562d62505f92e4b4dd.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-04808a0abcc183c02ab11ffa5b3696c9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -242,23 +243,40 @@
 ✖ dplyr::lag()    masks stats::lag()
 ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(glmmTMB)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DHARMa)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(glmmTMB)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>This is DHARMa 0.4.7. For overview type '?DHARMa'. For recent changes, type news(package = 'DHARMa')</code></pre>
+<pre><code>Warning: package 'glmmTMB' was built under R version 4.4.2</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(emmeans)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(viridis)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DHARMa)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>This is DHARMa 0.4.6. For overview type '?DHARMa'. For recent changes, type news(package = 'DHARMa')</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(emmeans)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'emmeans' was built under R version 4.4.2</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Welcome to emmeans.
+Caution: You lose important information if you filter this package's results.
+See '? untidy'</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(viridis)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'viridis' was built under R version 4.4.2</code></pre>
+</div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Loading required package: viridisLite</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(patchwork)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(patchwork)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'patchwork' was built under R version 4.4.2</code></pre>
+</div>
 </div></div>
 </section>
 <section id="read-in-data" class="level2">
 <h2 class="anchored" data-anchor-id="read-in-data">Read in data</h2>
 <div class="cell-container"><div class="cell-decorator"><pre>In [2]:</pre></div><div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>conc <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"./notebooks/P_concentration.csv"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>conc <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"./notebooks/P_concentration.csv"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Rows: 1141 Columns: 8
 ── Column specification ────────────────────────────────────────────────────────
@@ -269,7 +287,7 @@ dbl (3): site, ak_content, year
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>mass_data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"./notebooks/mass.csv"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>mass_data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"./notebooks/mass.csv"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Rows: 576 Columns: 8
 ── Column specification ────────────────────────────────────────────────────────
@@ -285,10 +303,10 @@ dbl (3): site, dryweight, year
 <section id="merge-data" class="level2">
 <h2 class="anchored" data-anchor-id="merge-data">Merge data</h2>
 <div class="cell-container"><div class="cell-decorator"><pre>In [3]:</pre></div><div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>veg_data <span class="ot">&lt;-</span> mass_data <span class="sc">%&gt;%</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">right_join</span>(conc) <span class="sc">%&gt;%</span></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">conc =</span> ak_content) <span class="sc">%&gt;%</span> <span class="co"># mg/kg</span></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">p_total =</span> conc <span class="sc">*</span> dryweight<span class="sc">/</span><span class="dv">1000</span> <span class="sc">/</span><span class="fl">0.25</span>) <span class="co"># mg/m2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>veg_data <span class="ot">&lt;-</span> mass_data <span class="sc">%&gt;%</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">right_join</span>(conc) <span class="sc">%&gt;%</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">conc =</span> ak_content) <span class="sc">%&gt;%</span> <span class="co"># mg/kg</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">p_total =</span> conc <span class="sc">*</span> dryweight<span class="sc">/</span><span class="dv">1000</span> <span class="sc">/</span><span class="fl">0.25</span>) <span class="co"># mg/m2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Joining with `by = join_by(sample_type, site, timing, plot, location, year,
 treatment)`</code></pre>
@@ -298,12 +316,12 @@ treatment)`</code></pre>
 <section id="litter-data" class="level2">
 <h2 class="anchored" data-anchor-id="litter-data">Litter data</h2>
 <div class="cell-container"><div class="cell-decorator"><pre>In [4]:</pre></div><div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>litter_diff <span class="ot">&lt;-</span> veg_data <span class="sc">%&gt;%</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(sample_type <span class="sc">==</span> <span class="st">"Litter"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">dryweight =</span> dryweight<span class="sc">/</span><span class="dv">1000</span> <span class="sc">/</span><span class="fl">0.25</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">c</span>(dryweight, p_total, conc), <span class="at">names_to =</span> <span class="st">"measure"</span>, <span class="at">values_to =</span> <span class="st">"value"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> timing, <span class="at">values_from =</span> value) <span class="sc">%&gt;%</span></span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">diff =</span> Before <span class="sc">-</span> After) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>litter_diff <span class="ot">&lt;-</span> veg_data <span class="sc">%&gt;%</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(sample_type <span class="sc">==</span> <span class="st">"Litter"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">dryweight =</span> dryweight<span class="sc">/</span><span class="dv">1000</span> <span class="sc">/</span><span class="fl">0.25</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">c</span>(dryweight, p_total, conc), <span class="at">names_to =</span> <span class="st">"measure"</span>, <span class="at">values_to =</span> <span class="st">"value"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> timing, <span class="at">values_from =</span> value) <span class="sc">%&gt;%</span></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">diff =</span> Before <span class="sc">-</span> After) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div>
 </section>
 <section id="litter-analysis" class="level2">
@@ -311,9 +329,9 @@ treatment)`</code></pre>
 <section id="p-total" class="level3">
 <h3 class="anchored" data-anchor-id="p-total">P-total</h3>
 <div class="cell-container"><div class="cell-decorator"><pre>In [5]:</pre></div><div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>m4 <span class="ot">&lt;-</span> <span class="fu">glmmTMB</span>(diff <span class="sc">~</span> treatment <span class="sc">*</span> location <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>site) <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>year),</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>             <span class="at">data =</span> <span class="fu">filter</span>(litter_diff, measure <span class="sc">==</span> <span class="st">"p_total"</span>))</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">simulateResiduals</span>(m4, <span class="at">n =</span> <span class="dv">1000</span>, <span class="at">plot =</span> <span class="cn">TRUE</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>m4 <span class="ot">&lt;-</span> <span class="fu">glmmTMB</span>(diff <span class="sc">~</span> treatment <span class="sc">*</span> location <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>site) <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>year),</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>             <span class="at">data =</span> <span class="fu">filter</span>(litter_diff, measure <span class="sc">==</span> <span class="st">"p_total"</span>))</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="fu">simulateResiduals</span>(m4, <span class="at">n =</span> <span class="dv">1000</span>, <span class="at">plot =</span> <span class="cn">TRUE</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="">
 <figure class="figure">
@@ -326,7 +344,7 @@ treatment)`</code></pre>
  
 Scaled residual values: 0.78 0.652 0.998 0.43 0.789 0.365 0.765 0.871 0.046 0.873 0.903 0.276 0.639 0.764 1 0.845 0.556 0.028 0.655 0.815 ...</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>car<span class="sc">::</span><span class="fu">Anova</span>(m4, <span class="at">type =</span> <span class="st">"III"</span>) <span class="co"># No interaction</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>car<span class="sc">::</span><span class="fu">Anova</span>(m4, <span class="at">type =</span> <span class="st">"III"</span>) <span class="co"># No interaction</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Analysis of Deviance Table (Type III Wald chisquare tests)
 
@@ -342,10 +360,10 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div></div>
 <p>Removing interaction</p>
 <div class="cell-container"><div class="cell-decorator"><pre>In [6]:</pre></div><div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>temp4 <span class="ot">&lt;-</span> <span class="fu">filter</span>(litter_diff, measure <span class="sc">==</span> <span class="st">"p_total"</span>) <span class="do">## otherwise issue with emmeans()</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>m4 <span class="ot">&lt;-</span> <span class="fu">glmmTMB</span>(diff <span class="sc">~</span> treatment <span class="sc">+</span> location <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>site) <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>year),</span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>             <span class="at">data =</span> temp4)</span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="fu">simulateResiduals</span>(m4, <span class="at">n =</span> <span class="dv">1000</span>, <span class="at">plot =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>temp4 <span class="ot">&lt;-</span> <span class="fu">filter</span>(litter_diff, measure <span class="sc">==</span> <span class="st">"p_total"</span>) <span class="do">## otherwise issue with emmeans()</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>m4 <span class="ot">&lt;-</span> <span class="fu">glmmTMB</span>(diff <span class="sc">~</span> treatment <span class="sc">+</span> location <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>site) <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>year),</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>             <span class="at">data =</span> temp4)</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="fu">simulateResiduals</span>(m4, <span class="at">n =</span> <span class="dv">1000</span>, <span class="at">plot =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="">
 <figure class="figure">
@@ -358,7 +376,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
  
 Scaled residual values: 0.773 0.556 0.999 0.475 0.824 0.268 0.697 0.896 0.053 0.886 0.883 0.291 0.576 0.791 1 0.842 0.469 0.046 0.675 0.788 ...</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>performance<span class="sc">::</span><span class="fu">check_collinearity</span>(m4)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>performance<span class="sc">::</span><span class="fu">check_collinearity</span>(m4)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># Check for Multicollinearity
 
@@ -368,7 +386,7 @@ Low Correlation
  treatment 1.00 [1.00, Inf]         1.00      1.00     [0.00, 1.00]
   location 1.00 [1.00, Inf]         1.00      1.00     [0.00, 1.00]</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>car<span class="sc">::</span><span class="fu">Anova</span>(m4, <span class="at">type =</span> <span class="st">"III"</span>) <span class="co"># No sig impact of treatment or position</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>car<span class="sc">::</span><span class="fu">Anova</span>(m4, <span class="at">type =</span> <span class="st">"III"</span>) <span class="co"># No sig impact of treatment or position</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Analysis of Deviance Table (Type III Wald chisquare tests)
 
@@ -383,11 +401,11 @@ location    1.1541  2     0.5615</code></pre>
 <section id="summary" class="level3">
 <h3 class="anchored" data-anchor-id="summary">Summary</h3>
 <div class="cell-container"><div class="cell-decorator"><pre>In [7]:</pre></div><div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>litter_diff <span class="sc">%&gt;%</span></span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(measure <span class="sc">==</span> <span class="st">"p_total"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(treatment) <span class="sc">%&gt;%</span></span>
-<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">median =</span> <span class="fu">median</span>(diff, <span class="at">na.rm =</span>T),</span>
-<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">mean =</span> <span class="fu">mean</span>(diff, <span class="at">na.rm =</span>T))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>litter_diff <span class="sc">%&gt;%</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(measure <span class="sc">==</span> <span class="st">"p_total"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(treatment) <span class="sc">%&gt;%</span></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">median =</span> <span class="fu">median</span>(diff, <span class="at">na.rm =</span>T),</span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">mean =</span> <span class="fu">mean</span>(diff, <span class="at">na.rm =</span>T))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 3
   treatment     median  mean
@@ -397,11 +415,11 @@ location    1.1541  2     0.5615</code></pre>
 3 Mow            -5.70 -7.94
 4 Regular Graze  -1.66 -6.05</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>litter_diff <span class="sc">%&gt;%</span></span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(measure <span class="sc">==</span> <span class="st">"p_total"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(location) <span class="sc">%&gt;%</span></span>
-<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">median =</span> <span class="fu">median</span>(diff, <span class="at">na.rm =</span>T),</span>
-<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">mean =</span> <span class="fu">mean</span>(diff, <span class="at">na.rm =</span>T))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>litter_diff <span class="sc">%&gt;%</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(measure <span class="sc">==</span> <span class="st">"p_total"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(location) <span class="sc">%&gt;%</span></span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">median =</span> <span class="fu">median</span>(diff, <span class="at">na.rm =</span>T),</span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">mean =</span> <span class="fu">mean</span>(diff, <span class="at">na.rm =</span>T))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 3
   location median  mean
@@ -416,40 +434,40 @@ location    1.1541  2     0.5615</code></pre>
 <h3 class="anchored" data-anchor-id="plots">Plots</h3>
 <p>Reorder factors</p>
 <div class="cell-container"><div class="cell-decorator"><pre>In [8]:</pre></div><div class="cell">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>plot_data <span class="ot">&lt;-</span> litter_diff <span class="sc">%&gt;%</span> </span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">treatment =</span> <span class="fu">fct_recode</span>(treatment, <span class="st">"Graze"</span> <span class="ot">=</span> <span class="st">"Regular Graze"</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">treatment =</span> <span class="fu">fct_relevel</span>(treatment, <span class="fu">c</span>(<span class="st">"Control"</span>, <span class="st">"Graze"</span>, <span class="st">"High Graze"</span>, <span class="st">"Mow"</span>))) <span class="sc">%&gt;%</span></span>
-<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">location =</span> <span class="fu">fct_relevel</span>(location, <span class="fu">c</span>(<span class="st">"Upper"</span>, <span class="st">"Middle"</span>, <span class="st">"Lower"</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>plot_data <span class="ot">&lt;-</span> litter_diff <span class="sc">%&gt;%</span> </span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">treatment =</span> <span class="fu">fct_recode</span>(treatment, <span class="st">"Graze"</span> <span class="ot">=</span> <span class="st">"Regular Graze"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">treatment =</span> <span class="fu">fct_relevel</span>(treatment, <span class="fu">c</span>(<span class="st">"Control"</span>, <span class="st">"Graze"</span>, <span class="st">"High Graze"</span>, <span class="st">"Mow"</span>))) <span class="sc">%&gt;%</span></span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">location =</span> <span class="fu">fct_relevel</span>(location, <span class="fu">c</span>(<span class="st">"Upper"</span>, <span class="st">"Middle"</span>, <span class="st">"Lower"</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div>
 <p>Extra</p>
 <div class="cell-container"><div class="cell-decorator"><pre>In [9]:</pre></div><div class="cell">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x1 =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="cn">Inf</span>, <span class="sc">-</span><span class="cn">Inf</span>), <span class="at">x2 =</span> <span class="fu">c</span>(<span class="cn">Inf</span>, <span class="cn">Inf</span>), <span class="at">y2 =</span> <span class="fu">c</span>(<span class="cn">Inf</span>, <span class="dv">0</span>), <span class="at">y1 =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="sc">-</span><span class="cn">Inf</span>), <span class="at">difference =</span> <span class="fu">c</span>(<span class="st">"Net removal"</span>, <span class="st">"Net addition"</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">difference =</span> <span class="fu">fct_relevel</span>(difference, <span class="fu">c</span>(<span class="st">"Net removal"</span>, <span class="st">"Net addition"</span>))) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x1 =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="cn">Inf</span>, <span class="sc">-</span><span class="cn">Inf</span>), <span class="at">x2 =</span> <span class="fu">c</span>(<span class="cn">Inf</span>, <span class="cn">Inf</span>), <span class="at">y2 =</span> <span class="fu">c</span>(<span class="cn">Inf</span>, <span class="dv">0</span>), <span class="at">y1 =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="sc">-</span><span class="cn">Inf</span>), <span class="at">difference =</span> <span class="fu">c</span>(<span class="st">"Net removal"</span>, <span class="st">"Net addition"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">difference =</span> <span class="fu">fct_relevel</span>(difference, <span class="fu">c</span>(<span class="st">"Net removal"</span>, <span class="st">"Net addition"</span>))) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div>
 <p>Plots</p>
 <div class="cell-container"><div class="cell-decorator"><pre>In [10]:</pre></div><div id="cell-fig-litter-WEP" class="cell">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co">#|</span></span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>p1 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> <span class="fu">filter</span>(plot_data, measure <span class="sc">==</span> <span class="st">"p_total"</span>)) <span class="sc">+</span></span>
-<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>(<span class="at">base_size =</span> <span class="dv">12</span>) <span class="sc">+</span></span>
-<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_rect</span>(<span class="at">data =</span> df, <span class="fu">aes</span>(<span class="at">xmin =</span> x1, <span class="at">xmax =</span> x2, <span class="at">ymin =</span> y1, <span class="at">ymax =</span> y2, <span class="at">fill =</span> difference), <span class="at">alpha =</span> <span class="fl">0.15</span>) <span class="sc">+</span></span>
-<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>  <span class="co">#scale_fill_manual(values = c("white", "black")) +</span></span>
-<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>  <span class="co">#ggnewscale::new_scale_fill() +</span></span>
-<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> treatment, <span class="at">y =</span> diff, <span class="at">fill =</span> location)) <span class="sc">+</span></span>
-<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="fu">expression</span>(<span class="fu">paste</span>(<span class="st">"Net WEP Difference ("</span>, mg<span class="sc">~</span>m<span class="sc">^</span>{<span class="sc">-</span><span class="dv">2</span>}, <span class="st">")"</span>)), <span class="at">x =</span> <span class="st">"Treatment"</span>) <span class="sc">+</span></span>
-<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>  <span class="co">#scale_fill_viridis_d(name = "Location", begin = 0.3, end = 1) +</span></span>
-<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"white"</span>, <span class="st">"black"</span>, <span class="st">"#35608DFF"</span>, <span class="st">"#2FB47CFF"</span>, <span class="st">"#FDE725FF"</span>)) <span class="sc">+</span></span>
-<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">fill =</span> <span class="fu">guide_legend</span>(<span class="at">override.aes =</span> <span class="fu">list</span>(<span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">size =</span> <span class="dv">1</span>))) <span class="sc">+</span></span>
-<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.title.x =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">0</span>, <span class="at">vjust =</span> <span class="dv">1</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>),</span>
-<span id="cb31-14"><a href="#cb31-14" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.position =</span> <span class="st">"bottom"</span>,</span>
-<span id="cb31-15"><a href="#cb31-15" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.title =</span> <span class="fu">element_blank</span>())</span>
-<span id="cb31-16"><a href="#cb31-16" aria-hidden="true" tabindex="-1"></a>p1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co">#|</span></span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>p1 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> <span class="fu">filter</span>(plot_data, measure <span class="sc">==</span> <span class="st">"p_total"</span>)) <span class="sc">+</span></span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>(<span class="at">base_size =</span> <span class="dv">12</span>) <span class="sc">+</span></span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_rect</span>(<span class="at">data =</span> df, <span class="fu">aes</span>(<span class="at">xmin =</span> x1, <span class="at">xmax =</span> x2, <span class="at">ymin =</span> y1, <span class="at">ymax =</span> y2, <span class="at">fill =</span> difference), <span class="at">alpha =</span> <span class="fl">0.15</span>) <span class="sc">+</span></span>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a>  <span class="co">#scale_fill_manual(values = c("white", "black")) +</span></span>
+<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a>  <span class="co">#ggnewscale::new_scale_fill() +</span></span>
+<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> treatment, <span class="at">y =</span> diff, <span class="at">fill =</span> location)) <span class="sc">+</span></span>
+<span id="cb38-8"><a href="#cb38-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="fu">expression</span>(<span class="fu">paste</span>(<span class="st">"Net WEP Difference ("</span>, mg<span class="sc">~</span>m<span class="sc">^</span>{<span class="sc">-</span><span class="dv">2</span>}, <span class="st">")"</span>)), <span class="at">x =</span> <span class="st">"Treatment"</span>) <span class="sc">+</span></span>
+<span id="cb38-9"><a href="#cb38-9" aria-hidden="true" tabindex="-1"></a>  <span class="co">#scale_fill_viridis_d(name = "Location", begin = 0.3, end = 1) +</span></span>
+<span id="cb38-10"><a href="#cb38-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"white"</span>, <span class="st">"black"</span>, <span class="st">"#35608DFF"</span>, <span class="st">"#2FB47CFF"</span>, <span class="st">"#FDE725FF"</span>)) <span class="sc">+</span></span>
+<span id="cb38-11"><a href="#cb38-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">fill =</span> <span class="fu">guide_legend</span>(<span class="at">override.aes =</span> <span class="fu">list</span>(<span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">size =</span> <span class="dv">1</span>))) <span class="sc">+</span></span>
+<span id="cb38-12"><a href="#cb38-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.title.x =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb38-13"><a href="#cb38-13" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">0</span>, <span class="at">vjust =</span> <span class="dv">1</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>),</span>
+<span id="cb38-14"><a href="#cb38-14" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.position =</span> <span class="st">"bottom"</span>,</span>
+<span id="cb38-15"><a href="#cb38-15" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.title =</span> <span class="fu">element_blank</span>())</span>
+<span id="cb38-16"><a href="#cb38-16" aria-hidden="true" tabindex="-1"></a>p1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: Removed 11 rows containing non-finite outside the scale range
 (`stat_boxplot()`).</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co">#|</span></span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="co"># ggsave(plot = p1, filename = here::here("./Figures/Figure 4.png"), width = 174, height = 85, units = "mm", dpi = 600)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co">#|</span></span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="co"># ggsave(plot = p1, filename = here::here("./Figures/Figure 4.png"), width = 174, height = 85, units = "mm", dpi = 600)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div id="fig-litter-WEP" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Boxplots showing the change in riparian litter WEP following grazing or mowing.">
 <figure class="quarto-float quarto-float-fig figure">

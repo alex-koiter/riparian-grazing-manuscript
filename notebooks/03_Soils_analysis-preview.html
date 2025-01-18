@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
     <meta charset="utf-8">
-    <meta name="generator" content="quarto-1.6.36">
+    <meta name="generator" content="quarto-1.7.13">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -148,15 +148,16 @@
     
 <script src="../site_libs/manuscript-notebook/headroom.min.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-01c78b5cd655e4cd89133cf59d535862.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-66ab7fd5e73b7f0a764e0d49b3e29ab1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-86e67f1fcd594f562d62505f92e4b4dd.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-04808a0abcc183c02ab11ffa5b3696c9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -244,20 +245,31 @@
 ✖ dplyr::lag()    masks stats::lag()
 ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(glmmTMB)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DHARMa)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(glmmTMB)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>This is DHARMa 0.4.7. For overview type '?DHARMa'. For recent changes, type news(package = 'DHARMa')</code></pre>
+<pre><code>Warning: package 'glmmTMB' was built under R version 4.4.2</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(emmeans)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DHARMa)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>This is DHARMa 0.4.6. For overview type '?DHARMa'. For recent changes, type news(package = 'DHARMa')</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(emmeans)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'emmeans' was built under R version 4.4.2</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Welcome to emmeans.
+Caution: You lose important information if you filter this package's results.
+See '? untidy'</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div>
 </section>
 <section id="read-in-clean-data" class="level2">
 <h2 class="anchored" data-anchor-id="read-in-clean-data">Read in clean data</h2>
 <div class="cell-container"><div class="cell-decorator"><pre>In [2]:</pre></div><div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>conc <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"./notebooks/P_concentration.csv"</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="st">"conc"</span> <span class="ot">=</span> <span class="st">"ak_content"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>conc <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"./notebooks/P_concentration.csv"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="st">"conc"</span> <span class="ot">=</span> <span class="st">"ak_content"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Rows: 1141 Columns: 8
 ── Column specification ────────────────────────────────────────────────────────
@@ -273,35 +285,35 @@ dbl (3): site, ak_content, year
 <section id="organics-data" class="level2">
 <h2 class="anchored" data-anchor-id="organics-data">Organics data</h2>
 <div class="cell-container"><div class="cell-decorator"><pre>In [3]:</pre></div><div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>organic_diff <span class="ot">&lt;-</span> conc <span class="sc">%&gt;%</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(sample_type <span class="sc">==</span> <span class="st">"Organic"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> timing, <span class="at">values_from =</span> conc) <span class="sc">%&gt;%</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">diff =</span> Before <span class="sc">-</span> After) <span class="sc">%&gt;%</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">treatment =</span> <span class="fu">fct_recode</span>(treatment, <span class="st">"Graze"</span> <span class="ot">=</span> <span class="st">"Regular Graze"</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">treatment =</span> <span class="fu">fct_relevel</span>(treatment, <span class="fu">c</span>(<span class="st">"Control"</span>, <span class="st">"Graze"</span>, <span class="st">"High Graze"</span>, <span class="st">"Mow"</span>))) <span class="sc">%&gt;%</span></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">location =</span> <span class="fu">fct_relevel</span>(location, <span class="fu">c</span>(<span class="st">"Upper"</span>, <span class="st">"Middle"</span>, <span class="st">"Lower"</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>organic_diff <span class="ot">&lt;-</span> conc <span class="sc">%&gt;%</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(sample_type <span class="sc">==</span> <span class="st">"Organic"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> timing, <span class="at">values_from =</span> conc) <span class="sc">%&gt;%</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">diff =</span> Before <span class="sc">-</span> After) <span class="sc">%&gt;%</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">treatment =</span> <span class="fu">fct_recode</span>(treatment, <span class="st">"Graze"</span> <span class="ot">=</span> <span class="st">"Regular Graze"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">treatment =</span> <span class="fu">fct_relevel</span>(treatment, <span class="fu">c</span>(<span class="st">"Control"</span>, <span class="st">"Graze"</span>, <span class="st">"High Graze"</span>, <span class="st">"Mow"</span>))) <span class="sc">%&gt;%</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">location =</span> <span class="fu">fct_relevel</span>(location, <span class="fu">c</span>(<span class="st">"Upper"</span>, <span class="st">"Middle"</span>, <span class="st">"Lower"</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div>
 </section>
 <section id="soil-data" class="level2">
 <h2 class="anchored" data-anchor-id="soil-data">Soil data</h2>
 <div class="cell-container"><div class="cell-decorator"><pre>In [4]:</pre></div><div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>soil_diff <span class="ot">&lt;-</span> conc <span class="sc">%&gt;%</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(sample_type <span class="sc">==</span> <span class="st">"Soil"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> timing, <span class="at">values_from =</span> conc) <span class="sc">%&gt;%</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">diff =</span> Before <span class="sc">-</span> After) <span class="sc">%&gt;%</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">treatment =</span> <span class="fu">fct_recode</span>(treatment, <span class="st">"Graze"</span> <span class="ot">=</span> <span class="st">"Regular Graze"</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">treatment =</span> <span class="fu">fct_relevel</span>(treatment, <span class="fu">c</span>(<span class="st">"Control"</span>, <span class="st">"Graze"</span>, <span class="st">"High Graze"</span>, <span class="st">"Mow"</span>))) <span class="sc">%&gt;%</span></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">location =</span> <span class="fu">fct_relevel</span>(location, <span class="fu">c</span>(<span class="st">"Upper"</span>, <span class="st">"Middle"</span>, <span class="st">"Lower"</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>soil_diff <span class="ot">&lt;-</span> conc <span class="sc">%&gt;%</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(sample_type <span class="sc">==</span> <span class="st">"Soil"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> timing, <span class="at">values_from =</span> conc) <span class="sc">%&gt;%</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">diff =</span> Before <span class="sc">-</span> After) <span class="sc">%&gt;%</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">treatment =</span> <span class="fu">fct_recode</span>(treatment, <span class="st">"Graze"</span> <span class="ot">=</span> <span class="st">"Regular Graze"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">treatment =</span> <span class="fu">fct_relevel</span>(treatment, <span class="fu">c</span>(<span class="st">"Control"</span>, <span class="st">"Graze"</span>, <span class="st">"High Graze"</span>, <span class="st">"Mow"</span>))) <span class="sc">%&gt;%</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">location =</span> <span class="fu">fct_relevel</span>(location, <span class="fu">c</span>(<span class="st">"Upper"</span>, <span class="st">"Middle"</span>, <span class="st">"Lower"</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div>
 </section>
 <section id="organics-analysis" class="level2">
 <h2 class="anchored" data-anchor-id="organics-analysis">Organics analysis</h2>
 <div class="cell-container"><div class="cell-decorator"><pre>In [5]:</pre></div><div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>m7 <span class="ot">&lt;-</span> <span class="fu">glmmTMB</span>(diff <span class="sc">~</span> treatment <span class="sc">*</span> location <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>site) <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>year),</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>              <span class="at">data =</span> organic_diff)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>m7 <span class="ot">&lt;-</span> <span class="fu">glmmTMB</span>(diff <span class="sc">~</span> treatment <span class="sc">*</span> location <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>site) <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>year),</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>              <span class="at">data =</span> organic_diff)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div>
 <div class="cell-container"><div class="cell-decorator"><pre>In [6]:</pre></div><div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">simulateResiduals</span>(m7, <span class="at">n =</span> <span class="dv">1000</span>, <span class="at">plot =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">simulateResiduals</span>(m7, <span class="at">n =</span> <span class="dv">1000</span>, <span class="at">plot =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="">
 <figure class="figure">
@@ -316,7 +328,7 @@ Scaled residual values: 0.238 0.027 0.226 0.24 0.719 0.392 0.179 0.09 0.368 0.24
 </div>
 </div></div>
 <div class="cell-container"><div class="cell-decorator"><pre>In [7]:</pre></div><div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>car<span class="sc">::</span><span class="fu">Anova</span>(m7, <span class="at">type =</span> <span class="st">"III"</span>)  <span class="co"># No interaction</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>car<span class="sc">::</span><span class="fu">Anova</span>(m7, <span class="at">type =</span> <span class="st">"III"</span>)  <span class="co"># No interaction</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Analysis of Deviance Table (Type III Wald chisquare tests)
 
@@ -329,9 +341,9 @@ treatment:location 2.8111  6     0.8322</code></pre>
 </div>
 </div></div>
 <div class="cell-container"><div class="cell-decorator"><pre>In [8]:</pre></div><div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>m7 <span class="ot">&lt;-</span> <span class="fu">glmmTMB</span>(diff <span class="sc">~</span> treatment <span class="sc">+</span> location <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>site) <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>year),</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>              <span class="at">data =</span> organic_diff)</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">simulateResiduals</span>(m7, <span class="at">n =</span> <span class="dv">1000</span>, <span class="at">plot =</span> <span class="cn">TRUE</span>) <span class="co"># No interaction</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>m7 <span class="ot">&lt;-</span> <span class="fu">glmmTMB</span>(diff <span class="sc">~</span> treatment <span class="sc">+</span> location <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>site) <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>year),</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>              <span class="at">data =</span> organic_diff)</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="fu">simulateResiduals</span>(m7, <span class="at">n =</span> <span class="dv">1000</span>, <span class="at">plot =</span> <span class="cn">TRUE</span>) <span class="co"># No interaction</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="">
 <figure class="figure">
@@ -344,7 +356,7 @@ treatment:location 2.8111  6     0.8322</code></pre>
  
 Scaled residual values: 0.246 0.033 0.186 0.226 0.693 0.435 0.183 0.12 0.31 0.257 0.319 0.8 0.865 0.745 0.32 0.802 0.881 0.428 0.995 0.63 ...</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>performance<span class="sc">::</span><span class="fu">check_collinearity</span>(m7)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>performance<span class="sc">::</span><span class="fu">check_collinearity</span>(m7)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># Check for Multicollinearity
 
@@ -354,7 +366,7 @@ Low Correlation
  treatment 1.00 [1.00, 1.00]         1.00      1.00
   location 1.00 [1.00, 1.00]         1.00      1.00</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>car<span class="sc">::</span><span class="fu">Anova</span>(m7, <span class="at">type =</span> <span class="st">"III"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>car<span class="sc">::</span><span class="fu">Anova</span>(m7, <span class="at">type =</span> <span class="st">"III"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Analysis of Deviance Table (Type III Wald chisquare tests)
 
@@ -369,8 +381,8 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div></div>
 <p>Post-hoc</p>
 <div class="cell-container"><div class="cell-decorator"><pre>In [9]:</pre></div><div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>m_emms7 <span class="ot">&lt;-</span> <span class="fu">emmeans</span>(m7, <span class="sc">~</span>treatment)</span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">pairs</span>(m_emms7, <span class="at">adjust =</span> <span class="st">"fdr"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>m_emms7 <span class="ot">&lt;-</span> <span class="fu">emmeans</span>(m7, <span class="sc">~</span>treatment)</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="fu">pairs</span>(m_emms7, <span class="at">adjust =</span> <span class="st">"fdr"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> contrast             estimate    SE  df t.ratio p.value
  Control - Graze        -1.486 0.594 135  -2.501  0.0656
@@ -383,44 +395,44 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 Results are averaged over the levels of: location 
 P value adjustment: fdr method for 6 tests </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>location_pair <span class="ot">&lt;-</span> <span class="fu">summary</span>(<span class="fu">pairs</span>(m_emms7, <span class="at">adjust =</span> <span class="st">"fdr"</span>)) </span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>pairs <span class="ot">&lt;-</span> location_pair <span class="sc">%&gt;%</span></span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="st">"Contrast"</span> <span class="ot">=</span> <span class="st">"contrast"</span>, <span class="st">"Estimate"</span> <span class="ot">=</span> <span class="st">"estimate"</span>, <span class="st">"t ratio"</span> <span class="ot">=</span> <span class="st">"t.ratio"</span>, <span class="st">"p value"</span> <span class="ot">=</span> <span class="st">"p.value"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>location_pair <span class="ot">&lt;-</span> <span class="fu">summary</span>(<span class="fu">pairs</span>(m_emms7, <span class="at">adjust =</span> <span class="st">"fdr"</span>)) </span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>pairs <span class="ot">&lt;-</span> location_pair <span class="sc">%&gt;%</span></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="st">"Contrast"</span> <span class="ot">=</span> <span class="st">"contrast"</span>, <span class="st">"Estimate"</span> <span class="ot">=</span> <span class="st">"estimate"</span>, <span class="st">"t ratio"</span> <span class="ot">=</span> <span class="st">"t.ratio"</span>, <span class="st">"p value"</span> <span class="ot">=</span> <span class="st">"p.value"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div>
 <div class="cell-container"><div class="cell-decorator"><pre>In [10]:</pre></div><div class="cell">
 
-<div class="cell-container"><div class="cell-decorator"><pre>In [11]:</pre></div><div><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>pairs <span class="sc">|&gt;</span></span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">|&gt;</span></span>
-<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fmt_number</span>(<span class="at">columns =</span> <span class="fu">c</span>(<span class="st">"Estimate"</span>, <span class="st">"SE"</span>, <span class="st">"t ratio"</span>), <span class="at">decimal =</span> <span class="dv">2</span>)<span class="sc">|&gt;</span></span>
-<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fmt_number</span>(<span class="at">columns =</span> <span class="fu">c</span>(<span class="st">"p value"</span>), <span class="at">decimal =</span> <span class="dv">3</span>)<span class="sc">|&gt;</span></span>
-<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sub_small_vals</span>(<span class="at">threshold =</span> <span class="fl">0.001</span>) <span class="sc">|&gt;</span></span>
-<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_style</span>(<span class="at">style =</span>  <span class="fu">cell_text</span>(<span class="at">weight =</span> <span class="st">"bold"</span>, <span class="at">align =</span> <span class="st">"center"</span>), <span class="at">locations =</span>  <span class="fu">cells_row_groups</span>()) <span class="sc">|&gt;</span></span>
-<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_options</span>(<span class="at">column_labels.font.weight =</span> <span class="st">"bold"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div><div id="tbl-organic-posthoc" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<div class="cell-container"><div class="cell-decorator"><pre>In [11]:</pre></div><div><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>pairs <span class="sc">|&gt;</span></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">|&gt;</span></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fmt_number</span>(<span class="at">columns =</span> <span class="fu">c</span>(<span class="st">"Estimate"</span>, <span class="st">"SE"</span>, <span class="st">"t ratio"</span>), <span class="at">decimal =</span> <span class="dv">2</span>)<span class="sc">|&gt;</span></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fmt_number</span>(<span class="at">columns =</span> <span class="fu">c</span>(<span class="st">"p value"</span>), <span class="at">decimal =</span> <span class="dv">3</span>)<span class="sc">|&gt;</span></span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sub_small_vals</span>(<span class="at">threshold =</span> <span class="fl">0.001</span>) <span class="sc">|&gt;</span></span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_style</span>(<span class="at">style =</span>  <span class="fu">cell_text</span>(<span class="at">weight =</span> <span class="st">"bold"</span>, <span class="at">align =</span> <span class="st">"center"</span>), <span class="at">locations =</span>  <span class="fu">cells_row_groups</span>()) <span class="sc">|&gt;</span></span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_options</span>(<span class="at">column_labels.font.weight =</span> <span class="st">"bold"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div><div id="tbl-organic-posthoc" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-organic-posthoc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value adjustment for differences in the net organic layer WEP (<span class="math inline">\(mg~kg^{-1}\)</span>) between the four treatments.
 </figcaption>
 <div aria-describedby="tbl-organic-posthoc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="lzmsducohl" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#lzmsducohl table {
+<div id="gvvfgacbtm" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#gvvfgacbtm table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#lzmsducohl thead, #lzmsducohl tbody, #lzmsducohl tfoot, #lzmsducohl tr, #lzmsducohl td, #lzmsducohl th {
+#gvvfgacbtm thead, #gvvfgacbtm tbody, #gvvfgacbtm tfoot, #gvvfgacbtm tr, #gvvfgacbtm td, #gvvfgacbtm th {
   border-style: none;
 }
 
-#lzmsducohl p {
+#gvvfgacbtm p {
   margin: 0;
   padding: 0;
 }
 
-#lzmsducohl .gt_table {
+#gvvfgacbtm .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -446,12 +458,12 @@ Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value a
   border-left-color: #D3D3D3;
 }
 
-#lzmsducohl .gt_caption {
+#gvvfgacbtm .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#lzmsducohl .gt_title {
+#gvvfgacbtm .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -463,7 +475,7 @@ Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value a
   border-bottom-width: 0;
 }
 
-#lzmsducohl .gt_subtitle {
+#gvvfgacbtm .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -475,7 +487,7 @@ Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value a
   border-top-width: 0;
 }
 
-#lzmsducohl .gt_heading {
+#gvvfgacbtm .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -487,13 +499,13 @@ Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value a
   border-right-color: #D3D3D3;
 }
 
-#lzmsducohl .gt_bottom_border {
+#gvvfgacbtm .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#lzmsducohl .gt_col_headings {
+#gvvfgacbtm .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -508,7 +520,7 @@ Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value a
   border-right-color: #D3D3D3;
 }
 
-#lzmsducohl .gt_col_heading {
+#gvvfgacbtm .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -528,7 +540,7 @@ Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value a
   overflow-x: hidden;
 }
 
-#lzmsducohl .gt_column_spanner_outer {
+#gvvfgacbtm .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -540,15 +552,15 @@ Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value a
   padding-right: 4px;
 }
 
-#lzmsducohl .gt_column_spanner_outer:first-child {
+#gvvfgacbtm .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#lzmsducohl .gt_column_spanner_outer:last-child {
+#gvvfgacbtm .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#lzmsducohl .gt_column_spanner {
+#gvvfgacbtm .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -560,11 +572,11 @@ Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value a
   width: 100%;
 }
 
-#lzmsducohl .gt_spanner_row {
+#gvvfgacbtm .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#lzmsducohl .gt_group_heading {
+#gvvfgacbtm .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -590,7 +602,7 @@ Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value a
   text-align: left;
 }
 
-#lzmsducohl .gt_empty_group_heading {
+#gvvfgacbtm .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -605,15 +617,15 @@ Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value a
   vertical-align: middle;
 }
 
-#lzmsducohl .gt_from_md > :first-child {
+#gvvfgacbtm .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#lzmsducohl .gt_from_md > :last-child {
+#gvvfgacbtm .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#lzmsducohl .gt_row {
+#gvvfgacbtm .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -632,7 +644,7 @@ Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value a
   overflow-x: hidden;
 }
 
-#lzmsducohl .gt_stub {
+#gvvfgacbtm .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -645,7 +657,7 @@ Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value a
   padding-right: 5px;
 }
 
-#lzmsducohl .gt_stub_row_group {
+#gvvfgacbtm .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -659,15 +671,15 @@ Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value a
   vertical-align: top;
 }
 
-#lzmsducohl .gt_row_group_first td {
+#gvvfgacbtm .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#lzmsducohl .gt_row_group_first th {
+#gvvfgacbtm .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#lzmsducohl .gt_summary_row {
+#gvvfgacbtm .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -677,16 +689,16 @@ Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value a
   padding-right: 5px;
 }
 
-#lzmsducohl .gt_first_summary_row {
+#gvvfgacbtm .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#lzmsducohl .gt_first_summary_row.thick {
+#gvvfgacbtm .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#lzmsducohl .gt_last_summary_row {
+#gvvfgacbtm .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -696,7 +708,7 @@ Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value a
   border-bottom-color: #D3D3D3;
 }
 
-#lzmsducohl .gt_grand_summary_row {
+#gvvfgacbtm .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -706,7 +718,7 @@ Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value a
   padding-right: 5px;
 }
 
-#lzmsducohl .gt_first_grand_summary_row {
+#gvvfgacbtm .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -716,7 +728,7 @@ Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value a
   border-top-color: #D3D3D3;
 }
 
-#lzmsducohl .gt_last_grand_summary_row_top {
+#gvvfgacbtm .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -726,11 +738,11 @@ Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value a
   border-bottom-color: #D3D3D3;
 }
 
-#lzmsducohl .gt_striped {
+#gvvfgacbtm .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#lzmsducohl .gt_table_body {
+#gvvfgacbtm .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -739,7 +751,7 @@ Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value a
   border-bottom-color: #D3D3D3;
 }
 
-#lzmsducohl .gt_footnotes {
+#gvvfgacbtm .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -753,7 +765,7 @@ Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value a
   border-right-color: #D3D3D3;
 }
 
-#lzmsducohl .gt_footnote {
+#gvvfgacbtm .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -762,7 +774,7 @@ Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value a
   padding-right: 5px;
 }
 
-#lzmsducohl .gt_sourcenotes {
+#gvvfgacbtm .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -776,7 +788,7 @@ Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value a
   border-right-color: #D3D3D3;
 }
 
-#lzmsducohl .gt_sourcenote {
+#gvvfgacbtm .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -784,64 +796,73 @@ Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value a
   padding-right: 5px;
 }
 
-#lzmsducohl .gt_left {
+#gvvfgacbtm .gt_left {
   text-align: left;
 }
 
-#lzmsducohl .gt_center {
+#gvvfgacbtm .gt_center {
   text-align: center;
 }
 
-#lzmsducohl .gt_right {
+#gvvfgacbtm .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#lzmsducohl .gt_font_normal {
+#gvvfgacbtm .gt_font_normal {
   font-weight: normal;
 }
 
-#lzmsducohl .gt_font_bold {
+#gvvfgacbtm .gt_font_bold {
   font-weight: bold;
 }
 
-#lzmsducohl .gt_font_italic {
+#gvvfgacbtm .gt_font_italic {
   font-style: italic;
 }
 
-#lzmsducohl .gt_super {
+#gvvfgacbtm .gt_super {
   font-size: 65%;
 }
 
-#lzmsducohl .gt_footnote_marks {
+#gvvfgacbtm .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#lzmsducohl .gt_asterisk {
+#gvvfgacbtm .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#lzmsducohl .gt_indent_1 {
+#gvvfgacbtm .gt_indent_1 {
   text-indent: 5px;
 }
 
-#lzmsducohl .gt_indent_2 {
+#gvvfgacbtm .gt_indent_2 {
   text-indent: 10px;
 }
 
-#lzmsducohl .gt_indent_3 {
+#gvvfgacbtm .gt_indent_3 {
   text-indent: 15px;
 }
 
-#lzmsducohl .gt_indent_4 {
+#gvvfgacbtm .gt_indent_4 {
   text-indent: 20px;
 }
 
-#lzmsducohl .gt_indent_5 {
+#gvvfgacbtm .gt_indent_5 {
   text-indent: 25px;
+}
+
+#gvvfgacbtm .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#gvvfgacbtm div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
 }
 </style>
 <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
@@ -851,8 +872,8 @@ Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value a
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Estimate">Estimate</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="SE">SE</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="df">df</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="t ratio">t ratio</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="p value">p value</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="t-ratio">t ratio</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="p-value">p value</th>
     </tr>
   </thead>
   <tbody class="gt_table_body">
@@ -906,27 +927,27 @@ Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value a
 <h3 class="anchored" data-anchor-id="plots">Plots</h3>
 <p>Extra</p>
 <div class="cell-container"><div class="cell-decorator"><pre>In [12]:</pre></div><div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x1 =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="cn">Inf</span>, <span class="sc">-</span><span class="cn">Inf</span>), <span class="at">x2 =</span> <span class="fu">c</span>(<span class="cn">Inf</span>, <span class="cn">Inf</span>), <span class="at">y2 =</span> <span class="fu">c</span>(<span class="cn">Inf</span>, <span class="dv">0</span>), <span class="at">y1 =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="sc">-</span><span class="cn">Inf</span>), <span class="at">difference =</span> <span class="fu">c</span>(<span class="st">"Net removal"</span>, <span class="st">"Net addition"</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">difference =</span> <span class="fu">fct_relevel</span>(difference, <span class="fu">c</span>(<span class="st">"Net removal"</span>, <span class="st">"Net addition"</span>))) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x1 =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="cn">Inf</span>, <span class="sc">-</span><span class="cn">Inf</span>), <span class="at">x2 =</span> <span class="fu">c</span>(<span class="cn">Inf</span>, <span class="cn">Inf</span>), <span class="at">y2 =</span> <span class="fu">c</span>(<span class="cn">Inf</span>, <span class="dv">0</span>), <span class="at">y1 =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="sc">-</span><span class="cn">Inf</span>), <span class="at">difference =</span> <span class="fu">c</span>(<span class="st">"Net removal"</span>, <span class="st">"Net addition"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">difference =</span> <span class="fu">fct_relevel</span>(difference, <span class="fu">c</span>(<span class="st">"Net removal"</span>, <span class="st">"Net addition"</span>))) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div>
 <p>Plots</p>
 <div class="cell-container"><div class="cell-decorator"><pre>In [13]:</pre></div><div id="cell-fig-organic-WEP" class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co">#|</span></span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>p1 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> organic_diff) <span class="sc">+</span></span>
-<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>(<span class="at">base_size =</span> <span class="dv">12</span>) <span class="sc">+</span> </span>
-<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_rect</span>(<span class="at">data =</span> df, <span class="fu">aes</span>(<span class="at">xmin =</span> x1, <span class="at">xmax =</span> x2, <span class="at">ymin =</span> y1, <span class="at">ymax =</span> y2, <span class="at">fill =</span> difference), <span class="at">alpha =</span> <span class="fl">0.15</span>) <span class="sc">+</span></span>
-<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>  <span class="co">#scale_fill_manual(values = c("white", "black")) +</span></span>
-<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>  <span class="co">#ggnewscale::new_scale_fill() +</span></span>
-<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> treatment, <span class="at">y =</span> diff, <span class="at">fill =</span> location)) <span class="sc">+</span></span>
-<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>  <span class="co">#scale_fill_viridis_d(name = "Location", begin = 0.3, end = 1) +</span></span>
-<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"white"</span>, <span class="st">"black"</span>, <span class="st">"#35608DFF"</span>, <span class="st">"#2FB47CFF"</span>, <span class="st">"#FDE725FF"</span>)) <span class="sc">+</span></span>
-<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">fill =</span> <span class="fu">guide_legend</span>(<span class="at">override.aes =</span> <span class="fu">list</span>(<span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">size =</span> <span class="dv">1</span>))) <span class="sc">+</span></span>
-<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="fu">expression</span>(<span class="fu">paste</span>(<span class="st">"Net WEP Difference ("</span>, mg<span class="sc">~</span>kg<span class="sc">^</span>{<span class="sc">-</span><span class="dv">1</span>}, <span class="st">")"</span>)), <span class="at">x =</span> <span class="st">"Treatment"</span>) <span class="sc">+</span></span>
-<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.title.x =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">0</span>, <span class="at">vjust =</span> <span class="dv">1</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>),</span>
-<span id="cb26-14"><a href="#cb26-14" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.position =</span> <span class="st">'bottom'</span>, <span class="at">legend.title =</span> <span class="fu">element_blank</span>())</span>
-<span id="cb26-15"><a href="#cb26-15" aria-hidden="true" tabindex="-1"></a>p1</span>
-<span id="cb26-16"><a href="#cb26-16" aria-hidden="true" tabindex="-1"></a><span class="co"># ggsave(plot = p1, filename = here::here("./Figures/Figure 5.png"), width = 174, height = 85, units = "mm", dpi = 600)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co">#|</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>p1 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> organic_diff) <span class="sc">+</span></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>(<span class="at">base_size =</span> <span class="dv">12</span>) <span class="sc">+</span> </span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_rect</span>(<span class="at">data =</span> df, <span class="fu">aes</span>(<span class="at">xmin =</span> x1, <span class="at">xmax =</span> x2, <span class="at">ymin =</span> y1, <span class="at">ymax =</span> y2, <span class="at">fill =</span> difference), <span class="at">alpha =</span> <span class="fl">0.15</span>) <span class="sc">+</span></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>  <span class="co">#scale_fill_manual(values = c("white", "black")) +</span></span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>  <span class="co">#ggnewscale::new_scale_fill() +</span></span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> treatment, <span class="at">y =</span> diff, <span class="at">fill =</span> location)) <span class="sc">+</span></span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>  <span class="co">#scale_fill_viridis_d(name = "Location", begin = 0.3, end = 1) +</span></span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"white"</span>, <span class="st">"black"</span>, <span class="st">"#35608DFF"</span>, <span class="st">"#2FB47CFF"</span>, <span class="st">"#FDE725FF"</span>)) <span class="sc">+</span></span>
+<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">fill =</span> <span class="fu">guide_legend</span>(<span class="at">override.aes =</span> <span class="fu">list</span>(<span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">size =</span> <span class="dv">1</span>))) <span class="sc">+</span></span>
+<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="fu">expression</span>(<span class="fu">paste</span>(<span class="st">"Net WEP Difference ("</span>, mg<span class="sc">~</span>kg<span class="sc">^</span>{<span class="sc">-</span><span class="dv">1</span>}, <span class="st">")"</span>)), <span class="at">x =</span> <span class="st">"Treatment"</span>) <span class="sc">+</span></span>
+<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.title.x =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">0</span>, <span class="at">vjust =</span> <span class="dv">1</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>),</span>
+<span id="cb31-14"><a href="#cb31-14" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.position =</span> <span class="st">'bottom'</span>, <span class="at">legend.title =</span> <span class="fu">element_blank</span>())</span>
+<span id="cb31-15"><a href="#cb31-15" aria-hidden="true" tabindex="-1"></a>p1</span>
+<span id="cb31-16"><a href="#cb31-16" aria-hidden="true" tabindex="-1"></a><span class="co"># ggsave(plot = p1, filename = here::here("./Figures/Figure 5.png"), width = 174, height = 85, units = "mm", dpi = 600)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div id="fig-organic-WEP" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Boxplots showing the change in riparian organic layer WEP concentration following grazing or mowing.">
 <figure class="quarto-float quarto-float-fig figure">
@@ -945,9 +966,9 @@ Change in riparian organic layer WEP concentration following grazing or mowing i
 <section id="mineral-soil-analysis" class="level2">
 <h2 class="anchored" data-anchor-id="mineral-soil-analysis">Mineral soil analysis</h2>
 <div class="cell-container"><div class="cell-decorator"><pre>In [14]:</pre></div><div class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>m8 <span class="ot">&lt;-</span> <span class="fu">glmmTMB</span>(diff <span class="sc">~</span> treatment <span class="sc">*</span> location <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>site) <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>year),</span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>              <span class="at">data =</span> soil_diff)</span>
-<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="fu">simulateResiduals</span>(m8, <span class="at">n =</span> <span class="dv">1000</span>, <span class="at">plot =</span> <span class="cn">TRUE</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>m8 <span class="ot">&lt;-</span> <span class="fu">glmmTMB</span>(diff <span class="sc">~</span> treatment <span class="sc">*</span> location <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>site) <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>year),</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>              <span class="at">data =</span> soil_diff)</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="fu">simulateResiduals</span>(m8, <span class="at">n =</span> <span class="dv">1000</span>, <span class="at">plot =</span> <span class="cn">TRUE</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="">
 <figure class="figure">
@@ -960,7 +981,7 @@ Change in riparian organic layer WEP concentration following grazing or mowing i
  
 Scaled residual values: 0.037 0.063 0.012 0.314 0.393 0.032 0.242 0.114 0.046 0.028 0.011 0 0.07 0.132 0.188 0.225 0.153 0.18 0.264 0.093 ...</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>car<span class="sc">::</span><span class="fu">Anova</span>(m8, <span class="at">type =</span> <span class="st">"III"</span>) <span class="co"># No interaction</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>car<span class="sc">::</span><span class="fu">Anova</span>(m8, <span class="at">type =</span> <span class="st">"III"</span>) <span class="co"># No interaction</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Analysis of Deviance Table (Type III Wald chisquare tests)
 
@@ -974,9 +995,9 @@ treatment:location 4.3581  6     0.6283</code></pre>
 </div></div>
 <p>No interaction</p>
 <div class="cell-container"><div class="cell-decorator"><pre>In [15]:</pre></div><div class="cell">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>m8 <span class="ot">&lt;-</span> <span class="fu">glmmTMB</span>(diff <span class="sc">~</span> treatment <span class="sc">+</span> location <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>site) <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>year),</span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>              <span class="at">data =</span> soil_diff)</span>
-<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="fu">simulateResiduals</span>(m8, <span class="at">n =</span> <span class="dv">1000</span>, <span class="at">plot =</span> <span class="cn">TRUE</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>m8 <span class="ot">&lt;-</span> <span class="fu">glmmTMB</span>(diff <span class="sc">~</span> treatment <span class="sc">+</span> location <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>site) <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>year),</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>              <span class="at">data =</span> soil_diff)</span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a><span class="fu">simulateResiduals</span>(m8, <span class="at">n =</span> <span class="dv">1000</span>, <span class="at">plot =</span> <span class="cn">TRUE</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="">
 <figure class="figure">
@@ -989,7 +1010,7 @@ treatment:location 4.3581  6     0.6283</code></pre>
  
 Scaled residual values: 0.021 0.08 0.014 0.389 0.363 0.018 0.219 0.111 0.06 0.03 0.011 0 0.065 0.158 0.27 0.203 0.114 0.123 0.311 0.121 ...</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>performance<span class="sc">::</span><span class="fu">check_collinearity</span>(m8)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>performance<span class="sc">::</span><span class="fu">check_collinearity</span>(m8)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># Check for Multicollinearity
 
@@ -999,7 +1020,7 @@ Low Correlation
  treatment 1.00 [1.00, 1.00]         1.00      1.00
   location 1.00 [1.00, 1.00]         1.00      1.00</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>car<span class="sc">::</span><span class="fu">Anova</span>(m8, <span class="at">type =</span> <span class="st">"III"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>car<span class="sc">::</span><span class="fu">Anova</span>(m8, <span class="at">type =</span> <span class="st">"III"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Analysis of Deviance Table (Type III Wald chisquare tests)
 
@@ -1013,22 +1034,22 @@ location    1.1674  2     0.5578</code></pre>
 <section id="plots-1" class="level3">
 <h3 class="anchored" data-anchor-id="plots-1">plots</h3>
 <div class="cell-container"><div class="cell-decorator"><pre>In [16]:</pre></div><div id="cell-fig-soil-WEP" class="cell">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co">#|</span></span>
-<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>p2 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> soil_diff) <span class="sc">+</span></span>
-<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>(<span class="at">base_size =</span> <span class="dv">12</span>) <span class="sc">+</span> </span>
-<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_rect</span>(<span class="at">data =</span> df, <span class="fu">aes</span>(<span class="at">xmin =</span> x1, <span class="at">xmax =</span> x2, <span class="at">ymin =</span> y1, <span class="at">ymax =</span> y2, <span class="at">fill =</span> difference), <span class="at">alpha =</span> <span class="fl">0.15</span>) <span class="sc">+</span></span>
-<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a>  <span class="co">#scale_fill_manual(values = c("white", "black")) +</span></span>
-<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a>  <span class="co">#ggnewscale::new_scale_fill() +</span></span>
-<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> treatment, <span class="at">y =</span> diff, <span class="at">fill =</span> location)) <span class="sc">+</span></span>
-<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a>  <span class="co">#scale_fill_viridis_d(name = "Location", begin = 0.3, end = 1) +</span></span>
-<span id="cb37-9"><a href="#cb37-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"white"</span>, <span class="st">"black"</span>, <span class="st">"#35608DFF"</span>, <span class="st">"#2FB47CFF"</span>, <span class="st">"#FDE725FF"</span>)) <span class="sc">+</span></span>
-<span id="cb37-10"><a href="#cb37-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">fill =</span> <span class="fu">guide_legend</span>(<span class="at">override.aes =</span> <span class="fu">list</span>(<span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">size =</span> <span class="dv">1</span>))) <span class="sc">+</span></span>
-<span id="cb37-11"><a href="#cb37-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="fu">expression</span>(<span class="fu">paste</span>(<span class="st">"Net WEP Difference ("</span>, mg<span class="sc">~</span>kg<span class="sc">^</span>{<span class="sc">-</span><span class="dv">1</span>}, <span class="st">")"</span>)), <span class="at">x =</span> <span class="st">"Treatment"</span>) <span class="sc">+</span></span>
-<span id="cb37-12"><a href="#cb37-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.title.x =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb37-13"><a href="#cb37-13" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">0</span>, <span class="at">vjust =</span> <span class="dv">1</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>),</span>
-<span id="cb37-14"><a href="#cb37-14" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.position =</span> <span class="st">'bottom'</span>, <span class="at">legend.title =</span> <span class="fu">element_blank</span>())</span>
-<span id="cb37-15"><a href="#cb37-15" aria-hidden="true" tabindex="-1"></a>p2</span>
-<span id="cb37-16"><a href="#cb37-16" aria-hidden="true" tabindex="-1"></a><span class="co"># ggsave(plot = p2, filename = here::here("./Figures/Figure 6.png"), width = 174, height = 85, units = "mm", dpi = 600)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="co">#|</span></span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>p2 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> soil_diff) <span class="sc">+</span></span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>(<span class="at">base_size =</span> <span class="dv">12</span>) <span class="sc">+</span> </span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_rect</span>(<span class="at">data =</span> df, <span class="fu">aes</span>(<span class="at">xmin =</span> x1, <span class="at">xmax =</span> x2, <span class="at">ymin =</span> y1, <span class="at">ymax =</span> y2, <span class="at">fill =</span> difference), <span class="at">alpha =</span> <span class="fl">0.15</span>) <span class="sc">+</span></span>
+<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a>  <span class="co">#scale_fill_manual(values = c("white", "black")) +</span></span>
+<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a>  <span class="co">#ggnewscale::new_scale_fill() +</span></span>
+<span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> treatment, <span class="at">y =</span> diff, <span class="at">fill =</span> location)) <span class="sc">+</span></span>
+<span id="cb42-8"><a href="#cb42-8" aria-hidden="true" tabindex="-1"></a>  <span class="co">#scale_fill_viridis_d(name = "Location", begin = 0.3, end = 1) +</span></span>
+<span id="cb42-9"><a href="#cb42-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"white"</span>, <span class="st">"black"</span>, <span class="st">"#35608DFF"</span>, <span class="st">"#2FB47CFF"</span>, <span class="st">"#FDE725FF"</span>)) <span class="sc">+</span></span>
+<span id="cb42-10"><a href="#cb42-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">fill =</span> <span class="fu">guide_legend</span>(<span class="at">override.aes =</span> <span class="fu">list</span>(<span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">size =</span> <span class="dv">1</span>))) <span class="sc">+</span></span>
+<span id="cb42-11"><a href="#cb42-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="fu">expression</span>(<span class="fu">paste</span>(<span class="st">"Net WEP Difference ("</span>, mg<span class="sc">~</span>kg<span class="sc">^</span>{<span class="sc">-</span><span class="dv">1</span>}, <span class="st">")"</span>)), <span class="at">x =</span> <span class="st">"Treatment"</span>) <span class="sc">+</span></span>
+<span id="cb42-12"><a href="#cb42-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.title.x =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb42-13"><a href="#cb42-13" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">0</span>, <span class="at">vjust =</span> <span class="dv">1</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>),</span>
+<span id="cb42-14"><a href="#cb42-14" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.position =</span> <span class="st">'bottom'</span>, <span class="at">legend.title =</span> <span class="fu">element_blank</span>())</span>
+<span id="cb42-15"><a href="#cb42-15" aria-hidden="true" tabindex="-1"></a>p2</span>
+<span id="cb42-16"><a href="#cb42-16" aria-hidden="true" tabindex="-1"></a><span class="co"># ggsave(plot = p2, filename = here::here("./Figures/Figure 6.png"), width = 174, height = 85, units = "mm", dpi = 600)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div id="fig-soil-WEP" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Boxplots showing the change in riparian  Ah layer (0-10cm) WEP concentration following grazing or mowing.">
 <figure class="quarto-float quarto-float-fig figure">

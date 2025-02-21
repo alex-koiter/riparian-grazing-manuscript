@@ -199,7 +199,7 @@
   pdfcreator={LaTeX via pandoc}}
 
 
-\journalname{TBD}
+\journalname{Journal of Environmental Quality}
 
 \draftfalse
 
@@ -540,7 +540,7 @@ calculated using the bulk density and depth measurements collected in
 \subsection{Statistical analysis}\label{statistical-analysis}
 
 All statistical analysis, plotting, and mapping were undertaken using
-the R Statistical Software (v4.4.1; R Core Team (2024)), through the
+the R Statistical Software (v4.4.2; R Core Team (2024)), through the
 RStudio Integrated Development Environment v2023.12.1.402 (RStudio,
 2024). All plots and maps were created using the R package
 \texttt{ggplot2} (v3.5.1; Wickham (2016)). Country and regional maps
@@ -570,8 +570,8 @@ interaction was significant, post-hoc pairwise comparisons with a
 Benjamini-Hochberg p-value adjustment were performed (p \textless0.05).
 When a main effect or interaction was significant, post-hoc pairwise
 comparisons with a Benjamini-Hochberg p-value adjustment was used
-(\texttt{emmeans} v1.10.5; Lenth (2024)). Model assumptions were
-assessed using DHARMa residual plots (\texttt{DHARMa} v0.4.6; Hartig
+(\texttt{emmeans} v1.10.6; Lenth (2024)). Model assumptions were
+assessed using DHARMa residual plots (\texttt{DHARMa} v0.4.7; Hartig
 (2022)), main effects were tested for collinearity (\texttt{performance}
 v0.12.4; Lüdecke et al. (2021)), and results were presented as type III
 ANOVA (\texttt{car} v3.1.3; Fox and Weisberg (2019)). For each unique
@@ -609,7 +609,8 @@ the biomass (26.3 \(mg~m^{-2}\)), organic layer (14.3 \(mg~m^{-2}\)),
 and the litter (13.7 \(mg~m^{-2}\)). It should be noted that these are
 only approximate estimates for the organic layer and Ah horizon because
 the values for depth and bulk density measured in 2023 were used in the
-calculations for all previous years. Nevertheless, the vertical profile
+calculations for all previous years
+(\quartosuppfigref{suppfig-bd-plot}). Nevertheless, the vertical profile
 of WEP in riparian areas (Figure~\ref{fig-vertical-wep}) observed in
 this study supports the concept that a measure of P in soil alone is
 likely missing a large proportion of the near-surface P that can be
@@ -680,7 +681,7 @@ biomass WEP was largest near the lower sampling location and the Ah soil
 WEP was largest in the upper sampling location adjacent to the fields
 (Figure~\ref{fig-vertical-wep} b). The high soil water content in the
 lower location created conditions that favor high biomass production
-(\quartosuppfigref{suppfig-bd-plot}) ) and higher WEP concentration
+(\quartosuppfigref{suppfig-bd-plot}) and higher WEP concentration
 (Figure~\ref{fig-vertical-wep} a). The higher bulk density was most
 likely due to the lower soil organic matter content and the higher WEP
 concentration may be related to the interception of P-rich runoff from
@@ -778,16 +779,17 @@ The model looking at areal density of litter WEP showed no significant
 impacts of either treatment (X\textsuperscript{2} = 1.15, df = 3, p =
 0.23) or riparian location (X\textsuperscript{2} = 4.30, df = 2, p =
 0.56) (Figure~\ref{fig-litter-wep}). ). In contrast, the model exploring
-WEP concentration in the organic layer detected no significant
-difference among riparian locations (X\textsuperscript{2} = 0.57, df =
-2, p = 0.75) but did find a significant effect of treatment
-(X\textsuperscript{2} = 8.24, df = 3, p = 0.04). However, the post-hoc
-pairwise comparisons (Table~\ref{tbl-organic-posthoc}) found no
-significant differences (p \textless{} 0.05) among the treatments.
-Finally, there was no significant effect of treatment
-(X\textsuperscript{2} = 2.59, df = 3, p = 0.46) or riparian position
-(X\textsuperscript{2} = 1.17, df = 2, p = 0.56) on the concentration of
-WEP in the Ah horizon (Figure~\ref{fig-soil-wep}).
+WEP concentration in the organic layer (Figure~\ref{fig-organic-wep})
+detected no significant difference among riparian locations
+(X\textsuperscript{2} = 0.57, df = 2, p = 0.75) but did find a
+significant effect of treatment (X\textsuperscript{2} = 8.24, df = 3, p
+= 0.04). However, the post-hoc pairwise comparisons
+(Table~\ref{tbl-organic-posthoc}) found no significant differences (p
+\textless{} 0.05) among the treatments. Finally, there was no
+significant effect of treatment (X\textsuperscript{2} = 2.59, df = 3, p
+= 0.46) or riparian position (X\textsuperscript{2} = 1.17, df = 2, p =
+0.56) on the concentration of WEP in the Ah horizon
+(Figure~\ref{fig-soil-wep}).
 
 \begin{figure}[H]
 

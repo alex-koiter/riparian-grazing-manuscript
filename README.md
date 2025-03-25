@@ -15,6 +15,25 @@ ORCID: 0009-0002-5887-5574
 This manuscript that has been accepted for publication at the Journal of Environmental Quality.
 A preview of the manuscript, including notebooks for analysis, can be found at <https://alexkoiter.ca/riparian-grazing-manuscript/>
 
+The published article is open access and found at <http://doi.org/10.1002/jeq2.70012>
+
+To cite the paper or the data please use the following:
+
+Koiter AJ, Malone TY (2025) Effects of riparian grazing on distinct water-extractable phosphorus sources. J Environ Qual 1–13. https://doi.org/10.1002/jeq2.70012
+
+A BibTeX entry for LaTeX users is
+
+@article{,
+	title = {Effects of riparian grazing on distinct water-extractable phosphorus sources},  
+	doi = {10.1002/jeq2.70012},  
+	journal = {Journal of Environmental Quality},  
+	author = {Koiter, Alexander J. and Malone, Tamaragh Y.},  
+	year = {2025},  
+	note = {\_eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1002/jeq2.70012},  
+	pages = {1--13},  
+}
+
+
 ## Abstract
  Riparian areas play an important role in maintaining water quality in agricultural watersheds by buffering sediment, nutrients, and other pollutants. Additionally, these areas are also an important sources of forage, particularly during drought. Recent studies have shown that riparian areas are less effective buffers and, in some cases, are a net source of phosphorus (P) in cold climates. The repeated freeze-thaw cycles increase the availability of P in both the vegetation and soil sources. Cattle grazing or harvesting of riparian areas prior to the onset of winter conditions may be a viable management practice to reduce the loss of P during the spring snowmelt. This study measured the water-extractable phosphorus (WEP) in four distinctive sources: biomass, litter, organic layer, and Ah horizon. Overall, the Ah (0-10cm) soil was the largest (~44%) source of WEP; however, the biomass (i.e., standing vegetation) was a considerable proportion (~25%) of the total. In addition to control plots, the riparian areas were subjected to grazing, high density grazing, and mowing treatments. Findings revealed significant reductions in biomass WEP with high density grazing and mowing treatments, particularly in lower riparian zones. There were no detectable changes in the other sources of WEP. This suggests that autumn short-term grazing may be a mechanism to use this important forage resource and reduce the potential P loss during the snowmelt period.
 
@@ -37,4 +56,4 @@ This project was undertaken with the financial support of the Government of Cana
 
 ## Sharing
 Data is also available via the Dryad repository and any use of the data should cite:
-Koiter, Alexander; Malone, Tamaragh (Forthcoming 2025). Effects of Riparian Grazing on Distinct Phosphorus Sources [Dataset]. Dryad. [https://doi.org/10.5061/dryad.nzs7h4526](https://doi.org/10.5061/dryad.nzs7h4526)
+Koiter, Alexander; Malone, Tamaragh (2025). Effects of Riparian Grazing on Distinct Phosphorus Sources [Dataset]. Dryad. [https://doi.org/10.5061/dryad.nzs7h4526](https://doi.org/10.5061/dryad.nzs7h4526)

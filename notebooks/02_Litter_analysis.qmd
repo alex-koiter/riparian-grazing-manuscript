@@ -117,5 +117,5 @@ p1 <- ggplot(data = filter(plot_data, measure == "p_total")) +
         legend.position = "bottom",
         legend.title = element_blank())
 p1
-# ggsave(plot = p1, filename = here::here("./Figures/Figure 4.png"), width = 174, height = 85, units = "mm", dpi = 600)
+# ggsave(plot = p1, filename = here::here("./Figures/Figure 4.tiff"), width = 174, height = 85, units = "mm", dpi = 400)
 ```

@@ -1,6 +1,6 @@
 ---
 title: Effects of Riparian Grazing on Distinct Water-Extractable Phosphorus Sources
-
+date: 2025-03-14
 author:
   - name: Alexander J Koiter
     orcid: 0000-0002-9355-9561
@@ -49,10 +49,11 @@ key-points:
 date-modified: last-modified
 bibliography: references.bib
 csl: journal-of-environmental-quality.csl
-date: 14/04/2025
+year: 2025
 citation:
   type: article-journal
   container-title: Journal of Environmental Quality
+  doi: 10.1002/jeq2.70012
 number-sections: true
 ---
 

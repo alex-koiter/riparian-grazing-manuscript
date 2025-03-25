@@ -1,0 +1,219 @@
+---
+title: Riparian vegetation WEP in response to grazing
+author: Alex Koiter
+html-table-processing: none
+---
+
+## Load Libraries
+```{r}
+library(tidyverse)
+library(glmmTMB)
+library(DHARMa)
+library(emmeans)
+library(viridis)
+library(patchwork)
+library(gt)
+```
+
+## Read in data
+```{r}
+conc <- read_csv(here::here("./notebooks/P_concentration.csv"))
+mass_data <- read_csv(here::here("./notebooks/mass.csv"))
+```
+
+
+## Merge data
+```{r}
+veg_data <- mass_data %>%
+  right_join(conc) %>%
+  rename(conc = ak_content) %>% # mg/kg
+  mutate(p_total = conc * dryweight/1000 /0.25) # mg/m2
+```
+
+## Biomass data
+```{r}
+biomass_diff <- veg_data %>%
+  filter(sample_type == "Biomass") %>%
+  mutate(dryweight = dryweight/1000 /0.25) %>% # kg/m2
+  pivot_longer(cols = c(dryweight, p_total, conc), names_to = "measure", values_to = "value") %>%
+  pivot_wider(names_from = timing, values_from = value) %>%
+  mutate(diff = Before - After)
+```
+
+
+## Biomass Analysis
+### P-total
+```{r}
+m <- glmmTMB((diff) ~ treatment * location + Before + (1|site) + (1|year),
+             data = filter(biomass_diff, measure == "p_total"))
+simulateResiduals(m, n = 1000, plot = TRUE) 
+car::Anova(m, type = "III") # No interaction
+```
+
+Removing interaction
+
+```{r}
+temp <- filter(biomass_diff, measure == "p_total") ## otherwise issue with emmeans()
+m <- glmmTMB((diff) ~ treatment + location + Before + (1|site) + (1|year),
+             data = temp)
+simulateResiduals(m, n = 1000, plot = TRUE)
+performance::check_collinearity(m)
+car::Anova(m, type = "III")
+```
+
+Post-hoc
+
+```{r}
+m_emms1 <- emmeans(m, ~treatment)
+m_emms2 <- emmeans(m, ~location)
+
+treat_pair <- summary(pairs(m_emms1, adjust = "fdr")) %>%
+  mutate(type = "Treatment")
+location_pair <- summary(pairs(m_emms2, adjust = "fdr")) %>%
+  mutate(type = "Location")
+
+pairs <- treat_pair %>%
+  bind_rows(location_pair) %>%
+  rename("Contrast" = "contrast", "Estimate" = "estimate", "t ratio" = "t.ratio", "p value" = "p.value")
+
+```
+
+```{r}
+#| label: tbl-biomass-posthoc
+#| tbl-cap: Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value adjustment for differences in the net biomass WEP ($mg~m^{-2}$) between the four treatments and three riparian sampling locations.
+
+pairs |>
+  mutate(Contrast = fct_recode(Contrast, "Control - Graze" = "Control - Regular Graze", "High Graze - Graze" = "High Graze - Regular Graze", "Mow - Graze" = "Mow - Regular Graze")) |>
+  group_by(type) |>
+  gt() |>
+  fmt_number(columns = c("Estimate", "SE", "t ratio"), decimal = 2)|>
+  fmt_number(columns = c("p value"), decimal = 3)|>
+  sub_small_vals(threshold = 0.001) |>
+  tab_style(style =  cell_text(weight = "bold", align = "center"), locations =  cells_row_groups()) |>
+  tab_options(column_labels.font.weight = "bold")
+```
+
+
+### Summary
+
+```{r}
+biomass_diff %>%
+  filter(measure == "p_total") %>%
+  group_by(treatment) %>%
+  summarise(median = median(diff, na.rm =T),
+            mean = mean(diff, na.rm =T))
+
+biomass_diff %>%
+  filter(measure == "p_total") %>%
+  group_by(location) %>%
+  summarise(median = median(diff, na.rm =T),
+            mean = mean(diff, na.rm =T))
+```
+
+
+### Plotting
+
+Ordering of factors
+
+```{r}
+plot_data <- biomass_diff %>% 
+  mutate(treatment = fct_recode(treatment, "Graze" = "Regular Graze")) %>%
+  mutate(treatment = fct_relevel(treatment, c("Control", "Graze", "High Graze", "Mow"))) %>%
+  mutate(location = fct_relevel(location, c("Upper", "Middle", "Lower")))
+```
+
+Extra
+```{r}
+df <- data.frame(x1 = c(-Inf, -Inf), x2 = c(Inf, Inf), y2 = c(Inf, 0), y1 = c(0, -Inf), difference = c("Net removal", "Net addition")) %>%
+  mutate(difference = fct_relevel(difference, c("Net removal", "Net addition"))) 
+```
+
+
+Plots
+```{r}
+p1 <- ggplot(data = filter(plot_data, measure == "p_total")) +
+  geom_rect(data = df, aes(xmin = x1, xmax = x2, ymin = y1, ymax = y2, fill = difference), alpha = 0.15) +
+  #geom_hline(yintercept = 0) +
+  scale_y_continuous(breaks = seq(-40, 120, 40)) +
+  geom_boxplot(data = filter(plot_data, measure == "p_total"), aes(x = treatment, y = diff)) +
+  theme_bw(base_size = 12) + 
+  labs(y = expression(paste("Net WEP Difference (", mg~m^{-2}, ")")), x = "Treatment", tag = "a)") +
+  annotate("text", x = "Control", y = 130, label = "a") + 
+  annotate("text", x = "Graze", y = 130, label = "a") + 
+  annotate("text", x = "High Graze", y = 130, label = "b") + 
+  annotate("text", x = "Mow", y = 130, label = "b") +
+  scale_fill_manual(values = c("white", "black"), guide = guide_legend(override.aes = list(colour = "black"))) +
+  theme(axis.title.x = element_blank(),
+        axis.text.x = element_text(angle = 0, vjust = 1, hjust = 0.5))
+p1
+
+p2 <- ggplot() +
+  geom_rect(data = df, aes(xmin = x1, xmax = x2, ymin = y1, ymax = y2, fill = difference), alpha = 0.15) +
+  geom_boxplot(data = filter(plot_data, measure == "p_total"), aes(x = location, y = diff)) +
+  theme_bw(base_size = 12) + 
+  scale_y_continuous(breaks = seq(-40, 120, 40)) +
+  labs(tag = "b)") +
+  annotate("text", x = "Upper", y = 130, label = "a") + 
+  annotate("text", x = "Middle", y = 130, label = "ab") + 
+  annotate("text", x = "Lower", y = 130, label = "c") +
+  scale_fill_manual(values = c("white", "black"), guide = guide_legend(override.aes = list(colour = "black"))) +
+  theme(axis.title.y = element_blank(),
+        axis.title.x = element_blank(),
+        axis.text.x = element_text(angle = 0, vjust = 1, hjust = 0.5))
+p2
+```
+
+```{r}
+#| label: fig-vegetation-WEP
+#| fig-cap: "Change in riparian biomass WEP following grazing or mowing in each riparian location. Within each plot significant differences (p<0.05) between treatments or riparian locations are denoted with different letters. Lower sampling locations are adjacent to the edge of the waterbody and Upper locations are adjacent to the field."
+#| fig-alt: "Boxplots showing the change in riparian biomass WEP following grazing or mowing."
+#|   
+p3 <- p1 + p2 + plot_layout(guides = 'collect') & theme(legend.position = 'bottom', legend.title = element_blank())
+p3
+# ggsave(plot = p3, filename = here::here("./Figures/Figure 3.tiff"), width = 174, height = 85, units = "mm", dpi = 400)
+```
+
+
+
+## Dry Weight
+```{r}
+m2 <- glmmTMB((diff) ~ treatment * location + Before + (1|site) + (1|year),
+              data = filter(biomass_diff, measure == "dryweight"))
+simulateResiduals(m2, n = 1000, plot = TRUE)
+car::Anova(m2, type = "III")
+
+performance::check_collinearity(glmmTMB((diff) ~ treatment + location + Before + (1|site) + (1|year),
+                                        data = filter(biomass_diff, measure == "dryweight")))
+```
+
+
+Post-hoc
+```{r}
+m_emms2 <- emmeans(m2, ~treatment * location)
+emmeans(m2, pairwise ~ location|treatment, adjust = "fdr")$contrasts
+emmeans(m2, pairwise ~ treatment|location, adjust = "fdr")$contrasts
+```
+
+### Plots
+
+```{r}
+ggplot(data = filter(plot_data, measure == "dryweight"), aes(x = treatment, y = diff, fill = location)) +
+  geom_boxplot() +
+  labs(y = "kg/m^2") +
+  geom_hline(yintercept = 0) +
+  facet_grid(~measure) 
+
+ggplot(data = filter(plot_data, measure == "dryweight"), aes(x = treatment, y = diff, fill = location)) +
+  geom_boxplot() +
+  labs(y = "kg/m^2") +
+  geom_hline(yintercept = 0) +
+  facet_grid(location~measure) 
+
+ggplot(data = filter(plot_data, measure == "dryweight"), aes(x = location, y = diff, fill = treatment)) +
+  geom_boxplot() +
+  labs(y = "kg/m^2") +
+  geom_hline(yintercept = 0) +
+  facet_grid(treatment~measure) 
+```
+
+

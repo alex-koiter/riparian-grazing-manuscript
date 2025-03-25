@@ -1,0 +1,243 @@
+---
+title: Map of study area
+author: Alex Koiter
+---
+## Load Libraries
+```{r}
+library(tidyverse)
+library(ggspatial)
+library(sf)
+library(rnaturalearth)
+library(patchwork)
+library(OpenStreetMap)
+```
+
+## Important coordinants 
+Regional site location
+
+```{r}
+site <- st_sfc(st_point(c(-99.924176, 50.056015)), crs = 4326)
+box = c(xmin = -99.99, xmax = -99.924176 + 0.12, ymax = 50.056015 +.065, ymin = 50.056015 - 0.065)
+```
+
+Study plot locations
+```{r}
+# sites <- st_as_sf(data.frame(site = c(1,2,3,4), lat = c(50.052525, 50.052209, 50.059208, 50.060235), long = c(-99.924242, -99.918429, -99.912849, -99.931591)), coords = c("long", "lat"), crs = 4362)
+                                                                                              
+sites <- data.frame(site = c(1,2,3,4), lat = c(50.052525, 50.052209, 50.059208, 50.060235), long = c(-99.924242, -99.918429, -99.912849, -99.931591))
+```
+
+## Land use data of region
+### Get data
+```{r}
+minnedosa_data <- "lcv_minnedosa_2004_2006_shp"
+if (file.exists(minnedosa_data)) {
+  print("The data already exists!")
+} else {
+  download.file("https://mli.gov.mb.ca/landuse/shp_zip_files/lcv_minnedosa_2004_2006_shp.zip", 
+                destfile = "lcv_minnedosa_2004_2006_shp.zip")
+  unzip("lcv_minnedosa_2004_2006_shp.zip", exdir = "lcv_minnedosa_2004_2006_shp")
+}
+
+brandon_data <- "lcv_brandon_2006_shp"
+if (file.exists(brandon_data)) {
+  print("The data already exists!")
+} else {
+  download.file("https://mli.gov.mb.ca/landuse/shp_zip_files/lcv_brandon_2006_shp.zip", 
+                destfile = "lcv_brandon_2006_shp.zip")
+  unzip("lcv_brandon_2006_shp.zip", exdir = "lcv_brandon_2006_shp")
+}
+
+```
+
+
+
+```{r}
+
+sf_use_s2(FALSE)
+land <- st_read(here::here("./notebooks/lcv_brandon_2006_shp/lcv_brandon_2006.shp")) %>%
+  bind_rows(st_read(here::here("./notebooks/lcv_minnedosa_2004_2006_shp/lcv_minnedosa_2004_2006.shp"))) %>%
+  st_transform(crs = 4326) %>%
+  st_crop(st_bbox(box, crs = 4326)) %>%
+  mutate(Land_use = recode(CLASSNAME, "Agricultural Field" = "Agriculture", "Agri - Forage Field" = "Forage", "Water Body" = "Water", "Wetland - Treed Bog" = "Wetland", "Wetland - Marsh" = "Wetland", "Decidious Forest" = "Forest", "Open Decidious Forest" = "Forest", "Mixedwood Forest" = "Forest", "Forest Cut Blocks" = "Forest", "Coniferous Forest" = "Forest","Roads Trails Rail Lines" = "Other", "Sand and Gravel" = "Other", "Cultural Features" = "Other", "Range and Grassland" = "Forage", "Water Bodies" = "Water")) %>%
+  # group_by(Land_use) %>%
+  # summarise(do_union = TRUE) %>%
+  mutate(Land_use = factor(Land_use, levels=c("Agriculture", "Forage", "Forest",  "Water", "Wetland", "Other")))
+```
+
+## Canada
+```{r}
+canada <- ne_states(country = "Canada", returnclass = "sf") %>%
+  st_transform(crs = 3348) 
+
+```
+
+## Maps
+### Land use
+```{r}
+p3 <- ggplot() +
+  theme_bw() +
+  geom_sf(data = land, aes(fill = Land_use), lwd = 0) +
+  scale_fill_manual(values=c("#458B00",  "#CDAD00", "#006400","#009ACD", "#0096D194",  "#C1CDCD"), name = "Land use") +
+  geom_point(data = sites, aes(x = long, y = lat), shape = 23, colour = "red", fill = "red", size = 2) +
+  coord_sf(ylim = c(49.992, 50.1), xlim = c(-99.965, -99.80418), crs = 4326) +
+  scale_y_continuous(expand = c(0,0)) +
+  scale_x_continuous(expand = c(0,0)) +
+  labs(tag = "b)") +
+  annotation_scale(location = "bl",
+                   height = unit(0.05, "cm")) +
+  annotation_north_arrow(location = "br", 
+                         height = unit(0.5, "cm"),
+                         width = unit(0.5, "cm")) +
+  theme(axis.text = element_blank(),
+        axis.ticks = element_blank(),
+        axis.title = element_blank(),
+        plot.margin = unit(c(0,0,0,0), "mm"))
+```
+
+### Open street
+not used
+```{r}
+p2 <- ggplot(site) +
+  annotation_map_tile(type = "osm", zoom = 15) +
+  geom_point(data = sites, aes(x = long, y = lat), shape = 23, colour = "red", fill = "red", size = 1) +
+  #coord_sf(ylim = c(50.056015 +.02, 50.056015 - 0.02), xlim = c(-99.924176 - 0.04, -99.924176 + 0.04), crs = 4326) +
+  coord_sf(ylim = c(50.056015 +.01, 50.056015 +.065), xlim = c(-99.924176 - 0.02, -99.924176 + 0.02), crs = 4326) +
+  annotation_scale(location = "bl",
+                   height = unit(0.05, "cm")) +
+  annotation_north_arrow(location = "br", 
+                         height = unit(0.5, "cm"),
+                         width = unit(0.5, "cm")) +
+  theme(axis.text = element_blank(),
+        axis.ticks = element_blank(),
+        axis.title = element_blank(),
+        plot.margin = unit(c(0,0,0,0), "mm"))
+
+```
+### Canada
+```{r}
+p1 <- ggplot() +
+  theme_bw() +
+  layer_spatial(canada, fill = "white") +
+  layer_spatial(site, shape = 23, colour = "red", fill = "red", size = 2) +
+  theme(axis.text = element_blank(),
+        axis.ticks = element_blank(),
+        axis.title = element_blank(),
+        plot.margin = unit(c(0,0,0,0), "mm"),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        #panel.border = element_blank(),
+        panel.background = element_blank())
+```
+
+```{r}
+#| label: fig-map
+#| fig-cap: "Showing a) the study site in southwestern Manitoba and b) the four riparian areas included in this study and the regional land use (data from https://mli.gov.mb.ca/)."
+#| fig-alt: "Map of Canada with red dot showing location of stite. Regional landuse with red dots showing the location of the four riparian areas included in this study"
+#|   
+p1 + p3 + plot_layout(guides = "collect") & theme(legend.position = "right")
+
+#ggsave(filename = "Figures/Maps.png", plot = p4, height = 75, width = 180, units = "mm", dpi = 600)
+```
+
+```{r}
+mb_river <- ne_download(scale = 10,  type = 'rivers_lake_centerlines', category = "physical", returnclass = "sf") %>%
+  st_transform(crs = 4326) %>%
+  st_crop(st_bbox(c(xmin = -101.5889, ymin = 48.99267, 
+                    xmax = -95.15399, ymax = 51.399), 
+                  crs = st_crs(.)))
+
+mb_lakes <- ne_download(scale = 10,  type = 'lakes', category = "physical", returnclass = "sf") %>%
+  st_transform(crs = 4326) %>%
+  st_crop(st_bbox(c(xmin = -101.5889, ymin = 48.99267, 
+                    xmax = -95.15399, ymax = 51.399), 
+                  crs = st_crs(.)))
+
+mb <- ne_states(country = "Canada", returnclass = "sf") %>%
+  filter(name == "Manitoba") %>%
+  st_transform(crs = 4326) %>%
+  st_crop(st_bbox(c(xmin = -101.5889, ymin = 48.99267, 
+                    xmax = -95.15399, ymax = 51.399), 
+                  crs = st_crs(.)))
+
+mb_cities <- maps::canada.cities %>%
+  filter(country.etc == "MB") %>%
+  mutate(name = str_remove(name, " [A-Z]{2}$")) %>%
+  st_as_sf(coords = c("long", "lat"), crs = 4326) %>%
+  st_transform(crs = 4326) %>%
+  st_crop(st_bbox(c(xmin = -101.5889, ymin = 48.99267, 
+                    xmax = -95.15399, ymax = 51.399), 
+                  crs = st_crs(.))) %>%
+  filter(pop >5000)
+
+p4 <- ggplot() +
+  theme_bw() +
+  geom_sf(data = mb, fill = "white") +
+  geom_sf(data = mb_river, colour = "skyblue4") +
+    geom_sf(data = mb_lakes, fill = "lightblue") +
+  geom_sf(data = mb_cities) +
+  ggrepel::geom_label_repel(
+    data = mb_cities,
+    aes(label = name, geometry = geometry),
+    stat = "sf_coordinates",
+    min.segment.length = 0,
+    nudge_y = 0.02,
+    size = 2
+  ) +
+  layer_spatial(site, shape = 23, colour = "red", fill = "red", size = 2) +
+  labs(tag = "a)") +
+  annotation_scale(location = "bl",
+                   height = unit(0.05, "cm"), 
+                   pad_y = unit(0.5, "cm"),
+                   pad_x = unit(1.1, "cm")) +
+  annotation_north_arrow(location = "br", 
+                         height = unit(0.5, "cm"),
+                         width = unit(0.5, "cm"), 
+                   pad_y = unit(0.5, "cm"),
+                   pad_x = unit(1.1, "cm")) +
+  theme(axis.text = element_blank(),
+        axis.ticks = element_blank(),
+        axis.title = element_blank(),
+        plot.margin = unit(c(0,0,0,0), "mm"),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.border = element_blank(),
+        panel.background = element_blank())
+
+
+
+map <- openmap(c(50.047, -99.936), c( 50.065, -99.909), zoom = NULL,
+                  type = "esri-imagery", mergeTiles = TRUE) 
+
+sa_map2 <- openproj(map, projection = "+proj=longlat +datum=WGS84 +no_defs +type=crs")
+
+sites <- data.frame(sites = c("1", "2", "3", "4"), lat = c(50.052472, 50.052288, 50.059197, 50.060114), long = c(-99.924327, -99.918839, -99.912919, -99.931479)) 
+
+
+p5 <- OpenStreetMap::autoplot.OpenStreetMap(sa_map2) +
+  theme_void() +
+  geom_point(data = sites,
+           aes(x = long , y = lat ), 
+           colour = "red", size =  2.5) +
+  ggrepel::geom_label_repel(data = sites, 
+            aes(long, lat, label = sites), 
+            size = 3, colour = "black",
+            min.segment.length = 0) + 
+  geom_segment(aes(x = -99.934824, y = 50.048, xend = -99.927655, yend = 50.048), colour = "black", linewidth = 1) +
+  geom_segment(aes(x = -99.931150, y = 50.048, xend = -99.927655, yend = 50.048), colour = "white", linewidth = 1) +
+  annotate("label", x = -99.926, y = 50.048, label = "500m", fill = "lightgray") +
+  labs(tag = "b)")
+
+```
+
+```{r}
+#| label: fig-mapr
+#| fig-cap: "Showing a) the location of the study site in southern Manitoba with an inset map of Canada; and b) the locations of the four riparian areas included in this study"
+#| fig-alt: "Map of Southern Manitba with an inset map of Canada with red dot showing location of site. Satellite imagery of the locations of the four riparian areas included in this study"
+   
+p6 <- p4 + inset_element(p1, left = 0.6, bottom = 0.6, right = 1, top = 1) + p5
+p6
+
+#ggsave(plot = p6, filename = here::here("./Figures/Figure 1.tiff"), width = 174, height = 100, units = "mm", dpi = 400) 
+```
+

@@ -1,5 +1,6 @@
 project:
   type: manuscript
+  output-dir: docs
 
 execute:
   freeze: auto

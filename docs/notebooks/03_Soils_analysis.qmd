@@ -1,0 +1,167 @@
+---
+title: Riparian organic and mineral soil WEP in response to grazing
+author: Alex Koiter
+html-table-processing: none
+---
+
+## Load Libraries
+```{r}
+library(tidyverse)
+library(glmmTMB)
+library(DHARMa)
+library(emmeans)
+library(gt)
+```
+
+## Read in clean data 
+```{r}
+conc <- read_csv(here::here("./notebooks/P_concentration.csv")) %>%
+  rename("conc" = "ak_content")
+```
+
+## Organics data
+```{r}
+
+organic_diff <- conc %>%
+  filter(sample_type == "Organic") %>%
+  pivot_wider(names_from = timing, values_from = conc) %>%
+  mutate(diff = Before - After) %>%
+  mutate(treatment = fct_recode(treatment, "Graze" = "Regular Graze")) %>%
+  mutate(treatment = fct_relevel(treatment, c("Control", "Graze", "High Graze", "Mow"))) %>%
+  mutate(location = fct_relevel(location, c("Upper", "Middle", "Lower")))
+
+```
+
+## Soil data
+```{r}
+soil_diff <- conc %>%
+  filter(sample_type == "Soil") %>%
+  pivot_wider(names_from = timing, values_from = conc) %>%
+  mutate(diff = Before - After) %>%
+  mutate(treatment = fct_recode(treatment, "Graze" = "Regular Graze")) %>%
+  mutate(treatment = fct_relevel(treatment, c("Control", "Graze", "High Graze", "Mow"))) %>%
+  mutate(location = fct_relevel(location, c("Upper", "Middle", "Lower")))
+
+```
+
+
+## Organics analysis
+```{r}
+m7 <- glmmTMB(diff ~ treatment * location + (1|site) + (1|year),
+              data = organic_diff)
+```
+
+```{r}
+simulateResiduals(m7, n = 1000, plot = TRUE)
+```
+
+```{r}
+car::Anova(m7, type = "III")  # No interaction
+```
+
+```{r}
+m7 <- glmmTMB(diff ~ treatment + location + (1|site) + (1|year),
+              data = organic_diff)
+simulateResiduals(m7, n = 1000, plot = TRUE) # No interaction
+performance::check_collinearity(m7)
+car::Anova(m7, type = "III")
+```
+
+
+Post-hoc
+```{r}
+m_emms7 <- emmeans(m7, ~treatment)
+pairs(m_emms7, adjust = "fdr")
+
+
+location_pair <- summary(pairs(m_emms7, adjust = "fdr")) 
+
+pairs <- location_pair %>%
+  rename("Contrast" = "contrast", "Estimate" = "estimate", "t ratio" = "t.ratio", "p value" = "p.value")
+
+```
+
+```{r}
+#| label: tbl-organic-posthoc
+#| tbl-cap: Results of the post-hoc pairwise comparisons with a Benjamini-Hochberg p value adjustment for differences in the net organic layer WEP ($mg~kg^{-1}$) between the four treatments.
+
+pairs |>
+  gt() |>
+  fmt_number(columns = c("Estimate", "SE", "t ratio"), decimal = 2)|>
+  fmt_number(columns = c("p value"), decimal = 3)|>
+  sub_small_vals(threshold = 0.001) |>
+  tab_style(style =  cell_text(weight = "bold", align = "center"), locations =  cells_row_groups()) |>
+  tab_options(column_labels.font.weight = "bold")
+```
+
+### Plots
+Extra
+```{r}
+
+df <- data.frame(x1 = c(-Inf, -Inf), x2 = c(Inf, Inf), y2 = c(Inf, 0), y1 = c(0, -Inf), difference = c("Net removal", "Net addition")) %>%
+  mutate(difference = fct_relevel(difference, c("Net removal", "Net addition"))) 
+```
+Plots
+```{r}
+#| label: fig-organic-WEP
+#| fig-cap: "Change in riparian organic layer WEP concentration following grazing or mowing in each of the riparian locations. A significant effect of treatment was detected; however, the post-hoc analysis was not able to detect any significant (p < 0.05) pairwise contrasts. Lower sampling locations are adjacent to the edge of the waterbody and Upper locations are adjacent to the field."
+#| fig-alt: "Boxplots showing the change in riparian organic layer WEP concentration following grazing or mowing."
+#|  
+p1 <- ggplot(data = organic_diff) +
+  theme_bw(base_size = 12) + 
+  geom_rect(data = df, aes(xmin = x1, xmax = x2, ymin = y1, ymax = y2, fill = difference), alpha = 0.15) +
+  #scale_fill_manual(values = c("white", "black")) +
+  #ggnewscale::new_scale_fill() +
+  geom_boxplot(aes(x = treatment, y = diff, fill = location)) +
+  #scale_fill_viridis_d(name = "Location", begin = 0.3, end = 1) +
+  scale_fill_manual(values = c("white", "black", "#35608DFF", "#2FB47CFF", "#FDE725FF")) +
+  guides(fill = guide_legend(override.aes = list(colour = "black", size = 1))) +
+  labs(y = expression(paste("Net WEP Difference (", mg~kg^{-1}, ")")), x = "Treatment") +
+  theme(axis.title.x = element_blank(),
+        axis.text.x = element_text(angle = 0, vjust = 1, hjust = 0.5),
+        legend.position = 'bottom', legend.title = element_blank())
+p1
+# ggsave(plot = p1, filename = here::here("./Figures/Figure 5.tiff"), width = 174, height = 85, units = "mm", dpi = 400)
+```
+
+## Mineral soil analysis
+```{r}
+m8 <- glmmTMB(diff ~ treatment * location + (1|site) + (1|year),
+              data = soil_diff)
+simulateResiduals(m8, n = 1000, plot = TRUE) 
+car::Anova(m8, type = "III") # No interaction
+```
+
+No interaction
+```{r}
+
+m8 <- glmmTMB(diff ~ treatment + location + (1|site) + (1|year),
+              data = soil_diff)
+simulateResiduals(m8, n = 1000, plot = TRUE) 
+performance::check_collinearity(m8)
+car::Anova(m8, type = "III")
+```
+
+### plots
+```{r}
+#| label: fig-soil-WEP
+#| fig-cap: "Change in riparian Ah layer (0-10cm) WEP concentration following grazing or mowing in each of the riparian locations. No significant effect of treatment or location was detected. Lower sampling locations are adjacent to the edge of the waterbody and Upper locations are adjacent to the field."
+#| fig-alt: "Boxplots showing the change in riparian  Ah layer (0-10cm) WEP concentration following grazing or mowing."
+#|  
+p2 <- ggplot(data = soil_diff) +
+  theme_bw(base_size = 12) + 
+  geom_rect(data = df, aes(xmin = x1, xmax = x2, ymin = y1, ymax = y2, fill = difference), alpha = 0.15) +
+  #scale_fill_manual(values = c("white", "black")) +
+  #ggnewscale::new_scale_fill() +
+  geom_boxplot(aes(x = treatment, y = diff, fill = location)) +
+  #scale_fill_viridis_d(name = "Location", begin = 0.3, end = 1) +
+  scale_fill_manual(values = c("white", "black", "#35608DFF", "#2FB47CFF", "#FDE725FF")) +
+  guides(fill = guide_legend(override.aes = list(colour = "black", size = 1))) +
+  labs(y = expression(paste("Net WEP Difference (", mg~kg^{-1}, ")")), x = "Treatment") +
+  theme(axis.title.x = element_blank(),
+        axis.text.x = element_text(angle = 0, vjust = 1, hjust = 0.5),
+        legend.position = 'bottom', legend.title = element_blank())
+p2
+# ggsave(plot = p2, filename = here::here("./Figures/Figure 6.tiff"), width = 174, height = 85, units = "mm", dpi = 400)
+```
+

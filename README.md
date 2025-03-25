@@ -1,3 +1,6 @@
+[![DOI](https://zenodo.org/badge/760113390.svg)](https://doi.org/10.5281/zenodo.15084343)
+[![publication](https://img.shields.io/badge/status-published-green)](http://doi.org/10.1002/jeq2.70012)
+
 ## Effects of Riparian Grazing on Distinct Phosphorus Sources
 
 Alexander J Koiter<sup>*1</sup> and Tamaragh Y Malone<sup>2</sup>

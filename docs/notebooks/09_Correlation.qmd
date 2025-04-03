@@ -80,7 +80,7 @@ p3 <- ggplot(data = filter(corr_data, sample_type == "Organic"), aes(x = soil_co
   scale_colour_manual(values = c("#35608DFF", "#2FB47CFF", "#FDE725FF")) +
   facet_wrap(~sample_type, scales = "free")
 
-p1 + p2 + p3 + plot_layout(axis_titles = "collect", guides = 'collect') & theme(legend.position = "top")
+#p1 + p2 + p3 + plot_layout(axis_titles = "collect", guides = 'collect') & theme(legend.position = "top")
 
 ```
 
@@ -105,7 +105,7 @@ p5 <- ggplot(data = filter(corr_data, sample_type == "Litter"), aes(x = soil_con
   facet_wrap(~sample_type, scales = "free")
 
 p6 <- p4 + p5 + plot_layout(axis_titles = "collect", guides = 'collect') & theme(legend.position = "top")
-p6
+#p6
 ```
 
 ```{r}

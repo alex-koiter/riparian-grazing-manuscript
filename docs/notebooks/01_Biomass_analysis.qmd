@@ -145,7 +145,7 @@ p1 <- ggplot(data = filter(plot_data, measure == "p_total")) +
   scale_fill_manual(values = c("white", "black"), guide = guide_legend(override.aes = list(colour = "black"))) +
   theme(axis.title.x = element_blank(),
         axis.text.x = element_text(angle = 0, vjust = 1, hjust = 0.5))
-p1
+#p1
 
 p2 <- ggplot() +
   geom_rect(data = df, aes(xmin = x1, xmax = x2, ymin = y1, ymax = y2, fill = difference), alpha = 0.15) +
@@ -160,7 +160,7 @@ p2 <- ggplot() +
   theme(axis.title.y = element_blank(),
         axis.title.x = element_blank(),
         axis.text.x = element_text(angle = 0, vjust = 1, hjust = 0.5))
-p2
+#p2
 ```
 
 ```{r}
@@ -203,17 +203,17 @@ ggplot(data = filter(plot_data, measure == "dryweight"), aes(x = treatment, y = 
   geom_hline(yintercept = 0) +
   facet_grid(~measure) 
 
-ggplot(data = filter(plot_data, measure == "dryweight"), aes(x = treatment, y = diff, fill = location)) +
-  geom_boxplot() +
-  labs(y = "kg/m^2") +
-  geom_hline(yintercept = 0) +
-  facet_grid(location~measure) 
-
-ggplot(data = filter(plot_data, measure == "dryweight"), aes(x = location, y = diff, fill = treatment)) +
-  geom_boxplot() +
-  labs(y = "kg/m^2") +
-  geom_hline(yintercept = 0) +
-  facet_grid(treatment~measure) 
+# ggplot(data = filter(plot_data, measure == "dryweight"), aes(x = treatment, y = diff, fill = location)) +
+#   geom_boxplot() +
+#   labs(y = "kg/m^2") +
+#   geom_hline(yintercept = 0) +
+#   facet_grid(location~measure) 
+# 
+# ggplot(data = filter(plot_data, measure == "dryweight"), aes(x = location, y = diff, fill = treatment)) +
+#   geom_boxplot() +
+#   labs(y = "kg/m^2") +
+#   geom_hline(yintercept = 0) +
+#   facet_grid(treatment~measure) 
 ```
 
 

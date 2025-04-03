@@ -4,7 +4,7 @@ author: Alex Koiter
 ---
 ## Load Libraries
 ```{r}
-library(tidyverse)
+library(tidyverse) 
 library(readxl)
 library(janitor)
 ```
@@ -12,7 +12,7 @@ library(janitor)
 ## Read in data
 
 ```{r}
-data <- read_excel("Forrest-Daily-TempRainSoil-20192021-AKoiter.xlsx") %>%
+data <- read_excel(here::here("./notebooks/Forrest-Daily-TempRainSoil-20192021-AKoiter.xlsx")) %>%
   clean_names() %>%
   mutate(date = ymd(date),
          year = year(date),
@@ -29,14 +29,14 @@ precip <- data %>%
 ```
 
 ```{r}
-ggplot(data = data, aes(x = date, y = avg_air_t)) +
-  geom_point() +
-  theme_bw() +
-  facet_wrap(~year, scales = "free_x")
-ggplot(data = precip, aes(x = date, y = cumu_precip)) +
-  geom_point() +
-  theme_bw() +
-  facet_wrap(~year, scales = "free_x")
+# ggplot(data = data, aes(x = date, y = avg_air_t)) +
+#   geom_point() +
+#   theme_bw() +
+#   facet_wrap(~year, scales = "free_x")
+# ggplot(data = precip, aes(x = date, y = cumu_precip)) +
+#   geom_point() +
+#   theme_bw() +
+#   facet_wrap(~year, scales = "free_x")
 ```
 
 ## Sampling dates

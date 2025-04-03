@@ -535,19 +535,20 @@ calculated using the bulk density and depth measurements collected in
 
 \subsubsection{Statistical analysis}\label{statistical-analysis}
 
+\textsubscript{Source:
+\href{https://alex-koiter.github.io/riparian-grazing-manuscript/index.qmd.html}{Article
+Notebook}}
+
 All statistical analysis, plotting, and mapping were undertaken using
-the R Statistical Software
-(v\texttt{r\ paste(R.Version()\$major,\ R.Version()\$minor,\ sep\ =\ ".")};
-R Core Team (2024)), through the RStudio Integrated Development
-Environment v2023.12.1.402 (RStudio, 2024). All plots and maps were
-created using the R package \texttt{ggplot2}
-(v\texttt{r\ packageVersion("ggplot2")}; Wickham (2016)). Country and
-regional maps were created using data from the \texttt{rnaturalearth}
-package (Massicotte and South, 2023) and other maps using ESRI imagery
-and the \texttt{OpenStreetMap} package (Fellows, 2023). Four Linear
-Mixed Models (R package \texttt{glmmTMB}
-v\texttt{r\ packageVersion("glmmTMB")}; Brooks et al. (2017)) were used
-to investigate the effect of treatment and riparian sampling location
+the R Statistical Software (v4.4.3; R Core Team (2024)), through the
+RStudio Integrated Development Environment v2023.12.1.402 (RStudio,
+2024). All plots and maps were created using the R package
+\texttt{ggplot2} (v3.5.1; Wickham (2016)). Country and regional maps
+were created using data from the \texttt{rnaturalearth} package
+(Massicotte and South, 2023) and other maps using ESRI imagery and the
+\texttt{OpenStreetMap} package (Fellows, 2023). Four Linear Mixed Models
+(R package \texttt{glmmTMB} v1.1.10; Brooks et al. (2017)) were used to
+investigate the effect of treatment and riparian sampling location
 (including interaction) on the numeric difference in WEP measurements
 taken before and after treatment for each of the four distinct sources
 of P (areal densities for biomass and litter; concentrations for organic
@@ -569,23 +570,21 @@ interaction was significant, post-hoc pairwise comparisons with a
 Benjamini-Hochberg p-value adjustment were performed (p \textless0.05).
 When a main effect or interaction was significant, post-hoc pairwise
 comparisons with a Benjamini-Hochberg p-value adjustment was used
-(\texttt{emmeans} v\texttt{r\ packageVersion("emmeans")}; Lenth (2024)).
-Model assumptions were assessed using DHARMa residual plots
-(\texttt{DHARMa} v\texttt{r\ packageVersion("DHARMa")}; Hartig (2022)),
-main effects were tested for collinearity (\texttt{performance}
-v\texttt{r\ packageVersion("performance")}; Lüdecke et al. (2021)), and
-results were presented as type III ANOVA (\texttt{car}
-v\texttt{r\ packageVersion("car")}; Fox and Weisberg (2019)). For each
-unique source of WEP, the null hypotheses were 1) no difference in the
-net WEP among treatments or riparian sampling locations and 2) no
-interactions between these two factors.
+(\texttt{emmeans} v1.10.6; Lenth (2024)). Model assumptions were
+assessed using DHARMa residual plots (\texttt{DHARMa} v0.4.7; Hartig
+(2022)), main effects were tested for collinearity (\texttt{performance}
+v0.12.4; Lüdecke et al. (2021)), and results were presented as type III
+ANOVA (\texttt{car} v3.1.3; Fox and Weisberg (2019)). For each unique
+source of WEP, the null hypotheses were 1) no difference in the net WEP
+among treatments or riparian sampling locations and 2) no interactions
+between these two factors.
 
 Pearson correlations were performed to explore relations in WEP
 concentrations among the four unique P sources for each of the three
 topographic positions using samples collected before the application of
 the treatments. These relations were visualized using a scatterplot
-matrix created using the \texttt{GGally} R package
-(v\texttt{r\ packageVersion("GGally")}; Schloerke et al. (2024) )
+matrix created using the \texttt{GGally} R package (v2.2.1; Schloerke et
+al. (2024) )
 
 \subsection{Results and Discussion}\label{results-and-discussion}
 
@@ -1062,6 +1061,9 @@ design.
 
 Data and source code for analysis and manuscript available on GitHub:
 \url{https://github.com/alex-koiter/riparian-grazing-manuscript}
+
+Data set also available in the Dryad repository:
+\url{https://doi.org/10.5061/dryad.nzs7h4526}
 
 \subsection*{Conflict of interest
 statement}\label{conflict-of-interest-statement}

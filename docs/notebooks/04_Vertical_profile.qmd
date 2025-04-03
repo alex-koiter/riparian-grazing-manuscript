@@ -117,7 +117,7 @@ p1 <- ggplot(data = conc, aes(y = sample_type, x = conc, fill = location)) +
         legend.title = element_blank()) +
   labs(x = expression(paste("WEP Concentration (", mg~kg^{-1}, ")")), y = "P Source", tag = "a)") +
   scale_fill_viridis_d(name = "Location", begin = 0.3, end = 1)
-p1
+#p1
 
 p2 <- ggplot(data = total_data, aes(y = sample_type, x = p_total, fill = location)) + 
   geom_boxplot() + 
@@ -127,7 +127,7 @@ p2 <- ggplot(data = total_data, aes(y = sample_type, x = p_total, fill = locatio
         legend.position = "none") +
   labs(x = expression(paste("WEP Total (", mg~m^{-2}, ")")), tag = "b)") +
   scale_fill_viridis_d(name = "Location", begin = 0.3, end = 1)
-p2
+#p2
 ```
 
 ```{r}

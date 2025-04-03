@@ -480,17 +480,13 @@ extractable phosphorus</p>
   <sec id="statistical-analysis">
     <title>2.4 Statistical analysis</title>
     <p>All statistical analysis, plotting, and mapping were undertaken
-    using the R Statistical Software
-    (v<monospace>r paste(R.Version()$major, R.Version()$minor, sep = &quot;.&quot;)</monospace>;
-    R Core Team
+    using the R Statistical Software (v4.4.3; R Core Team
     (<xref alt="2024" rid="ref-rcoreteam2024" ref-type="bibr">2024</xref>)),
     through the RStudio Integrated Development Environment
     v2023.12.1.402
     (<xref alt="RStudio, 2024" rid="ref-rstudio2024" ref-type="bibr">RStudio,
     2024</xref>). All plots and maps were created using the R package
-    <monospace>ggplot2</monospace>
-    (v<monospace>r packageVersion(&quot;ggplot2&quot;)</monospace>;
-    Wickham
+    <monospace>ggplot2</monospace> (v3.5.1; Wickham
     (<xref alt="2016" rid="ref-wickham2016" ref-type="bibr">2016</xref>)).
     Country and regional maps were created using data from the
     <monospace>rnaturalearth</monospace> package
@@ -499,9 +495,7 @@ extractable phosphorus</p>
     <monospace>OpenStreetMap</monospace> package
     (<xref alt="Fellows, 2023" rid="ref-fellows2023" ref-type="bibr">Fellows,
     2023</xref>). Four Linear Mixed Models (R package
-    <monospace>glmmTMB</monospace>
-    v<monospace>r packageVersion(&quot;glmmTMB&quot;)</monospace>;
-    Brooks et al.
+    <monospace>glmmTMB</monospace> v1.1.10; Brooks et al.
     (<xref alt="2017" rid="ref-brooks2017" ref-type="bibr">2017</xref>))
     were used to investigate the effect of treatment and riparian
     sampling location (including interaction) on the numeric difference
@@ -524,22 +518,16 @@ extractable phosphorus</p>
     Benjamini-Hochberg p-value adjustment were performed (p &lt;0.05).
     When a main effect or interaction was significant, post-hoc pairwise
     comparisons with a Benjamini-Hochberg p-value adjustment was used
-    (<monospace>emmeans</monospace>
-    v<monospace>r packageVersion(&quot;emmeans&quot;)</monospace>; Lenth
+    (<monospace>emmeans</monospace> v1.10.6; Lenth
     (<xref alt="2024" rid="ref-lenth2024" ref-type="bibr">2024</xref>)).
     Model assumptions were assessed using DHARMa residual plots
-    (<monospace>DHARMa</monospace>
-    v<monospace>r packageVersion(&quot;DHARMa&quot;)</monospace>; Hartig
+    (<monospace>DHARMa</monospace> v0.4.7; Hartig
     (<xref alt="2022" rid="ref-hartig2022" ref-type="bibr">2022</xref>)),
     main effects were tested for collinearity
-    (<monospace>performance</monospace>
-    v<monospace>r packageVersion(&quot;performance&quot;)</monospace>;
-    Lüdecke et al.
+    (<monospace>performance</monospace> v0.12.4; Lüdecke et al.
     (<xref alt="2021" rid="ref-ludecke2021" ref-type="bibr">2021</xref>)),
     and results were presented as type III ANOVA
-    (<monospace>car</monospace>
-    v<monospace>r packageVersion(&quot;car&quot;)</monospace>; Fox and
-    Weisberg
+    (<monospace>car</monospace> v3.1.3; Fox and Weisberg
     (<xref alt="2019" rid="ref-fox2019" ref-type="bibr">2019</xref>)).
     For each unique source of WEP, the null hypotheses were 1) no
     difference in the net WEP among treatments or riparian sampling
@@ -549,9 +537,7 @@ extractable phosphorus</p>
     topographic positions using samples collected before the application
     of the treatments. These relations were visualized using a
     scatterplot matrix created using the <monospace>GGally</monospace> R
-    package
-    (v<monospace>r packageVersion(&quot;GGally&quot;)</monospace>;
-    Schloerke et al.
+    package (v2.2.1; Schloerke et al.
     (<xref alt="2024" rid="ref-Schloerke2024" ref-type="bibr">2024</xref>)
     )</p>
   </sec>
@@ -1200,6 +1186,8 @@ extractable phosphorus</p>
   <p>Data and source code for analysis and manuscript available on
   GitHub:
   <ext-link ext-link-type="uri" xlink:href="https://github.com/alex-koiter/riparian-grazing-manuscript">https://github.com/alex-koiter/riparian-grazing-manuscript</ext-link></p>
+  <p>Data set also available in the Dryad repository:
+  <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.5061/dryad.nzs7h4526">https://doi.org/10.5061/dryad.nzs7h4526</ext-link></p>
 </sec>
 <sec id="conflict-of-interest-statement">
   <title>Conflict of interest statement</title>
@@ -2401,6 +2389,2470 @@ extractable phosphorus</p>
 </ref-list>
 </back>
 
+<sub-article article-type="notebook" id="nb-31-nb-article">
+<front-stub>
+<title-group>
+<article-title>Effects of Riparian Grazing on Distinct Water-Extractable
+Phosphorus Sources</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author" corresp="yes">
+<contrib-id contrib-id-type="orcid">0000-0002-9355-9561</contrib-id>
+<name>
+<surname>Koiter</surname>
+<given-names>Alexander J</given-names>
+</name>
+<string-name>Alexander J Koiter</string-name>
+
+<email>koitera@brandonu.ca</email>
+<role>Principle investigator</role>
+<role>Primary author</role>
+<role>Statistics</role>
+<role vocab="https://credit.niso.org" vocab-term="visualization" vocab-term-identifier="https://credit.niso.org/contributor-roles/visualization/">Visualization</role>
+<xref ref-type="aff" rid="aff-1-nb-article">a</xref>
+<xref ref-type="corresp" rid="cor-1-nb-article">&#x002A;</xref>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">0009-0002-5887-5574</contrib-id>
+<name>
+<surname>Malone</surname>
+<given-names>Tamaragh Y</given-names>
+</name>
+<string-name>Tamaragh Y Malone</string-name>
+
+<email>malonety35@brandonu.ca</email>
+<role>Research Assistant</role>
+<role>Data collection</role>
+<role>Technical and editorial review</role>
+<xref ref-type="aff" rid="aff-2-nb-article">b</xref>
+</contrib>
+</contrib-group>
+<aff id="aff-1-nb-article">
+<institution-wrap>
+<institution>Brandon University, Department of Geography and
+Environment</institution>
+</institution-wrap>
+<addr-line>270 18th St</addr-line>
+<city>Brandon</city>
+<state>MB</state>
+
+<postal-code>R7A 6A9</postal-code>
+
+
+</aff>
+<aff id="aff-2-nb-article">
+<institution-wrap>
+<institution>Brandon University, Department of Biology</institution>
+</institution-wrap>
+<addr-line>270 18th St</addr-line>
+<city>Brandon</city>
+<state>MB</state>
+
+<postal-code>R7A 6A9</postal-code>
+
+
+</aff>
+<author-notes>
+<corresp id="cor-1-nb-article">koitera@brandonu.ca</corresp>
+</author-notes>
+<abstract>
+<p>Riparian areas play an important role in maintaining water quality in
+agricultural watersheds by buffering sediment, nutrients, and other
+pollutants. Recent studies have shown that in some cases riparian areas
+are a net source of phosphorus (P) in cold climates. This study assessed
+the impact of cattle grazing or harvesting of riparian areas on the
+spatial and vertical distribution of water-extractable phosphorus (WEP).
+This study measured the WEP in four distinctive sources: biomass,
+litter, organic layer, and Ah horizon in three riparian locations
+extending from the edge of the waterbody to the field edge. In addition
+to a control, three treatments were examined: 1) grazing; 2)
+high-density grazing; and 3) mowing. Prior to implementing the
+treatments, the Ah (0-10cm) soil was the largest pool of WEP (42.5 mg
+m<sup>-2</sup>, ~44%); however, the biomass (i.e., standing vegetation)
+was a considerable proportion of the total (26.3 mg m<sup>-2</sup>,
+~25%) WEP pool. The litter and organic layer had median WEP areal
+densities of 11.1 and 17.7 mg m<sup>-2</sup>, respectively. Findings
+revealed significant reductions in biomass WEP with median reductions of
+10.4 and 18.7 mg m<sup>-2</sup> for high-density grazing and mowing
+treatments, respectively. This reduction was more pronounced in the
+lower riparian locations where there was more biomass available to be
+grazed or mowed. There were no detectable changes in the other sources
+of WEP across all the treatments. Assessment of the control plots (pre-
+and post-treatment) clearly indicate that there is considerable
+small-scale spatial variability in P measurements in riparian areas.
+Overall, the results of this study suggest that management practices
+that target vegetation, including harvesting and autumn short-term
+grazing, may be mechanisms to reduce the potential P loss during the
+snowmelt period. To fully assess the risk of P loss, studies
+investigating other important riparian processes that also have a
+demonstrated impact on P mobility, including freeze-thaw cycles and
+flooding, are needed.</p>
+</abstract>
+</front-stub>
+
+<body>
+<p><bold>Core ideas</bold></p>
+<list list-type="bullet">
+  <list-item>
+    <p>Biomass and litter are substantial sources of WEP in riparian
+    areas</p>
+  </list-item>
+  <list-item>
+    <p>Autumn cattle grazing and mowing treatments reduced the areal
+    density of WEP in riparian biomass</p>
+  </list-item>
+  <list-item>
+    <p>There were no measurable changes in the areal
+    density/concentration of WEP in the litter, organic layer, or Ah
+    horizon post grazing</p>
+  </list-item>
+  <list-item>
+    <p>Large spatial variability in areal density/concentration of WEP
+    exists in riparian areas</p>
+  </list-item>
+</list>
+<p><bold>Abbreviations</bold></p>
+<p>MBFI, Manitoba Beef and Forage Initiatives; P, phosphorus; WEP, water
+extractable phosphorus</p>
+<sec id="introduction-nb-article">
+  <title>1 Introduction</title>
+  <p>The increasing frequency and extent of algal blooms is typically
+  linked to increased nutrient loading into lake and rivers. Phosphorus
+  (P) loading is particularly concerning as this is generally the
+  limiting nutrient in freshwater systems
+  (<xref alt="Schindler et al., 2012" rid="ref-schindler2012-nb-article" ref-type="bibr">Schindler
+  et al., 2012</xref>). There have been many lab and field studies
+  demonstrating the role and functionality of riparian areas in reducing
+  P loading to surface water in agricultural settings
+  (<xref alt="Yu et al., 2019" rid="ref-yu2019-nb-article" ref-type="bibr">Yu et
+  al., 2019</xref>). Infiltration, adsorption, biological uptake,
+  microbial activity, and sedimentation are the key processes that
+  intercept and buffer the delivery of P
+  (<xref alt="Lacas et al., 2005" rid="ref-lacas2005-nb-article" ref-type="bibr">Lacas
+  et al., 2005</xref>;
+  <xref alt="Owens et al., 2007" rid="ref-owens2007-nb-article" ref-type="bibr">Owens
+  et al., 2007</xref>;
+  <xref alt="McGuire and McDonnell, 2010" rid="ref-mcguire2010-nb-article" ref-type="bibr">McGuire
+  and McDonnell, 2010</xref>).Convergence within the landscape coupled
+  with climatic/weather conditions creates variability in hydrologic
+  conditions and pathways, reducing the buffering capacity of riparian
+  areas and ultimately resulting in reduced, inconsistent, and/or
+  unsustainable reductions in P loading relative to many controlled
+  experimental studies
+  (<xref alt="Roberts et al., 2012" rid="ref-roberts2012-nb-article" ref-type="bibr">Roberts
+  et al., 2012</xref>;
+  <xref alt="Habibiandehkordi et al., 2017" rid="ref-habibiandehkordi2017-nb-article" ref-type="bibr">Habibiandehkordi
+  et al., 2017</xref>).</p>
+  <p>In cold climates, the reduced infiltration due to frozen ground,
+  limited vegetation uptake, and low microbial activity coupled with a
+  flashy hydrograph hydrograph (rapid rise and fall in discharge) during
+  snowmelt creates conditions that further compromise the buffering
+  capacity of riparian areas
+  (<xref alt="Kieta et al., 2018" rid="ref-kieta2018-nb-article" ref-type="bibr">Kieta
+  et al., 2018</xref>;
+  <xref alt="Nsenga Kumwimba et al., 2023" rid="ref-nsengakumwimba2023-nb-article" ref-type="bibr">Nsenga
+  Kumwimba et al., 2023</xref>). Additionally, research increasingly
+  shows that riparian areas can contribute P (i.e., net source) from
+  soil and vegetation to the surrounding environment
+  (<xref alt="Roberts et al., 2012" rid="ref-roberts2012-nb-article" ref-type="bibr">Roberts
+  et al., 2012</xref>). As soil P concentration increases, so does the
+  risk of P loss through leaching and runoff
+  (<xref alt="Habibiandehkordi et al., 2019" rid="ref-habibiandehkordi2019-nb-article" ref-type="bibr">Habibiandehkordi
+  et al., 2019</xref>). Soil P release can be intensified during periods
+  of inundation that often occur during the spring snow melt, due to
+  both to a longer period of soil-water contact and an increased
+  solubility of iron-bound P as soil redox conditions lower (i.e.,
+  become anaerobic)
+  (<xref alt="Carlyle and Hill, 2001" rid="ref-carlyle2001-nb-article" ref-type="bibr">Carlyle
+  and Hill, 2001</xref>;
+  <xref alt="Young and Briggs, 2008" rid="ref-young2008-nb-article" ref-type="bibr">Young
+  and Briggs, 2008</xref>). Vegetation P can become more mobile through
+  the mineralization of P from decaying vegetation near the soil
+  surface. There is also evidence that the longer vegetation-water
+  contact during periods of inundation will also increase the mass of P
+  leached out of the dead vegetation and contribute to the P available
+  to be lost during runoff
+  (<xref alt="Lozier and Macrae, 2017" rid="ref-lozier2017-nb-article" ref-type="bibr">Lozier
+  and Macrae, 2017</xref>;
+  <xref alt="Liu et al., 2019b" rid="ref-liu2019a-nb-article" ref-type="bibr">Liu
+  et al., 2019b</xref>). Both the soil and vegetation P sources can also
+  be affected by freeze-thaw cycles. Repeated freeze-thaw cycles result
+  in the cell disruption of microbial and plant biomass, releasing
+  inter-cellular P to the surrounding environment
+  (<xref alt="Kieta and Owens, 2019" rid="ref-kieta2019-nb-article" ref-type="bibr">Kieta
+  and Owens, 2019</xref>).</p>
+  <p>Management of riparian areas to maintain or enhance the buffering
+  capacity of P is typically needed to prevent loss to water bodies.
+  Unlike nitrogen (N), which can be significantly lost to the atmosphere
+  through nitrification and denitrification to offset the continued
+  input
+  (<xref alt="Lyu et al., 2021" rid="ref-lyu2021-nb-article" ref-type="bibr">Lyu et
+  al., 2021</xref>), when not taken up by plants, P is generally only
+  lost through runoff or leaching. Harvesting and removing of biomass
+  from the riparian area for use as forage can be a practice to remove
+  P. Mechanized biomass harvesting may be impractical or unsafe due to
+  steep gradients, wet soil, and other obstacles like trees; however,
+  livestock grazing in riparian areas (riparian pastures) is common in
+  the Canadian Prairies due to the abundance of forage, particularly
+  during drought. Livestock exclusion from riparian areas has been
+  suggested as a best management practice to reduce the direct inputs of
+  P, limit bank erosion, and avoid soil compaction
+  (<xref alt="Krall and Roni, 2023" rid="ref-krall2023-nb-article" ref-type="bibr">Krall
+  and Roni, 2023</xref>). However, strategies including alternative
+  water sources, rotational grazing, timed-controlled grazing,
+  rest-rotation grazing, and corridor fencing can all reduce those risks
+  (<xref alt="Fitch et al., 2003" rid="ref-fitch2003-nb-article" ref-type="bibr">Fitch
+  et al., 2003</xref>).</p>
+  <p>From a surface water quality perspective, understanding the
+  near-surface P distribution, both vertically and longitudinally, will
+  help develop and identify best management practices for reducing P
+  loading from riparian areas. Vertically, there are often four
+  distinctive and identifiable sources of near-surface P: 1) biomass
+  consisting of living standing vegetation; 2) litter consisting of
+  fresh (within the first three years) residues; 3) partially to
+  well-decomposed organic material; and 4) mineral soil
+  (<xref alt="Reid et al., 2018" rid="ref-reid2018-nb-article" ref-type="bibr">Reid
+  et al., 2018</xref>). Longitudinally there often is a strong soil
+  moisture gradient extending from the edge of the waterbody to the
+  field edge. This results in changes in the mass and composition of
+  biomass and litter as well as soil properties including organic matter
+  content and horizon thickness. A better understanding of the spatial
+  variability and relative contributions of the different sources of P
+  is is helpful in building a more complete representation of riparian
+  processes and function.</p>
+  <p>Given the timing and processes of P dynamics within riparian areas
+  in cold climates, like the Canadian Prairies, reducing the
+  near-surface concentration of soluble P prior to spring snowmelt could
+  be a strategy to limit the contribution of P from the riparian area to
+  surface water. Therefore, the overall aim of this study is to assess
+  the impacts of short-term autumn cattle grazing and mowing on the
+  sources and distribution of P in riparian areas. The objectives of
+  this study were to quantify 1) the vertical profile of WEP using four
+  distinctive P sources: biomass, litter, organic layer, and Ah horizon;
+  2) each of the four distinctive P sources in three riparian locations,
+  near the edge of the waterbody (lower), close to the field edge
+  (upper), and in between (middle); and 3) the net change in each of the
+  four sources of WEP in each riparian location in response to grazing,
+  high-density grazing, and mowing (harvesting) of biomass.
+  Understanding how riparian management practices affect the different
+  sources of P can be used to help tailor management strategies in cold
+  climates and ultimately reduce P loss and improve downstream water
+  quality.</p>
+</sec>
+<sec id="methods-nb-article">
+  <title>2 Methods</title>
+  <sec id="site-description-nb-article">
+    <title>2.1 Site description</title>
+    <p>A randomized complete block experimental design was used to
+    assess the sources of riparian WEP and investigate how it changes
+    following cattle grazing or mowing treatments. In addition to a
+    control, the three treatments included grazing, high-density
+    grazing, and mowing. Each treatment, including a control, was
+    replicated in riparian areas surrounding four prairie potholes
+    (wetlands). Samples of biomass, litter, organic layer, and Ah
+    horizon, were collected in three locations both pre- and
+    post-treatment. A workflow diagram showing the experimental setup,
+    field work, sample preparation, and laboratory analysis can be found
+    in
+    <xref alt="Figure S1" rid="suppfig-workflow-plot-nb-article">Figure S1</xref>.</p>
+    <p>The study was conducted at the Manitoba Beef and Forage
+    Initiatives (MBFI) research farm
+    (50.06<inline-formula><alternatives>
+    <tex-math><![CDATA[^\circ]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msup><mml:mi></mml:mi><mml:mo>∘</mml:mo></mml:msup></mml:math></alternatives></inline-formula>N,
+    99.92<inline-formula><alternatives>
+    <tex-math><![CDATA[^\circ]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msup><mml:mi></mml:mi><mml:mo>∘</mml:mo></mml:msup></mml:math></alternatives></inline-formula>W;
+    502 AMSL), approximately 25 km north of Brandon, Manitoba, Canada,
+    in the Prairie Pothole region of North America
+    (<xref alt="Figure 1" rid="fig-mapr-nb-article">Figure 1</xref>). The normal
+    (1981-2010) average daily air temperature was 2.2
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[^\circ]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msup><mml:mi></mml:mi><mml:mo>∘</mml:mo></mml:msup></mml:math></alternatives></inline-formula>C,
+    and the cumulative annual precipitation at Brandon was 474.2 mm,
+    with 24.8 % falling as snow
+    (<xref alt="Environment and Climate Change Canada, 2024" rid="ref-environmentandclimatechangecanada2024-nb-article" ref-type="bibr">Environment
+    and Climate Change Canada, 2024</xref>). The Köppen-Geiger climate
+    classification is cold, without dry season, and with warm summer
+    (Dfb)
+    (<xref alt="Beck et al., 2018" rid="ref-beck2018-nb-article" ref-type="bibr">Beck
+    et al., 2018</xref>). The region is predominantly agricultural land
+    use, including annual crops (grains and oil seeds) and
+    grazing/forage. MBFI is a 260-hectare (ha) research and
+    demonstration farm with a mix of pasture, hay, and forage/silage
+    cropland. Prior to the establishment of MBFI the site was part of
+    the Manitoba Zero Tillage Research Association farm (1993-2014)
+    where annual crops, including oil seeds and grains, were grown.</p>
+    <p>There are also numerous small permanent and ephemeral wetlands
+    (potholes) and associated riparian areas which account for
+    approximately 35% of the total farmland
+    (<xref alt="Manitoba Beef &amp; Forage Initiatives, 2024" rid="ref-manitobabeefforageinitiatives2024-nb-article" ref-type="bibr">Manitoba
+    Beef &amp; Forage Initiatives, 2024</xref>). The riparian areas
+    surrounding the larger permanent wetlands are fenced off to exclude
+    livestock and are not actively managed. Approximately half the farm
+    has an irregular undulating to hummocky relief (2-5%) with the
+    reminder being nearly level (0-2%). The soils have developed on fine
+    loamy, moderately calcareous glacial till. The drainage class in
+    upper slope positions are well to rapidly draining while lower slope
+    and riparian soils are poorly drained and primarily consist of Humic
+    and Luvic Gleysols
+    (<xref alt="Podolsky and Schindler, 1993" rid="ref-podolsky1993-nb-article" ref-type="bibr">Podolsky
+    and Schindler, 1993</xref>). The surface texture class of the
+    riparian soil is a clay loam and pH values range from 7.1 to 8.3
+    with a mean of 7.6. Generally the surface soil profiles surrounding
+    theses prairie potholes can be described by a 1-10 cm organic layer
+    overlying a 10-18 cm Ah horizon
+    (<xref alt="Podolsky and Schindler, 1993" rid="ref-podolsky1993-nb-article" ref-type="bibr">Podolsky
+    and Schindler, 1993</xref>). In the riparian areas used as part of
+    this study the average depth of the organic layer was found to be
+    approximately 1 cm for the upper and middle sampling locations and 2
+    cm for the lower sampling location. The Ah horizon was more than 10
+    cm deep at all sampling locations.</p>
+    <p>Vegetation was assessed using the foliar cover method for each
+    plot within each of the four riparian areas. There was considerable
+    variability among riparian areas, plots, and sampling locations
+    (upper, midle, and lower). The four most dominant species identified
+    were Sow Thistle (<italic>Sonchus arvensis</italic>), Smooth Aster
+    (<italic>Aster laevis</italic>), Kentucky bluegrass (<italic>Poa
+    pratensis</italic>), and Smooth Brome (<italic>Bromus
+    inermis</italic>) and the complete assessment can be found in
+    <xref alt="Figure S2" rid="suppfig-plant-plot-nb-article">Figure S2</xref>. All
+    riparian areas investigated in this study were adjacent to actively
+    grazed pastures.</p>
+    <sec id="cell-fig-mapr-nb-article" specific-use="notebook-content">
+    <code language="python">p6 &lt;- p4 + inset_element(p1, left = 0.6, bottom = 0.6, right = 1, top = 1) + p5
+p6</code>
+    <boxed-text>
+      <preformat>Warning in st_point_on_surface.sfc(sf::st_zm(x)): st_point_on_surface may not
+give correct results for longitude/latitude data</preformat>
+    </boxed-text>
+    <boxed-text>
+      <fig id="fig-mapr-nb-article">
+        <caption><p>Figure 1: Showing a) the location of the study site
+        in southern Manitoba with an inset map of Canada; and b) the
+        locations of the four riparian areas included in this
+        study</p></caption>
+        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/notebooks-05_Map-fig-mapr-output-2.png" />
+      </fig>
+    </boxed-text>
+    </sec>
+  </sec>
+  <sec id="experimental-design-nb-article">
+    <title>2.2 Experimental design</title>
+    <p>Four riparian areas surrounding permanent wetlands were selected
+    (<xref alt="Figure 1" rid="fig-mapr-nb-article">Figure 1</xref>) and subdivided
+    into four approximately 450 <inline-formula><alternatives>
+    <tex-math><![CDATA[m^2]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msup><mml:mi>m</mml:mi><mml:mn>2</mml:mn></mml:msup></mml:math></alternatives></inline-formula>
+    plots. Within each riparian area, each plot was randomly assigned to
+    a treatment or control. The experimental groups (i.e., treatments)
+    were 1) control, 2) graze, 3) high-density graze, and 4) mow and
+    harvest. The grazing treatments consisted of a single five-hour
+    grazing period, with the grazing treatment having 3.1-3.5 animal
+    units per plot and the high-density grazing having 11.75-12 animal
+    units. These stocking densities were used to approximate a typical
+    rotational grazing and a mob grazing approach. The grazed plots were
+    fenced on all four sides, including the edge of the waterbody and
+    provided with supplemental water. The cattle grazing treatments
+    occurred over four consecutive days where each day the graze and
+    high-density graze treatments were completed at a given riparian
+    area. The cattle were transported between the riparian areas by
+    trailer and were placed in a holding area while not grazing the
+    experimental plots. For the mowing treatment, the vegetation was cut
+    to a height of 10cm, and the vegetation was manually raked out of
+    the plot. Treatments were applied early to mid-September, before the
+    first frost, in three consecutive years (2019-2021)
+    (<xref alt="Figure S3" rid="suppfig-weather-plot-nb-article">Figure S3</xref>).
+    Within each plot three distinctive sampling locations, or
+    topographic positions, were established, adjacent to the edge of the
+    waterbody (lower), adjacent to the field/pasture (upper), and at the
+    mid-point (middle). Samples were collected at each sampling location
+    1-3 days before and 1-3 days after treatment (including the control)
+    to assess the impact of grazing and mowing. Before and after samples
+    were collected at immediately adjacent locations.</p>
+  </sec>
+  <sec id="sampling-and-analysis-nb-article">
+    <title>2.3 Sampling and analysis</title>
+    <p>Four types of samples were collected: 1) biomass, 2) litter, 3)
+    organic layer, and 4) Ah horizon. Using a 0.25
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[m^2]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msup><mml:mi>m</mml:mi><mml:mn>2</mml:mn></mml:msup></mml:math></alternatives></inline-formula>
+    quadrate, biomass was collected by cutting the standing live
+    vegetation and litter by raking the surface and picking up the
+    previous year’s growth. Both the biomass and litter were dried at 40
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[^\circ C]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msup><mml:mi></mml:mi><mml:mo>∘</mml:mo></mml:msup><mml:mi>C</mml:mi></mml:mrow></mml:math></alternatives></inline-formula>,
+    weighed, and homogenized using a blade grinder (&lt;1cm). A
+    composite of five soil samples was collected within the same quadrat
+    as the biomass/litter using a 19 mm diameter soil probe and was
+    divided into the organic layer (1 – 2 cm deep) and the top 10 cm of
+    the Ah horizon. The organic layer and Ah soil were air-dried,
+    disaggregated with a mortar and pestle, and passed through a 2-mm
+    sieve. Additional bulk density samples of both the organic layer and
+    Ah and the depth of the organic layer were collected in 2023. Daily
+    air temperature and rainfall data were collected from an onsite
+    station
+    (<xref alt="Figure S3" rid="suppfig-weather-plot-nb-article">Figure S3</xref>)
+    (<xref alt="Manitoba Agriculture, 2023" rid="ref-manitobaagriculture2023-nb-article" ref-type="bibr">Manitoba
+    Agriculture, 2023</xref>).</p>
+    <p>Water Extractable Phosphorus (WEP), an environmental soil and
+    vegetation P test, was used to infer soil P release into runoff
+    water. Dried and homogenized samples were extracted by shaking (150
+    RPM) with deionized water for one hour at a mass-to-volume ratio of
+    1:30 for the biomass and litter samples (1 g) and 1:15 for the
+    organic and Ah samples (2 g). Extractions were gravity filtered
+    through a Whatman 42 filter followed by syringe filtration with a
+    0.45 <inline-formula><alternatives>
+    <tex-math><![CDATA[\mu m]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>μ</mml:mi><mml:mi>m</mml:mi></mml:mrow></mml:math></alternatives></inline-formula>
+    nylon filter. WEP in the extract was measured spectrophotometrically
+    by the colorimetric molybdate–ascorbic acid method
+    (<xref alt="Murphy and Riley, 1962" rid="ref-murphy1962-nb-article" ref-type="bibr">Murphy
+    and Riley, 1962</xref>;
+    <xref alt="Sharpley et al., 2006" rid="ref-sharpley-nb-article" ref-type="bibr">Sharpley
+    et al., 2006</xref>).</p>
+    <p>The concentration of WEP (<inline-formula><alternatives>
+    <tex-math><![CDATA[mg~kg^{-1}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>m</mml:mi><mml:mi>g</mml:mi><mml:mspace width="0.222em"></mml:mspace><mml:mi>k</mml:mi><mml:msup><mml:mi>g</mml:mi><mml:mrow><mml:mi>−</mml:mi><mml:mn>1</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:math></alternatives></inline-formula>)
+    was calculated for all sources of P. In addition, the areal density
+    of WEP was calculated for biomass and litter by combining WEP
+    concentration with the mass of material collected from the quadrat.
+    The vertical profile of WEP within the riparian area assessed from
+    samples collected before treatments were implemented across the
+    3-year study. For comparison, an approximate estimation of areal
+    density WEP in the organic layer and Ah was calculated using the
+    bulk density and depth measurements collected in 2023
+    (<xref alt="Figure 2" rid="fig-vertical-wep-nb-article">Figure 2</xref> b).</p>
+  </sec>
+  <sec id="statistical-analysis-nb-article">
+    <title>2.4 Statistical analysis</title>
+    <p>All statistical analysis, plotting, and mapping were undertaken
+    using the R Statistical Software (v4.4.3; R Core Team
+    (<xref alt="2024" rid="ref-rcoreteam2024-nb-article" ref-type="bibr">2024</xref>)),
+    through the RStudio Integrated Development Environment
+    v2023.12.1.402
+    (<xref alt="RStudio, 2024" rid="ref-rstudio2024-nb-article" ref-type="bibr">RStudio,
+    2024</xref>). All plots and maps were created using the R package
+    <monospace>ggplot2</monospace> (v3.5.1; Wickham
+    (<xref alt="2016" rid="ref-wickham2016-nb-article" ref-type="bibr">2016</xref>)).
+    Country and regional maps were created using data from the
+    <monospace>rnaturalearth</monospace> package
+    (<xref alt="Massicotte and South, 2023" rid="ref-massicotte2023-nb-article" ref-type="bibr">Massicotte
+    and South, 2023</xref>) and other maps using ESRI imagery and the
+    <monospace>OpenStreetMap</monospace> package
+    (<xref alt="Fellows, 2023" rid="ref-fellows2023-nb-article" ref-type="bibr">Fellows,
+    2023</xref>). Four Linear Mixed Models (R package
+    <monospace>glmmTMB</monospace> v1.1.10; Brooks et al.
+    (<xref alt="2017" rid="ref-brooks2017-nb-article" ref-type="bibr">2017</xref>))
+    were used to investigate the effect of treatment and riparian
+    sampling location (including interaction) on the numeric difference
+    in WEP measurements taken before and after treatment for each of the
+    four distinct sources of P (areal densities for biomass and litter;
+    concentrations for organic matter and Ah). Year and riparian area
+    were included as crossed random factors to control for the
+    variability within years and riparian areas.</p>
+    <p>Additionally, when investigating the net change in biomass WEP
+    the initial biomass WEP (before applying the treatment) was included
+    in the model as a covariate. This controls for the fact that the
+    magnitude of the difference in biomass measurements taken before and
+    after treatment is directly related to the mass of WEP initially
+    available. By controlling for this, the model indicates which
+    treatments resulted in a relatively greater change in biomass,
+    rather than simply absolute change.</p>
+    <p>The interaction between treatment and riparian sampling location
+    was removed if non-significant (p &lt; 0.05). When a main effect or
+    interaction was significant, post-hoc pairwise comparisons with a
+    Benjamini-Hochberg p-value adjustment were performed (p &lt;0.05).
+    When a main effect or interaction was significant, post-hoc pairwise
+    comparisons with a Benjamini-Hochberg p-value adjustment was used
+    (<monospace>emmeans</monospace> v1.10.6; Lenth
+    (<xref alt="2024" rid="ref-lenth2024-nb-article" ref-type="bibr">2024</xref>)).
+    Model assumptions were assessed using DHARMa residual plots
+    (<monospace>DHARMa</monospace> v0.4.7; Hartig
+    (<xref alt="2022" rid="ref-hartig2022-nb-article" ref-type="bibr">2022</xref>)),
+    main effects were tested for collinearity
+    (<monospace>performance</monospace> v0.12.4; Lüdecke et al.
+    (<xref alt="2021" rid="ref-ludecke2021-nb-article" ref-type="bibr">2021</xref>)),
+    and results were presented as type III ANOVA
+    (<monospace>car</monospace> v3.1.3; Fox and Weisberg
+    (<xref alt="2019" rid="ref-fox2019-nb-article" ref-type="bibr">2019</xref>)).
+    For each unique source of WEP, the null hypotheses were 1) no
+    difference in the net WEP among treatments or riparian sampling
+    locations and 2) no interactions between these two factors.</p>
+    <p>Pearson correlations were performed to explore relations in WEP
+    concentrations among the four unique P sources for each of the three
+    topographic positions using samples collected before the application
+    of the treatments. These relations were visualized using a
+    scatterplot matrix created using the <monospace>GGally</monospace> R
+    package (v2.2.1; Schloerke et al.
+    (<xref alt="2024" rid="ref-Schloerke2024-nb-article" ref-type="bibr">2024</xref>)
+    )</p>
+  </sec>
+</sec>
+<sec id="results-and-discussion-nb-article">
+  <title>3 Results and Discussion</title>
+  <sec id="vertical-profiles-of-p-nb-article">
+    <title>3.1 Vertical profiles of P</title>
+    <p>The biomass, litter, organic layer, and Ah horizon sources of P
+    demonstrated a strong vertical stratification in both the
+    concentration and areal densities of WEP
+    (<xref alt="Figure 2" rid="fig-vertical-wep-nb-article">Figure 2</xref>). The
+    median concentrations in the vegetation sources were 82.8 and 39.0
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[mg~kg^{-1}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>m</mml:mi><mml:mi>g</mml:mi><mml:mspace width="0.222em"></mml:mspace><mml:mi>k</mml:mi><mml:msup><mml:mi>g</mml:mi><mml:mrow><mml:mi>−</mml:mi><mml:mn>1</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:math></alternatives></inline-formula>
+    for the biomass and litter components, respectively, which is more
+    than an order of magnitude greater than the soil components (0.9 and
+    3.4 <inline-formula><alternatives>
+    <tex-math><![CDATA[mg~kg^{-1}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>m</mml:mi><mml:mi>g</mml:mi><mml:mspace width="0.222em"></mml:mspace><mml:mi>k</mml:mi><mml:msup><mml:mi>g</mml:mi><mml:mrow><mml:mi>−</mml:mi><mml:mn>1</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:math></alternatives></inline-formula>;
+    Ah and organic, respectively). Considerable variability in the WEP
+    concentration in the biomass and litter sources were observed with
+    interquartile ranges (IQR) of 54.3 and 32.9
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[mg~kg^{-1}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>m</mml:mi><mml:mi>g</mml:mi><mml:mspace width="0.222em"></mml:mspace><mml:mi>k</mml:mi><mml:msup><mml:mi>g</mml:mi><mml:mrow><mml:mi>−</mml:mi><mml:mn>1</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:math></alternatives></inline-formula>
+    for the biomass and litter sources, respectively. In contrast, the
+    IQR for the organic and Ah sources both were &lt;2.5
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[mg~kg^{-1}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>m</mml:mi><mml:mi>g</mml:mi><mml:mspace width="0.222em"></mml:mspace><mml:mi>k</mml:mi><mml:msup><mml:mi>g</mml:mi><mml:mrow><mml:mi>−</mml:mi><mml:mn>1</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:math></alternatives></inline-formula>.</p>
+    <p>Overall, in terms of the areal density of WEP, the top 10 cm of
+    the Ah horizon was the largest source of WEP (42.5
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[mg~m^{-2}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>m</mml:mi><mml:mi>g</mml:mi><mml:mspace width="0.222em"></mml:mspace><mml:msup><mml:mi>m</mml:mi><mml:mrow><mml:mi>−</mml:mi><mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:math></alternatives></inline-formula>)
+    followed by the biomass (26.3 <inline-formula><alternatives>
+    <tex-math><![CDATA[mg~m^{-2}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>m</mml:mi><mml:mi>g</mml:mi><mml:mspace width="0.222em"></mml:mspace><mml:msup><mml:mi>m</mml:mi><mml:mrow><mml:mi>−</mml:mi><mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:math></alternatives></inline-formula>),
+    organic layer (14.3 <inline-formula><alternatives>
+    <tex-math><![CDATA[mg~m^{-2}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>m</mml:mi><mml:mi>g</mml:mi><mml:mspace width="0.222em"></mml:mspace><mml:msup><mml:mi>m</mml:mi><mml:mrow><mml:mi>−</mml:mi><mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:math></alternatives></inline-formula>),
+    and the litter (13.7 <inline-formula><alternatives>
+    <tex-math><![CDATA[mg~m^{-2}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>m</mml:mi><mml:mi>g</mml:mi><mml:mspace width="0.222em"></mml:mspace><mml:msup><mml:mi>m</mml:mi><mml:mrow><mml:mi>−</mml:mi><mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:math></alternatives></inline-formula>).
+    It should be noted that these are only approximate estimates for the
+    organic layer and Ah horizon because the values for depth and bulk
+    density measured in 2023 were used in the calculations for all
+    previous years
+    (<xref alt="Figure S4" rid="suppfig-bd-plot-nb-article">Figure S4</xref>).
+    Nevertheless, the vertical profile of WEP in riparian areas
+    (<xref alt="Figure 2" rid="fig-vertical-wep-nb-article">Figure 2</xref>)
+    observed in this study supports the concept that a measure of P in
+    soil alone is likely missing a large proportion of the near-surface
+    P that can be potentially lost during the spring snowmelt
+    (<xref alt="Liu et al., 2019a" rid="ref-liu2019-nb-article" ref-type="bibr">Liu
+    et al., 2019a</xref>;
+    <xref alt="b" rid="ref-liu2019a-nb-article" ref-type="bibr">b</xref>;
+    <xref alt="Cober et al., 2019" rid="ref-cober2019-nb-article" ref-type="bibr">Cober
+    et al., 2019</xref>). The substantial proportion of WEP above the
+    soil surface provides evidence that managing the biomass in riparian
+    areas in autumn may reduce the contribution of P lost directly from
+    this area during spring. Specifically, the harvesting of this
+    biomass results in an export of P which can maintain or enhance the
+    buffering or storage capacity of P derived from upslope sources
+    further improving downstream water quality
+    (<xref alt="Kelly et al., 2007" rid="ref-kelly2007-nb-article" ref-type="bibr">Kelly
+    et al., 2007</xref>;
+    <xref alt="Hille et al., 2019" rid="ref-hille2019-nb-article" ref-type="bibr">Hille
+    et al., 2019</xref>).</p>
+    <sec id="cell-fig-vertical-WEP-nb-article" specific-use="notebook-content">
+    <code language="python">p3 &lt;- p1+p2 + plot_layout(guides = 'collect') &amp; theme(legend.position = 'bottom', legend.title = element_blank())  
+
+p3</code>
+    <boxed-text>
+      <preformat>Warning: Removed 2 rows containing non-finite outside the scale range
+(`stat_boxplot()`).
+Removed 2 rows containing non-finite outside the scale range
+(`stat_boxplot()`).</preformat>
+    </boxed-text>
+    <boxed-text>
+      <fig id="fig-vertical-wep-nb-article">
+        <caption><p>Figure 2: Vertical and longitudinal profiles of a)
+        WEP concentration and b) WEP content in the riparian areas prior
+        to grazing and mowing treatments.</p></caption>
+        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/notebooks-04_Vertical_profile-fig-vertical-wep-output-2.png" />
+      </fig>
+    </boxed-text>
+    </sec>
+  </sec>
+  <sec id="longitudinal-profiles-of-p-nb-article">
+    <title>3.2 Longitudinal profiles of P</title>
+    <p>Prior to grazing and mowing treatments, the median WEP
+    concentrations were similar among the upper, mid, and lower
+    positions for the biomass samples. There was a small topographic
+    trend in the WEP concentration for both the Ah and organic litter P
+    sources where the concentration decreased from the upper through to
+    the lower sampling locations. The WEP concentrations in the Ah and
+    organic layer were found to be significantly (p &lt; 0.001) and
+    positively correlated (r<sup>2</sup> = 0.40)
+    (<xref alt="Figure 2" rid="fig-vertical-wep-nb-article">Figure 2</xref> and
+    <xref alt="Figure S5" rid="suppfig-pairs-plot-nb-article">Figure S5</xref>).
+    This topographic pattern is consistent with other studies and is
+    likely due to the rapid physical and geochemical retention of
+    upslope derived P within the first 5 m of the riparian area
+    (<xref alt="Syversen and Borch, 2005" rid="ref-syversen2005-nb-article" ref-type="bibr">Syversen
+    and Borch, 2005</xref>).The litter showed the opposite topographic
+    trend with higher WEP concentrations in the lower sampling
+    locations. There was a significant (p &lt; 0.001) positive
+    correlation (r<sup>2</sup> = 0.34)between the WEP concentration in
+    the biomass and litter samples suggesting that biomass with a high
+    WEP concentration produces litter with a high WEP concentration
+    (<xref alt="Figure S5" rid="suppfig-pairs-plot-nb-article">Figure S5</xref>).
+    There was no correlation (p &gt; 0.05) between the Ah and biomass
+    WEP concentrations suggesting that higher soil WEP concentration
+    does not result in biomass with elevated WEP concentrations at this
+    study site
+    (<xref alt="Figure S5" rid="suppfig-pairs-plot-nb-article">Figure S5</xref>).
+    There is some evidence that plants growing in P-rich environments
+    can become enriched in P (e.g.,
+    <xref alt="Kröger et al., 2007" rid="ref-kröger2007-nb-article" ref-type="bibr">Kröger
+    et al., 2007</xref>); however, there was no correlation (p &gt;
+    0.05) between the Ah and biomass WEP concentrations suggesting that
+    higher soil WEP concentration does not result in biomass with
+    elevated WEP concentrations at this study site
+    (<xref alt="Figure S5" rid="suppfig-pairs-plot-nb-article">Figure S5</xref>).</p>
+    <p>For the biomass and litter sources, the lower riparian locations
+    had greater areal densities of WEP whereas the organic and Ah
+    sources had greater areal densities of WEP in the upper riparian
+    locations. The longitudinal gradient of WEP showed an inverted
+    symmetry where the biomass WEP was largest near the lower sampling
+    location and the Ah soil WEP was largest in the upper sampling
+    location adjacent to the fields
+    (<xref alt="Figure 2" rid="fig-vertical-wep-nb-article">Figure 2</xref> b). The
+    high soil water content in the lower location created conditions
+    that favor high biomass production
+    (<xref alt="Figure S4" rid="suppfig-bd-plot-nb-article">Figure S4</xref>) and
+    higher WEP concentration
+    (<xref alt="Figure 2" rid="fig-vertical-wep-nb-article">Figure 2</xref> a). The
+    higher bulk density was most likely due to the lower soil organic
+    matter content and the higher WEP concentration may be related to
+    the interception of P-rich runoff from upslope areas
+    (<xref alt="Tomer et al., 2007" rid="ref-tomer2007-nb-article" ref-type="bibr">Tomer
+    et al., 2007</xref>). Understanding and quantifying the sources and
+    patterns of P within riparian areas is a key part of assessing the
+    risk of P loss as it helps to inform management decisions and target
+    the largest sources of P
+    (<xref alt="Reid et al., 2018" rid="ref-reid2018-nb-article" ref-type="bibr">Reid
+    et al., 2018</xref>).</p>
+  </sec>
+  <sec id="impacts-of-grazing-and-mowing-on-p-sources-nb-article">
+    <title>3.3 Impacts of grazing and mowing on P sources</title>
+    <p>There was considerable variation across all treatments and
+    riparian locations in all four P sources. This high variability in
+    WEP areal density/concentration is best reflected in the control
+    treatment where the expected difference was 0 (Figures 3 through 6),
+    but WEP losses and gains were still observed despite no treatment
+    being applied. . For example, the control plots had a median biomass
+    WEP removal rate of 5.5 <inline-formula><alternatives>
+    <tex-math><![CDATA[mg~m^{-2}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>m</mml:mi><mml:mi>g</mml:mi><mml:mspace width="0.222em"></mml:mspace><mml:msup><mml:mi>m</mml:mi><mml:mrow><mml:mi>−</mml:mi><mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:math></alternatives></inline-formula>
+    (<xref alt="Figure 3" rid="fig-vegetation-wep-nb-article">Figure 3</xref> a).
+    However, despite this variability, several patterns demonstrating
+    relationships among treatments and vertical and longitudinal P
+    emerged.</p>
+    <p>Results of the linear mixed model of areal density of biomass WEP
+    show a significant effect of treatment (X<sup>2</sup> = 24.8, df =
+    3, p &lt; 0.001) and riparian location (X<sup>2</sup> = 15.7, df =
+    2, p &lt; 0.001). Post-hoc comparisons showed that the net biomass
+    WEP for the high-density grazing and mowing treatments were similar
+    (p&gt;0.05) but significantly (p&lt;0.05) different from the control
+    and graze treatments
+    (<xref alt="Figure 3" rid="fig-vegetation-wep-nb-article">Figure 3</xref> a and
+    <xref alt="Table 1" rid="tbl-biomass-posthoc-nb-article">Table 1</xref>).The
+    mowing and high-density grazing reduced the average WEP areal
+    density by 7.4 and 4.2 <inline-formula><alternatives>
+    <tex-math><![CDATA[mg~m^{-2}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>m</mml:mi><mml:mi>g</mml:mi><mml:mspace width="0.222em"></mml:mspace><mml:msup><mml:mi>m</mml:mi><mml:mrow><mml:mi>−</mml:mi><mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:math></alternatives></inline-formula>
+    relative to the control, respectively. The reduction in biomass WEP
+    was significantly (p&lt;0.05) greater in the lower sampling
+    locations as compared to the upper and mid locations
+    (<xref alt="Figure 3" rid="fig-vegetation-wep-nb-article">Figure 3</xref> b and
+    <xref alt="Table 1" rid="tbl-biomass-posthoc-nb-article">Table 1</xref>) with a
+    difference in average WEP of 10.2 <inline-formula><alternatives>
+    <tex-math><![CDATA[mg~m^{-2}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>m</mml:mi><mml:mi>g</mml:mi><mml:mspace width="0.222em"></mml:mspace><mml:msup><mml:mi>m</mml:mi><mml:mrow><mml:mi>−</mml:mi><mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:math></alternatives></inline-formula>
+    between the lower and upper locations of the riparian area.</p>
+    <sec id="cell-fig-vegetation-WEP-nb-article" specific-use="notebook-content">
+    <code language="python">p3 &lt;- p1 + p2 + plot_layout(guides = 'collect') &amp; theme(legend.position = 'bottom', legend.title = element_blank())
+p3</code>
+    <boxed-text>
+      <preformat>Warning: Removed 2 rows containing non-finite outside the scale range
+(`stat_boxplot()`).
+Removed 2 rows containing non-finite outside the scale range
+(`stat_boxplot()`).</preformat>
+    </boxed-text>
+    <boxed-text>
+      <fig id="fig-vegetation-wep-nb-article">
+        <caption><p>Figure 3: Change in riparian biomass WEP following
+        grazing or mowing in each riparian location. Within each plot
+        significant differences (p&lt;0.05) between treatments or
+        riparian locations are denoted with different letters. Lower
+        sampling locations are adjacent to the edge of the waterbody and
+        Upper locations are adjacent to the field.</p></caption>
+        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/notebooks-01_Biomass_analysis-fig-vegetation-wep-output-2.png" />
+      </fig>
+    </boxed-text>
+    </sec>
+    <sec specific-use="notebook-content">
+    <code language="python">pairs |&gt;
+  mutate(Contrast = fct_recode(Contrast, &quot;Control - Graze&quot; = &quot;Control - Regular Graze&quot;, &quot;High Graze - Graze&quot; = &quot;High Graze - Regular Graze&quot;, &quot;Mow - Graze&quot; = &quot;Mow - Regular Graze&quot;)) |&gt;
+  group_by(type) |&gt;
+  gt() |&gt;
+  fmt_number(columns = c(&quot;Estimate&quot;, &quot;SE&quot;, &quot;t ratio&quot;), decimal = 2)|&gt;
+  fmt_number(columns = c(&quot;p value&quot;), decimal = 3)|&gt;
+  sub_small_vals(threshold = 0.001) |&gt;
+  tab_style(style =  cell_text(weight = &quot;bold&quot;, align = &quot;center&quot;), locations =  cells_row_groups()) |&gt;
+  tab_options(column_labels.font.weight = &quot;bold&quot;)</code>
+    <fig id="tbl-biomass-posthoc-nb-article">
+      <caption><p>Table 1: Results of the post-hoc pairwise comparisons
+      with a Benjamini-Hochberg p value adjustment for differences in
+      the net biomass WEP (<inline-formula><alternatives>
+      <tex-math><![CDATA[mg~m^{-2}]]></tex-math>
+      <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>m</mml:mi><mml:mi>g</mml:mi><mml:mspace width="0.222em"></mml:mspace><mml:msup><mml:mi>m</mml:mi><mml:mrow><mml:mi>−</mml:mi><mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:math></alternatives></inline-formula>)
+      between the four treatments and three riparian sampling
+      locations.</p></caption>
+      <boxed-text>
+        <table-wrap>
+          <table>
+            <thead>
+              <tr>
+                <th align="center" id="Contrast-nb-article" scope="col">Contrast</th>
+                <th align="center" id="Estimate-nb-article" scope="col">Estimate</th>
+                <th align="center" id="SE-nb-article" scope="col">SE</th>
+                <th align="center" id="df-nb-article" scope="col">df</th>
+                <th align="center" id="t-ratio-nb-article" scope="col">t ratio</th>
+                <th align="center" id="p-value-nb-article" scope="col">p value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td align="center" colspan="6" id="Treatment-nb-article" style="font-weight: bold" scope="colgroup">Treatment</td>
+              </tr>
+              <tr>
+                <td align="center" headers="Treatment  Contrast">Control
+                - High Graze</td>
+                <td align="center" headers="Treatment  Estimate">−4.83</td>
+                <td align="center" headers="Treatment  SE">2.42</td>
+                <td align="center" headers="Treatment  df">132</td>
+                <td align="center" headers="Treatment  t ratio">−2.00</td>
+                <td align="center" headers="Treatment  p value">0.072</td>
+              </tr>
+              <tr>
+                <td align="center" headers="Treatment  Contrast">Control
+                - Mow</td>
+                <td align="center" headers="Treatment  Estimate">−8.52</td>
+                <td align="center" headers="Treatment  SE">2.42</td>
+                <td align="center" headers="Treatment  df">132</td>
+                <td align="center" headers="Treatment  t ratio">−3.52</td>
+                <td align="center" headers="Treatment  p value">0.002</td>
+              </tr>
+              <tr>
+                <td align="center" headers="Treatment  Contrast">Control
+                - Graze</td>
+                <td align="center" headers="Treatment  Estimate">2.47</td>
+                <td align="center" headers="Treatment  SE">2.40</td>
+                <td align="center" headers="Treatment  df">132</td>
+                <td align="center" headers="Treatment  t ratio">1.03</td>
+                <td align="center" headers="Treatment  p value">0.306</td>
+              </tr>
+              <tr>
+                <td align="center" headers="Treatment  Contrast">High
+                Graze - Mow</td>
+                <td align="center" headers="Treatment  Estimate">−3.69</td>
+                <td align="center" headers="Treatment  SE">2.43</td>
+                <td align="center" headers="Treatment  df">132</td>
+                <td align="center" headers="Treatment  t ratio">−1.51</td>
+                <td align="center" headers="Treatment  p value">0.159</td>
+              </tr>
+              <tr>
+                <td align="center" headers="Treatment  Contrast">High
+                Graze - Graze</td>
+                <td align="center" headers="Treatment  Estimate">7.30</td>
+                <td align="center" headers="Treatment  SE">2.42</td>
+                <td align="center" headers="Treatment  df">132</td>
+                <td align="center" headers="Treatment  t ratio">3.02</td>
+                <td align="center" headers="Treatment  p value">0.006</td>
+              </tr>
+              <tr>
+                <td align="center" headers="Treatment  Contrast">Mow -
+                Graze</td>
+                <td align="center" headers="Treatment  Estimate">10.99</td>
+                <td align="center" headers="Treatment  SE">2.42</td>
+                <td align="center" headers="Treatment  df">132</td>
+                <td align="center" headers="Treatment  t ratio">4.55</td>
+                <td align="center" headers="Treatment  p value">&lt;0.001</td>
+              </tr>
+              <tr>
+                <td align="center" colspan="6" id="Location-nb-article" style="font-weight: bold" scope="colgroup">Location</td>
+              </tr>
+              <tr>
+                <td align="center" headers="Location  Contrast">Lower -
+                Middle</td>
+                <td align="center" headers="Location  Estimate">−7.94</td>
+                <td align="center" headers="Location  SE">2.43</td>
+                <td align="center" headers="Location  df">132</td>
+                <td align="center" headers="Location  t ratio">−3.26</td>
+                <td align="center" headers="Location  p value">0.002</td>
+              </tr>
+              <tr>
+                <td align="center" headers="Location  Contrast">Lower -
+                Upper</td>
+                <td align="center" headers="Location  Estimate">−9.82</td>
+                <td align="center" headers="Location  SE">2.57</td>
+                <td align="center" headers="Location  df">132</td>
+                <td align="center" headers="Location  t ratio">−3.83</td>
+                <td align="center" headers="Location  p value">&lt;0.001</td>
+              </tr>
+              <tr>
+                <td align="center" headers="Location  Contrast">Middle -
+                Upper</td>
+                <td align="center" headers="Location  Estimate">−1.87</td>
+                <td align="center" headers="Location  SE">2.11</td>
+                <td align="center" headers="Location  df">132</td>
+                <td align="center" headers="Location  t ratio">−0.89</td>
+                <td align="center" headers="Location  p value">0.377</td>
+              </tr>
+            </tbody>
+          </table>
+        </table-wrap>
+      </boxed-text>
+    </fig>
+    </sec>
+    <p>The model looking at areal density of litter WEP showed no
+    significant impacts of either treatment (X<sup>2</sup> = 1.15, df =
+    3, p = 0.23) or riparian location (X<sup>2</sup> = 4.30, df = 2, p =
+    0.56) (<xref alt="Figure 4" rid="fig-litter-wep-nb-article">Figure 4</xref>).
+    ). In contrast, the model exploring WEP concentration in the organic
+    layer (<xref alt="Figure 5" rid="fig-organic-wep-nb-article">Figure 5</xref>)
+    detected no significant difference among riparian locations
+    (X<sup>2</sup> = 0.57, df = 2, p = 0.75) but did find a significant
+    effect of treatment (X<sup>2</sup> = 8.24, df = 3, p = 0.04).
+    However, the post-hoc pairwise comparisons
+    (<xref alt="Table 2" rid="tbl-organic-posthoc-nb-article">Table 2</xref>) found
+    no significant differences (p &lt; 0.05) among the treatments.
+    Finally, there was no significant effect of treatment (X<sup>2</sup>
+    = 2.59, df = 3, p = 0.46) or riparian position (X<sup>2</sup> =
+    1.17, df = 2, p = 0.56) on the concentration of WEP in the Ah
+    horizon
+    (<xref alt="Figure 6" rid="fig-soil-wep-nb-article">Figure 6</xref>).</p>
+    <sec id="cell-fig-litter-WEP-nb-article" specific-use="notebook-content">
+    <code language="python">p1 &lt;- ggplot(data = filter(plot_data, measure == &quot;p_total&quot;)) +
+  theme_bw(base_size = 12) +
+  geom_rect(data = df, aes(xmin = x1, xmax = x2, ymin = y1, ymax = y2, fill = difference), alpha = 0.15) +
+  #scale_fill_manual(values = c(&quot;white&quot;, &quot;black&quot;)) +
+  #ggnewscale::new_scale_fill() +
+  geom_boxplot(aes(x = treatment, y = diff, fill = location)) +
+  labs(y = expression(paste(&quot;Net WEP Difference (&quot;, mg~m^{-2}, &quot;)&quot;)), x = &quot;Treatment&quot;) +
+  #scale_fill_viridis_d(name = &quot;Location&quot;, begin = 0.3, end = 1) +
+  scale_fill_manual(values = c(&quot;white&quot;, &quot;black&quot;, &quot;#35608DFF&quot;, &quot;#2FB47CFF&quot;, &quot;#FDE725FF&quot;)) +
+  guides(fill = guide_legend(override.aes = list(colour = &quot;black&quot;, size = 1))) +
+  theme(axis.title.x = element_blank(),
+        axis.text.x = element_text(angle = 0, vjust = 1, hjust = 0.5),
+        legend.position = &quot;bottom&quot;,
+        legend.title = element_blank())
+p1</code>
+    <boxed-text>
+      <preformat>Warning: Removed 11 rows containing non-finite outside the scale range
+(`stat_boxplot()`).</preformat>
+    </boxed-text>
+    <boxed-text>
+      <fig id="fig-litter-wep-nb-article">
+        <caption><p>Figure 4: Change in riparian litter WEP following
+        grazing or mowing in each of the riparian locations. No
+        significant effect of treatment or riparian location on the
+        litter WEP content was detected. Lower sampling locations are
+        adjacent to the edge of the waterbody and Upper locations are
+        adjacent to the field.</p></caption>
+        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/notebooks-02_Litter_analysis-fig-litter-wep-output-2.png" />
+      </fig>
+    </boxed-text>
+    </sec>
+    <sec id="cell-fig-organic-WEP-nb-article" specific-use="notebook-content">
+    <code language="python">p1 &lt;- ggplot(data = organic_diff) +
+  theme_bw(base_size = 12) + 
+  geom_rect(data = df, aes(xmin = x1, xmax = x2, ymin = y1, ymax = y2, fill = difference), alpha = 0.15) +
+  #scale_fill_manual(values = c(&quot;white&quot;, &quot;black&quot;)) +
+  #ggnewscale::new_scale_fill() +
+  geom_boxplot(aes(x = treatment, y = diff, fill = location)) +
+  #scale_fill_viridis_d(name = &quot;Location&quot;, begin = 0.3, end = 1) +
+  scale_fill_manual(values = c(&quot;white&quot;, &quot;black&quot;, &quot;#35608DFF&quot;, &quot;#2FB47CFF&quot;, &quot;#FDE725FF&quot;)) +
+  guides(fill = guide_legend(override.aes = list(colour = &quot;black&quot;, size = 1))) +
+  labs(y = expression(paste(&quot;Net WEP Difference (&quot;, mg~kg^{-1}, &quot;)&quot;)), x = &quot;Treatment&quot;) +
+  theme(axis.title.x = element_blank(),
+        axis.text.x = element_text(angle = 0, vjust = 1, hjust = 0.5),
+        legend.position = 'bottom', legend.title = element_blank())
+p1
+# ggsave(plot = p1, filename = here::here(&quot;./Figures/Figure 5.tiff&quot;), width = 174, height = 85, units = &quot;mm&quot;, dpi = 400)</code>
+    <boxed-text>
+      <fig id="fig-organic-wep-nb-article">
+        <caption><p>Figure 5: Change in riparian organic layer WEP
+        concentration following grazing or mowing in each of the
+        riparian locations. A significant effect of treatment was
+        detected; however, the post-hoc analysis was not able to detect
+        any significant (p &lt; 0.05) pairwise contrasts. Lower sampling
+        locations are adjacent to the edge of the waterbody and Upper
+        locations are adjacent to the field.</p></caption>
+        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/notebooks-03_Soils_analysis-fig-organic-wep-output-1.png" />
+      </fig>
+    </boxed-text>
+    </sec>
+    <sec specific-use="notebook-content">
+    <code language="python">pairs |&gt;
+  gt() |&gt;
+  fmt_number(columns = c(&quot;Estimate&quot;, &quot;SE&quot;, &quot;t ratio&quot;), decimal = 2)|&gt;
+  fmt_number(columns = c(&quot;p value&quot;), decimal = 3)|&gt;
+  sub_small_vals(threshold = 0.001) |&gt;
+  tab_style(style =  cell_text(weight = &quot;bold&quot;, align = &quot;center&quot;), locations =  cells_row_groups()) |&gt;
+  tab_options(column_labels.font.weight = &quot;bold&quot;)</code>
+    <fig id="tbl-organic-posthoc-nb-article">
+      <caption><p>Table 2: Results of the post-hoc pairwise comparisons
+      with a Benjamini-Hochberg p value adjustment for differences in
+      the net organic layer WEP (<inline-formula><alternatives>
+      <tex-math><![CDATA[mg~kg^{-1}]]></tex-math>
+      <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>m</mml:mi><mml:mi>g</mml:mi><mml:mspace width="0.222em"></mml:mspace><mml:mi>k</mml:mi><mml:msup><mml:mi>g</mml:mi><mml:mrow><mml:mi>−</mml:mi><mml:mn>1</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:math></alternatives></inline-formula>)
+      between the four treatments.</p></caption>
+      <boxed-text>
+        <table-wrap>
+          <table>
+            <thead>
+              <tr>
+                <th id="Contrast-nb-article" scope="col">Contrast</th>
+                <th id="Estimate-nb-article" scope="col">Estimate</th>
+                <th id="SE-nb-article" scope="col">SE</th>
+                <th id="df-nb-article" scope="col">df</th>
+                <th id="t-ratio-nb-article" scope="col">t ratio</th>
+                <th id="p-value-nb-article" scope="col">p value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td headers="Contrast">Control - Graze</td>
+                <td headers="Estimate">−1.49</td>
+                <td headers="SE">0.59</td>
+                <td headers="df">135</td>
+                <td headers="t ratio">−2.50</td>
+                <td headers="p value">0.066</td>
+              </tr>
+              <tr>
+                <td headers="Contrast">Control - High Graze</td>
+                <td headers="Estimate">−0.63</td>
+                <td headers="SE">0.59</td>
+                <td headers="df">135</td>
+                <td headers="t ratio">−1.05</td>
+                <td headers="p value">0.353</td>
+              </tr>
+              <tr>
+                <td headers="Contrast">Control - Mow</td>
+                <td headers="Estimate">−1.38</td>
+                <td headers="SE">0.59</td>
+                <td headers="df">135</td>
+                <td headers="t ratio">−2.32</td>
+                <td headers="p value">0.066</td>
+              </tr>
+              <tr>
+                <td headers="Contrast">Graze - High Graze</td>
+                <td headers="Estimate">0.86</td>
+                <td headers="SE">0.59</td>
+                <td headers="df">135</td>
+                <td headers="t ratio">1.45</td>
+                <td headers="p value">0.299</td>
+              </tr>
+              <tr>
+                <td headers="Contrast">Graze - Mow</td>
+                <td headers="Estimate">0.11</td>
+                <td headers="SE">0.59</td>
+                <td headers="df">135</td>
+                <td headers="t ratio">0.18</td>
+                <td headers="p value">0.856</td>
+              </tr>
+              <tr>
+                <td headers="Contrast">High Graze - Mow</td>
+                <td headers="Estimate">−0.75</td>
+                <td headers="SE">0.59</td>
+                <td headers="df">135</td>
+                <td headers="t ratio">−1.27</td>
+                <td headers="p value">0.311</td>
+              </tr>
+            </tbody>
+          </table>
+        </table-wrap>
+      </boxed-text>
+    </fig>
+    </sec>
+    <sec id="cell-fig-soil-WEP-nb-article" specific-use="notebook-content">
+    <code language="python">p2 &lt;- ggplot(data = soil_diff) +
+  theme_bw(base_size = 12) + 
+  geom_rect(data = df, aes(xmin = x1, xmax = x2, ymin = y1, ymax = y2, fill = difference), alpha = 0.15) +
+  #scale_fill_manual(values = c(&quot;white&quot;, &quot;black&quot;)) +
+  #ggnewscale::new_scale_fill() +
+  geom_boxplot(aes(x = treatment, y = diff, fill = location)) +
+  #scale_fill_viridis_d(name = &quot;Location&quot;, begin = 0.3, end = 1) +
+  scale_fill_manual(values = c(&quot;white&quot;, &quot;black&quot;, &quot;#35608DFF&quot;, &quot;#2FB47CFF&quot;, &quot;#FDE725FF&quot;)) +
+  guides(fill = guide_legend(override.aes = list(colour = &quot;black&quot;, size = 1))) +
+  labs(y = expression(paste(&quot;Net WEP Difference (&quot;, mg~kg^{-1}, &quot;)&quot;)), x = &quot;Treatment&quot;) +
+  theme(axis.title.x = element_blank(),
+        axis.text.x = element_text(angle = 0, vjust = 1, hjust = 0.5),
+        legend.position = 'bottom', legend.title = element_blank())
+p2
+# ggsave(plot = p2, filename = here::here(&quot;./Figures/Figure 6.tiff&quot;), width = 174, height = 85, units = &quot;mm&quot;, dpi = 400)</code>
+    <boxed-text>
+      <fig id="fig-soil-wep-nb-article">
+        <caption><p>Figure 6: Change in riparian Ah layer (0-10cm) WEP
+        concentration following grazing or mowing in each of the
+        riparian locations. No significant effect of treatment or
+        location was detected. Lower sampling locations are adjacent to
+        the edge of the waterbody and Upper locations are adjacent to
+        the field.</p></caption>
+        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/notebooks-03_Soils_analysis-fig-soil-wep-output-1.png" />
+      </fig>
+    </boxed-text>
+    </sec>
+    <p>Taken together, these results suggest that short-term autumn
+    high-density grazing may be a potential management tool that can
+    reduce the mass of P lost directly from the riparian area
+    (<xref alt="Figure 3" rid="fig-vegetation-wep-nb-article">Figure 3</xref> a).
+    In addition to managing P loss, grazing riparian areas can also
+    provide an essential source of forage, particularly during drought.
+    Mechanized harvesting of biomass could also achieve this reduction
+    in P loss
+    (<xref alt="Figure 3" rid="fig-vegetation-wep-nb-article">Figure 3</xref> a) if
+    the landscape and soil conditions are favorable. Despite the cycling
+    of nutrients by the removal of P through grazing of biomass
+    (<xref alt="Figure 3" rid="fig-vegetation-wep-nb-article">Figure 3</xref>) and
+    the deposition through excretion, no differences were detected in
+    the litter and Ah sources of P
+    (<xref alt="Figure 4" rid="fig-litter-wep-nb-article">Figure 4</xref>, and
+    <xref alt="6" rid="fig-soil-wep-nb-article">6</xref>). The models did detect a
+    significant effect of treatment on the organic layer WEP; however,
+    the pairwise comparisons were not able to detect any significant
+    differences and the exact nature of the impact of the treatments
+    remains unclear.</p>
+    <p>The ability to detect changes in the WEP sources in riparian
+    areas is difficult due to spatial variability in both the pre- and
+    post-grazing treatments. Even within the control plots, both net
+    addition and removal of WEP were detected and in many cases the
+    variability was similar to the other treatments. This inherent
+    variability (i.e., pre-grazing) likely results from a combination of
+    hydrological factors like ground water fluctuations, soil attributes
+    such as texture, ecological dynamics involving plant community
+    composition, and anthropogenic influences like historical land
+    management practices
+    (<xref alt="McClain et al., 2003" rid="ref-mcclain2003-nb-article" ref-type="bibr">McClain
+    et al., 2003</xref>;
+    <xref alt="Vidon et al., 2010" rid="ref-vidon2010-nb-article" ref-type="bibr">Vidon
+    et al., 2010</xref>). In particular, the species cover information
+    (<xref alt="Figure S2" rid="suppfig-plant-plot-nb-article">Figure S2</xref>)
+    demonstrates a wide range in species composition and abundance, this
+    coupled with the variation in P release with different vegetation
+    species may explain some of the observed variability
+    (<xref alt="Cober et al., 2018" rid="ref-cober2018-nb-article" ref-type="bibr">Cober
+    et al., 2018</xref>).</p>
+  </sec>
+  <sec id="sources-of-variability-and-uncertainty-in-p-sources-nb-article">
+    <title>3.4 Sources of variability and uncertainty in P
+    sources</title>
+    <p>The prairie pothole wetlands regularly experience high water
+    levels in the early spring. Automated observations made with a water
+    level logger adjacent to one plot between October 2020 and May 2021
+    showed that the lower, middle, and upper sampling points experienced
+    inundation for approximately 21, 11, and zero days, respectively
+    (<xref alt="Noyes et al., 2024" rid="ref-noyes2024-nb-article" ref-type="bibr">Noyes
+    et al., 2024</xref>). The annual weather conditions and topography
+    of riparian areas surrounding the wetlands will impact the length
+    and extent of flooding. Prolonged contact with water has been shown
+    to increase the mass of WEP lost in both soil
+    (<xref alt="Young and Briggs, 2008" rid="ref-young2008-nb-article" ref-type="bibr">Young
+    and Briggs, 2008</xref>) and vegetation
+    (<xref alt="Lozier and Macrae, 2017" rid="ref-lozier2017-nb-article" ref-type="bibr">Lozier
+    and Macrae, 2017</xref>) and may also explain some of the observed
+    variability. As reported by Podolsky and Schindler
+    (<xref alt="1993" rid="ref-podolsky1993-nb-article" ref-type="bibr">1993</xref>),
+    the soils surrounding these potholes are typically low in
+    CaCo<sub>3</sub> and have a neutral to slight alkaline pH. In this
+    pH range (6.5 to 7.5) P availability is typically at its highest and
+    not expected to precipitate with Ca. A more detailed soil chemical
+    analysis, particularly Fe and Mn, along with soil saturation
+    duration information (i.e., redox) would be needed to fully assess
+    the potential for P loss during the spring
+    (<xref alt="Walton et al., 2020" rid="ref-walton2020-nb-article" ref-type="bibr">Walton
+    et al., 2020</xref>).</p>
+    <p>The WEP protocol used for both soil and vegetation samples are
+    not likely to capture redox-sensitive mobilized P from the soil
+    (<xref alt="Walton et al., 2020" rid="ref-walton2020-nb-article" ref-type="bibr">Walton
+    et al., 2020</xref>) or enhanced P leaching from vegetation
+    (<xref alt="Lozier and Macrae, 2017" rid="ref-lozier2017-nb-article" ref-type="bibr">Lozier
+    and Macrae, 2017</xref>). Similarly, the WEP protocol also does not
+    capture the enhanced P release from soil and vegetation that results
+    repeated freeze-thaw cycles
+    (<xref alt="Liu et al., 2013" rid="ref-liu2013-nb-article" ref-type="bibr">Liu
+    et al., 2013</xref>;
+    <xref alt="Lozier and Macrae, 2017" rid="ref-lozier2017-nb-article" ref-type="bibr">Lozier
+    and Macrae, 2017</xref>). However, temperature sensors placed at the
+    soil surface adjacent to one plot recorded four freeze-thaw cycles
+    between Oct 2020 and May 2021 and found that surface temperatures
+    fluctuations are moderated in this region by the relatively
+    persistent snowpack
+    (<xref alt="Noyes et al., 2024" rid="ref-noyes2024-nb-article" ref-type="bibr">Noyes
+    et al., 2024</xref>).), reducing the potential effects of
+    freeze-thaw cycles on P release. However, both the prolonged contact
+    with water and freeze-thaw cycles are not captured in the WEP
+    protocols and may result in an underestimation of the potential for
+    P loss from each of the four distinctive sources of P in riparian
+    areas.</p>
+    <p>In addition to climatic effects, there may be variability in P as
+    a side effect of the study design. One source of variability could
+    be from added urine and manure in grazed areas which likely created
+    additional hotspots of P that may carry forward to subsequent years
+    (<xref alt="Subedi et al., 2020" rid="ref-subedi2020-nb-article" ref-type="bibr">Subedi
+    et al., 2020</xref>;
+    <xref alt="Donohoe et al., 2021" rid="ref-donohoe2021-nb-article" ref-type="bibr">Donohoe
+    et al., 2021</xref>). However, there was no indication of P
+    accumulation due to grazing in any of the four distinctive P sources
+    over the 3-year study period. The highest concentrations of WEP were
+    typically found in the second year of the study
+    (<xref alt="Figure S6" rid="suppfig-years-plot-nb-article">Figure S6</xref>).
+    This suggests that other biophysical processes regulated by weather
+    conditions
+    (<xref alt="Figure S3" rid="suppfig-weather-plot-nb-article">Figure S3</xref>)
+    were of greater importance in controlling the WEP concentrations
+    than P additions from cattle urine and manure.</p>
+    <p>Another source of variability may have been from sampling. As
+    there was significant variability among plots, the single 0.25
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[m^2]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msup><mml:mi>m</mml:mi><mml:mn>2</mml:mn></mml:msup></mml:math></alternatives></inline-formula>
+    sampling quadrat within each riparian location may have been
+    insufficient to capture the spatial variability. Therefore, larger
+    composite and/or several sampling locations within each upper,
+    middle and lower locations are recommended. Appropriate sampling
+    design becomes critical as the scale of observation of similar
+    research increases to the farm scale, and so will the range and
+    sources of variability. As the scope of research is expanded to the
+    farm level, the importance of using an appropriate sampling design
+    becomes increasingly critical
+    (<xref alt="Hale et al., 2014" rid="ref-hale2014-nb-article" ref-type="bibr">Hale
+    et al., 2014</xref>).</p>
+  </sec>
+  <sec id="management-implications-nb-article">
+    <title>3.5 Management implications</title>
+    <p>Autumn was selected for the mowing and grazing treatments for
+    three reasons. The first was to reduce the mass of biomass P
+    available that can contribute to the P loss during the spring
+    snowmelt. Second, drier soil conditions reduce the extent of pugging
+    and soil compaction, which limits the disruption of soil structure
+    and damage to plants
+    (<xref alt="Batey, 2009" rid="ref-batey2009-nb-article" ref-type="bibr">Batey,
+    2009</xref>). Lastly, the prairie potholes and associated riparian
+    areas are important breeding habitats for migratory birds. Grazing
+    can negatively affect these species, but late-season grazing may
+    reduce this potential ecological impact
+    (<xref alt="Stanley and Knopf, 2002" rid="ref-stanley2002-nb-article" ref-type="bibr">Stanley
+    and Knopf, 2002</xref>). However, the type of grazing system
+    (timing, stocking rate, and density, etc.) may impact habitat
+    quality and breeding success
+    (<xref alt="Carnochan et al., 2018" rid="ref-carnochan2018-nb-article" ref-type="bibr">Carnochan
+    et al., 2018</xref>;
+    <xref alt="Hansen et al., 2019" rid="ref-hansen2019-nb-article" ref-type="bibr">Hansen
+    et al., 2019</xref>;
+    <xref alt="Kraft et al., 2021" rid="ref-kraft2021-nb-article" ref-type="bibr">Kraft
+    et al., 2021</xref>).</p>
+    <p>Corridor fencing at the edge of the waterbody and alternative
+    water sources were used in this study to limit livestock access to
+    prevent bank erosion and protect water quality (e.g., direct
+    deposition)
+    (<xref alt="Dauwalter et al., 2018" rid="ref-dauwalter2018-nb-article" ref-type="bibr">Dauwalter
+    et al., 2018</xref>). Scaling this to the farm level would require
+    virtual fencing or infrastructure
+    (<xref alt="Aarons et al., 2013" rid="ref-aarons2013-nb-article" ref-type="bibr">Aarons
+    et al., 2013</xref>) and time (to conduct short-term grazing),
+    especially in prairie pothole region where there are numerous and
+    small riparian areas
+    (<xref alt="Sovell et al., 2000" rid="ref-sovell2000-nb-article" ref-type="bibr">Sovell
+    et al., 2000</xref>;
+    <xref alt="Hubbard et al., 2004" rid="ref-hubbard2004-nb-article" ref-type="bibr">Hubbard
+    et al., 2004</xref>;
+    <xref alt="Hulvey et al., 2021" rid="ref-hulvey2021-nb-article" ref-type="bibr">Hulvey
+    et al., 2021</xref>;
+    <xref alt="Manitoba Agriculture, 2024" rid="ref-manitobaagriculture2024-nb-article" ref-type="bibr">Manitoba
+    Agriculture, 2024</xref>).</p>
+    <p>The long-term impacts of repeated grazing of riparian areas also
+    need to be considered. From a nutrient loss reduction perspective, a
+    shift in the magnitude of P sources could be expected as less
+    biomass is available to be added to the litter source, affecting the
+    organic layer and Ah sources of P. The regular inclusion of cattle
+    will also introduce a new manure source of P, which can spatially
+    redistribute P and initially be more water soluble and readily
+    transported
+    (<xref alt="Franzluebbers et al., 2019" rid="ref-franzluebbers2019-nb-article" ref-type="bibr">Franzluebbers
+    et al., 2019</xref>). Grazing can also reduce the litter layer
+    through trampling increasing the soil-vegetation contact and
+    speeding up the decomposition process. These changes in biomass and
+    litter quantities may result in changes to habitat structure.
+    Although this study generally considers environmental implications,
+    forage management practices also have an agronomic effect which
+    should be taken into consideration when developing best management
+    practices
+    (<xref alt="Subedi et al., 2020" rid="ref-subedi2020-nb-article" ref-type="bibr">Subedi
+    et al., 2020</xref>).</p>
+  </sec>
+</sec>
+<sec id="conclusion-nb-article">
+  <title>4 Conclusion</title>
+  <p>Biomass and litter are significant sources of near-surface WEP in
+  riparian areas that have been historically disregarded in studies.
+  Management of the biomass prior to the onset of winter conditions in
+  cold climates has the potential to reduce the mass of P directly lost
+  during the spring snowmelt and maintain or enhance the nutrient
+  buffering capacity. The results from this experiment demonstrated that
+  short-term, high-density cattle grazing and mowing both resulted in a
+  reduction in the mass of biomass WEP, particularly in the lower
+  riparian locations. The grazing and mowing treatments had no
+  detectable effect on the other three near-surface sources of WEP.
+  However, detecting changes in the near-surface sources of WEP is
+  challenging due to high spatial variability.</p>
+  <p>Additional work on riparian management strategies is needed to
+  address the specific challenges posed by cold climates. In these
+  regions, the runoff and nutrient losses occur predominately during the
+  spring snowmelt period when the ability of riparian areas to trap and
+  retain nutrients is diminished. Further, the repeated freeze-thaw
+  cycles of the vegetation and soils increases the potential P losses
+  during this key time. Continued research to identify, quantify, and
+  manage these sources of P to improve water quality remains a priority.
+  In addition to improving water quality, the development of riparian
+  management strategies should prioritize the protection of other
+  ecological goods and services and recognize these areas as an integral
+  part of the farm.</p>
+</sec>
+<sec id="acknowledgements-nb-article">
+  <title>Acknowledgements</title>
+  <p>This project was undertaken with the financial support of the
+  Government of Canada through the federal Department of Environment and
+  Climate Change and a Lake Winnipeg Basin Program grant awarded to the
+  Manitoba Association of Watersheds. Additional research funding was
+  provided through a Brandon University Research Committee grant awarded
+  to AK. Thank you to A. Avila, M. Luna, C Sobchuk, and A. Tan for all
+  the help with lab and field work. Special thanks to the Manitoba Beef
+  and Forage Initiatives research farm staff for the use of their
+  facilities and managing the cattle grazing and mowing treatments.
+  Lastly, thank you to R. Canart and M. Elsinger for helping to develop
+  the experimental design.</p>
+</sec>
+<sec id="data-availability-nb-article">
+  <title>Data availability</title>
+  <p>Data and source code for analysis and manuscript available on
+  GitHub:
+  <ext-link ext-link-type="uri" xlink:href="https://github.com/alex-koiter/riparian-grazing-manuscript">https://github.com/alex-koiter/riparian-grazing-manuscript</ext-link></p>
+  <p>Data set also available in the Dryad repository:
+  <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.5061/dryad.nzs7h4526">https://doi.org/10.5061/dryad.nzs7h4526</ext-link></p>
+</sec>
+<sec id="conflict-of-interest-statement-nb-article">
+  <title>Conflict of interest statement</title>
+  <p>The authors have no competing interests to declare that are
+  relevant to the content of this article.</p>
+</sec>
+<sec id="author-contributions-nb-article">
+  <title>Author contributions</title>
+  <p><bold>A Koiter:</bold> Conceptualization; Funding acquisition;
+  Methodology (equal); Investigation (equal); Data curation (equal);
+  Formal analysis; Visualization; Writing – original draft (lead);
+  writing – review and editing (lead). <bold>T. Malone:</bold>
+  Methodology (equal); Data curation (equal); Investigation (equal);
+  Writing – original draft (supporting); Writing – review and editing
+  (supporting).</p>
+</sec>
+<sec id="references-nb-article">
+  <title>References</title>
+</sec>
+<sec id="supplemental-materials-nb-article">
+  <title>Supplemental materials</title>
+  <fig id="suppfig-workflow-plot-nb-article">
+    <caption><p>Figure S1: Workflow diagram showing the experimental
+    setup (yellow), field work (green), sample preparation (brown), and
+    laboratory analysis (blue).</p></caption>
+    <graphic mimetype="image" mime-subtype="png" xlink:href="Workflow.png" />
+  </fig>
+  <fig id="suppfig-plant-plot-nb-article">
+    <caption><p>Figure S2: Initial year (2019) cover assessment using
+    the foliar cover method for each plot within the four riparian
+    locations</p></caption>
+    <graphic mimetype="image" mime-subtype="png" xlink:href="plant_composition.png" />
+  </fig>
+  <fig id="suppfig-weather-plot-nb-article">
+    <caption><p>Figure S3: Average daily air temperature and cumulative
+    rainfall over the growing season over the three year study. Red bars
+    indicate sampling dates</p></caption>
+    <graphic mimetype="image" mime-subtype="png" xlink:href="supp-weather-plot-1.png" />
+  </fig>
+  <fig id="suppfig-bd-plot-nb-article">
+    <caption><p>Figure S4: a) Mass of biomass and litter before grazing
+    and mowing (2019-2021) and b) the bulk density of the organic layer
+    and 10 cm Ah horizon (2023)</p></caption>
+    <graphic mimetype="image" mime-subtype="png" xlink:href="supp-weights-bd-1.png" />
+  </fig>
+  <fig id="suppfig-pairs-plot-nb-article">
+    <caption><p>Figure S5: Generalized pairs plot showing the data and
+    relationships between WEP concentration between the different
+    sources of Phosphorus at the lower (purple), middle (blue), and
+    lower (green) topographic positions. Data set only includes samples
+    collected before grazing and mowing treatments were applied. Corr
+    indicates the pearson correlation coefficient. *** p-value &lt;
+    0.001, ** p-value &lt; 0.01, ** p-value &lt; 0.05.</p></caption>
+    <graphic mimetype="image" mime-subtype="png" xlink:href="pair_plot.png" />
+  </fig>
+  <fig id="suppfig-years-plot-nb-article">
+    <caption><p>Figure S6: Mean and standard deviation WEP concentration
+    for each of the different sources of Phosphorus at each topographic
+    position over the three year period of observations. Data set only
+    includes samples collected before grazing and mowing treatments were
+    applied.</p></caption>
+    <graphic mimetype="image" mime-subtype="png" xlink:href="P_conc_year.png" />
+  </fig>
+</sec>
+</body>
+
+
+
+<back>
+<ref-list>
+  <title></title>
+  <ref id="ref-fitch2003-nb-article">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Fitch</surname><given-names>L</given-names></name>
+        <name><surname>Adams</surname><given-names>B</given-names></name>
+        <name><surname>O’Shaughnessy</surname><given-names>K</given-names></name>
+      </person-group>
+      <source>Caring for the green zone: Riparian areas and grazing management</source>
+      <publisher-name>Cows; Fish Program</publisher-name>
+      <publisher-loc>Lethbridge, Alberta</publisher-loc>
+      <year iso-8601-date="2003">2003</year>
+      <edition>3</edition>
+    </element-citation>
+  </ref>
+  <ref id="ref-vidon2010-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Vidon</surname><given-names>Philippe</given-names></name>
+        <name><surname>Allan</surname><given-names>C.</given-names></name>
+        <name><surname>Burns</surname><given-names>Douglas</given-names></name>
+        <name><surname>Duval</surname><given-names>Tim P.</given-names></name>
+        <name><surname>Gurwick</surname><given-names>Noel</given-names></name>
+        <name><surname>Inamdar</surname><given-names>Shreeram</given-names></name>
+        <name><surname>Lowrance</surname><given-names>Richard</given-names></name>
+        <name><surname>Okay</surname><given-names>Judy</given-names></name>
+        <name><surname>Scott</surname><given-names>Durelle</given-names></name>
+        <name><surname>Sebestyen</surname><given-names>Steve</given-names></name>
+      </person-group>
+      <article-title>Hot spots and hot moments in riparian zones: Potential for improved water quality management</article-title>
+      <source>Journal of the American Water Resources Association</source>
+      <year iso-8601-date="2010-04">2010</year><month>04</month>
+      <volume>46</volume>
+      <issue>2</issue>
+      <uri>http://onlinelibrary.wiley.com/doi/10.1111/j.1752-1688.2010.00420.x/pdf</uri>
+      <pub-id pub-id-type="doi">10.1111/j.1752-1688.2010.00420.x</pub-id>
+      <fpage>278</fpage>
+      <lpage>298</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-beck2018-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Beck</surname><given-names>Hylke E.</given-names></name>
+        <name><surname>Zimmermann</surname><given-names>Niklaus E.</given-names></name>
+        <name><surname>McVicar</surname><given-names>Tim R.</given-names></name>
+        <name><surname>Vergopolan</surname><given-names>Noemi</given-names></name>
+        <name><surname>Berg</surname><given-names>Alexis</given-names></name>
+        <name><surname>Wood</surname><given-names>Eric F.</given-names></name>
+      </person-group>
+      <article-title>Present and future Köppen-Geiger climate classification maps at 1-km resolution</article-title>
+      <source>Scientific Data</source>
+      <year iso-8601-date="2018-10-30">2018</year><month>10</month><day>30</day>
+      <volume>5</volume>
+      <issue>1</issue>
+      <uri>https://www.nature.com/articles/sdata2018214</uri>
+      <pub-id pub-id-type="doi">10.1038/sdata.2018.214</pub-id>
+      <fpage>180214</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-environmentandclimatechangecanada2024-nb-article">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Environment</surname></name>
+        <name><surname>Climate Change Canada</surname></name>
+      </person-group>
+      <article-title>Canadian Climate Normals</article-title>
+      <year iso-8601-date="2024">2024</year>
+      <uri>https://climate.weather.gc.ca/climate_normals/index_e.html</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-podolsky1993-nb-article">
+    <element-citation publication-type="report">
+      <person-group person-group-type="author">
+        <name><surname>Podolsky</surname><given-names>G P</given-names></name>
+        <name><surname>Schindler</surname><given-names>D</given-names></name>
+      </person-group>
+      <article-title>Soils of the manitoba zero tillage research association farm</article-title>
+      <publisher-loc>Winnipeg, Manitoba</publisher-loc>
+      <year iso-8601-date="1993">1993</year>
+      <uri>https://www.manitoba.ca/agriculture/soil/soil-survey/pubs/fss02s00943.pdf</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-sharpley-nb-article">
+    <element-citation publication-type="chapter">
+      <person-group person-group-type="author">
+        <name><surname>Sharpley</surname><given-names>A. N</given-names></name>
+        <name><surname>Kleinman</surname><given-names>P. J. A.</given-names></name>
+        <name><surname>Weld</surname><given-names>J. L.</given-names></name>
+      </person-group>
+      <article-title>Environmental soil phosphorus indices</article-title>
+      <person-group person-group-type="editor">
+        <name><surname>Carter</surname><given-names>M. R.</given-names></name>
+        <name><surname>Gregorich</surname><given-names>E. G.</given-names></name>
+      </person-group>
+      <publisher-name>CRC Press</publisher-name>
+      <publisher-loc>Boca Raton, FL, U.S.A</publisher-loc>
+      <year iso-8601-date="2006">2006</year>
+      <edition>2</edition>
+    </element-citation>
+  </ref>
+  <ref id="ref-murphy1962-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Murphy</surname><given-names>J.</given-names></name>
+        <name><surname>Riley</surname><given-names>J. P.</given-names></name>
+      </person-group>
+      <article-title>A modified single solution method for the determination of phosphate in natural waters</article-title>
+      <source>Analytica Chimica Acta</source>
+      <year iso-8601-date="1962">1962</year>
+      <volume>27</volume>
+      <uri>https://www.sciencedirect.com/science/article/pii/S0003267000884445</uri>
+      <pub-id pub-id-type="doi">10.1016/S0003-2670(00)88444-5</pub-id>
+      <fpage>31</fpage>
+      <lpage>36</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-manitobaagriculture2023-nb-article">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Manitoba Agriculture</surname></name>
+      </person-group>
+      <article-title>Manitoba agriculture weather program</article-title>
+      <year iso-8601-date="2023">2023</year>
+      <uri>https://www.gov.mb.ca/agriculture/weather/manitoba-ag-weather.html</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-liu2019-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Liu</surname><given-names>Jian</given-names></name>
+        <name><surname>Baulch</surname><given-names>Helen M.</given-names></name>
+        <name><surname>Macrae</surname><given-names>Merrin L.</given-names></name>
+        <name><surname>Wilson</surname><given-names>Henry F.</given-names></name>
+        <name><surname>Elliott</surname><given-names>Jane A.</given-names></name>
+        <name><surname>Bergström</surname><given-names>Lars</given-names></name>
+        <name><surname>Glenn</surname><given-names>Aaron J.</given-names></name>
+        <name><surname>Vadas</surname><given-names>Peter A.</given-names></name>
+      </person-group>
+      <article-title>Agricultural water quality in cold climates: processes, drivers, management options, and research needs</article-title>
+      <source>Journal of Environmental Quality</source>
+      <year iso-8601-date="2019-01">2019</year><month>01</month>
+      <volume>48</volume>
+      <issue>4</issue>
+      <uri>https://onlinelibrary.wiley.com/doi/10.2134/jeq2019.05.0220</uri>
+      <pub-id pub-id-type="doi">10.2134/jeq2019.05.0220</pub-id>
+      <fpage>792</fpage>
+      <lpage>802</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-cober2019-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Cober</surname><given-names>James R.</given-names></name>
+        <name><surname>Macrae</surname><given-names>Merrin L.</given-names></name>
+        <name><surname>Van Eerd</surname><given-names>Laura L.</given-names></name>
+      </person-group>
+      <article-title>Winter phosphorus release from cover crops and linkages with runoff chemistry</article-title>
+      <source>Journal of Environmental Quality</source>
+      <year iso-8601-date="2019-07">2019</year><month>07</month>
+      <volume>48</volume>
+      <issue>4</issue>
+      <pub-id pub-id-type="doi">10.2134/jeq2018.08.0307</pub-id>
+      <fpage>907</fpage>
+      <lpage>914</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-lozier2017-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Lozier</surname><given-names>Tatianna M.</given-names></name>
+        <name><surname>Macrae</surname><given-names>Merrin L.</given-names></name>
+      </person-group>
+      <article-title>Potential phosphorus mobilization from above-soil winter vegetation assessed from laboratory water extractions following freezethaw cycles</article-title>
+      <source>Canadian Water Resources Journal</source>
+      <year iso-8601-date="2017-07-03">2017</year><month>07</month><day>03</day>
+      <volume>42</volume>
+      <issue>3</issue>
+      <uri>https://www.tandfonline.com/doi/full/10.1080/07011784.2017.1331140</uri>
+      <pub-id pub-id-type="doi">10.1080/07011784.2017.1331140</pub-id>
+      <fpage>276</fpage>
+      <lpage>288</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-roberts2012-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Roberts</surname><given-names>William M.</given-names></name>
+        <name><surname>Stutter</surname><given-names>Marc I.</given-names></name>
+        <name><surname>Haygarth</surname><given-names>Philip M.</given-names></name>
+      </person-group>
+      <article-title>Phosphorus retention and remobilization in vegetated buffer strips: A review</article-title>
+      <source>Journal of Environmental Quality</source>
+      <year iso-8601-date="2012">2012</year>
+      <volume>41</volume>
+      <issue>2</issue>
+      <uri>https://onlinelibrary.wiley.com/doi/abs/10.2134/jeq2010.0543</uri>
+      <pub-id pub-id-type="doi">10.2134/jeq2010.0543</pub-id>
+      <fpage>389</fpage>
+      <lpage>399</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-kieta2018-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Kieta</surname><given-names>Kristen A.</given-names></name>
+        <name><surname>Owens</surname><given-names>Philip N.</given-names></name>
+        <name><surname>Lobb</surname><given-names>David A.</given-names></name>
+        <name><surname>Vanrobaeys</surname><given-names>Jason A.</given-names></name>
+        <name><surname>Flaten</surname><given-names>Don N.</given-names></name>
+      </person-group>
+      <article-title>Phosphorus dynamics in vegetated buffer strips in cold climates: A review</article-title>
+      <source>Environmental Reviews</source>
+      <year iso-8601-date="2018-05-09">2018</year><month>05</month><day>09</day>
+      <volume>26</volume>
+      <issue>3</issue>
+      <uri>https://www.nrcresearchpress.com/doi/10.1139/er-2017-0077</uri>
+      <pub-id pub-id-type="doi">10.1139/er-2017-0077</pub-id>
+      <fpage>255</fpage>
+      <lpage>272</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-young2008-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Young</surname><given-names>Eric O.</given-names></name>
+        <name><surname>Briggs</surname><given-names>Russell D.</given-names></name>
+      </person-group>
+      <article-title>Phosphorus concentrations in soil and subsurface water: A field study among cropland and riparian buffers</article-title>
+      <source>Journal of Environmental Quality</source>
+      <year iso-8601-date="2008">2008</year>
+      <volume>37</volume>
+      <issue>1</issue>
+      <uri>https://onlinelibrary.wiley.com/doi/abs/10.2134/jeq2006.0422</uri>
+      <pub-id pub-id-type="doi">10.2134/jeq2006.0422</pub-id>
+      <fpage>69</fpage>
+      <lpage>78</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-lacas2005-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Lacas</surname><given-names>Jean-Guillaume</given-names></name>
+        <name><surname>Voltz</surname><given-names>Marc</given-names></name>
+        <name><surname>Gouy</surname><given-names>Véronique</given-names></name>
+        <name><surname>Carluer</surname><given-names>Nadia</given-names></name>
+        <name><surname>Gril</surname><given-names>Jean-Joël</given-names></name>
+      </person-group>
+      <article-title>Using grassed strips to limit pesticide transfer to surface water: A review</article-title>
+      <source>Agronomy for Sustainable Development</source>
+      <year iso-8601-date="2005-04">2005</year><month>04</month>
+      <volume>25</volume>
+      <issue>2</issue>
+      <pub-id pub-id-type="doi">10.1051/agro:2005001</pub-id>
+      <fpage>253</fpage>
+      <lpage>266</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-owens2007-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Owens</surname><given-names>P. N.</given-names></name>
+        <name><surname>Duzant</surname><given-names>J. H.</given-names></name>
+        <name><surname>Deeks</surname><given-names>L. K.</given-names></name>
+        <name><surname>Wood</surname><given-names>G. A.</given-names></name>
+        <name><surname>Morgan</surname><given-names>R. P. C.</given-names></name>
+        <name><surname>Collins</surname><given-names>A. J.</given-names></name>
+      </person-group>
+      <article-title>Evaluation of contrasting buffer features within an agricultural landscape for reducing sediment and sediment-associated phosphorus delivery to surface waters</article-title>
+      <source>Soil Use and Management</source>
+      <year iso-8601-date="2007-09">2007</year><month>09</month>
+      <volume>23</volume>
+      <issue>s1</issue>
+      <uri>http://library.unbc.ca:2649/doi/10.1111/j.1475-2743.2007.00121.x/pdf</uri>
+      <pub-id pub-id-type="doi">10.1111/j.1475-2743.2007.00121.x</pub-id>
+      <fpage>165</fpage>
+      <lpage>175</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-mcguire2010-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>McGuire</surname><given-names>K. J</given-names></name>
+        <name><surname>McDonnell</surname><given-names>J. J</given-names></name>
+      </person-group>
+      <article-title>Hydrological connectivity of hillslopes and streams: Characteristic time scales and nonlinearities</article-title>
+      <source>Water Resources Research</source>
+      <year iso-8601-date="2010">2010</year>
+      <volume>46</volume>
+      <issue>10</issue>
+      <pub-id pub-id-type="doi">10.1029/2010WR009341</pub-id>
+      <fpage>W10543</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-kieta2019-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Kieta</surname><given-names>Kristen A.</given-names></name>
+        <name><surname>Owens</surname><given-names>Philip N.</given-names></name>
+      </person-group>
+      <article-title>Phosphorus release from shoots of phleum pretense l. After repeated freeze-thaw cycles and harvests</article-title>
+      <source>Ecological Engineering</source>
+      <year iso-8601-date="2019">2019</year>
+      <volume>127</volume>
+      <pub-id pub-id-type="doi">10.1016/j.ecoleng.2018.11.024</pub-id>
+      <fpage>204</fpage>
+      <lpage>211</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-mcclain2003-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>McClain</surname><given-names>M. E</given-names></name>
+        <name><surname>Boyer</surname><given-names>E. W</given-names></name>
+        <name><surname>Dent</surname><given-names>C. L</given-names></name>
+        <name><surname>Gergel</surname><given-names>S. E</given-names></name>
+        <name><surname>Grimm</surname><given-names>N. B</given-names></name>
+        <name><surname>Groffman</surname><given-names>P. M</given-names></name>
+        <name><surname>Hart</surname><given-names>S. C</given-names></name>
+        <name><surname>Harvey</surname><given-names>J. W</given-names></name>
+        <name><surname>Johnston</surname><given-names>C. A</given-names></name>
+        <name><surname>Mayorga</surname><given-names>E.</given-names></name>
+        <name><surname>others</surname></name>
+      </person-group>
+      <article-title>Biogeochemical hot spots and hot moments at the interface of terrestrial and aquatic ecosystems</article-title>
+      <source>Ecosystems</source>
+      <year iso-8601-date="2003">2003</year>
+      <volume>6</volume>
+      <issue>4</issue>
+      <pub-id pub-id-type="doi">10.1007/s10021-003-0161-9</pub-id>
+      <fpage>301312</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-habibiandehkordi2017-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Habibiandehkordi</surname><given-names>Reza</given-names></name>
+        <name><surname>Lobb</surname><given-names>David A.</given-names></name>
+        <name><surname>Sheppard</surname><given-names>Steve C.</given-names></name>
+        <name><surname>Flaten</surname><given-names>Don N.</given-names></name>
+        <name><surname>Owens</surname><given-names>Philip N.</given-names></name>
+      </person-group>
+      <article-title>Uncertainties in vegetated buffer strip function in controlling phosphorus export from agricultural land in the canadian prairies</article-title>
+      <source>Environmental Science and Pollution Research</source>
+      <year iso-8601-date="2017-08">2017</year><month>08</month>
+      <volume>24</volume>
+      <issue>22</issue>
+      <pub-id pub-id-type="doi">10.1007/s11356-017-9406-6</pub-id>
+      <fpage>18372</fpage>
+      <lpage>18382</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-habibiandehkordi2019-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Habibiandehkordi</surname><given-names>Reza</given-names></name>
+        <name><surname>Lobb</surname><given-names>David A.</given-names></name>
+        <name><surname>Owens</surname><given-names>Philip N.</given-names></name>
+        <name><surname>Flaten</surname><given-names>Don N.</given-names></name>
+      </person-group>
+      <article-title>Effectiveness of vegetated buffer strips in controlling legacy phosphorus exports from agricultural land</article-title>
+      <source>Journal of Environmental Quality</source>
+      <year iso-8601-date="2019-03">2019</year><month>03</month>
+      <volume>48</volume>
+      <issue>2</issue>
+      <uri>https://dl.sciencesocieties.org/publications/jeq/abstracts/48/2/314</uri>
+      <pub-id pub-id-type="doi">10.2134/jeq2018.04.0129</pub-id>
+      <fpage>314</fpage>
+      <lpage>321</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-liu2019a-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Liu</surname><given-names>Jian</given-names></name>
+        <name><surname>Macrae</surname><given-names>Merrin L.</given-names></name>
+        <name><surname>Elliott</surname><given-names>Jane A.</given-names></name>
+        <name><surname>Baulch</surname><given-names>Helen M.</given-names></name>
+        <name><surname>Wilson</surname><given-names>Henry F.</given-names></name>
+        <name><surname>Kleinman</surname><given-names>Peter J. A.</given-names></name>
+      </person-group>
+      <article-title>Impacts of cover crops and crop residues on phosphorus losses in cold climates: a review</article-title>
+      <source>Journal of Environmental Quality</source>
+      <year iso-8601-date="2019-01">2019</year><month>01</month>
+      <volume>48</volume>
+      <issue>4</issue>
+      <uri>https://onlinelibrary.wiley.com/doi/10.2134/jeq2019.03.0119</uri>
+      <pub-id pub-id-type="doi">10.2134/jeq2019.03.0119</pub-id>
+      <fpage>850</fpage>
+      <lpage>868</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-reid2018-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Reid</surname><given-names>Keith</given-names></name>
+        <name><surname>Schneider</surname><given-names>Kimberly</given-names></name>
+        <name><surname>McConkey</surname><given-names>Brian</given-names></name>
+      </person-group>
+      <article-title>Components of phosphorus loss from agricultural landscapes, and how to incorporate them into risk assessment tools</article-title>
+      <source>Frontiers in Earth Science</source>
+      <year iso-8601-date="2018">2018</year>
+      <volume>6</volume>
+      <uri>https://www.frontiersin.org/article/10.3389/feart.2018.00135</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-dauwalter2018-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Dauwalter</surname><given-names>Daniel C.</given-names></name>
+        <name><surname>Fesenmyer</surname><given-names>Kurt A.</given-names></name>
+        <name><surname>Miller</surname><given-names>Scott W.</given-names></name>
+        <name><surname>Porter</surname><given-names>Tucker</given-names></name>
+      </person-group>
+      <article-title>Response of riparian vegetation, instream habitat, and aquatic biota to riparian grazing exclosures</article-title>
+      <source>North American Journal of Fisheries Management</source>
+      <year iso-8601-date="2018">2018</year>
+      <volume>38</volume>
+      <issue>5</issue>
+      <uri>https://onlinelibrary.wiley.com/doi/abs/10.1002/nafm.10224</uri>
+      <pub-id pub-id-type="doi">10.1002/nafm.10224</pub-id>
+      <fpage>1187</fpage>
+      <lpage>1200</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-schindler2012-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Schindler</surname><given-names>David W.</given-names></name>
+        <name><surname>Hecky</surname><given-names>Robert E.</given-names></name>
+        <name><surname>McCullough</surname><given-names>Gregory K.</given-names></name>
+      </person-group>
+      <article-title>The rapid eutrophication of lake winnipeg: Greening under global change</article-title>
+      <source>Journal of Great Lakes Research</source>
+      <year iso-8601-date="2012">2012</year>
+      <volume>38, Supplement 3</volume>
+      <uri>http://www.sciencedirect.com/science/article/pii/S0380133012000676</uri>
+      <pub-id pub-id-type="doi">10.1016/j.jglr.2012.04.003</pub-id>
+      <fpage>6</fpage>
+      <lpage>13</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-nsengakumwimba2023-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Nsenga Kumwimba</surname><given-names>Mathieu</given-names></name>
+        <name><surname>Huang</surname><given-names>Jinlou</given-names></name>
+        <name><surname>Dzakpasu</surname><given-names>Mawuli</given-names></name>
+        <name><surname>De Silva</surname><given-names>Koshila</given-names></name>
+        <name><surname>Ohore</surname><given-names>Okugbe Ebiotubo</given-names></name>
+        <name><surname>Ajibade</surname><given-names>Fidelis Odedishemi</given-names></name>
+        <name><surname>Li</surname><given-names>Xuyong</given-names></name>
+        <name><surname>Jingjun</surname><given-names>Su</given-names></name>
+        <name><surname>Muyembe</surname><given-names>Diana Kavidia</given-names></name>
+        <name><surname>Kaixuan</surname><given-names>Huang</given-names></name>
+      </person-group>
+      <article-title>An updated review of the efficacy of buffer zones in warm/temperate and cold climates: Insights into processes and drivers of nutrient retention</article-title>
+      <source>Journal of Environmental Management</source>
+      <year iso-8601-date="2023">2023</year>
+      <volume>336</volume>
+      <uri>https://www.sciencedirect.com/science/article/pii/S0301479723004346</uri>
+      <pub-id pub-id-type="doi">10.1016/j.jenvman.2023.117646</pub-id>
+      <fpage>117646</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-krall2023-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Krall</surname><given-names>Michelle</given-names></name>
+        <name><surname>Roni</surname><given-names>Philip</given-names></name>
+      </person-group>
+      <article-title>Effects of livestock exclusion on stream habitat and aquatic biota: A review and recommendations for implementation and monitoring</article-title>
+      <source>North American Journal of Fisheries Management</source>
+      <year iso-8601-date="2023-04">2023</year><month>04</month>
+      <volume>43</volume>
+      <issue>2</issue>
+      <uri>https://www.webofscience.com/api/gateway?GWVersion=2&amp;SrcAuth=DynamicDOIArticle&amp;SrcApp=WOS&amp;KeyAID=10.1002%2Fnafm.10863&amp;DestApp=DOI&amp;SrcAppSID=USW2EC0C3C9OL0whJ8zP8XkLMASfg&amp;SrcJTitle=NORTH+AMERICAN+JOURNAL+OF+FISHERIES+MANAGEMENT&amp;DestDOIRegistrantName=Wiley+%28John+Wiley+%26+Sons%29</uri>
+      <pub-id pub-id-type="doi">10.1002/nafm.10863</pub-id>
+      <fpage>476</fpage>
+      <lpage>504</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-yu2019-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Yu</surname><given-names>Congrong</given-names></name>
+        <name><surname>Duan</surname><given-names>Peiyi</given-names></name>
+        <name><surname>Yu</surname><given-names>Zhongbo</given-names></name>
+        <name><surname>Gao</surname><given-names>Bin</given-names></name>
+      </person-group>
+      <article-title>Experimental and model investigations of vegetative filter strips for contaminant removal: A review</article-title>
+      <source>Ecological Engineering</source>
+      <year iso-8601-date="2019-01-01">2019</year><month>01</month><day>01</day>
+      <volume>126</volume>
+      <uri>https://www.sciencedirect.com/science/article/pii/S0925857418303975</uri>
+      <pub-id pub-id-type="doi">10.1016/j.ecoleng.2018.10.020</pub-id>
+      <fpage>25</fpage>
+      <lpage>36</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-lyu2021-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Lyu</surname><given-names>Chunjian</given-names></name>
+        <name><surname>Li</surname><given-names>Xiaojie</given-names></name>
+        <name><surname>Yuan</surname><given-names>Peng</given-names></name>
+        <name><surname>Song</surname><given-names>Yonghui</given-names></name>
+        <name><surname>Gao</surname><given-names>Hongjie</given-names></name>
+        <name><surname>Liu</surname><given-names>Xiaoling</given-names></name>
+        <name><surname>Liu</surname><given-names>Ruixia</given-names></name>
+        <name><surname>Yu</surname><given-names>Huibin</given-names></name>
+      </person-group>
+      <article-title>Nitrogen retention effect of riparian zones in agricultural areas: A meta-analysis</article-title>
+      <source>Journal of Cleaner Production</source>
+      <year iso-8601-date="2021">2021</year>
+      <volume>315</volume>
+      <uri>https://www.sciencedirect.com/science/article/pii/S0959652621023611</uri>
+      <pub-id pub-id-type="doi">10.1016/j.jclepro.2021.128143</pub-id>
+      <fpage>128143</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-manitobabeefforageinitiatives2024-nb-article">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Manitoba Beef &amp; Forage Initiatives</surname></name>
+      </person-group>
+      <article-title>MBFI farm stations</article-title>
+      <year iso-8601-date="2024">2024</year>
+      <uri>https://www.mbfi.ca/farm-station</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-kelly2007-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Kelly</surname><given-names>J. M.</given-names></name>
+        <name><surname>Kovar</surname><given-names>J. L.</given-names></name>
+        <name><surname>Sokolowsky</surname><given-names>R.</given-names></name>
+        <name><surname>Moorman</surname><given-names>T. B.</given-names></name>
+      </person-group>
+      <article-title>Phosphorus uptake during four years by different vegetative cover types in a riparian buffer</article-title>
+      <source>Nutrient Cycling in Agroecosystems</source>
+      <year iso-8601-date="2007-07-01">2007</year><month>07</month><day>01</day>
+      <volume>78</volume>
+      <issue>3</issue>
+      <uri>https://doi.org/10.1007/s10705-007-9088-4</uri>
+      <pub-id pub-id-type="doi">10.1007/s10705-007-9088-4</pub-id>
+      <fpage>239</fpage>
+      <lpage>251</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-hille2019-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Hille</surname><given-names>Sandra</given-names></name>
+        <name><surname>Graeber</surname><given-names>Daniel</given-names></name>
+        <name><surname>Kronvang</surname><given-names>Brian</given-names></name>
+        <name><surname>Rubæk</surname><given-names>Gitte H.</given-names></name>
+        <name><surname>Onnen</surname><given-names>Nils</given-names></name>
+        <name><surname>Molina-Navarro</surname><given-names>Eugenio</given-names></name>
+        <name><surname>Baattrup-Pedersen</surname><given-names>Annette</given-names></name>
+        <name><surname>Heckrath</surname><given-names>Goswin J.</given-names></name>
+        <name><surname>Stutter</surname><given-names>Marc I.</given-names></name>
+      </person-group>
+      <article-title>Management options to reduce phosphorus leaching from vegetated buffer strips</article-title>
+      <source>Journal of Environmental Quality</source>
+      <year iso-8601-date="2019">2019</year>
+      <volume>48</volume>
+      <issue>2</issue>
+      <uri>https://onlinelibrary.wiley.com/doi/abs/10.2134/jeq2018.01.0042</uri>
+      <pub-id pub-id-type="doi">10.2134/jeq2018.01.0042</pub-id>
+      <fpage>322</fpage>
+      <lpage>329</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-donohoe2021-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Donohoe</surname><given-names>Gwen</given-names></name>
+        <name><surname>Flaten</surname><given-names>Don</given-names></name>
+        <name><surname>Omonijo</surname><given-names>Faith</given-names></name>
+        <name><surname>Ominski</surname><given-names>Kim</given-names></name>
+      </person-group>
+      <article-title>Short-term impacts of winter bale grazing beef cows on forage production and soil nutrient status in the eastern canadian prairies</article-title>
+      <source>Canadian Journal of Soil Science</source>
+      <year iso-8601-date="2021-12-01">2021</year><month>12</month><day>01</day>
+      <volume>101</volume>
+      <issue>4</issue>
+      <uri>https://cdnsciencepub.com/doi/10.1139/cjss-2021-0028</uri>
+      <pub-id pub-id-type="doi">10.1139/cjss-2021-0028</pub-id>
+      <fpage>717</fpage>
+      <lpage>733</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-subedi2020-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Subedi</surname><given-names>Anish</given-names></name>
+        <name><surname>Franklin</surname><given-names>Dorcas</given-names></name>
+        <name><surname>Cabrera</surname><given-names>Miguel</given-names></name>
+        <name><surname>McPherson</surname><given-names>Amanda</given-names></name>
+        <name><surname>Dahal</surname><given-names>Subash</given-names></name>
+      </person-group>
+      <article-title>Grazing systems to retain and redistribute soil phosphorus and to reduce phosphorus losses in runoff</article-title>
+      <source>Soil Systems</source>
+      <year iso-8601-date="2020-12">2020</year><month>12</month>
+      <volume>4</volume>
+      <issue>4</issue>
+      <uri>https://www.mdpi.com/2571-8789/4/4/66</uri>
+      <pub-id pub-id-type="doi">10.3390/soilsystems4040066</pub-id>
+      <fpage>66</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-franzluebbers2019-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Franzluebbers</surname><given-names>A. J.</given-names></name>
+        <name><surname>Poore</surname><given-names>M. H.</given-names></name>
+        <name><surname>Freeman</surname><given-names>S. R.</given-names></name>
+        <name><surname>Rogers</surname><given-names>J. R.</given-names></name>
+      </person-group>
+      <article-title>Soil-surface nutrient distributions in grazed pastures of North Carolina</article-title>
+      <source>Journal of Soil and Water Conservation</source>
+      <year iso-8601-date="2019-11-01">2019</year><month>11</month><day>01</day>
+      <volume>74</volume>
+      <issue>6</issue>
+      <uri>https://www.jswconline.org/content/74/6/571</uri>
+      <pub-id pub-id-type="doi">10.2489/jswc.74.6.571</pub-id>
+      <fpage>571</fpage>
+      <lpage>583</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-kraft2021-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Kraft</surname><given-names>John D.</given-names></name>
+        <name><surname>Haukos</surname><given-names>David A.</given-names></name>
+        <name><surname>Bain</surname><given-names>Matthew R.</given-names></name>
+        <name><surname>Rice</surname><given-names>Mindy B.</given-names></name>
+        <name><surname>Robinson</surname><given-names>Samantha</given-names></name>
+        <name><surname>Sullins</surname><given-names>Dan S.</given-names></name>
+        <name><surname>Hagen</surname><given-names>Christian A.</given-names></name>
+        <name><surname>Pitman</surname><given-names>James</given-names></name>
+        <name><surname>Lautenbach</surname><given-names>Joseph</given-names></name>
+        <name><surname>Plumb</surname><given-names>Reid</given-names></name>
+        <name><surname>Lautenbach</surname><given-names>Jonathan</given-names></name>
+      </person-group>
+      <article-title>Using grazing to manage herbaceous structure for a heterogeneity-dependent bird</article-title>
+      <source>The Journal of Wildlife Management</source>
+      <year iso-8601-date="2021">2021</year>
+      <volume>85</volume>
+      <issue>2</issue>
+      <pub-id pub-id-type="doi">10.1002/jwmg.21984</pub-id>
+      <fpage>354</fpage>
+      <lpage>368</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-aarons2013-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Aarons</surname><given-names>Sharon R.</given-names></name>
+        <name><surname>Melland</surname><given-names>Alice R.</given-names></name>
+        <name><surname>Dorling</surname><given-names>Lianne</given-names></name>
+      </person-group>
+      <article-title>Dairy farm impacts of fencing riparian land: Pasture production and farm productivity</article-title>
+      <source>Journal of Environmental Management</source>
+      <year iso-8601-date="2013">2013</year>
+      <volume>130</volume>
+      <uri>https://www.sciencedirect.com/science/article/pii/S0301479713005859</uri>
+      <pub-id pub-id-type="doi">10.1016/j.jenvman.2013.08.060</pub-id>
+      <fpage>255</fpage>
+      <lpage>266</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-manitobaagriculture2024-nb-article">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Manitoba Agriculture</surname></name>
+      </person-group>
+      <article-title>Agriculture rotational grazing</article-title>
+      <year iso-8601-date="2024">2024</year>
+      <uri>https://www.gov.mb.ca/agriculture/</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-carnochan2018-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Carnochan</surname><given-names>Stacey Jalane</given-names></name>
+        <name><surname>De Ruyck</surname><given-names>Christopher Charles</given-names></name>
+        <name><surname>Koper</surname><given-names>Nicola</given-names></name>
+      </person-group>
+      <article-title>Effects of twice-over rotational grazing on songbird nesting success in years with and without flooding</article-title>
+      <source>Rangeland Ecology &amp; Management</source>
+      <year iso-8601-date="2018-11">2018</year><month>11</month>
+      <volume>71</volume>
+      <issue>6</issue>
+      <uri>https://www.webofscience.com/wos/woscc/summary/793cb0af-b2ce-4c54-aac9-52d7014ced7f-d151e15d/recently-added/1</uri>
+      <pub-id pub-id-type="doi">10.1016/j.rama.2018.04.013</pub-id>
+      <fpage>776</fpage>
+      <lpage>782</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-hansen2019-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Hansen</surname><given-names>Birgita D.</given-names></name>
+        <name><surname>Fraser</surname><given-names>Hannah S.</given-names></name>
+        <name><surname>Jones</surname><given-names>Christopher S.</given-names></name>
+      </person-group>
+      <article-title>Livestock grazing effects on riparian bird breeding behaviour in agricultural landscapes</article-title>
+      <source>Agriculture, Ecosystems &amp; Environment</source>
+      <year iso-8601-date="2019">2019</year>
+      <volume>270-271</volume>
+      <uri>https://www.sciencedirect.com/science/article/pii/S0167880918304390</uri>
+      <pub-id pub-id-type="doi">10.1016/j.agee.2018.10.016</pub-id>
+      <fpage>93</fpage>
+      <lpage>102</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-stanley2002-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Stanley</surname><given-names>Thomas R.</given-names></name>
+        <name><surname>Knopf</surname><given-names>Fritz L.</given-names></name>
+      </person-group>
+      <article-title>Avian responses to late-season grazing in a shrub-willow floodplain</article-title>
+      <source>Conservation Biology</source>
+      <year iso-8601-date="2002">2002</year>
+      <volume>16</volume>
+      <issue>1</issue>
+      <uri>https://onlinelibrary.wiley.com/doi/abs/10.1046/j.1523-1739.2002.00269.x</uri>
+      <pub-id pub-id-type="doi">10.1046/j.1523-1739.2002.00269.x</pub-id>
+      <fpage>225</fpage>
+      <lpage>231</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-batey2009-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Batey</surname><given-names>Tom.</given-names></name>
+      </person-group>
+      <article-title>Soil compaction and soil management  a review</article-title>
+      <source>Soil Use and Management</source>
+      <year iso-8601-date="2009">2009</year>
+      <volume>25</volume>
+      <issue>4</issue>
+      <uri>https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1475-2743.2009.00236.x</uri>
+      <pub-id pub-id-type="doi">10.1111/j.1475-2743.2009.00236.x</pub-id>
+      <fpage>335</fpage>
+      <lpage>345</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-hale2014-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Hale</surname><given-names>Robin</given-names></name>
+        <name><surname>Reich</surname><given-names>Paul</given-names></name>
+        <name><surname>Daniel</surname><given-names>Tom</given-names></name>
+        <name><surname>Lake</surname><given-names>Philip S.</given-names></name>
+        <name><surname>Cavagnaro</surname><given-names>Timothy R.</given-names></name>
+      </person-group>
+      <article-title>Scales that matter: Guiding effective monitoring of soil properties in restored riparian zones</article-title>
+      <source>Geoderma</source>
+      <year iso-8601-date="2014-09-01">2014</year><month>09</month><day>01</day>
+      <volume>228-229</volume>
+      <uri>https://www.sciencedirect.com/science/article/pii/S0016706113003479</uri>
+      <pub-id pub-id-type="doi">10.1016/j.geoderma.2013.09.019</pub-id>
+      <fpage>173</fpage>
+      <lpage>181</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-carlyle2001-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Carlyle</surname><given-names>G. C.</given-names></name>
+        <name><surname>Hill</surname><given-names>A. R.</given-names></name>
+      </person-group>
+      <article-title>Groundwater phosphate dynamics in a river riparian zone: Effects of hydrologic flowpaths, lithology and redox chemistry</article-title>
+      <source>Journal of Hydrology</source>
+      <year iso-8601-date="2001-07-02">2001</year><month>07</month><day>02</day>
+      <volume>247</volume>
+      <issue>3</issue>
+      <uri>https://www.sciencedirect.com/science/article/pii/S0022169401003754</uri>
+      <pub-id pub-id-type="doi">10.1016/S0022-1694(01)00375-4</pub-id>
+      <fpage>151</fpage>
+      <lpage>168</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-tomer2007-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Tomer</surname><given-names>M. D.</given-names></name>
+        <name><surname>Moorman</surname><given-names>T. B.</given-names></name>
+        <name><surname>Kovar</surname><given-names>J. L.</given-names></name>
+        <name><surname>James</surname><given-names>D. E.</given-names></name>
+        <name><surname>Burkart</surname><given-names>M. R.</given-names></name>
+      </person-group>
+      <article-title>Spatial patterns of sediment and phosphorus in a riparian buffer in western iowa</article-title>
+      <source>Journal of Soil and Water Conservation</source>
+      <year iso-8601-date="2007-10">2007</year><month>10</month>
+      <volume>62</volume>
+      <issue>5</issue>
+      <fpage>329</fpage>
+      <lpage>338</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-cober2018-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Cober</surname><given-names>James R.</given-names></name>
+        <name><surname>Macrae</surname><given-names>Merrin L.</given-names></name>
+        <name><surname>Van Eerd</surname><given-names>Laura L.</given-names></name>
+      </person-group>
+      <article-title>Nutrient release from living and terminated cover crops under variable freezethaw cycles</article-title>
+      <source>Agronomy Journal</source>
+      <year iso-8601-date="2018-05">2018</year><month>05</month>
+      <volume>110</volume>
+      <issue>3</issue>
+      <uri>https://onlinelibrary.wiley.com/doi/10.2134/agronj2017.08.0449</uri>
+      <pub-id pub-id-type="doi">10.2134/agronj2017.08.0449</pub-id>
+      <fpage>1036</fpage>
+      <lpage>1045</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-liu2013-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Liu</surname><given-names>Jian</given-names></name>
+        <name><surname>Khalaf</surname><given-names>Rafa</given-names></name>
+        <name><surname>Ulén</surname><given-names>Barbro</given-names></name>
+        <name><surname>Bergkvist</surname><given-names>Göran</given-names></name>
+      </person-group>
+      <article-title>Potential phosphorus release from catch crop shoots and roots after freezing-thawing</article-title>
+      <source>Plant and Soil</source>
+      <year iso-8601-date="2013-10-01">2013</year><month>10</month><day>01</day>
+      <volume>371</volume>
+      <issue>1</issue>
+      <uri>https://doi.org/10.1007/s11104-013-1716-y</uri>
+      <pub-id pub-id-type="doi">10.1007/s11104-013-1716-y</pub-id>
+      <fpage>543</fpage>
+      <lpage>557</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-walton2020-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Walton</surname><given-names>Craig R.</given-names></name>
+        <name><surname>Zak</surname><given-names>Dominik</given-names></name>
+        <name><surname>Audet</surname><given-names>Joachim</given-names></name>
+        <name><surname>Petersen</surname><given-names>Rasmus Jes</given-names></name>
+        <name><surname>Lange</surname><given-names>Jelena</given-names></name>
+        <name><surname>Oehmke</surname><given-names>Claudia</given-names></name>
+        <name><surname>Wichtmann</surname><given-names>Wendelin</given-names></name>
+        <name><surname>Kreyling</surname><given-names>Jürgen</given-names></name>
+        <name><surname>Grygoruk</surname><given-names>Mateusz</given-names></name>
+        <name><surname>Jabłońska</surname><given-names>Ewa</given-names></name>
+        <name><surname>Kotowski</surname><given-names>Wiktor</given-names></name>
+        <name><surname>Wiśniewska</surname><given-names>Marta M.</given-names></name>
+        <name><surname>Ziegler</surname><given-names>Rafael</given-names></name>
+        <name><surname>Hoffmann</surname><given-names>Carl C.</given-names></name>
+      </person-group>
+      <article-title>Wetland buffer zones for nitrogen and phosphorus retention: Impacts of soil type, hydrology and vegetation</article-title>
+      <source>Science of The Total Environment</source>
+      <year iso-8601-date="2020-07-20">2020</year><month>07</month><day>20</day>
+      <volume>727</volume>
+      <uri>https://www.sciencedirect.com/science/article/pii/S0048969720322269</uri>
+      <pub-id pub-id-type="doi">10.1016/j.scitotenv.2020.138709</pub-id>
+      <fpage>138709</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-fellows2023-nb-article">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Fellows</surname><given-names>Ian</given-names></name>
+      </person-group>
+      <source>OpenStreetMap: Access to open street map raster images</source>
+      <year iso-8601-date="2023">2023</year>
+      <uri>https://CRAN.R-project.org/package=OpenStreetMap</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-massicotte2023-nb-article">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Massicotte</surname><given-names>Philippe</given-names></name>
+        <name><surname>South</surname><given-names>Andy</given-names></name>
+      </person-group>
+      <source>Rnaturalearth: World map data from natural earth</source>
+      <year iso-8601-date="2023">2023</year>
+      <uri>https://CRAN.R-project.org/package=rnaturalearth</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-brooks2017-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Brooks</surname><given-names>Mollie E.</given-names></name>
+        <name><surname>Kristensen</surname><given-names>Kasper</given-names></name>
+        <name><surname>van Benthem</surname><given-names>Koen J.</given-names></name>
+        <name><surname>Magnusson</surname><given-names>Arni</given-names></name>
+        <name><surname>Berg</surname><given-names>Casper W.</given-names></name>
+        <name><surname>Nielsen</surname><given-names>Anders</given-names></name>
+        <name><surname>Skaug</surname><given-names>Hans J.</given-names></name>
+        <name><surname>Maechler</surname><given-names>Martin</given-names></name>
+        <name><surname>Bolker</surname><given-names>Benjamin M.</given-names></name>
+      </person-group>
+      <article-title>glmmTMB balances speed and flexibility among packages for zero-inflated generalized linear mixed modeling</article-title>
+      <source>The R Journal</source>
+      <year iso-8601-date="2017">2017</year>
+      <volume>9</volume>
+      <issue>2</issue>
+      <pub-id pub-id-type="doi">10.32614/RJ-2017-066</pub-id>
+      <fpage>378</fpage>
+      <lpage>400</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-lenth2024-nb-article">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Lenth</surname><given-names>Russell V.</given-names></name>
+      </person-group>
+      <source>Emmeans: Estimated marginal means, aka least-squares means</source>
+      <year iso-8601-date="2024">2024</year>
+      <uri>https://CRAN.R-project.org/package=emmeans</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-hartig2022-nb-article">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Hartig</surname><given-names>Florian</given-names></name>
+      </person-group>
+      <source>DHARMa: Residual diagnostics for hierarchical (multi-level / mixed) regression models</source>
+      <year iso-8601-date="2022">2022</year>
+      <uri>https://CRAN.R-project.org/package=DHARMa</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-ludecke2021-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Lüdecke</surname><given-names>Daniel</given-names></name>
+        <name><surname>Ben-Shachar</surname><given-names>Mattan S.</given-names></name>
+        <name><surname>Patil</surname><given-names>Indrajeet</given-names></name>
+        <name><surname>Waggoner</surname><given-names>Philip</given-names></name>
+        <name><surname>Makowski</surname><given-names>Dominique</given-names></name>
+      </person-group>
+      <article-title>performance: An R package for assessment, comparison and testing of statistical models</article-title>
+      <source>Journal of Open Source Software</source>
+      <year iso-8601-date="2021">2021</year>
+      <volume>6</volume>
+      <issue>60</issue>
+      <pub-id pub-id-type="doi">10.21105/joss.03139</pub-id>
+      <fpage>3139</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-fox2019-nb-article">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Fox</surname><given-names>John</given-names></name>
+        <name><surname>Weisberg</surname><given-names>Sanford</given-names></name>
+      </person-group>
+      <source>An R companion to applied regression</source>
+      <publisher-name>Sage</publisher-name>
+      <publisher-loc>Thousand Oaks CA</publisher-loc>
+      <year iso-8601-date="2019">2019</year>
+      <edition>Third</edition>
+      <uri>https://socialsciences.mcmaster.ca/jfox/Books/Companion/</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-rstudio2024-nb-article">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>RStudio</surname></name>
+      </person-group>
+      <article-title>RStudio: Integrated development environment for r</article-title>
+      <year iso-8601-date="2024">2024</year>
+      <uri>http://www.rstudio.org/</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-rcoreteam2024-nb-article">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>R Core Team</surname></name>
+      </person-group>
+      <article-title>R: A language and environment for statistical computing</article-title>
+      <year iso-8601-date="2024">2024</year>
+      <uri>http://www.R-project.org</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-wickham2016-nb-article">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Wickham</surname><given-names>H</given-names></name>
+      </person-group>
+      <source>ggplot2: Elegant graphics for data analysis</source>
+      <publisher-name>Springer-Verlag</publisher-name>
+      <publisher-loc>New York NY U.S.A</publisher-loc>
+      <year iso-8601-date="2016">2016</year>
+    </element-citation>
+  </ref>
+  <ref id="ref-hulvey2021-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Hulvey</surname><given-names>Kristin B.</given-names></name>
+        <name><surname>Mellon</surname><given-names>Cassie D.</given-names></name>
+        <name><surname>Kleinhesselink</surname><given-names>Andrew R.</given-names></name>
+      </person-group>
+      <article-title>Rotational grazing can mitigate ecosystem service trade-offs between livestock production and water quality in semi-arid rangelands</article-title>
+      <source>Journal of Applied Ecology</source>
+      <year iso-8601-date="2021">2021</year>
+      <volume>58</volume>
+      <issue>10</issue>
+      <uri>https://onlinelibrary.wiley.com/doi/abs/10.1111/1365-2664.13954</uri>
+      <pub-id pub-id-type="doi">10.1111/1365-2664.13954</pub-id>
+      <fpage>2113</fpage>
+      <lpage>2123</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-sovell2000-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Sovell</surname><given-names>Laurie A.</given-names></name>
+        <name><surname>Vondracek</surname><given-names>Bruce</given-names></name>
+        <name><surname>Frost</surname><given-names>Julia A.</given-names></name>
+        <name><surname>Mumford</surname><given-names>Karen G.</given-names></name>
+      </person-group>
+      <article-title>Impacts of Rotational Grazing and Riparian Buffers on Physicochemical and Biological Characteristicsof Southeastern Minnesota, USA, Streams</article-title>
+      <source>Environmental Management</source>
+      <year iso-8601-date="2000-12-01">2000</year><month>12</month><day>01</day>
+      <volume>26</volume>
+      <issue>6</issue>
+      <uri>https://doi.org/10.1007/s002670010121</uri>
+      <pub-id pub-id-type="doi">10.1007/s002670010121</pub-id>
+      <fpage>629</fpage>
+      <lpage>641</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-hubbard2004-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Hubbard</surname><given-names>R. K.</given-names></name>
+        <name><surname>Newton</surname><given-names>G. L.</given-names></name>
+        <name><surname>Hill</surname><given-names>G. M.</given-names></name>
+      </person-group>
+      <article-title>Water quality and the grazing animal1</article-title>
+      <source>Journal of Animal Science</source>
+      <year iso-8601-date="2004-01-01">2004</year><month>01</month><day>01</day>
+      <volume>82</volume>
+      <issue>suppl_13</issue>
+      <uri>https://doi.org/10.2527/2004.8213_supplE255x</uri>
+      <pub-id pub-id-type="doi">10.2527/2004.8213_supplE255x</pub-id>
+      <fpage>E255</fpage>
+      <lpage>E263</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-syversen2005-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Syversen</surname><given-names>Nina</given-names></name>
+        <name><surname>Borch</surname><given-names>Håkon</given-names></name>
+      </person-group>
+      <article-title>Retention of soil particle fractions and phosphorus in cold-climate buffer zones</article-title>
+      <source>Ecological Engineering</source>
+      <year iso-8601-date="2005-11-01">2005</year><month>11</month><day>01</day>
+      <volume>25</volume>
+      <issue>4</issue>
+      <uri>http://www.sciencedirect.com/science/article/pii/S092585740500145X</uri>
+      <fpage>382</fpage>
+      <lpage>394</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-kröger2007-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Kröger</surname><given-names>R.</given-names></name>
+        <name><surname>Holland</surname><given-names>M. M.</given-names></name>
+        <name><surname>Moore</surname><given-names>M. T.</given-names></name>
+        <name><surname>Cooper</surname><given-names>C. M.</given-names></name>
+      </person-group>
+      <article-title>Plant senescence: A mechanism for nutrient release in temperate agricultural wetlands</article-title>
+      <source>Environmental Pollution</source>
+      <year iso-8601-date="2007-03-01">2007</year><month>03</month><day>01</day>
+      <volume>146</volume>
+      <issue>1</issue>
+      <uri>https://www.sciencedirect.com/science/article/pii/S0269749106003800</uri>
+      <pub-id pub-id-type="doi">10.1016/j.envpol.2006.06.005</pub-id>
+      <fpage>114</fpage>
+      <lpage>119</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-noyes2024-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Noyes</surname><given-names>I</given-names></name>
+        <name><surname>Koiter</surname><given-names>A J</given-names></name>
+        <name><surname>Jarvie</surname><given-names>H</given-names></name>
+        <name><surname>Plach</surname><given-names>Janina M.</given-names></name>
+        <name><surname>Lobb</surname><given-names>D A</given-names></name>
+        <name><surname>Glassauer</surname><given-names>S</given-names></name>
+        <name><surname>Macrae</surname><given-names>M. L.</given-names></name>
+      </person-group>
+      <article-title>Potential phosphorus mobilization from riparian vegetation following freezing</article-title>
+      <source>Journal of Environmental Management</source>
+      <year iso-8601-date="2024">2024</year>
+      <volume>370</volume>
+      <issue>122710</issue>
+      <pub-id pub-id-type="doi">https://doi.org/10.1016/j.jenvman.2024.122710</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-Schloerke2024-nb-article">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Schloerke</surname><given-names>Barret</given-names></name>
+        <name><surname>Cook</surname><given-names>Di</given-names></name>
+        <name><surname>Larmarange</surname><given-names>Joseph</given-names></name>
+        <name><surname>Briatte</surname><given-names>Francois</given-names></name>
+        <name><surname>Marbach</surname><given-names>Moritz</given-names></name>
+        <name><surname>Thoen</surname><given-names>Edwin</given-names></name>
+        <name><surname>Elberg</surname><given-names>Amos</given-names></name>
+        <name><surname>Crowley</surname><given-names>Jason</given-names></name>
+      </person-group>
+      <source>GGally: Extension to ’ggplot2’</source>
+      <year iso-8601-date="2024">2024</year>
+      <uri>https://CRAN.R-project.org/package=GGally</uri>
+    </element-citation>
+  </ref>
+</ref-list>
+</back>
+
+
+</sub-article>
 <sub-article article-type="notebook" id="nb-3-nb-1">
 <front-stub>
 <title-group>
@@ -2654,7 +5106,7 @@ p1
               data = soil_diff)
 simulateResiduals(m8, n = 1000, plot = TRUE) 
   </code>
-  <graphic mimetype="image" mime-subtype="png" xlink:href="03_Soils_analysis_files/figure-jats/unnamed-chunk-13-1.png" />
+  <graphic mimetype="image" mime-subtype="png" xlink:href="03_Soils_analysis_files/figure-jats/unnamed-chunk-11-1.png" />
   <boxed-text>
     <preformat>Object of Class DHARMa with simulated residuals based on 1000 simulations with refit = FALSE . See ?DHARMa::simulateResiduals for help. 
  
@@ -2679,7 +5131,7 @@ treatment:location 4.3581  6     0.6283</preformat>
               data = soil_diff)
 simulateResiduals(m8, n = 1000, plot = TRUE) 
   </code>
-  <graphic mimetype="image" mime-subtype="png" xlink:href="03_Soils_analysis_files/figure-jats/unnamed-chunk-14-1.png" />
+  <graphic mimetype="image" mime-subtype="png" xlink:href="03_Soils_analysis_files/figure-jats/unnamed-chunk-12-1.png" />
   <boxed-text>
     <preformat>Object of Class DHARMa with simulated residuals based on 1000 simulations with refit = FALSE . See ?DHARMa::simulateResiduals for help. 
  
@@ -2978,19 +5430,8 @@ p3 &lt;- ggplot(data = filter(corr_data, sample_type == &quot;Organic&quot;), ae
   scale_colour_manual(values = c(&quot;#35608DFF&quot;, &quot;#2FB47CFF&quot;, &quot;#FDE725FF&quot;)) +
   facet_wrap(~sample_type, scales = &quot;free&quot;)
 
-p1 + p2 + p3 + plot_layout(axis_titles = &quot;collect&quot;, guides = 'collect') &amp; theme(legend.position = &quot;top&quot;)
+#p1 + p2 + p3 + plot_layout(axis_titles = &quot;collect&quot;, guides = 'collect') &amp; theme(legend.position = &quot;top&quot;)
   </code>
-  <boxed-text>
-    <preformat>Warning: Removed 3 rows containing missing values or values outside the scale range
-(`geom_point()`).</preformat>
-  </boxed-text>
-  <boxed-text>
-    <preformat>Warning: Removed 1 row containing missing values or values outside the scale range
-(`geom_point()`).
-Removed 1 row containing missing values or values outside the scale range
-(`geom_point()`).</preformat>
-  </boxed-text>
-  <graphic mimetype="image" mime-subtype="png" xlink:href="09_Correlation_files/figure-jats/unnamed-chunk-5-1.png" />
   </sec>
   <sec specific-use="notebook-content">
   <code language="r script">p4 &lt;- ggplot(data = filter(corr_data, sample_type == &quot;Biomass&quot;), aes(x = soil_conc, y = dryweight, colour = location,)) +
@@ -3012,15 +5453,8 @@ p5 &lt;- ggplot(data = filter(corr_data, sample_type == &quot;Litter&quot;), aes
   facet_wrap(~sample_type, scales = &quot;free&quot;)
 
 p6 &lt;- p4 + p5 + plot_layout(axis_titles = &quot;collect&quot;, guides = 'collect') &amp; theme(legend.position = &quot;top&quot;)
-p6
+#p6
   </code>
-  <boxed-text>
-    <preformat>Warning: Removed 1 row containing missing values or values outside the scale range
-(`geom_point()`).
-Removed 1 row containing missing values or values outside the scale range
-(`geom_point()`).</preformat>
-  </boxed-text>
-  <graphic mimetype="image" mime-subtype="png" xlink:href="09_Correlation_files/figure-jats/unnamed-chunk-6-1.png" />
   </sec>
   <sec specific-use="notebook-content">
   <code language="r script">veg_data2 &lt;- mass_data %&gt;%
@@ -3258,7 +5692,7 @@ p1
 
 
 </sub-article>
-<sub-article article-type="notebook" id="nb-12-nb-4">
+<sub-article article-type="notebook" id="nb-13-nb-4">
 <front-stub>
 <title-group>
 <article-title>Map of study area</article-title>
@@ -3321,80 +5755,6 @@ sites &lt;- data.frame(site = c(1,2,3,4), lat = c(50.052525, 50.052209, 50.05920
   </code>
   </sec>
 </sec>
-<sec id="land-use-data-of-region-nb-4">
-  <title>Land use data of region</title>
-  <sec id="get-data-nb-4">
-    <title>Get data</title>
-    <sec specific-use="notebook-content">
-    <code language="r script">minnedosa_data &lt;- &quot;lcv_minnedosa_2004_2006_shp&quot;
-if (file.exists(minnedosa_data)) {
-  print(&quot;The data already exists!&quot;)
-} else {
-  download.file(&quot;https://mli.gov.mb.ca/landuse/shp_zip_files/lcv_minnedosa_2004_2006_shp.zip&quot;, 
-                destfile = &quot;lcv_minnedosa_2004_2006_shp.zip&quot;)
-  unzip(&quot;lcv_minnedosa_2004_2006_shp.zip&quot;, exdir = &quot;lcv_minnedosa_2004_2006_shp&quot;)
-}
-    </code>
-    <boxed-text>
-      <preformat>[1] &quot;The data already exists!&quot;</preformat>
-    </boxed-text>
-    <code language="r script">brandon_data &lt;- &quot;lcv_brandon_2006_shp&quot;
-if (file.exists(brandon_data)) {
-  print(&quot;The data already exists!&quot;)
-} else {
-  download.file(&quot;https://mli.gov.mb.ca/landuse/shp_zip_files/lcv_brandon_2006_shp.zip&quot;, 
-                destfile = &quot;lcv_brandon_2006_shp.zip&quot;)
-  unzip(&quot;lcv_brandon_2006_shp.zip&quot;, exdir = &quot;lcv_brandon_2006_shp&quot;)
-}
-    </code>
-    <boxed-text>
-      <preformat>[1] &quot;The data already exists!&quot;</preformat>
-    </boxed-text>
-    </sec>
-    <sec specific-use="notebook-content">
-    <code language="r script">sf_use_s2(FALSE)
-    </code>
-    <boxed-text>
-      <preformat>Spherical geometry (s2) switched off</preformat>
-    </boxed-text>
-    <code language="r script">land &lt;- st_read(here::here(&quot;./notebooks/lcv_brandon_2006_shp/lcv_brandon_2006.shp&quot;)) %&gt;%
-  bind_rows(st_read(here::here(&quot;./notebooks/lcv_minnedosa_2004_2006_shp/lcv_minnedosa_2004_2006.shp&quot;))) %&gt;%
-  st_transform(crs = 4326) %&gt;%
-  st_crop(st_bbox(box, crs = 4326)) %&gt;%
-  mutate(Land_use = recode(CLASSNAME, &quot;Agricultural Field&quot; = &quot;Agriculture&quot;, &quot;Agri - Forage Field&quot; = &quot;Forage&quot;, &quot;Water Body&quot; = &quot;Water&quot;, &quot;Wetland - Treed Bog&quot; = &quot;Wetland&quot;, &quot;Wetland - Marsh&quot; = &quot;Wetland&quot;, &quot;Decidious Forest&quot; = &quot;Forest&quot;, &quot;Open Decidious Forest&quot; = &quot;Forest&quot;, &quot;Mixedwood Forest&quot; = &quot;Forest&quot;, &quot;Forest Cut Blocks&quot; = &quot;Forest&quot;, &quot;Coniferous Forest&quot; = &quot;Forest&quot;,&quot;Roads Trails Rail Lines&quot; = &quot;Other&quot;, &quot;Sand and Gravel&quot; = &quot;Other&quot;, &quot;Cultural Features&quot; = &quot;Other&quot;, &quot;Range and Grassland&quot; = &quot;Forage&quot;, &quot;Water Bodies&quot; = &quot;Water&quot;)) %&gt;%
-  # group_by(Land_use) %&gt;%
-  # summarise(do_union = TRUE) %&gt;%
-  mutate(Land_use = factor(Land_use, levels=c(&quot;Agriculture&quot;, &quot;Forage&quot;, &quot;Forest&quot;,  &quot;Water&quot;, &quot;Wetland&quot;, &quot;Other&quot;)))
-    </code>
-    <boxed-text>
-      <preformat>Reading layer `lcv_brandon_2006' from data source 
-  `/home/alex/Dropbox/MBFI/MBFI riparian study/riparian-grazing-manuscript/notebooks/lcv_brandon_2006_shp/lcv_brandon_2006.shp' 
-  using driver `ESRI Shapefile'
-Simple feature collection with 145146 features and 5 fields
-Geometry type: POLYGON
-Dimension:     XY
-Bounding box:  xmin: 429971 ymin: 5427260 xmax: 510011 ymax: 5542070
-Projected CRS: UTM
-Reading layer `lcv_minnedosa_2004_2006' from data source 
-  `/home/alex/Dropbox/MBFI/MBFI riparian study/riparian-grazing-manuscript/notebooks/lcv_minnedosa_2004_2006_shp/lcv_minnedosa_2004_2006.shp' 
-  using driver `ESRI Shapefile'
-Simple feature collection with 160653 features and 5 fields
-Geometry type: POLYGON
-Dimension:     XY
-Bounding box:  xmin: 429972 ymin: 5542070 xmax: 549972 ymax: 5656880
-Projected CRS: UTM</preformat>
-    </boxed-text>
-    <boxed-text>
-      <preformat>although coordinates are longitude/latitude, st_intersection assumes that they
-are planar</preformat>
-    </boxed-text>
-    <boxed-text>
-      <preformat>Warning: attribute variables are assumed to be spatially constant throughout
-all geometries</preformat>
-    </boxed-text>
-    </sec>
-  </sec>
-</sec>
 <sec id="canada-nb-4">
   <title>Canada</title>
   <sec specific-use="notebook-content">
@@ -3405,51 +5765,6 @@ all geometries</preformat>
 </sec>
 <sec id="maps-nb-4">
   <title>Maps</title>
-  <sec id="land-use-nb-4">
-    <title>Land use</title>
-    <sec specific-use="notebook-content">
-    <code language="r script">p3 &lt;- ggplot() +
-  theme_bw() +
-  geom_sf(data = land, aes(fill = Land_use), lwd = 0) +
-  scale_fill_manual(values=c(&quot;#458B00&quot;,  &quot;#CDAD00&quot;, &quot;#006400&quot;,&quot;#009ACD&quot;, &quot;#0096D194&quot;,  &quot;#C1CDCD&quot;), name = &quot;Land use&quot;) +
-  geom_point(data = sites, aes(x = long, y = lat), shape = 23, colour = &quot;red&quot;, fill = &quot;red&quot;, size = 2) +
-  coord_sf(ylim = c(49.992, 50.1), xlim = c(-99.965, -99.80418), crs = 4326) +
-  scale_y_continuous(expand = c(0,0)) +
-  scale_x_continuous(expand = c(0,0)) +
-  labs(tag = &quot;b)&quot;) +
-  annotation_scale(location = &quot;bl&quot;,
-                   height = unit(0.05, &quot;cm&quot;)) +
-  annotation_north_arrow(location = &quot;br&quot;, 
-                         height = unit(0.5, &quot;cm&quot;),
-                         width = unit(0.5, &quot;cm&quot;)) +
-  theme(axis.text = element_blank(),
-        axis.ticks = element_blank(),
-        axis.title = element_blank(),
-        plot.margin = unit(c(0,0,0,0), &quot;mm&quot;))
-    </code>
-    </sec>
-  </sec>
-  <sec id="open-street-nb-4">
-    <title>Open street</title>
-    <p>not used</p>
-    <sec specific-use="notebook-content">
-    <code language="r script">p2 &lt;- ggplot(site) +
-  annotation_map_tile(type = &quot;osm&quot;, zoom = 15) +
-  geom_point(data = sites, aes(x = long, y = lat), shape = 23, colour = &quot;red&quot;, fill = &quot;red&quot;, size = 1) +
-  #coord_sf(ylim = c(50.056015 +.02, 50.056015 - 0.02), xlim = c(-99.924176 - 0.04, -99.924176 + 0.04), crs = 4326) +
-  coord_sf(ylim = c(50.056015 +.01, 50.056015 +.065), xlim = c(-99.924176 - 0.02, -99.924176 + 0.02), crs = 4326) +
-  annotation_scale(location = &quot;bl&quot;,
-                   height = unit(0.05, &quot;cm&quot;)) +
-  annotation_north_arrow(location = &quot;br&quot;, 
-                         height = unit(0.5, &quot;cm&quot;),
-                         width = unit(0.5, &quot;cm&quot;)) +
-  theme(axis.text = element_blank(),
-        axis.ticks = element_blank(),
-        axis.title = element_blank(),
-        plot.margin = unit(c(0,0,0,0), &quot;mm&quot;))
-    </code>
-    </sec>
-  </sec>
   <sec id="canada-1-nb-4">
     <title>Canada</title>
     <sec specific-use="notebook-content">
@@ -3467,20 +5782,12 @@ all geometries</preformat>
         panel.background = element_blank())
     </code>
     </sec>
-    <sec id="cell-fig-map-nb-4" specific-use="notebook-content">
-    <code language="r script">#|   
-p1 + p3 + plot_layout(guides = &quot;collect&quot;) &amp; theme(legend.position = &quot;right&quot;)
-
-#ggsave(filename = &quot;Figures/Maps.png&quot;, plot = p4, height = 75, width = 180, units = &quot;mm&quot;, dpi = 600)
-    </code>
-    <fig id="fig-map-nb-4">
-      <caption><p>Showing a) the study site in southwestern Manitoba and
-      b) the four riparian areas included in this study and the regional
-      land use (data from https://mli.gov.mb.ca/).</p></caption>
-      <graphic mimetype="image" mime-subtype="png" xlink:href="05_Map_files/figure-jats/fig-map-1.png" />
-    </fig>
-    </sec>
     <sec specific-use="notebook-content">
+    <code language="r script">sf_use_s2(FALSE)
+    </code>
+    <boxed-text>
+      <preformat>Spherical geometry (s2) switched off</preformat>
+    </boxed-text>
     <code language="r script">mb_river &lt;- ne_download(scale = 10,  type = 'rivers_lake_centerlines', category = &quot;physical&quot;, returnclass = &quot;sf&quot;) %&gt;%
   st_transform(crs = 4326) %&gt;%
   st_crop(st_bbox(c(xmin = -101.5889, ymin = 48.99267, 
@@ -3489,7 +5796,7 @@ p1 + p3 + plot_layout(guides = &quot;collect&quot;) &amp; theme(legend.position 
     </code>
     <boxed-text>
       <preformat>Reading layer `ne_10m_rivers_lake_centerlines' from data source 
-  `/tmp/RtmpUNfTO3/ne_10m_rivers_lake_centerlines.shp' using driver `ESRI Shapefile'
+  `/tmp/Rtmp0akUXl/ne_10m_rivers_lake_centerlines.shp' using driver `ESRI Shapefile'
 Simple feature collection with 1473 features and 38 fields
 Geometry type: MULTILINESTRING
 Dimension:     XY
@@ -3511,7 +5818,7 @@ all geometries</preformat>
                   crs = st_crs(.)))
     </code>
     <boxed-text>
-      <preformat>Reading layer `ne_10m_lakes' from data source `/tmp/RtmpUNfTO3/ne_10m_lakes.shp' using driver `ESRI Shapefile'
+      <preformat>Reading layer `ne_10m_lakes' from data source `/tmp/Rtmp0akUXl/ne_10m_lakes.shp' using driver `ESRI Shapefile'
 Simple feature collection with 1355 features and 41 fields
 Geometry type: MULTIPOLYGON
 Dimension:     XY
@@ -3648,7 +5955,7 @@ give correct results for longitude/latitude data</preformat>
 
 
 </sub-article>
-<sub-article article-type="notebook" id="nb-15-nb-5">
+<sub-article article-type="notebook" id="nb-16-nb-5">
 <front-stub>
 <title-group>
 <article-title>Weather</article-title>
@@ -3669,7 +5976,7 @@ give correct results for longitude/latitude data</preformat>
 <sec id="load-libraries-nb-5">
   <title>Load Libraries</title>
   <sec specific-use="notebook-content">
-  <code language="r script">library(tidyverse)
+  <code language="r script">library(tidyverse) 
   </code>
   <boxed-text>
     <preformat>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
@@ -3699,7 +6006,7 @@ The following objects are masked from 'package:stats':
 <sec id="read-in-data-nb-5">
   <title>Read in data</title>
   <sec specific-use="notebook-content">
-  <code language="r script">data &lt;- read_excel(&quot;Forrest-Daily-TempRainSoil-20192021-AKoiter.xlsx&quot;) %&gt;%
+  <code language="r script">data &lt;- read_excel(here::here(&quot;./notebooks/Forrest-Daily-TempRainSoil-20192021-AKoiter.xlsx&quot;)) %&gt;%
   clean_names() %&gt;%
   mutate(date = ymd(date),
          year = year(date),
@@ -3717,18 +6024,15 @@ The following objects are masked from 'package:stats':
     </code>
     </sec>
     <sec specific-use="notebook-content">
-    <code language="r script">ggplot(data = data, aes(x = date, y = avg_air_t)) +
-  geom_point() +
-  theme_bw() +
-  facet_wrap(~year, scales = &quot;free_x&quot;)
+    <code language="r script"># ggplot(data = data, aes(x = date, y = avg_air_t)) +
+#   geom_point() +
+#   theme_bw() +
+#   facet_wrap(~year, scales = &quot;free_x&quot;)
+# ggplot(data = precip, aes(x = date, y = cumu_precip)) +
+#   geom_point() +
+#   theme_bw() +
+#   facet_wrap(~year, scales = &quot;free_x&quot;)
     </code>
-    <graphic mimetype="image" mime-subtype="png" xlink:href="06_Weather_files/figure-jats/unnamed-chunk-4-1.png" />
-    <code language="r script">ggplot(data = precip, aes(x = date, y = cumu_precip)) +
-  geom_point() +
-  theme_bw() +
-  facet_wrap(~year, scales = &quot;free_x&quot;)
-    </code>
-    <graphic mimetype="image" mime-subtype="png" xlink:href="06_Weather_files/figure-jats/unnamed-chunk-4-2.png" />
     </sec>
   </sec>
 </sec>
@@ -3781,7 +6085,7 @@ ggplot() +
 
 
 </sub-article>
-<sub-article article-type="notebook" id="nb-18-nb-6">
+<sub-article article-type="notebook" id="nb-19-nb-6">
 <front-stub>
 <title-group>
 <article-title>Riparian litter WEP in response to
@@ -4058,7 +6362,7 @@ p1
 
 
 </sub-article>
-<sub-article article-type="notebook" id="nb-21-nb-7">
+<sub-article article-type="notebook" id="nb-22-nb-7">
 <front-stub>
 <title-group>
 <article-title>Vertical profile of WEP</article-title>
@@ -4318,14 +6622,9 @@ p4 + p5 + plot_layout(guides = 'collect') &amp; theme(legend.position = 'bottom'
 3.5.0.
 ℹ Please use the `legend.position.inside` argument of `theme()` instead.</preformat>
   </boxed-text>
-  <code language="r script">p1
-  </code>
-  <boxed-text>
-    <preformat>Warning: Removed 2 rows containing non-finite outside the scale range
-(`stat_boxplot()`).</preformat>
-  </boxed-text>
-  <graphic mimetype="image" mime-subtype="png" xlink:href="04_Vertical_profile_files/figure-jats/unnamed-chunk-8-1.png" />
-  <code language="r script">p2 &lt;- ggplot(data = total_data, aes(y = sample_type, x = p_total, fill = location)) + 
+  <code language="r script">#p1
+
+p2 &lt;- ggplot(data = total_data, aes(y = sample_type, x = p_total, fill = location)) + 
   geom_boxplot() + 
   #scale_x_log10() +
   theme_bw(base_size = 12) +
@@ -4333,13 +6632,8 @@ p4 + p5 + plot_layout(guides = 'collect') &amp; theme(legend.position = 'bottom'
         legend.position = &quot;none&quot;) +
   labs(x = expression(paste(&quot;WEP Total (&quot;, mg~m^{-2}, &quot;)&quot;)), tag = &quot;b)&quot;) +
   scale_fill_viridis_d(name = &quot;Location&quot;, begin = 0.3, end = 1)
-p2
+#p2
   </code>
-  <boxed-text>
-    <preformat>Warning: Removed 2 rows containing non-finite outside the scale range
-(`stat_boxplot()`).</preformat>
-  </boxed-text>
-  <graphic mimetype="image" mime-subtype="png" xlink:href="04_Vertical_profile_files/figure-jats/unnamed-chunk-8-2.png" />
   </sec>
   <sec id="cell-fig-vertical-WEP-nb-7" specific-use="notebook-content">
   <code language="r script">#|  
@@ -4373,7 +6667,7 @@ Removed 2 rows containing non-finite outside the scale range
 
 
 </sub-article>
-<sub-article article-type="notebook" id="nb-24-nb-8">
+<sub-article article-type="notebook" id="nb-25-nb-8">
 <front-stub>
 <title-group>
 <article-title>Workflow</article-title>
@@ -4467,7 +6761,7 @@ Removed 2 rows containing non-finite outside the scale range
 
 
 </sub-article>
-<sub-article article-type="notebook" id="nb-27-nb-9">
+<sub-article article-type="notebook" id="nb-28-nb-9">
 <front-stub>
 <title-group>
 <article-title>Riparian vegetation WEP in response to
@@ -4756,14 +7050,9 @@ pairs |&gt;
   scale_fill_manual(values = c(&quot;white&quot;, &quot;black&quot;), guide = guide_legend(override.aes = list(colour = &quot;black&quot;))) +
   theme(axis.title.x = element_blank(),
         axis.text.x = element_text(angle = 0, vjust = 1, hjust = 0.5))
-p1
-    </code>
-    <boxed-text>
-      <preformat>Warning: Removed 2 rows containing non-finite outside the scale range
-(`stat_boxplot()`).</preformat>
-    </boxed-text>
-    <graphic mimetype="image" mime-subtype="png" xlink:href="01_Biomass_analysis_files/figure-jats/unnamed-chunk-12-1.png" />
-    <code language="r script">p2 &lt;- ggplot() +
+#p1
+
+p2 &lt;- ggplot() +
   geom_rect(data = df, aes(xmin = x1, xmax = x2, ymin = y1, ymax = y2, fill = difference), alpha = 0.15) +
   geom_boxplot(data = filter(plot_data, measure == &quot;p_total&quot;), aes(x = location, y = diff)) +
   theme_bw(base_size = 12) + 
@@ -4776,13 +7065,8 @@ p1
   theme(axis.title.y = element_blank(),
         axis.title.x = element_blank(),
         axis.text.x = element_text(angle = 0, vjust = 1, hjust = 0.5))
-p2
+#p2
     </code>
-    <boxed-text>
-      <preformat>Warning: Removed 2 rows containing non-finite outside the scale range
-(`stat_boxplot()`).</preformat>
-    </boxed-text>
-    <graphic mimetype="image" mime-subtype="png" xlink:href="01_Biomass_analysis_files/figure-jats/unnamed-chunk-12-2.png" />
     </sec>
     <sec id="cell-fig-vegetation-WEP-nb-9" specific-use="notebook-content">
     <code language="r script">#|   
@@ -4817,7 +7101,7 @@ Removed 2 rows containing non-finite outside the scale range
               data = filter(biomass_diff, measure == &quot;dryweight&quot;))
 simulateResiduals(m2, n = 1000, plot = TRUE)
   </code>
-  <graphic mimetype="image" mime-subtype="png" xlink:href="01_Biomass_analysis_files/figure-jats/unnamed-chunk-14-1.png" />
+  <graphic mimetype="image" mime-subtype="png" xlink:href="01_Biomass_analysis_files/figure-jats/unnamed-chunk-12-1.png" />
   <boxed-text>
     <preformat>Object of Class DHARMa with simulated residuals based on 1000 simulations with refit = FALSE . See ?DHARMa::simulateResiduals for help. 
  
@@ -4930,21 +7214,19 @@ P value adjustment: fdr method for 6 tests </preformat>
   geom_hline(yintercept = 0) +
   facet_grid(~measure) 
     </code>
-    <graphic mimetype="image" mime-subtype="png" xlink:href="01_Biomass_analysis_files/figure-jats/unnamed-chunk-16-1.png" />
-    <code language="r script">ggplot(data = filter(plot_data, measure == &quot;dryweight&quot;), aes(x = treatment, y = diff, fill = location)) +
-  geom_boxplot() +
-  labs(y = &quot;kg/m^2&quot;) +
-  geom_hline(yintercept = 0) +
-  facet_grid(location~measure) 
+    <graphic mimetype="image" mime-subtype="png" xlink:href="01_Biomass_analysis_files/figure-jats/unnamed-chunk-14-1.png" />
+    <code language="r script"># ggplot(data = filter(plot_data, measure == &quot;dryweight&quot;), aes(x = treatment, y = diff, fill = location)) +
+#   geom_boxplot() +
+#   labs(y = &quot;kg/m^2&quot;) +
+#   geom_hline(yintercept = 0) +
+#   facet_grid(location~measure) 
+# 
+# ggplot(data = filter(plot_data, measure == &quot;dryweight&quot;), aes(x = location, y = diff, fill = treatment)) +
+#   geom_boxplot() +
+#   labs(y = &quot;kg/m^2&quot;) +
+#   geom_hline(yintercept = 0) +
+#   facet_grid(treatment~measure) 
     </code>
-    <graphic mimetype="image" mime-subtype="png" xlink:href="01_Biomass_analysis_files/figure-jats/unnamed-chunk-16-2.png" />
-    <code language="r script">ggplot(data = filter(plot_data, measure == &quot;dryweight&quot;), aes(x = location, y = diff, fill = treatment)) +
-  geom_boxplot() +
-  labs(y = &quot;kg/m^2&quot;) +
-  geom_hline(yintercept = 0) +
-  facet_grid(treatment~measure) 
-    </code>
-    <graphic mimetype="image" mime-subtype="png" xlink:href="01_Biomass_analysis_files/figure-jats/unnamed-chunk-16-3.png" />
     </sec>
   </sec>
 </sec>
